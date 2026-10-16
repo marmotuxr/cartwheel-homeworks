@@ -6,6 +6,9 @@ from __future__ import annotations
 import sqlite3
 from pathlib import Path
 
+import pytest
+
+from agent import agent as agent_module
 from agent.agent import (
     get_order_logic,
     issue_refund_logic,
@@ -37,17 +40,34 @@ def test_get_order_happy_path(world: dict) -> None:
     assert result["order"]["total_usd"] == 84.0
     assert result["order"]["refund_eligible"] is True
     assert result["order"]["store_name"] == "Blue Heron Ceramics"
+    assert result["order"]["product_title"] == "Heavy-Duty Vase"
 
 
 def test_get_order_denies_other_shopper(world: dict) -> None:
     result = get_order_logic(SHOPPER_2, 4127)
     assert result["ok"] is False
     assert result["error"] == "permission_denied"
+    assert "order" not in result
+    assert "product_title" not in result
+    assert "Heavy-Duty Vase" not in str(result)
 
 
 def test_get_order_denies_other_merchant_allows_support(world: dict) -> None:
-    assert get_order_logic(MERCHANT_STORE_2, 4127)["error"] == "permission_denied"
+    denied = get_order_logic(MERCHANT_STORE_2, 4127)
+    assert denied["error"] == "permission_denied"
+    assert "order" not in denied
+    assert "product_title" not in denied
+    assert "Heavy-Duty Vase" not in str(denied)
     assert get_order_logic(SUPPORT, 4127)["ok"] is True
+
+
+def test_get_order_fails_explicitly_when_product_is_missing(
+    world: dict, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.setattr(agent_module.db, "list_products", lambda conn, store_id: [])
+
+    with pytest.raises(RuntimeError, match="references missing product"):
+        get_order_logic(SHOPPER_1, 4127)
 
 
 def test_refund_below_threshold_auto_approves(world_copy: Path) -> None:

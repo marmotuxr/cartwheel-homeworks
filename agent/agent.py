@@ -70,6 +70,11 @@ or credential changes, and anything outside Cartwheel.
 - Cite the policy id (for example cw-returns) for every policy claim.
 - Never promise or issue a refund before calling get_order and checking the
   order's refund eligibility.
+- Before giving order-specific cancellation, return, exchange, or refund
+  guidance, use get_order to verify that its product_title matches the item
+  the customer described. If they do not match, explain the discrepancy and
+  ask for clarification before proceeding. Never treat the customer's
+  description as verified order data.
 
 ## Escalation
 When you are unsure, or an action is above your authority (for example a
@@ -200,8 +205,22 @@ def get_order_logic(ctx: AuthContext, order_id: int) -> dict[str, Any]:
                 f"role '{ctx.role}' (user {ctx.user_id}) may not view order #{order_id}"
             )
         store = db.get_store(conn, order.store_id)
+        product = next(
+            (
+                candidate
+                for candidate in db.list_products(conn, order.store_id)
+                if candidate.id == order.product_id
+            ),
+            None,
+        )
+        if product is None:
+            raise RuntimeError(
+                f"Order {order_id} references missing product {order.product_id} "
+                f"in store {order.store_id}."
+            )
         payload = order.to_public_dict()
         payload["store_name"] = store.name if store else None
+        payload["product_title"] = product.title
         return {"ok": True, "order": payload}
 
 
@@ -350,7 +369,7 @@ def search_help_center(
 
 @function_tool
 def get_order(wrapper: RunContextWrapper[AuthContext], order_id: int) -> dict[str, Any]:
-    """Look up one order by id, including its refund eligibility."""
+    """Look up one order by id, including its product title and refund eligibility."""
     return _call(wrapper, get_order_logic, order_id)
 
 
@@ -427,6 +446,14 @@ def find_order(
     return _call(wrapper, hw_tools.find_order, query)
 
 
+@function_tool
+def check_return_eligibility(
+    wrapper: RunContextWrapper[AuthContext], order_id: int
+) -> dict[str, Any]:
+    """Check an order's return window without submitting a return or refund."""
+    return _call(wrapper, hw_tools.check_return_eligibility, order_id)
+
+
 # Progressive disclosure: a session exposes only the tools its role can use.
 # Fewer tools mean fewer wrong choices and cleaner evals. At dev scale the
 # only difference is that support staff, who have no orders of their own,
@@ -438,6 +465,7 @@ _COMMON_TOOLS = [
     get_order,
     issue_refund,
     cancel_order,
+    check_return_eligibility,
     escalate_to_human,
 ]
 TOOLS_BY_ROLE = {

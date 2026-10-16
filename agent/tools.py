@@ -21,9 +21,11 @@ from __future__ import annotations
 from typing import Any
 
 from agent import db
-from agent.auth import AuthContext, can_cancel_order, permission_denied
+from agent.auth import AuthContext, can_cancel_order, can_view_order, permission_denied
+from agent.config import load_facts
 from agent.helpcenter import load_policy_docs
 from agent.killswitch import kill_switch
+from seed.eligibility import effective_return_window_days, is_refund_eligible
 
 MAX_SEARCH_LIMIT = 25
 DEFAULT_ORDER_LIMIT = 20
@@ -52,8 +54,20 @@ def get_policy(ctx: AuthContext, policy_id: str) -> dict[str, Any]:
     Implementation notes:
         agent.helpcenter.load_policy_docs() returns every parsed doc.
     """
-    ### YOUR CODE HERE (HW1)
-    raise NotImplementedError("HW1: implement get_policy")
+    for doc in load_policy_docs():
+        if doc.policy_id == policy_id:
+            return {
+                "ok": True,
+                "policy_id": doc.policy_id,
+                "title": doc.title,
+                "audience": doc.audience,
+                "body": doc.body,
+            }
+    return {
+        "ok": False,
+        "error": "not_found",
+        "reason": f"Policy '{policy_id}' was not found.",
+    }
 
 
 def search_products(
@@ -95,8 +109,53 @@ def search_products(
         agent.db.list_products(conn, store_id) gives the candidate set.
         Use `with db.connection() as conn:` to close the database automatically.
     """
-    ### YOUR CODE HERE (HW1)
-    raise NotImplementedError("HW1: implement search_products")
+    if not query.strip():
+        return {
+            "ok": False,
+            "error": "invalid_argument",
+            "reason": "Query must not be empty.",
+        }
+    if max_price_usd is not None and not max_price_usd > 0:
+        return {
+            "ok": False,
+            "error": "invalid_argument",
+            "reason": "Maximum price must be strictly positive.",
+        }
+
+    tokens = query.split()
+    result_limit = max(1, min(limit, MAX_SEARCH_LIMIT))
+
+    with db.connection() as conn:
+        store_id = None
+        if store is not None:
+            matched_store = db.get_store_by_name(conn, store)
+            if matched_store is None:
+                return {
+                    "ok": False,
+                    "error": "not_found",
+                    "reason": f"Store '{store}' was not found.",
+                }
+            store_id = matched_store.id
+
+        matches = []
+        for product in db.list_products(conn, store_id):
+            searchable_text = f"{product.title} {product.description}".lower()
+            if all(token.lower() in searchable_text for token in tokens) and (
+                max_price_usd is None or product.price_usd <= max_price_usd
+            ):
+                matches.append(product)
+
+    matches.sort(key=lambda product: (product.price_usd, product.id))
+    products = [
+        {
+            "product_id": product.id,
+            "store_id": product.store_id,
+            "title": product.title,
+            "price_usd": product.price_usd,
+        }
+        for product in matches[:result_limit]
+    ]
+    return {"ok": True, "products": products, "count": len(products)}
 
 
 def list_my_orders(ctx: AuthContext) -> dict[str, Any]:
@@ -121,8 +180,25 @@ def list_my_orders(ctx: AuthContext) -> dict[str, Any]:
         scope is baked into which query you run. That is the point of the
         tool: the model cannot ask for someone else's orders through it.
     """
-    ### YOUR CODE HERE (HW1)
-    raise NotImplementedError("HW1: implement list_my_orders")
+    if ctx.role == "support":
+        return {
+            "ok": False,
+            "error": "invalid_argument",
+            "reason": "Support staff should look up specific orders with get_order.",
+        }
+
+    with db.connection() as conn:
+        if ctx.role == "shopper":
+            orders = db.list_orders_for_user(
+                conn, ctx.user_id, limit=DEFAULT_ORDER_LIMIT
+            )
+        else:
+            assert ctx.store_id is not None
+            orders = db.list_orders_for_store(
+                conn, ctx.store_id, limit=DEFAULT_ORDER_LIMIT
+            )
+    public_orders = [order.to_public_dict() for order in orders]
+    return {"ok": True, "orders": public_orders, "count": len(public_orders)}
 
 
 def cancel_order(ctx: AuthContext, order_id: int, reason: str) -> dict[str, Any]:
@@ -167,8 +243,32 @@ def cancel_order(ctx: AuthContext, order_id: int, reason: str) -> dict[str, Any]
     paused = kill_switch("cancel_order")
     if paused is not None:
         return {"ok": False, "error": "paused", "reason": paused}
-    ### YOUR CODE HERE (HW1)
-    raise NotImplementedError("HW1: implement cancel_order")
+    with db.connection() as conn:
+        order = db.get_order(conn, order_id)
+        if order is None:
+            return {
+                "ok": False,
+                "error": "not_found",
+                "reason": f"Order {order_id} was not found.",
+            }
+
+        if not can_cancel_order(ctx, order.user_id, order.store_id):
+            return permission_denied(
+                f"Role '{ctx.role}' cannot cancel order {order_id}."
+            )
+
+        if order.status != "placed":
+            return {
+                "ok": False,
+                "error": "not_eligible",
+                "reason": (
+                    f"Order {order_id} has status '{order.status}'; "
+                    "orders can be cancelled only before shipment."
+                ),
+            }
+
+        db.set_order_status(conn, order_id, "cancelled")
+    return {"ok": True, "order_id": order_id, "status": "cancelled"}
 
 
 def find_order(ctx: AuthContext, query: str) -> dict[str, Any]:
@@ -202,5 +302,161 @@ def find_order(ctx: AuthContext, query: str) -> dict[str, Any]:
         (at most 5), each as the dict returned by agent.db. If no orders
         match, return {"ok": True, "orders": []}.
     """
-    ### YOUR CODE HERE (HW1)
-    raise NotImplementedError("HW1: implement find_order")
+    if ctx.role == "shopper":
+        if ctx.user_id is None:
+            return {
+                "ok": False,
+                "error": "invalid_argument",
+                "reason": "A shopper user id is required to search orders.",
+            }
+        scope = {"user_id": ctx.user_id}
+    elif ctx.role == "merchant":
+        if ctx.store_id is None:
+            return {
+                "ok": False,
+                "error": "invalid_argument",
+                "reason": "A merchant store id is required to search orders.",
+            }
+        scope = {"store_id": ctx.store_id}
+    elif ctx.role == "support":
+        scope = {"all_orders": True}
+    else:
+        return {
+            "ok": False,
+            "error": "invalid_argument",
+            "reason": f"Unsupported role '{ctx.role}' cannot search orders.",
+        }
+
+    ignored_terms = {
+        "a", "an", "and", "bought", "buy", "can", "find", "for", "from",
+        "get", "got", "i", "is", "last", "locate", "looking", "me", "my",
+        "of", "order", "ordered", "please", "product", "purchased", "the",
+        "this", "up", "week", "where", "with", "yesterday",
+    }
+    query_text = query.casefold()
+    query_terms = [
+        term.strip(".,!?;:'\"()[]{}")
+        for term in query_text.split()
+    ]
+    query_terms = [term for term in query_terms if term and term not in ignored_terms]
+
+    with db.connection() as conn:
+        candidates = db.list_order_search_candidates(conn, **scope)
+        products_by_id = {product.id: product for product in db.list_products(conn)}
+
+    matches = []
+    for order in candidates:
+        product = products_by_id[order.product_id]
+        title = product.title.casefold()
+        if query_text and (
+            title in query_text
+            or query_text in title
+            or any(term in title for term in query_terms)
+        ):
+            matches.append(order)
+            if len(matches) == 5:
+                break
+
+    return {"ok": True, "orders": [order.to_public_dict() for order in matches]}
+
+
+def check_return_eligibility(
+    ctx: AuthContext, order_id: int
+) -> dict[str, Any]:
+    """Assess an order's return window without submitting a return or refund.
+
+    Args:
+        ctx: The caller's authenticated context.
+        order_id: The order to assess.
+
+    Returns:
+        On success, the authorized order status and delivery date, applicable
+        return-window length and policy id, a window assessment, and a
+        recommended next step. An open window is not return approval, a
+        submitted request, or a refund.
+        If the order does not exist, return a structured "not_found" error.
+        If the caller cannot view it, return "permission_denied".
+    """
+    with db.connection() as conn:
+        order = db.get_order(conn, order_id)
+        if order is None:
+            return {
+                "ok": False,
+                "error": "not_found",
+                "reason": f"Order {order_id} was not found.",
+            }
+        if not can_view_order(ctx, order.user_id, order.store_id):
+            return permission_denied(
+                f"Role '{ctx.role}' cannot view order {order_id}."
+            )
+
+        store = db.get_store(conn, order.store_id)
+        if store is None:
+            raise RuntimeError(
+                f"Order {order_id} references missing store {order.store_id}."
+            )
+
+        facts = load_facts()
+        return_window_days = effective_return_window_days(
+            facts["return_window_days"], store.return_window_days_override
+        )
+        as_of = db.world_asof(conn)
+        refund_eligible = is_refund_eligible(
+            status=order.status,
+            delivered_at=order.delivered_at,
+            as_of=as_of,
+            return_window_days=return_window_days,
+        )
+
+        if order.status == "shipped" and order.delivered_at is None:
+            assessment = "pending_delivery"
+            return_window_open = None
+            next_step = (
+                "Wait until delivery, then check the return window. This "
+                "assessment does not approve or submit a return or issue a refund."
+            )
+        elif order.status == "delivered" and refund_eligible:
+            assessment = "return_window_open"
+            return_window_open = True
+            next_step = (
+                "If you want to proceed, request a return. This assessment "
+                "does not approve or submit a return or issue a refund."
+            )
+        elif (
+            order.status == "delivered"
+            and order.delivered_at is not None
+            and order.delivered_at <= as_of
+        ):
+            assessment = "return_window_expired"
+            return_window_open = False
+            next_step = (
+                "The applicable return window has passed. Contact human "
+                "support if you need help; this assessment does not submit "
+                "a return or issue a refund."
+            )
+        else:
+            assessment = "not_currently_eligible"
+            return_window_open = None
+            next_step = (
+                "Contact human support to review the order status and options. "
+                "This assessment does not approve or submit a return or issue a refund."
+            )
+
+        policy_id = (
+            f"store-{store.slug}-policy"
+            if store.return_window_days_override is not None
+            else "cw-returns"
+        )
+        return {
+            "ok": True,
+            "order_id": order.id,
+            "status": order.status,
+            "delivered_at": (
+                order.delivered_at.isoformat() if order.delivered_at else None
+            ),
+            "return_window_days": return_window_days,
+            "policy_id": policy_id,
+            "assessment": assessment,
+            "return_window_open": return_window_open,
+            "next_step": next_step,
+        }
