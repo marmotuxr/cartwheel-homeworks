@@ -1,0 +1,131 @@
+{
+  "experiment": "Homework 1 product verification prompt comparison",
+  "observed_at": "2026-10-16",
+  "request": "I ordered the wrong size jacket. I think it's order #4127. Can you check whether I can cancel it? If not, what are my return options?",
+  "identity": {
+    "role": "shopper",
+    "user_id": 1
+  },
+  "model": "gpt-4o-mini",
+  "model_settings": "ModelSettings(temperature=None, top_p=None, frequency_penalty=None, presence_penalty=None, tool_choice=None, parallel_tool_calls=None, truncation=None, max_tokens=None, reasoning=None, verbosity=None, metadata=None, store=None, prompt_cache_retention=None, include_usage=True, response_include=None, top_logprobs=None, extra_query=None, extra_body=None, extra_headers=None, extra_args=None, retry=None, context_management=None)",
+  "execution": {
+    "fresh_run_per_variant": true,
+    "run_config_tracing_disabled": true,
+    "write_tools_enabled": false,
+    "write_tools_excluded": [
+      "issue_refund",
+      "cancel_order",
+      "escalate_to_human"
+    ],
+    "database_regenerated_or_modified": false
+  },
+  "order_state_observed": {
+    "order_id": 4127,
+    "status": "delivered",
+    "product_title": "Heavy-Duty Vase",
+    "store_name": "Blue Heron Ceramics",
+    "delivered_at": "2026-06-19"
+  },
+  "revised_instruction": "Before providing order-specific return, cancellation, exchange, or refund guidance, compare the customer's product description against the verified product information returned by the order tool. If they conflict, explain the discrepancy and ask the customer to confirm the intended order before proceeding. Never treat a customer's product description as verified order data.",
+  "variants": [
+    {
+      "name": "baseline_original_prompt",
+      "prompt_version": "d108f6949e5e",
+      "prompt_construction": "The pre-experiment system prompt with the product-verification instruction removed; all other prompt text unchanged.",
+      "tool_calls": [
+        {
+          "name": "get_order",
+          "arguments": {
+            "order_id": 4127
+          },
+          "result": {
+            "ok": true,
+            "order": {
+              "order_id": 4127,
+              "store_id": 1,
+              "product_id": 1,
+              "quantity": 1,
+              "total_usd": 84.0,
+              "status": "delivered",
+              "ordered_at": "2026-06-14",
+              "shipped_at": "2026-06-16",
+              "delivered_at": "2026-06-19",
+              "refund_eligible": true,
+              "store_name": "Blue Heron Ceramics",
+              "product_title": "Heavy-Duty Vase"
+            }
+          }
+        },
+        {
+          "name": "search_help_center",
+          "arguments": {
+            "query": "return policy"
+          },
+          "result": {
+            "ok": true,
+            "results": [
+              {
+                "policy_id": "cw-cancellations",
+                "title": "Cartwheel order cancellation policy",
+                "snippet": "# Cartwheel order cancellation policy\n\nAn order can be cancelled at no cost any time before the store ships it. Once an order has shipped it can no longer be cancelled; the buyer should instead wait for delivery and request a return under the Cartwheel return policy.",
+                "score": 2.075
+              },
+              {
+                "policy_id": "cw-returns",
+                "title": "Cartwheel return policy",
+                "snippet": "# Cartwheel return policy\n\nItems bought on Cartwheel can be returned within 30 days of delivery. The window counts from the delivery date, not the purchase date. Items must be in the condition described by the store's listing. Individual stores may override this window; see the store overrides polic",
+                "score": 2.047
+              },
+              {
+                "policy_id": "store-cascade-audio-policy",
+                "title": "Cascade Audio store policy",
+                "snippet": "# Cascade Audio store policy\n\nCascade Audio follows the Cartwheel platform return window of 30 days from delivery. Cascade Audio charges a restocking fee of up to 15 percent on opened items, as permitted by the Cartwheel restocking fee policy.",
+                "score": 1.782
+              }
+            ]
+          }
+        }
+      ],
+      "response": "According to the Cartwheel return policy (policy ID: **cw-returns**), you can return items bought on Cartwheel within 30 days of delivery. Since your item was delivered on June 19, you have until July 19 for returns. \n\nMake sure the item is in the condition required by the store's listing. If you need further assistance with the return process or have questions about it, feel free to ask!",
+      "observed_outcome": "The response gave return guidance and did not mention that the verified order product was a Heavy-Duty Vase rather than a jacket."
+    },
+    {
+      "name": "revised_product_verification_prompt",
+      "prompt_version": "34d69a1dcbba",
+      "prompt_construction": "The same baseline prompt with only the revised_instruction inserted.",
+      "tool_calls": [
+        {
+          "name": "get_order",
+          "arguments": {
+            "order_id": 4127
+          },
+          "result": {
+            "ok": true,
+            "order": {
+              "order_id": 4127,
+              "store_id": 1,
+              "product_id": 1,
+              "quantity": 1,
+              "total_usd": 84.0,
+              "status": "delivered",
+              "ordered_at": "2026-06-14",
+              "shipped_at": "2026-06-16",
+              "delivered_at": "2026-06-19",
+              "refund_eligible": true,
+              "store_name": "Blue Heron Ceramics",
+              "product_title": "Heavy-Duty Vase"
+            }
+          }
+        }
+      ],
+      "response": "It looks like order #4127 is for a \"Heavy-Duty Vase,\" not a jacket. Can you please confirm if this is the order you intended to discuss? If it is indeed the wrong item, I can check your return options for it.",
+      "observed_outcome": "The response explicitly identified the product mismatch and asked the customer to confirm before proceeding with return guidance."
+    }
+  ],
+  "conclusion": "In these two observed runs, the revised prompt changed the response as hypothesized: it surfaced the vase/jacket mismatch and requested confirmation. This is evidence for this single request and model run, not a guarantee that the instruction will work consistently across prompts, runs, or models.",
+  "limitations": [
+    "One run per prompt variant; model responses may vary between runs.",
+    "Write-capable tools were excluded to ensure the experiment could not cancel, refund, or open a ticket.",
+    "The comparison used the current local database state and did not regenerate or modify it."
+  ]
+}
