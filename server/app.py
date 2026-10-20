@@ -21,7 +21,9 @@ Run with:
 
 from __future__ import annotations
 
+import asyncio
 import base64
+import logging
 import binascii
 import hashlib
 import hmac
@@ -34,6 +36,7 @@ from typing import Any, AsyncIterator
 
 from agents import Runner, SQLiteSession
 from fastapi import FastAPI, Header, HTTPException
+from fastapi.responses import FileResponse
 from opentelemetry import trace
 from pydantic import BaseModel
 
@@ -52,8 +55,14 @@ _tracer = trace.get_tracer("cartwheel.server")
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     load_env()
-    setup_tracing()  # no-op with a warning if LANGFUSE_PUBLIC_KEY is unset
-    yield
+    tracing_enabled = setup_tracing()  # warns and returns False when unconfigured
+    try:
+        yield
+    finally:
+        if tracing_enabled:
+            from langfuse import get_client
+
+            await asyncio.to_thread(get_client().flush)
 
 
 app = FastAPI(title="Cartwheel support agent", lifespan=lifespan)
@@ -123,8 +132,23 @@ def create_session(body: SessionCreate) -> dict[str, Any]:
     session id and a signed token. The token payload must contain session_id,
     user_id, role, store_id, and issued_at.
     """
-    ### YOUR CODE HERE (HW2)
-    raise NotImplementedError("HW2: implement POST /sessions")
+    if body.role not in ROLES:
+        raise HTTPException(status_code=400, detail="unknown role")
+    with db.connection() as conn:
+        user = db.get_user(conn, body.user_id)
+    if user is None:
+        raise HTTPException(status_code=404, detail="unknown user")
+    if body.role != user.role:
+        raise HTTPException(status_code=403, detail="role does not match this user")
+    ctx = AuthContext(user_id=user.id, role=user.role, store_id=user.store_id)
+    session_id = str(uuid.uuid4())
+    session = SQLiteSession(session_id, str(SESSIONS_DB))
+    _SESSIONS[session_id] = (ctx, session)
+    token = create_token({
+        "session_id": session_id, "user_id": ctx.user_id, "role": ctx.role,
+        "store_id": ctx.store_id, "issued_at": int(time.time()),
+    })
+    return {"session_id": session_id, "token": token}
 
 
 def _authorize(session_id: str, authorization: str | None) -> AuthContext:
@@ -158,8 +182,46 @@ async def post_message(
     gen_ai.output.messages on the root span as JSON arrays of OTel GenAI
     messages with role and parts fields.
     """
-    ### YOUR CODE HERE (HW2)
-    raise NotImplementedError("HW2: implement the traced message endpoint")
+    ctx = _authorize(session_id, authorization)
+    session = _SESSIONS[session_id][1]
+    version = prompt_version()
+    capture_content = os.environ.get("TRACELOOP_TRACE_CONTENT", "false").lower() == "true"
+    with _tracer.start_as_current_span("cartwheel.session_message") as span:
+        span.set_attribute("cartwheel.session_id", session_id)
+        span.set_attribute("cartwheel.user_role", ctx.role)
+        span.set_attribute("cartwheel.user_id", str(ctx.user_id))
+        span.set_attribute("cartwheel.prompt_version", version)
+        span.set_attribute("langfuse.session.id", session_id)
+        span.set_attribute("user.id", str(ctx.user_id))
+        if body.scenario_id:
+            span.set_attribute("cartwheel.scenario_id", body.scenario_id)
+        if capture_content:
+            span.set_attribute("gen_ai.input.messages", json.dumps([
+                {"role": "user", "parts": [{"type": "text", "content": body.message}]}
+            ]))
+        agent = build_agent(ctx, model=body.model)
+        result = await Runner.run(
+            agent, body.message, context=ctx, session=session, max_turns=MAX_TURNS
+        )
+        reply = str(result.final_output)
+        if capture_content:
+            span.set_attribute("gen_ai.output.messages", json.dumps([
+                {"role": "assistant", "parts": [{"type": "text", "content": reply}]}
+            ]))
+        span_context = span.get_span_context()
+        trace_id = format(span_context.trace_id, "032x") if span_context.is_valid else None
+    trace_url = None
+    if trace_id and os.environ.get("LANGFUSE_PUBLIC_KEY"):
+        # A missing trace link must not discard a successful assistant reply.
+        try:
+            from langfuse import get_client
+            trace_url = await asyncio.to_thread(get_client().get_trace_url, trace_id=trace_id)
+        except Exception:
+            logging.getLogger(__name__).warning("Could not resolve the Langfuse trace link")
+    return {
+        "session_id": session_id, "reply": reply, "prompt_version": version,
+        "trace_id": trace_id, "trace_url": trace_url,
+    }
 
 
 @app.get("/health")
@@ -169,3 +231,9 @@ def health() -> dict[str, Any]:
         "db_exists": db_path().exists(),
         "active_sessions": len(_SESSIONS),
     }
+
+
+@app.get("/", include_in_schema=False)
+def chat_page() -> FileResponse:
+    """Local browser chat using the same authenticated homework endpoints."""
+    return FileResponse(REPO_ROOT / "server" / "ui" / "index.html")
