@@ -19,3 +19,9 @@ __pycache__/
 .venv/
 .pytest_cache/
 scenarios/demo_pilot_gt.json
+
+# Private imported evidence and local runtime files
+archive/
+.sessions.db-*
+work/
+outputs/
