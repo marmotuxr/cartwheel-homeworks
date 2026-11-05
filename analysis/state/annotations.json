@@ -1,1 +1,2830 @@
-{"annotations": []}
+{
+  "annotations": [
+    {
+      "id": "ann-support-0088",
+      "kind": "open_code",
+      "trace_id": "0211a79fb4930ba39e1ea9a628cb2780",
+      "scenario_id": "support-0088",
+      "session_id": "558c17f0-1661-486b-8e28-f51258334969",
+      "trace_ids": [
+        "0211a79fb4930ba39e1ea9a628cb2780",
+        "cb19ed355f4105416d9f2c5578b51010"
+      ],
+      "note": "The agent said it would make sure the refund reason “aligns with our policies,” but it never looked up the refund policy (only find_order), so the policy claim is unsupported and uncited (RESP-1). Message 2: The customer asked if the $100 refund can be processed, a question, and the agent issued the refund without asking them to confirm.",
+      "no_failure": false,
+      "tags": [
+        "claims_policy_without_checking",
+        "acts_without_confirmation"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0088-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "I will ensure the reason for the refund aligns with our policies.",
+          "note": "Based on this response, you were supposed to look at the policy, but I don't see any policy tool called \"Lookup\" in the trace.",
+          "ts": "2026-10-31T14:40:42.660Z"
+        },
+        {
+          "id": "ann-support-0088-h1",
+          "turn": 0,
+          "role": "agent",
+          "quote": "Please clarify the reason for the partial refund,",
+          "note": "We were clearly looking for a clarifying reason for the partial refund, because even when the user said it wasn't as expected, my guess is that we need a better answer, and the user never gave a better answer.",
+          "ts": "2026-10-31T14:41:15.934Z"
+        },
+        {
+          "id": "ann-support-0088-h2",
+          "turn": 1,
+          "role": "agent",
+          "quote": "The $100 partial refund for your Portable Utility Knife has been successfully processed",
+          "note": "The whole point was that in the first it contradicts itself. It says it needed a clarification of the reason, and then it said it needed to look at the policy. It didn't look at the policy, didn't actually get a better reason, but it processed the refund, so it did the wrong thing.",
+          "ts": "2026-10-31T14:41:50.212Z"
+        }
+      ],
+      "author": "human",
+      "batch": null,
+      "ts": "2026-10-31T14:40:42.660Z",
+      "saved_ts": "2026-10-31T14:45:47.915Z",
+      "history": []
+    },
+    {
+      "id": "ann-support-0002",
+      "kind": "open_code",
+      "trace_id": "e7e37c104d04bf9f782464f21c9d97dd",
+      "scenario_id": "support-0002",
+      "session_id": "82c09e74-fed5-4171-911d-4ee035447463",
+      "trace_ids": [
+        "e7e37c104d04bf9f782464f21c9d97dd",
+        "6b8623219d1d6cc40149b73c0fae3f39"
+      ],
+      "note": "Message 1 is spot on. The agent called list_my_orders, found order 5333 (shipped June 29, not delivered), and reported exactly that. For message two, I guess I should have looked up where to find that tracking order. Then it didn't look at the help center, it told them to look at the email rather than being grounded in what the help center or FAQs would have said. It's not an awful answer, but I can't verify that it's true.",
+      "no_failure": false,
+      "tags": [
+        "claims_policy_without_checking"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-10-31T17:50:50.443Z",
+      "saved_ts": "2026-10-31T17:51:44.715Z",
+      "history": []
+    },
+    {
+      "id": "ann-support-0006",
+      "kind": "open_code",
+      "trace_id": "dd530c46b2b117841fe25bbad9b2d9f4",
+      "scenario_id": "support-0006",
+      "session_id": "68f05423-4f0c-4d32-8302-9957daeb7bd8",
+      "trace_ids": [
+        "dd530c46b2b117841fe25bbad9b2d9f4"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-10-31T17:54:03.537Z",
+      "saved_ts": "2026-10-31T17:54:05.965Z",
+      "history": [],
+      "repairs": [
+        {
+          "ts": "2026-10-31",
+          "what": "UI bug re-saved 'no failure observed' text as a failure note; restored no_failure=true"
+        }
+      ]
+    },
+    {
+      "id": "ann-support-0014",
+      "kind": "open_code",
+      "trace_id": "455481f1f3da81a1e1a47c5bd911880e",
+      "scenario_id": "support-0014",
+      "session_id": "964efa18-533f-4534-8c8d-e18c33f9736a",
+      "trace_ids": [
+        "455481f1f3da81a1e1a47c5bd911880e"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-10-31T17:55:33.175Z",
+      "saved_ts": "2026-10-31T17:55:33.990Z",
+      "history": [],
+      "repairs": [
+        {
+          "ts": "2026-10-31",
+          "what": "UI bug re-saved 'no failure observed' as a failure note; restored no_failure=true"
+        }
+      ]
+    },
+    {
+      "id": "ann-support-0023",
+      "kind": "open_code",
+      "trace_id": "c6e835ea8fb35d5f3e38f486cae32950",
+      "scenario_id": "support-0023",
+      "session_id": "45077b0f-e3b9-40ab-8b12-b0d44708b2bf",
+      "trace_ids": [
+        "c6e835ea8fb35d5f3e38f486cae32950"
+      ],
+      "note": "Message 1 (agent): The agent took liberty to find what is the latest order. It can give up to 20, so maybe I should have said that this is eight out of 20. Well, the table clearly has other statuses too, and it was missing two other statuses, like \"delivered\" status or \"canceled and shipped.\" It's missing key information that the user might want.",
+      "no_failure": false,
+      "tags": [
+        "hides_partial_list"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0023-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "latest orders",
+          "note": "The agent took liberty to find what is the latest order. It can give up to 20, so maybe I should have said that this is eight out of 20.",
+          "ts": "2026-10-31T18:00:11.647Z"
+        },
+        {
+          "id": "ann-support-0023-h1",
+          "turn": 0,
+          "role": "agent",
+          "quote": "Order ID:** 1935\n   - **Status:** Placed\n   - **Total:** $418.00\n   - **Quantity:** 2\n   - **Ordered At:** July 1, 2026\n   - **Refund Eligible:** No",
+          "note": "Well, the table clearly has other statuses too, and it was missing two other statuses, like \"delivered\" status or \"canceled and shipped.\"   It's missing key information that the user might want.",
+          "ts": "2026-10-31T18:01:14.807Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-10-31T18:00:11.647Z",
+      "saved_ts": "2026-10-31T18:03:26.103Z",
+      "history": [
+        {
+          "note": "Showed 8 of 20 orders without saying it was a subset, so the merchant could think these are all their recent orders (answer key: “make any displayed subset clear”). Closing line also says statuses are only placed/delivered, but the list includes shipped and cancelled.",
+          "no_failure": false,
+          "tags": [],
+          "ts": "2026-10-31T18:01:36.149Z"
+        },
+        {
+          "note": "Message 1 (agent): The agent took liberty to find what is the latest order. It can give up to 20, so maybe I should have said that this is eight out of 20.",
+          "no_failure": false,
+          "tags": [
+            "incomplete_response"
+          ],
+          "ts": "2026-10-31T18:03:11.644Z"
+        }
+      ],
+      "updated_ts": "2026-11-03T03:39:06.294Z"
+    },
+    {
+      "id": "ann-support-0027",
+      "kind": "open_code",
+      "trace_id": "475250c2cb54317ac6ac457e51283a25",
+      "scenario_id": "support-0027",
+      "session_id": "7236ac5e-97ce-4b74-8b15-12cbd0af3076",
+      "trace_ids": [
+        "475250c2cb54317ac6ac457e51283a25"
+      ],
+      "note": "Showed 10 of 20 orders as “the list of recent orders” without saying it’s a subset, same as 0023. Also inconsistent fields: refund eligibility missing on shipped orders.",
+      "no_failure": false,
+      "tags": [
+        "hides_partial_list"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0027-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "rder ID**: 6031\n   - **Status**: Shipped\n   - **Ordered At**: 2026-06-27\n   - **Shipped At**: 2026-06-30",
+          "note": "Missing fields that were in the table, so should have clarified with the user what fields they want to see for the order status. I don't know why it's showing refund eligibility for some but not others, so, inconsistent summary of orders.",
+          "ts": "2026-10-31T23:09:08.672Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-10-31T23:09:08.672Z",
+      "saved_ts": "2026-10-31T23:13:01.623Z",
+      "history": [],
+      "updated_ts": "2026-11-03T03:39:06.294Z"
+    },
+    {
+      "id": "ann-support-0043",
+      "kind": "open_code",
+      "trace_id": "b87d328fa8612aac48cc1db20cb35f49",
+      "scenario_id": "support-0043",
+      "session_id": "55b75ff7-3ebd-4699-9409-49bd3b17a8dd",
+      "trace_ids": [
+        "b87d328fa8612aac48cc1db20cb35f49"
+      ],
+      "note": "Customer described the store/product mismatch, and get_order confirmed it (product not in store 1), but the agent called it a “retrieval issue” and asked for the order ID instead of flagging the bad record and escalating.",
+      "no_failure": false,
+      "tags": [
+        "doesnt_escalate_when_required"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-10-31T23:25:31.526Z",
+      "saved_ts": "2026-10-31T23:25:45.609Z",
+      "history": [],
+      "updated_ts": "2026-11-03T03:39:06.294Z"
+    },
+    {
+      "id": "ann-support-0052",
+      "kind": "open_code",
+      "trace_id": "8593d72ff7d853eceba4e9954b51c32a",
+      "scenario_id": "support-0052",
+      "session_id": "25dbbedc-3266-4f04-acfc-be6488d0ab54",
+      "trace_ids": [
+        "8593d72ff7d853eceba4e9954b51c32a"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-10-31T23:29:55.369Z",
+      "saved_ts": "2026-10-31T23:29:55.369Z",
+      "history": []
+    },
+    {
+      "id": "ann-support-0055",
+      "kind": "open_code",
+      "trace_id": "7fa760401cd35d2a6470726281c03b19",
+      "scenario_id": "support-0055",
+      "session_id": "3643fec6-0b07-4c9e-a4a2-f027d0bf8718",
+      "trace_ids": [
+        "7fa760401cd35d2a6470726281c03b19"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-10-31T23:31:49.822Z",
+      "saved_ts": "2026-10-31T23:31:49.822Z",
+      "history": []
+    },
+    {
+      "id": "ann-support-0059",
+      "kind": "open_code",
+      "trace_id": "382102be49b74592721bcfb92353cda4",
+      "scenario_id": "support-0059",
+      "session_id": "46c9b943-69e3-423b-b709-061f02f04fa0",
+      "trace_ids": [
+        "382102be49b74592721bcfb92353cda4"
+      ],
+      "note": "Really bad awkward language. It could have initiated the refund, but it didn't. The user gave a refund, but didn't accept it.",
+      "no_failure": false,
+      "tags": [
+        "stalls_instead_of_acting"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0059-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "as the refund eligibility status is true.",
+          "note": "awkward language",
+          "ts": "2026-10-31T23:33:06.363Z"
+        },
+        {
+          "id": "ann-support-0059-h1",
+          "turn": 0,
+          "role": "agent",
+          "quote": "Now, I can initiate the refund process.",
+          "note": "weird language",
+          "ts": "2026-10-31T23:33:48.299Z"
+        },
+        {
+          "id": "ann-support-0059-h2",
+          "turn": 0,
+          "role": "agent",
+          "quote": "confirm the reason for the refund",
+          "note": "it did give a reaosn",
+          "ts": "2026-10-31T23:34:17.339Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-10-31T23:33:06.363Z",
+      "saved_ts": "2026-10-31T23:44:38.912Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0060",
+      "kind": "open_code",
+      "trace_id": "5668c3619b97c81222760de9a907cb21",
+      "scenario_id": "support-0060",
+      "session_id": "7c5d4501-2211-4a7c-b9f2-7f5ec0680ef7",
+      "trace_ids": [
+        "5668c3619b97c81222760de9a907cb21"
+      ],
+      "note": "Clear refund request, correct eligible order (#753, $57), but asked “please confirm” instead of issuing it, without saying the order or amount.",
+      "no_failure": false,
+      "tags": [
+        "stalls_instead_of_acting"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": null,
+      "ts": "2026-10-31T23:50:37.461Z",
+      "saved_ts": "2026-10-31T23:54:39.088Z",
+      "history": [
+        {
+          "note": "answer is redundant with the users request but it it didnt look up the policy.",
+          "no_failure": false,
+          "tags": [],
+          "ts": "2026-10-31T23:50:37.461Z"
+        },
+        {
+          "note": "answer is redundant with the users request but it it didnt look up the policy. it also had the ability to auto approve bc it was under $100 but did not",
+          "no_failure": false,
+          "tags": [],
+          "ts": "2026-10-31T23:51:56.571Z"
+        }
+      ],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0063",
+      "kind": "open_code",
+      "trace_id": "d9d9cd4add48f0778c703c946a7a1215",
+      "scenario_id": "support-0063",
+      "session_id": "d29c3f84-c263-4255-a7a0-df84b706e749",
+      "trace_ids": [
+        "d9d9cd4add48f0778c703c946a7a1215"
+      ],
+      "note": "Clear request for a full refund on a $203.25 order (over $100). Agent said it’s eligible and asked “please confirm” instead of calling issue_refund, which would queue it for human approval",
+      "no_failure": false,
+      "tags": [
+        "stalls_instead_of_acting"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-01T00:02:26.101Z",
+      "saved_ts": "2026-11-01T00:03:12.235Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0090",
+      "kind": "open_code",
+      "trace_id": "5ac79e5b210377fc71665ed416e206c7",
+      "scenario_id": "support-0090",
+      "session_id": "342231aa-aaa2-40ee-92e3-f0926ff51b8c",
+      "trace_ids": [
+        "5ac79e5b210377fc71665ed416e206c7"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-01T00:07:21.561Z",
+      "saved_ts": "2026-11-01T00:07:21.561Z",
+      "history": []
+    },
+    {
+      "id": "ann-support-0129",
+      "kind": "open_code",
+      "trace_id": "a8a0c638ffd0f079be4ad03863a8fcf4",
+      "scenario_id": "support-0129",
+      "session_id": "e56eaff5-afbb-4f6e-a500-7067464411e2",
+      "trace_ids": [
+        "a8a0c638ffd0f079be4ad03863a8fcf4"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-01T00:08:36.732Z",
+      "saved_ts": "2026-11-01T00:08:36.732Z",
+      "history": []
+    },
+    {
+      "id": "ann-support-0130",
+      "kind": "open_code",
+      "trace_id": "bd60664cbc12569888c53cc968c1ad2d",
+      "scenario_id": "support-0130",
+      "session_id": "bef8d3d4-b978-41be-b7fc-2dbcff3a643a",
+      "trace_ids": [
+        "bd60664cbc12569888c53cc968c1ad2d"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-01T00:12:23.271Z",
+      "saved_ts": "2026-11-01T00:12:23.271Z",
+      "history": []
+    },
+    {
+      "id": "ann-support-0140",
+      "kind": "open_code",
+      "trace_id": "1f182b40565b37098ce67e2507588631",
+      "scenario_id": "support-0140",
+      "session_id": "84734fbf-b05a-492b-9ed7-f7edd0597de4",
+      "trace_ids": [
+        "1f182b40565b37098ce67e2507588631",
+        "99d344faac0d3cadcbd19a448e8160b6"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-01T00:13:52.489Z",
+      "saved_ts": "2026-11-01T00:13:52.489Z",
+      "history": []
+    },
+    {
+      "id": "ann-support-0148",
+      "kind": "open_code",
+      "trace_id": "8bce3401443dd6fc83a431f48312a427",
+      "scenario_id": "support-0148",
+      "session_id": "8c5255a0-390c-4bd5-aece-ab771c8acba8",
+      "trace_ids": [
+        "8bce3401443dd6fc83a431f48312a427"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-01T00:14:27.545Z",
+      "saved_ts": "2026-11-01T00:14:27.545Z",
+      "history": []
+    },
+    {
+      "id": "ann-support-0149",
+      "kind": "open_code",
+      "trace_id": "a03d683c8de9b5139242e83505b439b3",
+      "scenario_id": "support-0149",
+      "session_id": "be8b3599-aee8-415f-825b-7199549c7924",
+      "trace_ids": [
+        "a03d683c8de9b5139242e83505b439b3"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0149-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "When you escalate a case, I will summarize the issue and its context, and a human support agent will follow up with you.",
+          "note": "Too wordy for a user who asked for a straightforward explanation (RESP-5). Should be 3 bullets of escalation cases + \"humans reply within 24 hours\".",
+          "tags": [
+            "unnatural_or_verbose_language"
+          ],
+          "ts": "2026-11-01T00:17:48.524Z"
+        },
+        {
+          "id": "ann-support-0149-h1",
+          "turn": 0,
+          "role": "user",
+          "quote": "uman support person i",
+          "note": "No policy lookup.",
+          "ts": "2026-11-01T00:18:19.348Z"
+        },
+        {
+          "id": "ann-support-0149-h2",
+          "turn": 0,
+          "role": "agent",
+          "quote": "Requests for refunds that exceed the auto-approval threshold.\n2. Complex issues or cases requiring specialized assistance.\n3. Any concerns that require a more personal touch or judgment.",
+          "note": "Too verbose.",
+          "ts": "2026-11-01T00:18:38.563Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-01T00:17:48.524Z",
+      "history": [],
+      "note": "No tool calls; never retrieved the escalation policy. Said humans reply \"within a few hours\" (policy: 24h) and invented a \"personal touch\" condition. No citation (RESP-1).",
+      "no_failure": false,
+      "tags": [
+        "claims_policy_without_checking"
+      ],
+      "saved_ts": "2026-11-01T00:19:10.930Z",
+      "updated_ts": "2026-11-03T04:56:56.127Z",
+      "via": "dictated to Claude"
+    },
+    {
+      "id": "ann-support-0157",
+      "kind": "open_code",
+      "trace_id": "ef339be44498e6106f9ba4f1c55cdf63",
+      "scenario_id": "support-0157",
+      "session_id": "d0987bb6-354f-4ffd-9e66-2c74cb092d13",
+      "trace_ids": [
+        "ef339be44498e6106f9ba4f1c55cdf63"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [
+        {
+          "id": "ann-support-0157-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "ssue is above your authority, such as large refunds or complex inquiries that require more detailed assistance.",
+          "note": "this is not how people talk and it's way too verbose it should be written in plain language",
+          "ts": "2026-11-01T02:19:02.764Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-01T02:18:22.689Z",
+      "saved_ts": "2026-11-01T02:20:10.427Z",
+      "history": [],
+      "updated_ts": "2026-11-01T02:20:10.430Z"
+    },
+    {
+      "id": "ann-support-0158",
+      "kind": "open_code",
+      "trace_id": "a24385e6c6b24df101eb21935e406b53",
+      "scenario_id": "support-0158",
+      "session_id": "6c05dbed-ca1d-452e-8a9c-63b5176f4aad",
+      "trace_ids": [
+        "a24385e6c6b24df101eb21935e406b53"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-01T02:21:39.296Z",
+      "saved_ts": "2026-11-01T02:21:39.296Z",
+      "history": [],
+      "updated_ts": "2026-11-01T02:21:39.301Z"
+    },
+    {
+      "id": "ann-support-0161",
+      "kind": "open_code",
+      "trace_id": "d664f3a303da728fa3f9d641f472b8a4",
+      "scenario_id": "support-0161",
+      "session_id": "8cb9c8d0-e326-4638-a26d-ca79b643fd54",
+      "trace_ids": [
+        "d664f3a303da728fa3f9d641f472b8a4"
+      ],
+      "note": "it should have stated the discrepancy between the Juniper Home Goods versus cartwheel platform return window and the answer was not helpful and it puts the work back on the user to double check specific details without telling the user on which the specific terms to look for therefore fail",
+      "no_failure": false,
+      "tags": [
+        "omits_critical_detail"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0161-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "Juniper Home Goods has a return policy that aligns with the platform's general return window",
+          "note": "this is actually not true and the trace that says that the Juniper Home Goods except 14 days whereas cartwheel accepts 30 days as a default so the store window takes precedence for all Juniper Home Goods so it gave the wrong answer",
+          "ts": "2026-11-01T02:24:34.449Z"
+        },
+        {
+          "id": "ann-support-0161-h1",
+          "turn": 0,
+          "role": "agent",
+          "quote": "it's always good to double-check specific details for any unique terms.",
+          "note": "this is not very helpful it should tell the user exactly where to look for and for which term",
+          "ts": "2026-11-01T02:25:18.634Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-01T02:24:34.449Z",
+      "saved_ts": "2026-11-01T02:26:12.298Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0165",
+      "kind": "open_code",
+      "trace_id": "d2058d7faca954179838588428fad7cb",
+      "scenario_id": "support-0165",
+      "session_id": "2e7a039a-f802-4422-8dd1-c3d07d03f194",
+      "trace_ids": [
+        "d2058d7faca954179838588428fad7cb"
+      ],
+      "note": "well the answer is correct this is not natural language and it could have been structured and formatted better for the user it also did not need to State the policy ID this is necessarily just for like an internal Trace rather than using user-facing",
+      "no_failure": false,
+      "tags": [
+        "unnatural_or_verbose_language"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0165-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "(policy ID: cw-returns).",
+          "note": "this is unnecessary to show to the user but it's more of an internal tool call that it didn't need to show",
+          "ts": "2026-11-01T02:27:34.341Z"
+        },
+        {
+          "id": "ann-support-0165-h1",
+          "turn": 0,
+          "role": "agent",
+          "quote": "Juniper Home Goods orders, the 14-day window applies.",
+          "note": "two verbose you already said that the window is different I think this could have also been shown in bullet points",
+          "ts": "2026-11-01T02:27:50.838Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-01T02:27:34.341Z",
+      "saved_ts": "2026-11-01T02:28:54.995Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0170",
+      "kind": "open_code",
+      "trace_id": "fb21be67f55ab47458d79dd8383700f0",
+      "scenario_id": "support-0170",
+      "session_id": "9d874a8a-3131-4187-8ae5-6059c4b38290",
+      "trace_ids": [
+        "fb21be67f55ab47458d79dd8383700f0",
+        "c4b3fcd14cc9f22a2be7a5fb00289a97"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-03T03:22:05.356Z",
+      "saved_ts": "2026-11-03T03:22:06.933Z",
+      "history": [
+        {
+          "note": "the language is a bit awkward the the message back for the first one is sufficient but the second message is not helpful at all and asking the user to check their stores website or inventory and putting work back on the user and I'm not sure if the brand or something that they could have looked up aside from just a product name",
+          "no_failure": false,
+          "tags": [],
+          "ts": "2026-11-03T03:22:05.357Z"
+        }
+      ],
+      "updated_ts": "2026-11-03T03:22:06.942Z"
+    },
+    {
+      "id": "ann-support-0178",
+      "kind": "open_code",
+      "trace_id": "f7b7e44945b7687c53ec001369bdae85",
+      "scenario_id": "support-0178",
+      "session_id": "8ebc08e3-9eea-4686-865b-69405ddf63e7",
+      "trace_ids": [
+        "f7b7e44945b7687c53ec001369bdae85"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-03T03:22:29.000Z",
+      "saved_ts": "2026-11-03T03:22:45.117Z",
+      "history": [],
+      "updated_ts": "2026-11-03T03:22:45.122Z"
+    },
+    {
+      "id": "ann-support-0179",
+      "kind": "open_code",
+      "trace_id": "dd1258a3177f81307537f913bd7ef2d7",
+      "scenario_id": "support-0179",
+      "session_id": "22821bd1-4d9b-4512-b8cb-f4b5a32695b4",
+      "trace_ids": [
+        "dd1258a3177f81307537f913bd7ef2d7",
+        "a0184592ec860324fc12cb5b38a6bc1b",
+        "4a146427385d6e7a3322f93edbb57643"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-03T03:24:11.043Z",
+      "saved_ts": "2026-11-03T03:24:13.355Z",
+      "history": [],
+      "updated_ts": "2026-11-03T03:24:13.361Z"
+    },
+    {
+      "id": "ann-support-0188",
+      "kind": "open_code",
+      "trace_id": "8eb20df8cab32d1e36fd8813a3606040",
+      "scenario_id": "support-0188",
+      "session_id": "29c329a0-a949-4e00-9a3c-201e6396d1e5",
+      "trace_ids": [
+        "8eb20df8cab32d1e36fd8813a3606040"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-03T03:25:25.260Z",
+      "saved_ts": "2026-11-03T03:25:25.260Z",
+      "history": [],
+      "updated_ts": "2026-11-03T03:25:25.265Z"
+    },
+    {
+      "id": "ann-support-0211",
+      "kind": "open_code",
+      "trace_id": "bb6a6aa3a9c7cff0429a6a5603cc34d3",
+      "scenario_id": "support-0211",
+      "session_id": "20ace2f8-da96-4588-b60d-ffdb4cf934b9",
+      "trace_ids": [
+        "bb6a6aa3a9c7cff0429a6a5603cc34d3"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-03T03:27:58.066Z",
+      "saved_ts": "2026-11-03T03:28:00.430Z",
+      "history": [
+        {
+          "note": "they should explain to the user why it had to be escalated to a human because it for from a user experience standpoint like being told hey I escalated it to a human without citing the reason or the policy is poor experience",
+          "no_failure": false,
+          "tags": [],
+          "ts": "2026-11-03T03:27:58.066Z"
+        }
+      ],
+      "updated_ts": "2026-11-03T03:28:00.435Z"
+    },
+    {
+      "id": "ann-support-0212",
+      "kind": "open_code",
+      "trace_id": "a30e8302943eca21c56cb1ec54818e83",
+      "scenario_id": "support-0212",
+      "session_id": "9c2c0948-17ce-4550-a133-0a00db6a1c28",
+      "trace_ids": [
+        "a30e8302943eca21c56cb1ec54818e83"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": null,
+      "ts": "2026-11-03T03:28:48.568Z",
+      "saved_ts": "2026-11-03T03:28:48.568Z",
+      "history": [],
+      "updated_ts": "2026-11-03T03:28:48.576Z"
+    },
+    {
+      "id": "ann-support-0215",
+      "kind": "open_code",
+      "trace_id": "78e4c7372d4d65a1a9b6060732616c3f",
+      "scenario_id": "support-0215",
+      "session_id": "4e3d30ba-1030-456e-9387-d8d2e818fa40",
+      "trace_ids": [
+        "78e4c7372d4d65a1a9b6060732616c3f",
+        "37fdf998806b2fa30b8042fb397b6a81"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-03T03:30:16.266Z",
+      "saved_ts": "2026-11-03T03:30:16.266Z",
+      "history": [],
+      "updated_ts": "2026-11-03T03:30:16.275Z"
+    },
+    {
+      "id": "ann-support-0220",
+      "kind": "open_code",
+      "trace_id": "b8c904fb48d2140f20b61318b24b89ae",
+      "scenario_id": "support-0220",
+      "session_id": "e30e6367-efd0-4a1f-a828-16c23b2051e8",
+      "trace_ids": [
+        "b8c904fb48d2140f20b61318b24b89ae"
+      ],
+      "note": "the answer key says disputes always go to a human, it did not state why it cannot help the user without using any tool calls.",
+      "no_failure": false,
+      "tags": [
+        "doesnt_escalate_when_required"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0220-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "I can't assist with disputes or connect you with specific individuals",
+          "note": "say why and cite the policy, and also ZERO tool calls",
+          "ts": "2026-11-03T03:32:13.866Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-03T03:32:13.866Z",
+      "saved_ts": "2026-11-03T03:33:37.598Z",
+      "history": [],
+      "updated_ts": "2026-11-03T03:33:45.559Z"
+    },
+    {
+      "id": "ann-support-0225",
+      "kind": "open_code",
+      "trace_id": "eb7a4ef263bd1a14b057398655d82e66",
+      "scenario_id": "support-0225",
+      "session_id": "ee2eedbe-396f-4c10-87d4-9a05277dc09b",
+      "trace_ids": [
+        "eb7a4ef263bd1a14b057398655d82e66"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-03T03:34:29.248Z",
+      "saved_ts": "2026-11-03T03:34:29.248Z",
+      "history": [],
+      "updated_ts": "2026-11-03T03:34:29.253Z"
+    },
+    {
+      "id": "ann-support-0233",
+      "kind": "open_code",
+      "trace_id": "022cb8fd8a62b46c0b22880f05e01367",
+      "scenario_id": "support-0233",
+      "session_id": "293bf366-c460-4572-ad3f-162025eccf4c",
+      "trace_ids": [
+        "022cb8fd8a62b46c0b22880f05e01367"
+      ],
+      "note": "it refused the user's request without citing the policy and it did not escalate to a human when the answer key said so and it also didn't give a reason for not being able to assist it also did not ask for context to actually escalate it",
+      "no_failure": false,
+      "tags": [
+        "doesnt_escalate_when_required"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0233-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "I can’t assist",
+          "note": "directly contradicts the answer key it says route to a human via escalation",
+          "ts": "2026-11-03T03:35:23.436Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-03T03:35:23.436Z",
+      "saved_ts": "2026-11-03T03:36:23.260Z",
+      "history": [],
+      "updated_ts": "2026-11-03T03:36:37.617Z"
+    },
+    {
+      "id": "ann-support-0247",
+      "kind": "open_code",
+      "trace_id": "cfe1f89788c9506fc5eaa30cf33f0951",
+      "scenario_id": "support-0247",
+      "session_id": "4a0bc460-2a74-4a02-8614-7401b8cb4d4f",
+      "trace_ids": [
+        "cfe1f89788c9506fc5eaa30cf33f0951",
+        "b0dd68972d2d5c455477fb987a974a78"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b1",
+      "ts": "2026-11-03T03:37:02.413Z",
+      "saved_ts": "2026-11-03T03:37:02.413Z",
+      "history": [],
+      "updated_ts": "2026-11-03T03:37:02.420Z"
+    },
+    {
+      "id": "ann-support-0009",
+      "kind": "open_code",
+      "trace_id": "debad35761f405a21794121b615bc6e9",
+      "scenario_id": "support-0009",
+      "session_id": "7450460e-8a93-422a-ab37-8602f5a0e71d",
+      "trace_ids": [
+        "debad35761f405a21794121b615bc6e9"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T03:43:15.649Z",
+      "saved_ts": "2026-11-03T03:43:21.488Z",
+      "history": [],
+      "updated_ts": "2026-11-03T03:43:21.495Z"
+    },
+    {
+      "id": "ann-support-0028",
+      "kind": "open_code",
+      "trace_id": "36b573c5533574b08070febed1f2ebb1",
+      "scenario_id": "support-0028",
+      "session_id": "6df873e5-1acc-495b-ae53-0d2465ab64a6",
+      "trace_ids": [
+        "36b573c5533574b08070febed1f2ebb1"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T03:45:09.469Z",
+      "saved_ts": "2026-11-03T03:45:09.469Z",
+      "history": [],
+      "updated_ts": "2026-11-03T03:45:09.477Z"
+    },
+    {
+      "id": "ann-support-0029",
+      "kind": "open_code",
+      "trace_id": "00a9c18a3f601e0fe64e08bc39d1676d",
+      "scenario_id": "support-0029",
+      "session_id": "3d63b529-c24f-464c-a4fb-c29475c52973",
+      "trace_ids": [
+        "00a9c18a3f601e0fe64e08bc39d1676d",
+        "1a3606a15794f19c6f9c3cfcf28c05b4",
+        "c2545fd5693942f94f4b1e5fb8a1d78e"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T03:46:00.154Z",
+      "saved_ts": "2026-11-03T03:46:00.154Z",
+      "history": [],
+      "updated_ts": "2026-11-03T03:46:00.159Z"
+    },
+    {
+      "id": "ann-support-0034",
+      "kind": "open_code",
+      "trace_id": "432808437ac0a9a7ca1f465eefcadd4c",
+      "scenario_id": "support-0034",
+      "session_id": "666615ca-5177-4925-bf3d-271d10dc60c1",
+      "trace_ids": [
+        "432808437ac0a9a7ca1f465eefcadd4c",
+        "667f0f6998e8a4e17db3244df4478cdb",
+        "eff1015dee5fdfe0f486e8d702ab5424"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T03:46:34.192Z",
+      "saved_ts": "2026-11-03T03:46:34.192Z",
+      "history": [],
+      "updated_ts": "2026-11-03T03:46:34.199Z"
+    },
+    {
+      "id": "ann-support-0049",
+      "kind": "open_code",
+      "trace_id": "efc6f6e06539da59408eb57a341c5691",
+      "scenario_id": "support-0049",
+      "session_id": "a55bbaeb-8824-405d-a860-2e77c76ccd87",
+      "trace_ids": [
+        "efc6f6e06539da59408eb57a341c5691",
+        "59cd076d284b6abe2dd153f074d222aa"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T03:55:33.216Z",
+      "saved_ts": "2026-11-03T04:57:49.100Z",
+      "history": [
+        {
+          "note": "no failure observed",
+          "no_failure": true,
+          "tags": [],
+          "ts": "2026-11-03T03:55:33.216Z"
+        },
+        {
+          "note": "I think even though the answer wasn't helpful it's stuck to the rules and what it was supposed to do and it explained the limitation and asked for the right contextual information so that it could help",
+          "no_failure": false,
+          "tags": [],
+          "ts": "2026-11-03T03:56:05.144Z"
+        }
+      ],
+      "updated_ts": "2026-11-03T04:57:49.100Z",
+      "pass_comment": "I think even though the answer wasn't helpful it's stuck to the rules and what it was supposed to do and it explained the limitation and asked for the right contextual information so that it could help",
+      "via": "Eve confirmed pass to Claude"
+    },
+    {
+      "id": "ann-support-0062",
+      "kind": "open_code",
+      "trace_id": "a31d46fcba4126ef146c0bace5268909",
+      "scenario_id": "support-0062",
+      "session_id": "0d2c75ad-b3d5-420e-917b-b4a80b81d921",
+      "trace_ids": [
+        "a31d46fcba4126ef146c0bace5268909",
+        "b71802725989ca486471c0b88161b96e"
+      ],
+      "note": "okay so the price was $282 and it's over $100 so it should have been acknowledged that it cannot process the refund and it needs to escalate to a human based on the price and when the user ask for can you please process it immediately it should have given a very straight answer of wire can and cannot inside the policy",
+      "no_failure": false,
+      "tags": [
+        "stalls_instead_of_acting"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:00:27.921Z",
+      "saved_ts": "2026-11-03T04:00:54.351Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0077",
+      "kind": "open_code",
+      "trace_id": "b9508408f7e796e00c3cf27b2e9bb4bf",
+      "scenario_id": "support-0077",
+      "session_id": "0207eaec-bcd7-4fce-9dae-b41471dbc763",
+      "trace_ids": [
+        "b9508408f7e796e00c3cf27b2e9bb4bf"
+      ],
+      "note": "all right so it can clearly see that the 8002 it was ordered but it's missing the delivery date and because it's missing data it should have escalated it rather than give a false answer to start and then also giving a not so useful answer",
+      "no_failure": false,
+      "tags": [
+        "wrong_about_order_records",
+        "doesnt_escalate_when_required"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0077-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "l Set. If",
+          "note": "we're missing us so what.",
+          "ts": "2026-11-03T04:03:20.485Z"
+        },
+        {
+          "id": "ann-support-0077-h1",
+          "turn": 0,
+          "role": "agent",
+          "quote": "have not ordered t",
+          "note": "well we can clearly see that it was ordered but we're just missing data on the delivery date",
+          "ts": "2026-11-03T04:03:37.205Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:03:20.485Z",
+      "saved_ts": "2026-11-03T04:04:18.661Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0080",
+      "kind": "open_code",
+      "trace_id": "931ef49cfe8d67db82df45601ba871b2",
+      "scenario_id": "support-0080",
+      "session_id": "235267aa-b31e-4238-8ebc-fc7c147bfb9e",
+      "trace_ids": [
+        "931ef49cfe8d67db82df45601ba871b2",
+        "890d4d66dc08cc44080ce41f7316b786",
+        "15f09d268398aef9493782fc86041801"
+      ],
+      "note": "Order exists (#8002, Atlas Stationery) but agent said “couldn’t find” it and asked for more details, when the real issue was the missing delivery date; should have escalated. Later computed a “May 13” deadline from a different store’s order (#1943, Copperline).",
+      "no_failure": false,
+      "tags": [
+        "wrong_about_order_records",
+        "claims_policy_without_checking"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0080-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "I couldn’t find an order",
+          "note": "this is false it did find the order but what it could not find was actually the delivery day so this is a false claim",
+          "ts": "2026-11-03T04:05:31.198Z"
+        },
+        {
+          "id": "ann-support-0080-h1",
+          "turn": 0,
+          "role": "agent",
+          "quote": ". Could you please confirm the order details or check if it was purchased under a different name or account?",
+          "note": "asking for Unnecessary information based on false claim of not being able to find it because the tool called clearly shows that you were able to find the order",
+          "ts": "2026-11-03T04:05:56.686Z"
+        },
+        {
+          "id": "ann-support-0080-h2",
+          "turn": 1,
+          "role": "agent",
+          "quote": "Since I couldn't find the order details for the Classic Pencil Set",
+          "note": "okay it's putting the blame on the user when the clear there was clear damage in the data and it's like a data error",
+          "ts": "2026-11-03T04:06:19.272Z"
+        },
+        {
+          "id": "ann-support-0080-h3",
+          "turn": 2,
+          "role": "agent",
+          "quote": "The return window for your Classic",
+          "note": "the agent keeps contradicting itself without basis on any",
+          "ts": "2026-11-03T04:06:40.472Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:05:31.198Z",
+      "saved_ts": "2026-11-03T04:08:19.157Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0082",
+      "kind": "open_code",
+      "trace_id": "52ef4597278d79d46c953e36db0ae961",
+      "scenario_id": "support-0082",
+      "session_id": "d4db5e35-386e-4fd1-9658-06b90c8a4e51",
+      "trace_ids": [
+        "52ef4597278d79d46c953e36db0ae961"
+      ],
+      "note": "okay so while it is eligible for a return because it is technically within the 30-day window it is literally on day 30 so instead of saying casually I can help you with that it should say it should give the user a sense of urgency of it is eligible but today is actually the last day to return it therefore if you wanted to go over to go ahead with it do need to let me know today so that I can escalate it and get this going for you and because it's over $100 I can move it to the team for approval",
+      "no_failure": false,
+      "tags": [
+        "omits_critical_detail"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0082-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "and I can assist you with that",
+          "note": "somewhat true I mean it's over $100 so it should have said if you wanted to proceed with a return I mean be clear that it cannot issue it through the Asian but it can escalate it to a human",
+          "ts": "2026-11-03T04:09:32.764Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:09:32.764Z",
+      "saved_ts": "2026-11-03T04:12:48.280Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0083",
+      "kind": "open_code",
+      "trace_id": "46d5d85082d975238f159b81831dc619",
+      "scenario_id": "support-0083",
+      "session_id": "c189796b-4571-47b8-9841-8bd724a81e4d",
+      "trace_ids": [
+        "46d5d85082d975238f159b81831dc619",
+        "5379356f8a4b0bfa030adcc6923db73c",
+        "b004a8f3f0f0ed8731e5becd7e707bbf"
+      ],
+      "note": "Said “eligible” but didn’t mention today (July 1) is the last day of the 30-day window, same as 0082. Msg 2 attributes made-up conditions (“ideally unused”) to cw-refunds and omits the 15% restocking fee on opened items.",
+      "no_failure": false,
+      "tags": [
+        "omits_critical_detail",
+        "claims_policy_without_checking"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0083-h0",
+          "turn": 2,
+          "role": "agent",
+          "quote": "s, it's best to keep the original box, but it may not be strictly necessary.",
+          "note": "is this grounded?",
+          "ts": "2026-11-03T04:15:55.919Z"
+        },
+        {
+          "id": "ann-support-0083-h1",
+          "turn": 0,
+          "role": "agent",
+          "quote": "delivered on June 1, 2026,",
+          "note": "the delivery date should also be accompanied by refund is eligible until X date to actually be helpful",
+          "ts": "2026-11-03T04:16:58.811Z"
+        },
+        {
+          "id": "ann-support-0083-h2",
+          "turn": 1,
+          "role": "agent",
+          "quote": "within a certain time frame after delivery.",
+          "note": "way too vague you should give a date or a number of days",
+          "ts": "2026-11-03T04:17:22.669Z"
+        },
+        {
+          "id": "ann-support-0083-h3",
+          "turn": 1,
+          "role": "agent",
+          "quote": "If yo",
+          "note": "left out a critical part about the refund situation which is that it charges a restock fee on opened items",
+          "ts": "2026-11-03T04:17:51.072Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:15:55.919Z",
+      "saved_ts": "2026-11-03T04:18:10.915Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0101",
+      "kind": "open_code",
+      "trace_id": "85df7ff37cb41dadd0631aafcecb342c",
+      "scenario_id": "support-0101",
+      "session_id": "4de7224c-dfc9-440c-94c0-385ede6c8970",
+      "trace_ids": [
+        "85df7ff37cb41dadd0631aafcecb342c"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:21:08.366Z",
+      "saved_ts": "2026-11-03T04:21:10.377Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:21:10.380Z"
+    },
+    {
+      "id": "ann-support-0103",
+      "kind": "open_code",
+      "trace_id": "89b7fba250daaddc4f3f11720532c7a5",
+      "scenario_id": "support-0103",
+      "session_id": "a9485643-50ff-4775-b4a9-99290650782e",
+      "trace_ids": [
+        "89b7fba250daaddc4f3f11720532c7a5",
+        "3a87b7dedad751c2ae7db56404a07d89"
+      ],
+      "note": "okay so the first error is that it used the wrong tool called it went to list my orders which doesn't have product name so I should have looked up on a tool called that shows product names and then even though on the back end it does show the order number like the 2926 and it shows up and no I'm assuming means that it has not been it has been ordered and placed but not shipped and not delivered so it was able to technically able to cancel it but it didn't so it made the wrong tool call gave the false answer of I cannot find it because we were able to find it so it contradicts itself",
+      "no_failure": false,
+      "tags": [
+        "wrong_about_order_records"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:24:40.958Z",
+      "saved_ts": "2026-11-03T04:25:10.060Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0107",
+      "kind": "open_code",
+      "trace_id": "9cccbc338364dcdfc43a9b1bf1f1184e",
+      "scenario_id": "support-0107",
+      "session_id": "5823f340-dd67-409e-b487-82e1bfe0f3e4",
+      "trace_ids": [
+        "9cccbc338364dcdfc43a9b1bf1f1184e"
+      ],
+      "note": "failed because it's giving two results when it could have asked a given the exact order do you see what I mean the user actually gave the name so it should clarify which order ID has which product name the response was fine saying it was already shipped and I cannot be canceled so that part is correct but the answer is not helpful",
+      "no_failure": false,
+      "tags": [
+        "wrong_about_order_records"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0107-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "rder ID 1058** from Cas",
+          "note": "well the first mistake is that it should also give the product name with the order ID",
+          "ts": "2026-11-03T04:26:04.405Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:26:04.405Z",
+      "saved_ts": "2026-11-03T04:27:04.619Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0121",
+      "kind": "open_code",
+      "trace_id": "6d3254a27730b07cb3e63e612c499424",
+      "scenario_id": "support-0121",
+      "session_id": "6a4e9586-168e-4930-bd31-040ea1582eee",
+      "trace_ids": [
+        "6d3254a27730b07cb3e63e612c499424",
+        "1860737db26576ff60b864ff99b61251"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [
+        {
+          "id": "ann-support-0121-h0",
+          "turn": 1,
+          "role": "agent",
+          "quote": "he return period is generally the same",
+          "note": "it's not did not verify with a policy look up to call",
+          "ts": "2026-11-03T04:28:18.064Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:28:18.064Z",
+      "saved_ts": "2026-11-03T04:57:04.243Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:57:04.251Z"
+    },
+    {
+      "id": "ann-support-0124",
+      "kind": "open_code",
+      "trace_id": "e720fef92d657fb97e247b56fd53fc42",
+      "scenario_id": "support-0124",
+      "session_id": "5534da79-26f0-4346-8909-3b04b6f9cf1a",
+      "trace_ids": [
+        "e720fef92d657fb97e247b56fd53fc42",
+        "8173a56eee5bd086b79f1c08dc1270d6"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:29:05.604Z",
+      "saved_ts": "2026-11-03T04:29:05.604Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:29:05.611Z"
+    },
+    {
+      "id": "ann-support-0125",
+      "kind": "open_code",
+      "trace_id": "a05aa121359bfedfacdf8197f9230f2c",
+      "scenario_id": "support-0125",
+      "session_id": "0dc31c38-3b40-44de-9f32-23ab8b406f10",
+      "trace_ids": [
+        "a05aa121359bfedfacdf8197f9230f2c"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:29:28.355Z",
+      "saved_ts": "2026-11-03T04:29:28.355Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:29:28.361Z"
+    },
+    {
+      "id": "ann-support-0131",
+      "kind": "open_code",
+      "trace_id": "96ca9ec5516dba16027f3b21c4d7cd13",
+      "scenario_id": "support-0131",
+      "session_id": "0dc70384-81a3-44bf-9b1f-115930ed4eab",
+      "trace_ids": [
+        "96ca9ec5516dba16027f3b21c4d7cd13",
+        "6d83f3b86e1d8bcf001c56e12ee2d24c",
+        "157c2b73b3212863144366b50526eb17"
+      ],
+      "note": "awkward language like asking to hold while still giving the answer is just weird and then the message three in the policy is specifically States you know how long it's going to take to process the cancellation",
+      "no_failure": false,
+      "tags": [
+        "unnatural_or_verbose_language"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0131-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "Please hold on a moment while I look that up",
+          "note": "this is awkward because it did not give the chance to the user to provide the necessary information",
+          "ts": "2026-11-03T04:30:00.455Z"
+        },
+        {
+          "id": "ann-support-0131-h1",
+          "turn": 2,
+          "role": "agent",
+          "quote": "t may still take a few business days to reflect in your account.",
+          "note": "this is not accurate enough I believe in the policy it says a specific range of dates",
+          "ts": "2026-11-03T04:30:44.582Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:30:00.455Z",
+      "saved_ts": "2026-11-03T04:31:24.360Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0156",
+      "kind": "open_code",
+      "trace_id": "347e9ecf7bf95f3f279b4543d7b46642",
+      "scenario_id": "support-0156",
+      "session_id": "5a58466b-d4b7-474b-9666-afac5b457fd8",
+      "trace_ids": [
+        "347e9ecf7bf95f3f279b4543d7b46642"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:31:41.424Z",
+      "saved_ts": "2026-11-03T04:31:41.424Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:31:41.428Z"
+    },
+    {
+      "id": "ann-support-0162",
+      "kind": "open_code",
+      "trace_id": "2a1ce5e9d2f5ffe5ecaa97c5594aaea6",
+      "scenario_id": "support-0162",
+      "session_id": "8aec2181-bfd5-48e1-85f8-22270cabb7e6",
+      "trace_ids": [
+        "2a1ce5e9d2f5ffe5ecaa97c5594aaea6"
+      ],
+      "note": "well the answer is true I think I should have been more clear and the fact that yeah the policies are different but in this case the store policy will override cartwheels policy that's not completely clear",
+      "no_failure": false,
+      "tags": [
+        "omits_critical_detail"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:32:50.579Z",
+      "saved_ts": "2026-11-03T04:32:52.151Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0168",
+      "kind": "open_code",
+      "trace_id": "32e575094ed38290d8af4b08df839646",
+      "scenario_id": "support-0168",
+      "session_id": "1c6a3081-c470-4870-b8e6-232330683a2d",
+      "trace_ids": [
+        "32e575094ed38290d8af4b08df839646",
+        "4bdb6ca995aac7c1f1ee507f8061b650",
+        "b957e6c12792dbdf351a7c43bceaa051",
+        "a4268d2bcb239ae87f2d6a0b67211b95"
+      ],
+      "note": "Asked for teapots under $25; agent listed a Heavy-Duty Vase as a “teapot” option and kept re-adding it in msgs 3–4 even after the user said “only the teapots.” Msg 3 also claimed “available for immediate purchase” with no stock/delivery data.",
+      "no_failure": false,
+      "tags": [
+        "ignores_user_constraint"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0168-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "*Heavy-Duty Vase** - $9.00 (not a teapot, but o",
+          "note": "if you already know that it's not a teapot then why offer this as an answer",
+          "ts": "2026-11-03T04:33:33.910Z"
+        },
+        {
+          "id": "ann-support-0168-h1",
+          "turn": 3,
+          "role": "agent",
+          "quote": ". **Heavy-Duty Vase** - $9.00 (not a teapot)",
+          "note": "stop talking about the vase it's not a teapot",
+          "ts": "2026-11-03T04:36:32.595Z"
+        },
+        {
+          "id": "ann-support-0168-h2",
+          "turn": 2,
+          "role": "agent",
+          "quote": "**Heavy-Duty Vase** is not a teapot and is priced at $9.00.",
+          "note": "continuous thread of irrelevant answers",
+          "ts": "2026-11-03T04:36:45.532Z"
+        },
+        {
+          "id": "ann-support-0168-h3",
+          "turn": 1,
+          "role": "agent",
+          "quote": "Unfortunately, no brand or size information is available",
+          "note": "my question if this is grounded and and if it could have done a different tool called to look up more product specs",
+          "ts": "2026-11-03T04:37:01.538Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:33:33.910Z",
+      "saved_ts": "2026-11-03T04:37:43.369Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0173",
+      "kind": "open_code",
+      "trace_id": "2269cc0a9d6da4a1190a564400b228a6",
+      "scenario_id": "support-0173",
+      "session_id": "aa85cf31-6b8a-4380-9d76-e4f8dfed8c76",
+      "trace_ids": [
+        "2269cc0a9d6da4a1190a564400b228a6",
+        "be1e2ba86d38abc6dc4d989037f52f01"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:40:42.351Z",
+      "saved_ts": "2026-11-03T04:41:19.797Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:41:19.804Z"
+    },
+    {
+      "id": "ann-support-0177",
+      "kind": "open_code",
+      "trace_id": "3f220d7594c6dea41c0773c2c63a2433",
+      "scenario_id": "support-0177",
+      "session_id": "87113b3f-38a4-4fcb-bbcf-0a54d48021c7",
+      "trace_ids": [
+        "3f220d7594c6dea41c0773c2c63a2433"
+      ],
+      "note": "while the answer was factually true it stalled on giving value back I think what it could have done is to do a tool call to look up the journal options that are available in the catalog and maybe order them from cheapest to the most expensive but t\nhen ask as a follow-up question what is a price range that you would like me to filter against",
+      "no_failure": false,
+      "tags": [
+        "stalls_instead_of_acting"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:42:20.385Z",
+      "saved_ts": "2026-11-03T04:42:20.385Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0183",
+      "kind": "open_code",
+      "trace_id": "43a2f78ba729e4fc8b1c1976c33d293b",
+      "scenario_id": "support-0183",
+      "session_id": "0d54b37a-f7cb-40b4-b37e-1d0876461e28",
+      "trace_ids": [
+        "43a2f78ba729e4fc8b1c1976c33d293b",
+        "43a2f78ba729e4fc8b1c1976c33d293b",
+        "f0f2fe9ed61e3096a0fdf01fc6105075"
+      ],
+      "note": "it's at the wrong tool call and I kept getting the wrong answer and gave a false answer because essentially it it it's not that it didn't return any specifics it's because the Asia made the wrong tool call to find the answer",
+      "no_failure": false,
+      "tags": [
+        "wrong_about_order_records"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0183-h0",
+          "turn": 1,
+          "role": "user",
+          "quote": "Confirm stock levels and any variations f",
+          "note": "it does not appear to do the right tool call because it did a search products when it was supposed to search for inventory and change an inventory",
+          "ts": "2026-11-03T04:43:46.686Z"
+        },
+        {
+          "id": "ann-support-0183-h1",
+          "turn": 1,
+          "role": "agent",
+          "quote": "didn't return any specific",
+          "note": "well it didn't return anything specific because the agent didn't do the right to call",
+          "ts": "2026-11-03T04:44:09.157Z"
+        },
+        {
+          "id": "ann-support-0183-h2",
+          "turn": 2,
+          "role": "agent",
+          "quote": "The search confirmed that there is 1 item name",
+          "note": "it keeps repeating the same mistake of doing the wrong tool call and not giving a helpful answer to the user",
+          "ts": "2026-11-03T04:44:32.263Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:43:46.686Z",
+      "saved_ts": "2026-11-03T04:45:13.154Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0185",
+      "kind": "open_code",
+      "trace_id": "18fbd53999d3497c9e72e667e16a8624",
+      "scenario_id": "support-0185",
+      "session_id": "309f9e64-63ab-4411-b2f1-73e828f3776a",
+      "trace_ids": [
+        "18fbd53999d3497c9e72e667e16a8624"
+      ],
+      "note": "“Preferably inexpensive” → agent silently capped search at $20 and never told the user; should state the assumption or ask for a range. (Many product IDs on screen came from list_my_orders, not the puzzle search; only 2 puzzles matched.)",
+      "no_failure": false,
+      "tags": [
+        "unstated_assumption"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0185-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "of inexpensive puzzle options for you:",
+          "note": "“Here are puzzles under $20: … Want me to look at higher price ranges too?” (state the assumption), or “What price range works for you?” woudl have been a better answer",
+          "ts": "2026-11-03T04:47:37.752Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:47:37.752Z",
+      "saved_ts": "2026-11-03T04:48:02.641Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:48:19.188Z"
+    },
+    {
+      "id": "ann-support-0205",
+      "kind": "open_code",
+      "trace_id": "318b77040a356013cd606ace7ab5071c",
+      "scenario_id": "support-0205",
+      "session_id": "0ed17e23-d779-4615-8e04-0f13430c8323",
+      "trace_ids": [
+        "318b77040a356013cd606ace7ab5071c"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [
+        {
+          "id": "ann-support-0205-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "s $-5.00",
+          "note": "never show an impossible answer to the user it can say that hey we have a error but there is no point to showing the negative $5",
+          "ts": "2026-11-03T04:50:02.158Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:50:02.158Z",
+      "saved_ts": "2026-11-03T04:50:08.225Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:50:08.232Z"
+    },
+    {
+      "id": "ann-support-0210",
+      "kind": "open_code",
+      "trace_id": "ff538fc1b82ee947d730dd9e666ee817",
+      "scenario_id": "support-0210",
+      "session_id": "dbc53df8-7001-4dea-9d11-bde8bd7bcb76",
+      "trace_ids": [
+        "ff538fc1b82ee947d730dd9e666ee817"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:50:50.742Z",
+      "saved_ts": "2026-11-03T04:50:50.742Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:50:50.749Z"
+    },
+    {
+      "id": "ann-support-0213",
+      "kind": "open_code",
+      "trace_id": "eb66d8c3c47d014a4875bca715700fa1",
+      "scenario_id": "support-0213",
+      "session_id": "7868e8f3-0454-4669-8d53-8b8a926dd37b",
+      "trace_ids": [
+        "eb66d8c3c47d014a4875bca715700fa1"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:51:10.871Z",
+      "saved_ts": "2026-11-03T04:51:10.871Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:51:10.874Z"
+    },
+    {
+      "id": "ann-support-0226",
+      "kind": "open_code",
+      "trace_id": "d2e0f1226c144a8490291119a80be87c",
+      "scenario_id": "support-0226",
+      "session_id": "51e4632a-fd05-4e45-b74e-35687e6cac5b",
+      "trace_ids": [
+        "d2e0f1226c144a8490291119a80be87c",
+        "5537114e97cf51c10b5d8bc369e6b1be",
+        "8cc342c9deffbb789ff161b229c178ac"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:52:31.245Z",
+      "saved_ts": "2026-11-03T04:52:31.245Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:52:31.253Z"
+    },
+    {
+      "id": "ann-support-0231",
+      "kind": "open_code",
+      "trace_id": "93d1a05dda7b8465ea3c316d55979214",
+      "scenario_id": "support-0231",
+      "session_id": "70c627b6-b124-43e4-8dc4-705135a7ff06",
+      "trace_ids": [
+        "93d1a05dda7b8465ea3c316d55979214"
+      ],
+      "note": "it was correct in saying I cannot assist but it should have offered a offered an alternative solution which is to escalate it to a human directly",
+      "no_failure": false,
+      "tags": [
+        "doesnt_escalate_when_required"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:53:30.665Z",
+      "saved_ts": "2026-11-03T04:53:30.665Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:56:56.127Z"
+    },
+    {
+      "id": "ann-support-0248",
+      "kind": "open_code",
+      "trace_id": "918e0a19d0b28fa6c627db69b241e864",
+      "scenario_id": "support-0248",
+      "session_id": "d26a7f6f-12f3-4ef2-992b-08dec554dacc",
+      "trace_ids": [
+        "918e0a19d0b28fa6c627db69b241e864",
+        "ef340cadef4cd754819ad824c4408e28"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [
+        {
+          "id": "ann-support-0248-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "I can’t assist with travel recommendations,",
+          "note": "I should have just directly said this is out of the scope of my abilities",
+          "ts": "2026-11-03T04:53:57.236Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b2",
+      "ts": "2026-11-03T04:53:57.236Z",
+      "saved_ts": "2026-11-03T04:54:02.757Z",
+      "history": [],
+      "updated_ts": "2026-11-03T04:54:02.765Z"
+    },
+    {
+      "id": "ann-support-0037",
+      "kind": "open_code",
+      "trace_id": "81b88d350744a9a70f8ecd18c7e2a0c4",
+      "scenario_id": "support-0037",
+      "session_id": "40200096-e591-4fe1-9c18-484e1eca29fb",
+      "trace_ids": [
+        "81b88d350744a9a70f8ecd18c7e2a0c4"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-03T05:10:50.916Z",
+      "history": [],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "saved_ts": "2026-11-03T05:10:50.916Z",
+      "updated_ts": "2026-11-04T02:41:08.950Z",
+      "via": "phone review page"
+    },
+    {
+      "id": "ann-support-0051",
+      "kind": "open_code",
+      "trace_id": "71bfd9e22c3cac49257e6509a993ddf6",
+      "scenario_id": "support-0051",
+      "session_id": "473e627c-ecaf-4ce7-9cc8-cd3adbdfb924",
+      "trace_ids": [
+        "71bfd9e22c3cac49257e6509a993ddf6"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-03T05:06:44.841Z",
+      "history": [],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "saved_ts": "2026-11-03T05:06:44.841Z",
+      "updated_ts": "2026-11-04T02:41:08.950Z",
+      "via": "phone review page",
+      "pass_comment": "Didn’t make the right tool call to look up the"
+    },
+    {
+      "id": "ann-support-0072",
+      "kind": "open_code",
+      "trace_id": "0b735036222b85160965b5c53bc5ac81",
+      "scenario_id": "support-0072",
+      "session_id": "b19023a5-2b15-4ea2-9899-16f9417a991e",
+      "trace_ids": [
+        "0b735036222b85160965b5c53bc5ac81"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0072-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "nor its status make it eligible for a refund",
+          "note": "explain the difference between why the two orders are not available for refund I mean reason number one is that it hasn't been shipped yet and reason number two is that it is beyond the refund eligibility",
+          "ts": "2026-11-04T02:46:33.770Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-03T05:09:13.394Z",
+      "history": [],
+      "note": "It could’ve offered more reason on why the second one that has been delivered is not eligible with a policy look up and also for the place item if that was the one that they wanted to cancel it should have noted. We cannot cancel it now, but if you would like to return it, we can, but also explain the caveat that because of the price it has to be escalated to a human so incomplete answer",
+      "no_failure": false,
+      "tags": [],
+      "saved_ts": "2026-11-04T02:46:39.744Z",
+      "updated_ts": "2026-11-04T02:46:39.748Z",
+      "via": "phone review page"
+    },
+    {
+      "id": "ann-support-0127",
+      "kind": "open_code",
+      "trace_id": "652e9a44111de5198eb7f6e30713e2d9",
+      "scenario_id": "support-0127",
+      "session_id": "d3baf296-b75a-4cf9-be0d-95479b5cf2f8",
+      "trace_ids": [
+        "652e9a44111de5198eb7f6e30713e2d9",
+        "992841d488c4a563118fe51a8cc104ad"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-03T05:07:16.940Z",
+      "history": [],
+      "note": "It should be looking up policies for every answer that it gives",
+      "no_failure": false,
+      "tags": [],
+      "saved_ts": "2026-11-03T05:07:16.940Z",
+      "updated_ts": "2026-11-04T02:41:08.950Z",
+      "via": "phone review page"
+    },
+    {
+      "id": "ann-support-0154",
+      "kind": "open_code",
+      "trace_id": "f52a22d5219ddc3a185a51dcc1012941",
+      "scenario_id": "support-0154",
+      "session_id": "1b6ad822-f1a8-4001-93d0-eda48019cde4",
+      "trace_ids": [
+        "f52a22d5219ddc3a185a51dcc1012941",
+        "6bfd0f3309e7e8ab8a21daf7f87c30da"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-03T05:07:56.229Z",
+      "history": [],
+      "note": "Well, the answer is right it doesn’t state any policy or policy look up and then it takes a few business days. It’s not right it should give a number",
+      "no_failure": false,
+      "tags": [],
+      "saved_ts": "2026-11-03T05:07:56.229Z",
+      "updated_ts": "2026-11-04T02:41:08.950Z",
+      "via": "phone review page"
+    },
+    {
+      "id": "ann-support-0228",
+      "kind": "open_code",
+      "trace_id": "67e72d25d032efff01f1277ca3201b60",
+      "scenario_id": "support-0228",
+      "session_id": "a7a6425f-d7ee-47a9-b367-d3153b099067",
+      "trace_ids": [
+        "67e72d25d032efff01f1277ca3201b60"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-03T05:11:41.963Z",
+      "history": [],
+      "note": "I mean, it’s a clear case where the Agent can’t do it so I should’ve offered to create a ticket and escalate to a human immediately Instead of putting the work back on the user",
+      "no_failure": false,
+      "tags": [
+        "doesnt_escalate_when_required"
+      ],
+      "saved_ts": "2026-11-03T05:11:41.963Z",
+      "updated_ts": "2026-11-04T02:41:08.950Z",
+      "via": "phone review page"
+    },
+    {
+      "id": "ann-support-0237",
+      "kind": "open_code",
+      "trace_id": "deccbb8cf2e1697dc94d87df26a69d0e",
+      "scenario_id": "support-0237",
+      "session_id": "9143da4f-035b-4a77-8acf-ae62bbe578ff",
+      "trace_ids": [
+        "deccbb8cf2e1697dc94d87df26a69d0e"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-03T05:10:15.201Z",
+      "history": [],
+      "note": "Well, it’s part It gave the option for the user to do it themselves, but it could’ve offered to escalate it and create a ticket to a human because this type of account change requires human instead of giving them very vague answers on contacting the cartwheel platform because this is literally the support agent",
+      "no_failure": false,
+      "tags": [],
+      "saved_ts": "2026-11-03T05:10:15.201Z",
+      "updated_ts": "2026-11-04T02:41:08.950Z",
+      "via": "phone review page"
+    },
+    {
+      "id": "ann-support-0068",
+      "kind": "open_code",
+      "trace_id": "ea6a5c196e6f9f59f0af95c84f080be6",
+      "scenario_id": "support-0068",
+      "session_id": "3efff432-b307-4732-b96b-393728be5753",
+      "trace_ids": [
+        "ea6a5c196e6f9f59f0af95c84f080be6"
+      ],
+      "note": "Order #4 (Little Fox Toys, delivered Jan 2025) is in the results, but agent said the puzzle \"doesn't appear in your orders\" and asked to confirm. Should have said it's past the 30-day window (cw-returns). Msg 2 invents a \"damaged items can be returned after the window\" exception.",
+      "no_failure": false,
+      "tags": [
+        "wrong_about_order_records"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0068-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "but there are no current orders for a Woven Puzzle",
+          "note": "false",
+          "ts": "2026-11-04T02:43:30.759Z"
+        },
+        {
+          "id": "ann-support-0068-h1",
+          "turn": 0,
+          "role": "agent",
+          "quote": "eligible",
+          "note": "“How do you do it all?” I don’t. Nobody does.  Saturday, 8:45 PM: MUST: meal prep. It runs my whole week. SHOULD: 3 hours of AI coursework. Got 1. DROP: staying up late. Sleep wins.  Rank by urgency × impact. Work back from your hard stop.  Send this to the friend who’s trying to do it all.",
+          "ts": "2026-11-04T02:43:54.857Z"
+        },
+        {
+          "id": "ann-support-0068-h2",
+          "turn": 1,
+          "role": "agent",
+          "quote": "Generally, if an item is defective or not as described, you may have the option to return it even if it's after the standard return window.",
+          "note": "That’s a policy claim made up from nowhere, with no lookup.",
+          "ts": "2026-11-04T02:44:29.786Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T02:43:30.759Z",
+      "saved_ts": "2026-11-04T04:10:14.012Z",
+      "history": [
+        {
+          "note": "Order #4 (Little Fox Toys, delivered Jan 2025) is in the results, but agent said the puzzle “doesn’t appear in your orders” and asked to confirm. Should have said it’s past the 30-day window (cw-returns). Msg 2 invents a “damaged items can be returned after the window” exception.",
+          "no_failure": false,
+          "tags": [
+            "claims_policy_without_checking",
+            "stalls_instead_of_acting"
+          ],
+          "ts": "2026-11-04T02:44:53.939Z"
+        }
+      ],
+      "updated_ts": "2026-11-04T04:10:14.012Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0078",
+      "kind": "open_code",
+      "trace_id": "759cb37ec72e60d96017e8cbd8b14cfe",
+      "scenario_id": "support-0078",
+      "session_id": "685e8f59-38f4-4d48-8c3f-9e1140458df8",
+      "trace_ids": [
+        "759cb37ec72e60d96017e8cbd8b14cfe"
+      ],
+      "note": "well I think this one should have clarified that we have a data error for the thing for the thing that you are asking for so I'm unable to give an answer and escalate it to a human",
+      "no_failure": false,
+      "tags": [
+        "didn't_escalate_bad_data"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T02:47:44.286Z",
+      "saved_ts": "2026-11-04T02:47:53.627Z",
+      "history": [],
+      "updated_ts": "2026-11-04T02:47:53.632Z"
+    },
+    {
+      "id": "ann-support-0087",
+      "kind": "open_code",
+      "trace_id": "03591ba2ed5a9e97692b3a891b2eb6d6",
+      "scenario_id": "support-0087",
+      "session_id": "efa4b1b4-8969-41da-aff2-de02560d84a3",
+      "trace_ids": [
+        "03591ba2ed5a9e97692b3a891b2eb6d6",
+        "07fd309992085450aad2247073bc880d"
+      ],
+      "note": "the rule states that if it's $100 and if it is within the return window then it can automatically approve it but it refused to do so and then ask for clarification instead of acting on it",
+      "no_failure": false,
+      "tags": [
+        "stalls_instead_of_acting"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0087-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "However, before proceeding",
+          "note": "it has to ability to approve refunds that are exactly $100",
+          "ts": "2026-11-04T02:48:59.884Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T02:48:59.884Z",
+      "saved_ts": "2026-11-04T02:49:25.786Z",
+      "history": [],
+      "updated_ts": "2026-11-04T02:49:36.111Z"
+    },
+    {
+      "id": "ann-support-0089",
+      "kind": "open_code",
+      "trace_id": "86c3bcc046b346252e656dae92f56f55",
+      "scenario_id": "support-0089",
+      "session_id": "5d40a5b1-f898-43d6-97f7-da6a16e990b1",
+      "trace_ids": [
+        "86c3bcc046b346252e656dae92f56f55"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T02:50:02.918Z",
+      "saved_ts": "2026-11-04T02:50:02.918Z",
+      "history": [],
+      "updated_ts": "2026-11-04T02:50:02.923Z"
+    },
+    {
+      "id": "ann-support-0092",
+      "kind": "open_code",
+      "trace_id": "c7ea2b0d10dec485e528c9e6b897f0de",
+      "scenario_id": "support-0092",
+      "session_id": "963af858-50ad-42e2-acc2-695711281fd8",
+      "trace_ids": [
+        "c7ea2b0d10dec485e528c9e6b897f0de"
+      ],
+      "note": "Correctly denied the refund but never explained why: Saltbox Pantry's 7-day window (delivered June 5, expired June 12). No policy lookup or citation; \"check the return policy for alternatives\" implies a return may still be possible.",
+      "no_failure": false,
+      "tags": [
+        "omits_critical_detail"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0092-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "isn't eligible for a refund, I",
+          "note": "Never said why. No mention of the 7-day window, no policy lookup, no citation. The customer is left thinking “why not? I bought it less than a month ago.”",
+          "ts": "2026-11-04T02:52:24.344Z"
+        },
+        {
+          "id": "ann-support-0092-h1",
+          "turn": 0,
+          "role": "agent",
+          "quote": "I recommend checking the return policy for alternatives.",
+          "note": "pushes the work back to the customer and implies a return might still be possible. It isn’t: the same 7-day window applies to returns. So the “helpful” part you noticed is actually misleading.",
+          "ts": "2026-11-04T02:52:41.614Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T02:52:24.344Z",
+      "saved_ts": "2026-11-04T04:10:14.012Z",
+      "history": [
+        {
+          "note": "Correctly denied the refund but never explained why: Saltbox Pantry’s 7-day window (delivered June 5, expired June 12). No policy lookup or citation; “check the return policy for alternatives” implies a return may still be possible.",
+          "no_failure": false,
+          "tags": [
+            "omits_critical_detail"
+          ],
+          "ts": "2026-11-04T02:52:56.576Z"
+        }
+      ],
+      "updated_ts": "2026-11-04T04:10:14.012Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0095",
+      "kind": "open_code",
+      "trace_id": "4a1301fa0a9d8c17b397a47d2af1eebc",
+      "scenario_id": "support-0095",
+      "session_id": "33a0529a-75d8-4237-8d31-f7fad005952c",
+      "trace_ids": [
+        "4a1301fa0a9d8c17b397a47d2af1eebc",
+        "16c26041066d62a1235beefc2b6b65c5",
+        "77e4165316eea87a0aa8d29a7e9b6141"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T04:11:22.784Z",
+      "history": [],
+      "note": "Order #908 (Meridian Cycles) is in list_my_orders, but agent said \"you don't have an order\" and then gave a generic, made-up refund process instead of applying the store's 21-day window (expired).",
+      "no_failure": false,
+      "tags": [
+        "wrong_about_order_records"
+      ],
+      "saved_ts": "2026-11-04T04:11:22.784Z",
+      "updated_ts": "2026-11-04T04:11:22.784Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0096",
+      "kind": "open_code",
+      "trace_id": "2b0eed40fd241e2691b82adf2ce9c32a",
+      "scenario_id": "support-0096",
+      "session_id": "b0fceefb-6923-45a6-941b-2e6b22dd0b89",
+      "trace_ids": [
+        "2b0eed40fd241e2691b82adf2ce9c32a"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T04:11:22.784Z",
+      "history": [],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "saved_ts": "2026-11-04T04:11:22.784Z",
+      "updated_ts": "2026-11-04T04:11:22.784Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing",
+      "pass_comment": "Clear cancel request; cancelled the right placed order (#1532) and reported only after the tool confirmed."
+    },
+    {
+      "id": "ann-support-0100",
+      "kind": "open_code",
+      "trace_id": "7dc59adfdba5a6b7657119da79e5a9de",
+      "scenario_id": "support-0100",
+      "session_id": "1abc8269-c6b1-4bd0-8d7a-f3c22e90845e",
+      "trace_ids": [
+        "7dc59adfdba5a6b7657119da79e5a9de"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T04:11:22.784Z",
+      "history": [],
+      "note": "Placed order #2053 (Meridian Cycles) is first in list_my_orders, but agent said there is no Trekking Poles order. list_my_orders has no product names; should have used find_order and cancelled.",
+      "no_failure": false,
+      "tags": [
+        "wrong_about_order_records"
+      ],
+      "saved_ts": "2026-11-04T04:11:22.784Z",
+      "updated_ts": "2026-11-04T04:11:22.784Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0104",
+      "kind": "open_code",
+      "trace_id": "8b953ffe369fced78c8cf0dd697c651a",
+      "scenario_id": "support-0104",
+      "session_id": "48f2b8d2-065a-4759-b638-ed3f6a71e6f4",
+      "trace_ids": [
+        "8b953ffe369fced78c8cf0dd697c651a"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T04:11:22.784Z",
+      "history": [],
+      "note": "Placed order #3416 (Harbor Knits) is first in list_my_orders, but agent said it couldn't find the tote bag order. Should have used find_order and cancelled.",
+      "no_failure": false,
+      "tags": [
+        "wrong_about_order_records"
+      ],
+      "saved_ts": "2026-11-04T04:11:22.784Z",
+      "updated_ts": "2026-11-04T04:11:22.784Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0110",
+      "kind": "open_code",
+      "trace_id": "50882ee40cb526ff57c29d9e9f657921",
+      "scenario_id": "support-0110",
+      "session_id": "ef7ac7f2-11fc-4521-8ef7-65ce1032c74a",
+      "trace_ids": [
+        "50882ee40cb526ff57c29d9e9f657921",
+        "269830bd199d3a74e896a12535bcfbb4"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T04:11:22.784Z",
+      "history": [],
+      "note": "Order #1793 (Harbor Knits, already shipped) is first in list_my_orders, but agent said no such order exists, and repeated it when the customer pushed. Should have said shipped orders can't be cancelled.",
+      "no_failure": false,
+      "tags": [
+        "wrong_about_order_records"
+      ],
+      "saved_ts": "2026-11-04T04:11:22.784Z",
+      "updated_ts": "2026-11-04T04:11:22.784Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0112",
+      "kind": "open_code",
+      "trace_id": "4c9d29842660c6299a7ea735323ddf21",
+      "scenario_id": "support-0112",
+      "session_id": "fe215f50-9d01-4b0c-bf6b-bc445496b70b",
+      "trace_ids": [
+        "4c9d29842660c6299a7ea735323ddf21",
+        "72b43741da0e5c5c2798138b0290a1d7"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T04:11:22.784Z",
+      "history": [],
+      "note": "Correctly said a shipped order can't be cancelled and suggested a return, but made the cutoff claim without looking up or citing the cancellation policy (key requires citation).",
+      "no_failure": false,
+      "tags": [
+        "claims_policy_without_checking"
+      ],
+      "saved_ts": "2026-11-04T04:11:22.784Z",
+      "updated_ts": "2026-11-04T04:11:22.784Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0114",
+      "kind": "open_code",
+      "trace_id": "c9afed4a393138da81bdc6521ff272f0",
+      "scenario_id": "support-0114",
+      "session_id": "fb58f9d5-6805-47e8-b6b7-5ff0ce700a78",
+      "trace_ids": [
+        "c9afed4a393138da81bdc6521ff272f0"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T04:12:57.426Z",
+      "history": [],
+      "note": "Order was already refunded, but agent used list_my_orders (no product names) and said none of the orders include the card game. Should have found it and explained it was already refunded.",
+      "no_failure": false,
+      "tags": [
+        "wrong_about_order_records"
+      ],
+      "saved_ts": "2026-11-04T04:12:57.426Z",
+      "updated_ts": "2026-11-04T04:12:57.426Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0115",
+      "kind": "open_code",
+      "trace_id": "ce48d8741af59d4523f1ad97b24e31d4",
+      "scenario_id": "support-0115",
+      "session_id": "4b0afe82-44a1-4b3f-882e-aca801c77cdb",
+      "trace_ids": [
+        "ce48d8741af59d4523f1ad97b24e31d4"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T04:12:57.426Z",
+      "history": [],
+      "note": "Order was already refunded, but agent said it couldn't find a tape measure order (list_my_orders has no product names). Should have explained the recorded refunded state.",
+      "no_failure": false,
+      "tags": [
+        "wrong_about_order_records"
+      ],
+      "saved_ts": "2026-11-04T04:12:57.426Z",
+      "updated_ts": "2026-11-04T04:12:57.426Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0132",
+      "kind": "open_code",
+      "trace_id": "b4a8d743360f56ca0a7ab917f29d21ea",
+      "scenario_id": "support-0132",
+      "session_id": "ad1e145d-182b-42eb-874c-d125bbdb6d09",
+      "trace_ids": [
+        "b4a8d743360f56ca0a7ab917f29d21ea"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T04:12:57.426Z",
+      "history": [],
+      "note": "Looked up and cited cw-payouts (weekly Friday, 2 business days), but then added \"about 7 days from the time of the sale\", which is not in the policy and is wrong for many sale days.",
+      "no_failure": false,
+      "tags": [
+        "claims_policy_without_checking"
+      ],
+      "saved_ts": "2026-11-04T04:12:57.426Z",
+      "updated_ts": "2026-11-04T04:12:57.426Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0159",
+      "kind": "open_code",
+      "trace_id": "a772fae27d7172ace725eb83868a2948",
+      "scenario_id": "support-0159",
+      "session_id": "c23c9919-6b13-4bb3-9989-2fbde802bb5f",
+      "trace_ids": [
+        "a772fae27d7172ace725eb83868a2948"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T04:12:57.426Z",
+      "history": [],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "saved_ts": "2026-11-04T04:12:57.426Z",
+      "updated_ts": "2026-11-04T04:12:57.426Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing",
+      "pass_comment": "Looked up cw-disputes and answered 60 days after delivery with citation, short as asked."
+    },
+    {
+      "id": "ann-support-0214",
+      "kind": "open_code",
+      "trace_id": "e554d383cf7fcb2c46a7333cfa3f0cd3",
+      "scenario_id": "support-0214",
+      "session_id": "a8037b1a-1e16-48e4-9d97-b9f12faa230b",
+      "trace_ids": [
+        "e554d383cf7fcb2c46a7333cfa3f0cd3"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T04:12:57.426Z",
+      "history": [],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "saved_ts": "2026-11-04T04:12:57.426Z",
+      "updated_ts": "2026-11-04T04:12:57.426Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing",
+      "pass_comment": "Escalated the billing dispute right away; ticket created; 24-hour response stated."
+    },
+    {
+      "id": "ann-support-0216",
+      "kind": "open_code",
+      "trace_id": "4abc4c014846ad489aa16274e8d7130a",
+      "scenario_id": "support-0216",
+      "session_id": "77729fcc-0704-4f17-9595-a4a83c38e0d2",
+      "trace_ids": [
+        "4abc4c014846ad489aa16274e8d7130a"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T04:12:57.426Z",
+      "history": [],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "saved_ts": "2026-11-04T04:12:57.426Z",
+      "updated_ts": "2026-11-04T04:12:57.426Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing",
+      "pass_comment": "Escalated the customer dispute; ticket opened; 24 hours; short and plain as asked."
+    },
+    {
+      "id": "ann-support-0235",
+      "kind": "open_code",
+      "trace_id": "9fee979c1d709730993a8f6fb33047c7",
+      "scenario_id": "support-0235",
+      "session_id": "5cd8404f-3540-494a-8172-93d377373ac0",
+      "trace_ids": [
+        "9fee979c1d709730993a8f6fb33047c7"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b3",
+      "ts": "2026-11-04T04:12:57.426Z",
+      "history": [],
+      "note": "Account change must go to a human (ESC-2), but agent refused and gave invented generic steps (\"Store Settings\") without escalating.",
+      "no_failure": false,
+      "tags": [
+        "doesnt_escalate_when_required"
+      ],
+      "saved_ts": "2026-11-04T04:12:57.426Z",
+      "updated_ts": "2026-11-04T04:12:57.426Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0003",
+      "kind": "open_code",
+      "trace_id": "b45d3a61336d1c658be3b6a955ebd29e",
+      "scenario_id": "support-0003",
+      "session_id": "54b692d2-2370-4ef8-b2e2-078b5f63163a",
+      "trace_ids": [
+        "b45d3a61336d1c658be3b6a955ebd29e"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b4",
+      "ts": "2026-11-04T04:35:28.048Z",
+      "history": [],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "saved_ts": "2026-11-04T04:35:28.048Z",
+      "updated_ts": "2026-11-04T04:35:28.048Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing",
+      "pass_comment": "Right order (#6428, row 1), delivered June 30, short as asked. Nice-to-have: name the product, but list_my_orders has no product names."
+    },
+    {
+      "id": "ann-support-0011",
+      "kind": "open_code",
+      "trace_id": "a46ca3499d423a8fb0184a7a94411507",
+      "scenario_id": "support-0011",
+      "session_id": "5929514e-8357-4502-8590-ce7b9f8e034c",
+      "trace_ids": [
+        "a46ca3499d423a8fb0184a7a94411507"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b4",
+      "ts": "2026-11-04T04:38:16.983Z",
+      "history": [],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "saved_ts": "2026-11-04T04:38:16.983Z",
+      "updated_ts": "2026-11-04T04:38:16.983Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing",
+      "pass_comment": "Right order (#7074), status and all three dates match the tool; covers the shipping question."
+    },
+    {
+      "id": "ann-support-0021",
+      "kind": "open_code",
+      "trace_id": "759d3eebadd1b112e9217894800b87f5",
+      "scenario_id": "support-0021",
+      "session_id": "709fbe0a-6c20-4aae-9a18-da66e9ca3004",
+      "trace_ids": [
+        "759d3eebadd1b112e9217894800b87f5",
+        "2986e5558e464eb6d1fb84c1215f16e7"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b4",
+      "ts": "2026-11-04T04:40:20.180Z",
+      "history": [],
+      "note": "Msg 1 listed all 20 store orders correctly, but when the merchant asked again (\"still waiting... ASAP\"), the agent said \"I've already provided\" instead of re-sharing or summarizing the statuses.",
+      "no_failure": false,
+      "tags": [
+        "dismisses_repeat_request"
+      ],
+      "saved_ts": "2026-11-04T04:40:20.180Z",
+      "updated_ts": "2026-11-04T04:40:20.180Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0047",
+      "kind": "open_code",
+      "trace_id": "e8fc255e4b66cfe658166f4042d51231",
+      "scenario_id": "support-0047",
+      "session_id": "de0ec9c7-3790-417f-877e-d0b8a7d363a0",
+      "trace_ids": [
+        "e8fc255e4b66cfe658166f4042d51231",
+        "5a1bdf8b56008739ae29c5f8eb6f02a0"
+      ],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "highlights": [],
+      "author": "human",
+      "batch": "b4",
+      "ts": "2026-11-04T04:41:13.591Z",
+      "saved_ts": "2026-11-04T04:41:31.604Z",
+      "history": [],
+      "checks": {
+        "0": true,
+        "1": true,
+        "2": true
+      },
+      "updated_ts": "2026-11-04T04:41:31.613Z"
+    },
+    {
+      "id": "ann-support-0058",
+      "kind": "open_code",
+      "trace_id": "8abbe779d7ec0c3a9f90bdb898527b3c",
+      "scenario_id": "support-0058",
+      "session_id": "5126eca4-8ae6-4673-9aaf-5a6f1de9ac38",
+      "trace_ids": [
+        "8abbe779d7ec0c3a9f90bdb898527b3c"
+      ],
+      "note": "Clear \"full refund now\" with a reason given; order #580 is eligible and $18 (auto-approves under $100). Agent asked for the amount and reason instead of calling issue_refund. Unnecessary extra step.",
+      "no_failure": false,
+      "tags": [
+        "stalls_instead_of_acting"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0058-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "Please confirm the amount you would like refunded (in USD) and the reason for the refund.",
+          "note": "rleady said they want a full refund so why ask",
+          "ts": "2026-11-04T04:42:05.472Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b4",
+      "ts": "2026-11-04T04:42:05.472Z",
+      "saved_ts": "2026-11-04T04:45:03.122Z",
+      "history": [],
+      "updated_ts": "2026-11-04T04:45:03.122Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0109",
+      "kind": "open_code",
+      "trace_id": "c8e1541c93345acb7d8e792437a56e3b",
+      "scenario_id": "support-0109",
+      "session_id": "f3e663dc-9513-4d63-8953-006d47e52761",
+      "trace_ids": [
+        "c8e1541c93345acb7d8e792437a56e3b"
+      ],
+      "note": "The order exists (#1247, row 1, shipped but not yet delivered), but the agent said the orders don't include a Sturdy Water Bottle. Should have said it already shipped, so it can't be cancelled; return after delivery (cw-cancellations).",
+      "no_failure": false,
+      "tags": [
+        "wrong_about_order_records"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0109-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "It seems that your recent orders do not include a \"Sturdy Water Bottle\" from Meridian Cycles. Here are the orders listed:",
+          "note": "it shodul hav recognized that itwas shipped but not dlievere yet and that is why ti is not eligible",
+          "ts": "2026-11-04T04:43:27.610Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b4",
+      "ts": "2026-11-04T04:43:27.610Z",
+      "saved_ts": "2026-11-04T04:45:35.131Z",
+      "history": [],
+      "updated_ts": "2026-11-04T04:45:35.131Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0117",
+      "kind": "open_code",
+      "trace_id": "3632919fcce7c51ac440295394c1dca9",
+      "scenario_id": "support-0117",
+      "session_id": "42eece11-fa9b-47fc-9a22-1a2acd0384ef",
+      "trace_ids": [
+        "3632919fcce7c51ac440295394c1dca9"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b4",
+      "ts": "2026-11-04T04:47:11.180Z",
+      "history": [],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "saved_ts": "2026-11-04T04:47:11.180Z",
+      "updated_ts": "2026-11-04T04:47:11.180Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing",
+      "pass_comment": "Did not guess an order; correctly said nothing is cancellable (14 delivered, 2 cancelled) and asked for details. Could have pointed out the 2 already-cancelled orders."
+    },
+    {
+      "id": "ann-support-0166",
+      "kind": "open_code",
+      "trace_id": "9f1f09db43956f050887d88b8b3440ac",
+      "scenario_id": "support-0166",
+      "session_id": "c792e46c-4a15-4024-8e79-eeb6106dcccb",
+      "trace_ids": [
+        "9f1f09db43956f050887d88b8b3440ac"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b4",
+      "ts": "2026-11-04T04:48:05.277Z",
+      "history": [],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "saved_ts": "2026-11-04T04:48:05.277Z",
+      "updated_ts": "2026-11-04T04:48:05.277Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing",
+      "pass_comment": "Four real mugs from the search, all strictly under $30, with real prices; satisfies \"a few\"."
+    },
+    {
+      "id": "ann-support-0175",
+      "kind": "open_code",
+      "trace_id": "5ab7ca533860fe4332c5cba795c015a0",
+      "scenario_id": "support-0175",
+      "session_id": "402eec81-1d44-45eb-8e64-6b3ced5f4790",
+      "trace_ids": [
+        "5ab7ca533860fe4332c5cba795c015a0"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b4",
+      "ts": "2026-11-04T04:49:45.769Z",
+      "history": [],
+      "note": "no failure observed",
+      "no_failure": true,
+      "tags": [],
+      "saved_ts": "2026-11-04T04:49:45.769Z",
+      "updated_ts": "2026-11-04T04:49:45.769Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing",
+      "pass_comment": "BORDERLINE pass: right store, product and real price. \"Available\" really means \"listed\"; no stock data exists, so a customer could be surprised if it were out of stock. Revisit when defining the unverified-claims boundary (compare 0168)."
+    },
+    {
+      "id": "ann-support-0176",
+      "kind": "open_code",
+      "trace_id": "09232b392e41b28f2238f7abf08618f7",
+      "scenario_id": "support-0176",
+      "session_id": "e2145655-462b-460e-a6b3-6298bbfd6fb8",
+      "trace_ids": [
+        "09232b392e41b28f2238f7abf08618f7",
+        "ba5e0fd82fa015ff2f4fad57ea3c1ee1"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b4",
+      "ts": "2026-11-04T04:51:06.309Z",
+      "history": [],
+      "note": "Agent invented a store filter (\"2\") the customer never gave, got a store-not-found error, then told the customer it couldn't find products and to \"check directly in the store or try again later\". Unhelpful, and contradicted by msg 2, which found two novels once the bad filter was dropped.",
+      "no_failure": false,
+      "tags": [
+        "wrong_about_order_records"
+      ],
+      "saved_ts": "2026-11-04T04:51:06.309Z",
+      "updated_ts": "2026-11-04T04:51:06.309Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0180",
+      "kind": "open_code",
+      "trace_id": "bcc3d43c1d482d0c4ed268a7163617f3",
+      "scenario_id": "support-0180",
+      "session_id": "8fe87301-2ad8-477d-8f03-4bd887322d69",
+      "trace_ids": [
+        "bcc3d43c1d482d0c4ed268a7163617f3"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0180-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "These options should provide a good mix of quality and affordability.",
+          "note": "No quality data exists; ungrounded claim.",
+          "tags": [
+            "states_unverified_facts"
+          ],
+          "ts": "2026-11-04T04:53:36.805Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b4",
+      "ts": "2026-11-04T04:53:36.805Z",
+      "history": [],
+      "note": "Showed 5 daypacks (search capped at 5) without saying there may be more, and claimed they are \"a good mix of quality\" with no quality data. Didn't give the \"couple of good picks\" the lost user asked for or offer to narrow by filters.",
+      "no_failure": false,
+      "tags": [
+        "hides_partial_list"
+      ],
+      "saved_ts": "2026-11-04T04:53:36.805Z",
+      "updated_ts": "2026-11-04T04:53:36.805Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0194",
+      "kind": "open_code",
+      "trace_id": "c21dc348acc4ad418313116bc8f2d395",
+      "scenario_id": "support-0194",
+      "session_id": "0ca7b987-aafc-46c5-bf04-05d282b6bd0a",
+      "trace_ids": [
+        "c21dc348acc4ad418313116bc8f2d395"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0194-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "such as dimensions or materials",
+          "note": "No dimension or material data exists; offers information it doesn't have.",
+          "tags": [
+            "states_unverified_facts"
+          ],
+          "ts": "2026-11-04T04:55:16.815Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b4",
+      "ts": "2026-11-04T04:55:16.815Z",
+      "history": [],
+      "note": "Four listings share the exact name \"Heavy-Duty Vase\"; the agent listed them by price only, with no product IDs (#2, #16, #19, #1) and no mention that duplicate titles are a data issue, so the merchant cannot tell them apart or pick one.",
+      "no_failure": false,
+      "tags": [
+        "omits_critical_detail"
+      ],
+      "saved_ts": "2026-11-04T04:55:16.815Z",
+      "updated_ts": "2026-11-04T04:55:16.815Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0196",
+      "kind": "open_code",
+      "trace_id": "80fd0d7f67642bd14fab51af8a419bda",
+      "scenario_id": "support-0196",
+      "session_id": "aed4aed3-9001-40ba-8e10-03978dae24b9",
+      "trace_ids": [
+        "80fd0d7f67642bd14fab51af8a419bda"
+      ],
+      "highlights": [
+        {
+          "id": "ann-support-0196-h0",
+          "turn": 0,
+          "role": "agent",
+          "quote": "It's possible that they vary in size, design, or materials.",
+          "note": "Speculation: the tool has no size, design or material data. Also offers to \"look deeper\" for dimensions it cannot get.",
+          "tags": [
+            "states_unverified_facts"
+          ],
+          "ts": "2026-11-04T04:57:26.027Z"
+        }
+      ],
+      "author": "human",
+      "batch": "b4",
+      "ts": "2026-11-04T04:57:26.027Z",
+      "history": [],
+      "note": "Listed 4 same-named vases by price only, with no product IDs, so the shopper cannot tell them apart; never said duplicate titles are a data problem. Same miss as 0194.",
+      "no_failure": false,
+      "tags": [
+        "omits_critical_detail"
+      ],
+      "saved_ts": "2026-11-04T04:57:26.027Z",
+      "updated_ts": "2026-11-04T04:57:26.027Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0209",
+      "kind": "open_code",
+      "trace_id": "7a656dc4bd53958b885172aa56e5420d",
+      "scenario_id": "support-0209",
+      "session_id": "be8c41ed-e02c-4ce3-8fac-77204f820993",
+      "trace_ids": [
+        "7a656dc4bd53958b885172aa56e5420d"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b4",
+      "ts": "2026-11-04T04:59:14.747Z",
+      "history": [],
+      "note": "Agent invented a store filter (\"2\"), got a store-not-found error, then asked the merchant to confirm the store name: a question that doesn't fix its own mistake. Never answered whether any mugs cost under $1. Same pattern as 0176.",
+      "no_failure": false,
+      "tags": [
+        "wrong_about_order_records"
+      ],
+      "saved_ts": "2026-11-04T04:59:14.747Z",
+      "updated_ts": "2026-11-04T04:59:14.747Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    },
+    {
+      "id": "ann-support-0222",
+      "kind": "open_code",
+      "trace_id": "a52a2d7c2109ca942fea62c56ccf3dc3",
+      "scenario_id": "support-0222",
+      "session_id": "f5b66bc8-7db4-45a5-a25e-2b08a92bb465",
+      "trace_ids": [
+        "a52a2d7c2109ca942fea62c56ccf3dc3"
+      ],
+      "highlights": [],
+      "author": "human",
+      "batch": "b4",
+      "ts": "2026-11-04T05:01:14.886Z",
+      "history": [],
+      "note": "Dispute must go to a human (ESC-3), but the agent made no escalation and instead asked for the order ID so it could \"assess the situation\" itself. Should escalate immediately and collect the order ID as context.",
+      "no_failure": false,
+      "tags": [
+        "doesnt_escalate_when_required"
+      ],
+      "saved_ts": "2026-11-04T05:01:14.886Z",
+      "updated_ts": "2026-11-04T05:01:14.886Z",
+      "via": "drafted by Claude in plain language, confirmed by Eve after reviewing"
+    }
+  ]
+}

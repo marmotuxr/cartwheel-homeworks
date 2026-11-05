@@ -1,0 +1,1129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cartwheel Error Analysis</title>
+<style>
+:root {
+  --bg: #ffffff; --panel: #f7f7f5; --border: #e6e4df; --text: #1d1d1b; --muted: #77756f;
+  --user-bg: #fff6ee; --user-bar: #f0a35e; --user-label: #c46a1c;
+  --agent-bg: #f1f6fd; --agent-bar: #4a7fd0; --agent-label: #2f62ad;
+  --tool-bg: #f2f9f1; --tool-bar: #6dbb6a; --tool-label: #3a8a37;
+  --key-bg: #fff8ec; --key-bar: #d98a1e; --key-label: #a8650c;
+  --ai-bg: #f5f0fd; --ai-bar: #8a5bd6; --ai-label: #6b3fb8;
+  --deny: #c43c3c; --deny-bg: #fdeeee; --ok: #2f8a3a; --ok-bg: #e6f4e7;
+  --badge: #f0a02a; --mark: #ffe38a; --accent: #1d1d1b; --accent-text: #fff;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #18181a; --panel: #1f1f22; --border: #34343a; --text: #ecebe8; --muted: #9a9890;
+    --user-bg: #2a2119; --user-label: #f0a35e; --agent-bg: #1a2230; --agent-label: #8fb4ee;
+    --tool-bg: #1b261b; --tool-label: #8fd18c; --key-bg: #2b2414; --key-label: #f0b45e;
+    --ai-bg: #241d33; --ai-label: #b89af0; --deny-bg: #3a1f1f; --ok-bg: #1d3320;
+    --mark: #7a6514; --accent: #ecebe8; --accent-text: #18181a;
+  }
+}
+:root[data-theme="dark"] {
+    --bg: #18181a; --panel: #1f1f22; --border: #34343a; --text: #ecebe8; --muted: #9a9890;
+    --user-bg: #2a2119; --user-label: #f0a35e; --agent-bg: #1a2230; --agent-label: #8fb4ee;
+    --tool-bg: #1b261b; --tool-label: #8fd18c; --key-bg: #2b2414; --key-label: #f0b45e;
+    --ai-bg: #241d33; --ai-label: #b89af0; --deny-bg: #3a1f1f; --ok-bg: #1d3320;
+    --mark: #7a6514; --accent: #ecebe8; --accent-text: #18181a;
+   color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--bg); color: var(--text); font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif; display: flex; flex-direction: column; }
+button { font: inherit; color: inherit; cursor: pointer; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+input, select, textarea { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 5px 8px; }
+.mono { font-family: var(--mono); } .muted { color: var(--muted); } .small { font-size: 12.5px; }
+header { display: flex; align-items: center; gap: 16px; padding: 10px 20px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+header h1 { font-size: 18px; margin: 0; font-weight: 650; white-space: nowrap; }
+.tabs { display: flex; gap: 6px; }
+.tabs button, .btn { border: 1px solid var(--border); background: var(--bg); padding: 5px 13px; border-radius: 6px; font-size: 14px; }
+.tabs button.on, .btn.primary { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+.btn.ai { border-color: var(--ai-bar); color: var(--ai-label); }
+.spacer { flex: 1; }
+.status { font-size: 13px; color: var(--muted); white-space: nowrap; }
+main { flex: 1; display: flex; min-height: 0; }
+.view { display: none; flex: 1; min-height: 0; } .view.on { display: flex; }
+aside { width: 320px; flex-shrink: 0; overflow: hidden; border-right: 1px solid var(--border); display: flex; flex-direction: column; min-height: 0; }
+body.nolist aside { display: none; }
+body.nolist #toggle-list { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+.side-toggle { border: 1px solid var(--border); background: var(--bg); border-radius: 6px; padding: 2px 9px; font-size: 13px; color: var(--muted); }
+.side-toggle:hover { color: var(--text); }
+.convnav { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.convnav h2 { margin: 0; }
+.convnav .pos { font-size: 12px; color: var(--muted); }
+.filters { padding: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; border-bottom: 1px solid var(--border); }
+.filters .full { grid-column: 1 / -1; }
+.filters select { font-size: 13px; padding: 4px 6px; min-width: 0; width: 100%; }
+.list { overflow-y: auto; flex: 1; }
+.item { padding: 9px 14px; border-bottom: 1px solid var(--border); cursor: pointer; }
+.item:hover { background: var(--panel); }
+.item.on { background: var(--panel); box-shadow: inset 3px 0 0 var(--accent); }
+.item .top { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 13px; }
+.item .preview { font-size: 13.5px; margin-top: 2px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dot { width: 9px; height: 9px; border-radius: 5px; border: 1.5px solid var(--muted); flex-shrink: 0; }
+.dot.fail { background: var(--badge); border-color: var(--badge); } .dot.nofail { background: var(--ok); border-color: var(--ok); }
+.pill { font-size: 11.5px; padding: 0 7px; border-radius: 4px; border: 1px solid var(--border); color: var(--muted); white-space: nowrap; display: inline-block; }
+.pill.challenge { color: #8a4bc4; border-color: #d9c2ef; } .pill.dq { color: #b0541a; border-color: #f1cfb6; }
+.pill.tag { background: var(--panel); color: var(--text); }
+.badge { margin-left: auto; background: var(--badge); color: #fff; font-size: 11px; font-weight: 700; min-width: 18px; height: 18px; border-radius: 9px; display: inline-flex; align-items: center; justify-content: center; padding: 0 5px; }
+
+/* conversation */
+.convcol { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.conv { flex: 1; overflow-y: auto; padding: 20px 32px 40px; }
+.inner { max-width: 1240px; }
+.inner > *:not(.row) { max-width: 900px; }
+.row { display: grid; grid-template-columns: minmax(0, 900px) 300px; gap: 18px; align-items: start; }
+.margin { display: flex; flex-direction: column; gap: 8px; }
+.ncard { border: 1px solid var(--border); border-left: 3px solid var(--badge); background: var(--bg); border-radius: 6px; padding: 8px 12px; font-size: 13.5px; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
+.ncard:hover { border-color: var(--badge); }
+.ncard .q { font-style: italic; color: var(--muted); font-size: 12.5px; margin-bottom: 4px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+mark.hot { background: var(--badge); color: #fff; }
+@media (max-width: 1180px) { .row { grid-template-columns: minmax(0, 1fr); gap: 0; } .margin { margin: -4px 0 10px 18px; } }
+.conv h2 { font-family: var(--mono); font-size: 20px; margin: 0 0 6px; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.meta .pill { font-size: 12px; padding: 1px 8px; }
+.card { border: 1px solid var(--border); border-radius: 8px; padding: 10px 16px; margin-bottom: 10px; background: var(--panel); font-size: 14px; }
+.card h4 { margin: 0 0 4px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.card.key { background: var(--key-bg); border-color: var(--key-bar); } .card.key h4 { color: var(--key-label); }
+.card p { margin: 3px 0; }
+details > summary { cursor: pointer; font-size: 13px; color: var(--muted); }
+pre { white-space: pre-wrap; word-break: break-word; font-family: var(--mono); font-size: 12.5px; margin: 6px 0 0; }
+.turn-h { font-weight: 650; margin: 20px 0 8px; font-size: 15px; }
+.msg { border-left: 3px solid; padding: 9px 16px; margin: 0 0 8px; border-radius: 0 6px 6px 0; }
+.msg .who { font-size: 11px; letter-spacing: .07em; text-transform: uppercase; font-weight: 600; margin-bottom: 2px; }
+.msg .text { white-space: pre-wrap; word-break: break-word; }
+.msg.user { background: var(--user-bg); border-color: var(--user-bar); } .msg.user .who { color: var(--user-label); }
+.msg.agent { background: var(--agent-bg); border-color: var(--agent-bar); } .msg.agent .who { color: var(--agent-label); }
+.msg.tool { background: var(--tool-bg); border-color: var(--tool-bar); padding: 6px 16px; } .msg.tool summary { color: var(--tool-label); font-weight: 600; font-size: 12px; letter-spacing: .05em; text-transform: uppercase; }
+.call { font-family: var(--mono); font-size: 13px; margin: 6px 0; }
+.call .fn { color: var(--tool-label); font-weight: 600; }
+.call .args { margin: 2px 0 0 16px; color: var(--muted); }
+.call details { margin: 4px 0 0 16px; }
+.res { margin: 6px 0 0; font-family: -apple-system, sans-serif; font-size: 13px; }
+.res .kv { margin: 2px 0; } .res .kv b { font-family: var(--mono); font-weight: 500; }
+.res .tbl { max-height: 340px; overflow: auto; border: 1px solid var(--border); border-radius: 6px; margin: 6px 0; background: var(--bg); }
+.res table { border-collapse: collapse; font-size: 12.5px; font-family: var(--mono); }
+.res th { position: sticky; top: 0; background: var(--panel); text-align: left; padding: 4px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; font-weight: 600; }
+.res td { padding: 3px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+.res tr:nth-child(even) td { background: var(--panel); }
+.res .lbl { font-size: 11px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+.raw-toggle { font-size: 12px; }
+.res th[draggable] { cursor: grab; } .res th.drag-over { box-shadow: inset 3px 0 0 var(--agent-bar); }
+.res th .x { border: none; background: none; color: var(--muted); padding: 0 0 0 6px; font-size: 13px; line-height: 1; }
+.res th .x:hover { color: var(--deny); }
+.colbar { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; font-size: 12px; color: var(--muted); margin: 4px 0 0; }
+.colbar button { border: 1px dashed var(--border); background: var(--bg); border-radius: 4px; padding: 0 6px; font-size: 12px; font-family: var(--mono); }
+.colbar .reset { border-style: solid; font-family: inherit; }
+.call details pre { max-height: 320px; overflow: auto; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; font-size: 12.5px; line-height: 1.45; white-space: pre; }
+.tag-deny { background: var(--deny-bg); color: var(--deny); font-size: 11px; padding: 0 6px; border-radius: 4px; margin-left: 6px; font-family: -apple-system, sans-serif; }
+mark { background: var(--mark); color: inherit; border-radius: 2px; cursor: pointer; }
+
+/* open coding panel */
+.code { border-top: 1px solid var(--border); padding: 12px 32px 14px; background: var(--bg); }
+.code .row { display: flex; gap: 10px; align-items: flex-start; flex-wrap: wrap; }
+.code textarea { flex: 1; min-width: 260px; min-height: 58px; resize: vertical; font-size: 14px; }
+.code .label { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 4px; }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
+.tags .pill.tag button { border: none; background: none; padding: 0 0 0 4px; color: var(--muted); }
+.saved-note { font-size: 12px; color: var(--ok); }
+.mic { border: 1px solid var(--border); background: var(--bg); border-radius: 6px; padding: 5px 12px; font-size: 14px; }
+.mic.on { background: var(--deny); color: #fff; border-color: var(--deny); animation: pulse 1.2s infinite; }
+@keyframes pulse { 50% { opacity: .7; } }
+.fmic { position: fixed; z-index: 20; display: none; width: 30px; height: 26px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg); font-size: 14px; line-height: 1; padding: 0; box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+.fmic.on { background: var(--deny); color: #fff; border-color: var(--deny); animation: pulse 1.2s infinite; display: block; }
+.ftip { position: fixed; z-index: 20; font-size: 12px; font-style: italic; color: var(--muted); background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 2px 8px; display: none; max-width: 420px; }
+.interim { font-size: 12.5px; color: var(--muted); font-style: italic; min-height: 16px; margin-top: 2px; }
+.hls { max-height: 150px; overflow-y: auto; }
+.hlrow { font-size: 13px; padding: 3px 0; border-top: 1px solid var(--border); display: flex; gap: 8px; align-items: baseline; }
+.hlrow button { margin-left: auto; flex-shrink: 0; font-size: 12px; padding: 1px 8px; }
+
+/* popover */
+.pop { position: fixed; z-index: 10; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 6px 24px rgba(0,0,0,.15); padding: 8px; width: 340px; display: none; }
+.pop input { width: 100%; border: 2px solid var(--agent-bar); }
+.pop .quote { font-size: 13px; color: var(--muted); margin-bottom: 6px; max-height: 60px; overflow: hidden; }
+.pop .del { border: none; background: none; color: var(--deny); font-size: 13px; }
+
+/* themes / taxonomy */
+.scroll { flex: 1; overflow-y: auto; padding: 20px 32px; }
+.cols { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 28px; }
+h3 { margin: 6px 0 10px; font-size: 16px; }
+.theme { border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; margin-bottom: 10px; }
+.theme .head { display: flex; align-items: center; gap: 8px; }
+.theme .name { font-family: var(--mono); font-weight: 600; }
+.theme .count { font-size: 12px; color: var(--muted); }
+.theme textarea { width: 100%; min-height: 44px; margin-top: 6px; font-size: 13.5px; }
+.theme ul { margin: 6px 0 0; padding-left: 18px; font-size: 13.5px; }
+.theme li a { color: inherit; font-family: var(--mono); font-size: 12px; }
+.ai-box { border: 1.5px dashed var(--ai-bar); background: var(--ai-bg); border-radius: 8px; padding: 10px 14px; margin-bottom: 14px; }
+.ai-box h4 { margin: 0 0 6px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ai-label); }
+.sug { border-top: 1px solid var(--border); padding: 8px 0; font-size: 14px; } .sug:first-of-type { border-top: none; }
+.sug .acts { margin-top: 4px; display: flex; gap: 6px; }
+.mode { border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; margin-bottom: 12px; }
+.mode label { display: block; font-size: 11px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+.mode input, .mode textarea, .mode select { width: 100%; font-size: 14px; }
+.mode textarea { min-height: 52px; }
+
+/* answer-key checklist, target row, quick tags */
+.checks { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.checks label { display: flex; gap: 8px; align-items: flex-start; cursor: pointer; }
+.checks input { margin-top: 4px; width: 16px; height: 16px; flex-shrink: 0; }
+.checks li.done span { color: var(--muted); text-decoration: line-through; }
+.checks li.last span { font-weight: 600; }
+.res tr.target td { background: var(--key-bg); font-weight: 600; }
+.res tr.target td:first-child { box-shadow: inset 4px 0 0 var(--key-bar); }
+.tgt { display: inline-block; font-size: 11px; font-family: -apple-system, sans-serif; background: var(--key-bar); color: #fff; border-radius: 4px; padding: 0 6px; margin-left: 6px; }
+.qtags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.qtags button { border: 1px solid var(--border); background: var(--bg); border-radius: 12px; padding: 1px 10px; font-size: 12.5px; }
+.qtags button.on { border-color: var(--agent-bar); color: var(--agent-label); font-weight: 600; }
+.keys { font-size: 11.5px; color: var(--muted); }
+.keys kbd { font-family: var(--mono); border: 1px solid var(--border); border-radius: 3px; padding: 0 4px; }
+/* compact theme cards */
+.theme .example { margin-top: 6px; font-size: 13.5px; }
+.theme .example.one { background: var(--panel); border-radius: 6px; padding: 6px 10px; }
+.theme .example .lbl { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.theme .example a { font-family: var(--mono); font-size: 12px; color: inherit; }
+.theme .cases { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+.theme .case { font-family: var(--mono); font-size: 12px; border: 1px solid var(--border); background: var(--bg); border-radius: 4px; padding: 0 7px; }
+.theme .case.on { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+.theme .case.all { font-family: inherit; border-style: dashed; }
+.theme details.memo { margin-top: 6px; } .theme details.memo summary { font-size: 12px; }
+/* scannable notes */
+.nt .lead { font-weight: 650; }
+.nt .ref { font-family: var(--mono); font-size: .92em; font-weight: 600; background: var(--panel); border-radius: 3px; padding: 0 3px; }
+/* axial table */
+.tbar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
+.tbar input[type=search] { width: 380px; max-width: 100%; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px 8px; margin-bottom: 18px; }
+.code { display: inline-block; font-size: 13px; padding: 2px 10px; border-radius: 5px; cursor: pointer; border: 1px solid transparent; white-space: nowrap; }
+.code .n { opacity: .65; margin-left: 4px; }
+.code.sel { border-color: currentColor; font-weight: 600; }
+.code.sm { font-size: 12px; padding: 1px 8px; cursor: default; }
+table.axial { width: 100%; border-collapse: collapse; }
+table.axial th { text-align: left; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding: 8px 12px; border-bottom: 1px solid var(--border); }
+table.axial td { vertical-align: top; padding: 12px; border-bottom: 1px solid var(--border); }
+table.axial td.cid { width: 140px; } table.axial td.ax { width: 300px; }
+table.axial td.cid a { font-family: var(--mono); font-size: 13px; color: var(--agent-label); text-decoration: none; }
+table.axial ul { margin: 0; padding-left: 16px; }
+table.axial li { margin-bottom: 6px; font-size: 14px; }
+table.axial li .where { color: var(--muted); font-size: 12px; margin: 0 6px 0 4px; }
+table.axial li .first { font-size: 11px; color: var(--key-label); text-transform: uppercase; letter-spacing: .05em; margin-right: 4px; }
+.addcode { border: 1px dashed var(--border); background: none; border-radius: 5px; font-size: 12px; padding: 0 7px; color: var(--muted); }
+.addcode:hover { color: var(--text); border-color: var(--muted); }
+.code .rm { border: none; background: none; padding: 0 0 0 4px; color: inherit; opacity: .6; font-size: 12px; }
+.ax .code { display: block; width: fit-content; margin-bottom: 6px; }
+
+/* labels grid */
+table.grid { border-collapse: collapse; font-size: 13px; }
+table.grid th, table.grid td { border: 1px solid var(--border); padding: 4px 8px; text-align: center; }
+table.grid th { position: sticky; top: 0; background: var(--bg); font-family: var(--mono); font-size: 12px; max-width: 130px; }
+table.grid td.id { text-align: left; font-family: var(--mono); cursor: pointer; text-decoration: underline; white-space: nowrap; }
+table.grid td.cell { cursor: pointer; min-width: 74px; user-select: none; }
+td.cell.p1 { background: var(--deny-bg); color: var(--deny); font-weight: 600; }
+td.cell.p0 { background: var(--ok-bg); color: var(--ok); }
+.stats { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+.stat { border: 1px solid var(--border); border-radius: 8px; padding: 10px 16px; min-width: 130px; }
+.stat b { display: block; font-size: 24px; font-variant-numeric: tabular-nums; } .stat span { font-size: 12px; color: var(--muted); }
+table.plain { border-collapse: collapse; width: 100%; font-size: 13.5px; margin-bottom: 20px; }
+table.plain th, table.plain td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.empty { padding: 50px; color: var(--muted); text-align: center; }
+.hint { font-size: 12px; color: var(--muted); }
+@media (max-width: 860px) { main { flex-direction: column; } aside { width: 100%; max-height: 40vh; border-right: none; border-bottom: 1px solid var(--border); } .cols { grid-template-columns: 1fr; } .conv, .scroll, .code { padding-left: 16px; padding-right: 16px; } }
+</style>
+</head>
+<body>
+<header>
+  <button class="side-toggle" id="toggle-list" title="Show / hide the conversation list (shortcut: [ )">☰ List</button>
+  <h1>Cartwheel error analysis</h1>
+  <div class="tabs" id="tabs">
+    <button data-view="review" class="on">Review</button>
+    <button data-view="themes">Themes &amp; taxonomy</button>
+    <button data-view="table">Table</button>
+    <button data-view="labels">Labels</button>
+    <button data-view="progress">Progress &amp; sampling</button>
+  </div>
+  <div class="spacer"></div>
+  <button class="side-toggle" id="theme-btn" title="Switch light / dark">◐ Light</button>
+  <div style="display:flex;gap:4px;align-items:center"><button class="side-toggle" id="zoom-out" title="Smaller text">A−</button><span class="small muted" id="zoom-val" style="min-width:38px;text-align:center"></span><button class="side-toggle" id="zoom-in" title="Bigger text">A+</button></div>
+  <div class="status" id="status">loading…</div>
+</header>
+
+<main>
+  <section class="view on" id="view-review">
+    <aside>
+      <div class="filters">
+        <select id="f-batch" class="full"></select>
+        <input type="search" id="q" class="full" placeholder="Search messages, ids, tools, notes…">
+        <select id="f-status"><option value="">Any status</option><option value="todo">Not reviewed</option><option value="fail">Failure noted</option><option value="nofail">No failure</option></select>
+        <select id="f-role"><option value="">All roles</option></select>
+        <select id="f-group"><option value="">All groups</option><option>coverage</option><option>challenge</option></select>
+        <select id="f-intent"><option value="">All intents</option></select>
+        <div class="full hint" id="count"></div>
+      </div>
+      <div class="list" id="list"></div>
+    </aside>
+    <div class="convcol">
+      <div class="conv" id="conv"><div class="empty">Loading…</div></div>
+      <div class="code" id="code" hidden></div>
+    </div>
+  </section>
+
+  <section class="view" id="view-themes"><div class="scroll" id="themes"></div></section>
+  <section class="view" id="view-table"><div class="scroll" id="table"></div></section>
+  <section class="view" id="view-labels"><div class="scroll" id="labels"></div></section>
+  <section class="view" id="view-progress"><div class="scroll" id="progress"></div></section>
+</main>
+<div class="pop" id="pop"></div>
+<button class="fmic" id="fmic" title="Dictate into this box (Option+D)">🎤</button>
+<div class="ftip" id="ftip"></div>
+
+<script>
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const now = () => new Date().toISOString();
+const S = { convs: [], byId: {}, st: null, current: null, view: "review", draft: {} };
+
+/* ---------- state + saving ---------- */
+const timers = {};
+const fingerprint = a => { const { updated_ts, ...rest } = a; return JSON.stringify(rest); };
+S.sync = {};
+function markSynced() { S.sync = Object.fromEntries(annList().map(a => [a.id, fingerprint(a)])); }
+function stampChanged() { for (const a of annList()) if (S.sync[a.id] !== fingerprint(a)) a.updated_ts = now(); }
+function adoptAnnotations(doc) {
+  // take in notes saved elsewhere (e.g. dictated through Claude) without losing local edits
+  S.st.annotations = doc; markSynced(); renderList(); renderStatus();
+  if (S.view === "review" && S.current && !S.quiet && document.activeElement?.id !== "note" && !document.activeElement?.closest?.("#pop") && !($("#note")?.value || "").trim()) { renderConv(); renderCode(); }
+  if (S.view === "table") renderTable(); if (S.view === "themes") renderThemes();
+}
+function persist(name, delay = 300) {
+  setStatus("saving…");
+  if (name === "annotations") stampChanged();
+  clearTimeout(timers[name]);
+  timers[name] = setTimeout(async () => {
+    try {
+      if (name === "annotations") stampChanged();
+      const r = await fetch(`/api/state/${name}`, { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify(S.st[name]) });
+      const out = await r.json().catch(() => ({}));
+      if (r.ok && out.merged) adoptAnnotations(out.merged);
+      setStatus(r.ok ? "saved" : "save failed");
+    } catch { setStatus("save failed — is the server running?"); }
+  }, delay);
+}
+window.addEventListener("focus", async () => {
+  try { const st = await fetch("/api/state").then(r => r.json()); stampChanged(); S.quiet = true; adoptAnnotations(mergeLocal(st.annotations)); } catch {} finally { S.quiet = false; }
+});
+function mergeLocal(disk) {
+  const stamp = a => [a.updated_ts, a.saved_ts, a.ts].filter(Boolean).sort().pop() || "";
+  const byId = Object.fromEntries(disk.annotations.map(a => [a.id, a]));
+  for (const a of annList()) if (!byId[a.id] || stamp(a) > stamp(byId[a.id])) byId[a.id] = a;
+  return { ...disk, annotations: Object.values(byId) };
+}
+function setStatus(w) { S.word = w; renderStatus(); }
+function renderStatus() {
+  if (!S.st) return;
+  const reviewed = annList().filter(isReviewed).length;
+  const inSample = sampleIds().size;
+  $("#status").textContent = `${reviewed} reviewed${inSample ? ` · ${inSample} in sample` : ""} · ${S.word || "saved"}`;
+}
+const annList = () => S.st.annotations.annotations;
+const annFor = id => annList().find(a => a.scenario_id === id);
+const isReviewed = a => a && (a.no_failure || (a.note || "").trim()) && a.saved_ts;
+function ensureAnn(c) {
+  let a = annFor(c.id);
+  if (!a) {
+    a = { id: `ann-${c.id}`, kind: "open_code", trace_id: c.trace_id, scenario_id: c.id, session_id: c.session_id,
+          trace_ids: c.trace_ids, note: "", no_failure: false, tags: [], highlights: [], author: "human",
+          batch: batchOf(c.id), ts: now(), saved_ts: null, history: [] };
+    annList().push(a);
+  }
+  return a;
+}
+function batchOf(id) { const b = S.st.sample_manifest.batches.find(b => (b.scenario_ids || []).includes(id)); return b ? b.id : null; }
+function sampleIds() { return new Set(S.st.sample_manifest.batches.flatMap(b => b.scenario_ids || [])); }
+function convTags(a) { return [...new Set([...(a.tags || []), ...(a.highlights || []).flatMap(h => h.tags || [])])]; }
+function tagCounts() {
+  const counts = {};
+  for (const a of annList()) for (const t of convTags(a)) counts[t] = (counts[t] || 0) + 1;
+  for (const t of Object.keys(S.st.themes.tags)) if (!S.st.themes.tags[t].merged_into) counts[t] ||= 0;
+  return counts;
+}
+
+/* ---------- load ---------- */
+async function init() {
+  const [convs, st] = await Promise.all([fetch("/api/conversations").then(r => r.json()), fetch("/api/state").then(r => r.json())]);
+  S.convs = convs; S.byId = Object.fromEntries(convs.map(c => [c.id, c])); S.st = st; markSynced();
+  for (const k of ["themes"]) { S.st[k].tags ||= {}; S.st[k].history ||= []; }
+  fill("#f-role", c => c.tuple.role); fill("#f-intent", c => c.tuple.intent);
+  buildBatchSelect();
+  ["#q", "#f-batch", "#f-status", "#f-role", "#f-group", "#f-intent"].forEach(s => $(s).addEventListener("input", () => { renderList(); if (S.current) renderConv(); }));
+  renderList(); renderStatus();
+  const want = location.hash.slice(1);
+  open(S.byId[want] ? want : (visible()[0] || {}).id);
+}
+function buildBatchSelect() {
+  const bsel = $("#f-batch"), keep = bsel.value;
+  const batches = S.st.sample_manifest.batches.filter(b => (b.scenario_ids || []).length);
+  bsel.innerHTML = (batches.length ? `<option value="sample">Review sample (all batches)</option>` : "") +
+    batches.map(b => `<option value="${esc(b.id)}">${esc(b.name || b.id)} (${b.scenario_ids.length})</option>`).join("") +
+    `<option value="">All 250 conversations</option>`;
+  if ([...bsel.options].some(o => o.value === keep)) bsel.value = keep;
+}
+function fill(sel, fn) {
+  const el = $(sel), first = el.options[0].outerHTML;
+  el.innerHTML = first + [...new Set(S.convs.map(fn).filter(Boolean))].sort().map(v => `<option>${esc(v)}</option>`).join("");
+}
+
+/* ---------- sidebar ---------- */
+function visible() {
+  const q = $("#q").value.trim().toLowerCase(), b = $("#f-batch").value, st = $("#f-status").value,
+        role = $("#f-role").value, g = $("#f-group").value, intent = $("#f-intent").value;
+  const sample = sampleIds(), batch = S.st.sample_manifest.batches.find(x => x.id === b);
+  return S.convs.filter(c => {
+    const a = annFor(c.id);
+    if (b === "sample" && !sample.has(c.id)) return false;
+    if (batch && !(batch.scenario_ids || []).includes(c.id)) return false;
+    if (st === "todo" && isReviewed(a)) return false;
+    if (st === "fail" && !(isReviewed(a) && !a.no_failure)) return false;
+    if (st === "nofail" && !(isReviewed(a) && a.no_failure)) return false;
+    if (role && c.tuple.role !== role) return false;
+    if (g && c.group !== g) return false;
+    if (intent && c.tuple.intent !== intent) return false;
+    if (q) {
+      const hay = [c.id, c.dq, ...Object.values(c.tuple), a?.note, ...(a?.tags || []),
+        ...c.turns.flatMap(t => [t.user, t.agent, ...t.tools.map(x => x.name)])].join(" ").toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+}
+function itemHTML(c) {
+  const a = annFor(c.id), done = isReviewed(a);
+  const n = (a?.highlights || []).length;
+  return `<div class="top"><span class="dot ${done ? (a.no_failure ? "nofail" : "fail") : ""}"></span><span>${esc(c.id)}</span>
+      ${c.group === "challenge" ? `<span class="pill challenge">challenge</span>` : ""}
+      <span class="muted" style="font-size:12px">${c.turns.length} msg</span>${n ? `<span class="badge">${n}</span>` : ""}</div>
+    <div class="muted small">${esc(c.tuple.role)} · ${esc(c.tuple.intent)}${(a?.tags || []).length ? " · " + a.tags.map(esc).join(", ") : ""}</div>
+    <div class="preview">${esc(c.opening)}</div>`;
+}
+function renderList() {
+  const v = visible();
+  $("#count").textContent = `${v.length} conversations · ○ not reviewed · ● failure noted · ● no failure`;
+  $("#list").innerHTML = v.map(c => `<div class="item${c.id === S.current ? " on" : ""}" data-id="${esc(c.id)}">${itemHTML(c)}</div>`).join("");
+}
+function refreshItem(id) { const el = $(`#list .item[data-id="${CSS.escape(id)}"]`); if (el) el.innerHTML = itemHTML(S.byId[id]); }
+$("#list").onclick = e => { const it = e.target.closest(".item"); if (it) open(it.dataset.id); };
+
+/* ---------- tool results as readable tables ---------- */
+const fmt = v => v === null ? "null" : typeof v === "object" ? JSON.stringify(v) : String(v);
+function parseOut(text) { try { return JSON.parse(text); } catch { return undefined; } }
+function resultSummary(text) {
+  const v = parseOut(text);
+  const tgt = S.current ? targetOrderId(S.byId[S.current]) : null;
+  if (tgt != null && v && Array.isArray(v.orders)) {
+    const pos = v.orders.findIndex(o => o.order_id === tgt);
+    if (pos >= 0) return ` (${v.orders.length} orders · #${tgt} is row ${pos + 1})`;
+  }
+  if (v && typeof v === "object" && !Array.isArray(v)) {
+    const arr = Object.entries(v).find(([, x]) => Array.isArray(x) && x.length && typeof x[0] === "object");
+    if (arr) return ` (${arr[1].length} ${arr[0]})`;
+  }
+  return "";
+}
+/* column layout per tool + list, remembered in this browser */
+const TABLES = {}; let tableSeq = 0;
+function colPrefs(key) { try { return JSON.parse(localStorage.getItem("cols:" + key)) || {}; } catch { return {}; } }
+function setColPrefs(key, p) { try { localStorage.setItem("cols:" + key, JSON.stringify(p)); } catch {} redrawTables(key); }
+function tableHTML(rows, key = "default", tid = null) {
+  const all = [...new Set(rows.flatMap(r => Object.keys(r)))];
+  const PRIORITY = ["order_id", "id", "title", "name", "ordered_at", "shipped_at", "delivered_at", "status", "total_usd", "price_usd"];
+  const rank = c => { const i = PRIORITY.indexOf(c); return i >= 0 ? i : PRIORITY.length + (c.endsWith("_id") ? 1 : 0); };
+  const p = colPrefs(key), hidden = new Set(p.hidden || []);
+  const saved = (p.order || []).filter(c => all.includes(c));
+  const cols = [...saved, ...all.filter(c => !saved.includes(c)).sort((a, b) => rank(a) - rank(b))].filter(c => !hidden.has(c));
+  tid ??= "t" + (++tableSeq); TABLES[tid] = { rows, key };
+  const hiddenHere = all.filter(c => hidden.has(c));
+  const tgt = S.current ? targetOrderId(S.byId[S.current]) : null;
+  return `<div class="tblwrap" data-tid="${tid}" data-tkey="${esc(key)}">
+    ${hiddenHere.length || saved.length ? `<div class="colbar">${hiddenHere.length ? `hidden: ${hiddenHere.map(c => `<button data-show="${esc(c)}" title="show column">+ ${esc(c)}</button>`).join("")}` : ""}<button class="reset" data-reset="1">reset columns</button></div>` : ""}
+    <div class="tbl"><table><tr><th>#</th>${cols.map(c => `<th draggable="true" data-col="${esc(c)}">${esc(c)}<button class="x" data-hide="${esc(c)}" title="hide column">×</button></th>`).join("")}</tr>${rows.map((r, i) => { const hit = tgt != null && r.order_id === tgt; return `<tr class="${hit ? "target" : ""}"><td class="muted">${i + 1}</td>${cols.map(c => `<td>${esc(c in r ? fmt(r[c]) : "")}${hit && c === cols[0] ? '<span class="tgt">the order the customer means</span>' : ""}</td>`).join("")}</tr>`; }).join("")}</table></div></div>`;
+}
+function redrawTables(key) {
+  document.querySelectorAll(".tblwrap").forEach(w => { if (w.dataset.tkey === key) { const t = TABLES[w.dataset.tid]; w.outerHTML = tableHTML(t.rows, t.key, w.dataset.tid); } });
+}
+function currentOrder(wrap) { return [...wrap.querySelectorAll("th[data-col]")].map(th => th.dataset.col); }
+document.addEventListener("click", e => {
+  const wrap = e.target.closest(".tblwrap"); if (!wrap) return;
+  const key = wrap.dataset.tkey, p = colPrefs(key);
+  if (e.target.dataset.hide) { e.stopPropagation(); p.order = currentOrder(wrap); p.hidden = [...new Set([...(p.hidden || []), e.target.dataset.hide])]; setColPrefs(key, p); }
+  else if (e.target.dataset.show) { p.hidden = (p.hidden || []).filter(c => c !== e.target.dataset.show); setColPrefs(key, p); }
+  else if (e.target.dataset.reset) setColPrefs(key, {});
+});
+let dragCol = null;
+document.addEventListener("dragstart", e => { const th = e.target.closest?.(".res th[data-col]"); if (th) { dragCol = th.dataset.col; e.dataTransfer.effectAllowed = "move"; } });
+document.addEventListener("dragover", e => { const th = e.target.closest?.(".res th[data-col]"); if (th && dragCol) { e.preventDefault(); document.querySelectorAll(".drag-over").forEach(x => x.classList.remove("drag-over")); th.classList.add("drag-over"); } });
+document.addEventListener("drop", e => {
+  const th = e.target.closest?.(".res th[data-col]"); if (!th || !dragCol) return;
+  e.preventDefault();
+  const wrap = th.closest(".tblwrap"), key = wrap.dataset.tkey, order = currentOrder(wrap).filter(c => c !== dragCol);
+  order.splice(order.indexOf(th.dataset.col), 0, dragCol);
+  const p = colPrefs(key); p.order = order; setColPrefs(key, p); dragCol = null;
+});
+document.addEventListener("dragend", () => { dragCol = null; document.querySelectorAll(".drag-over").forEach(x => x.classList.remove("drag-over")); });
+function resultHTML(text, tool = "tool") {
+  const v = parseOut(text);
+  if (v === undefined || typeof v !== "object" || v === null) return `<pre>${esc(text)}</pre>`;
+  if (Array.isArray(v)) return `<div class="res">${v.length && typeof v[0] === "object" ? tableHTML(v, tool) : `<pre>${esc(text)}</pre>`}</div>`;
+  let h = "", tables = "";
+  for (const [k, x] of Object.entries(v)) {
+    if (Array.isArray(x) && x.length && typeof x[0] === "object") tables += `<div class="lbl">${esc(k)} (${x.length}, in the order the tool returned them)</div>${tableHTML(x, `${tool}:${k}`)}`;
+    else if (x && typeof x === "object" && !Array.isArray(x)) tables += `<div class="lbl">${esc(k)}</div>${Object.entries(x).map(([k2, y]) => `<div class="kv">${esc(k2)}: <b>${esc(fmt(y))}</b></div>`).join("")}`;
+    else h += `<div class="kv">${esc(k)}: <b>${esc(fmt(x))}</b></div>`;
+  }
+  return `<div class="res">${h}${tables}</div>`;
+}
+
+
+/* ---------- answer key checklist + target order ---------- */
+function keyClauses(c) {
+  const text = (c.expected.outcome || c.expected.criterion || "").trim();
+  return text.split(/(?<=[.;])\s+(?=[A-Z])|;\s+/).map(x => x.trim().replace(/[;.]$/, "")).filter(Boolean);
+}
+function checklistHTML(c, a) {
+  const parts = keyClauses(c), done = (a && a.checks) || {};
+  return `<ul class="checks">${parts.map((t, i) => `<li class="${done[i] ? "done" : ""} ${i === parts.length - 1 && parts.length > 1 ? "last" : ""}"><label><input type="checkbox" data-chk="${i}" ${done[i] ? "checked" : ""}><span>${esc(t)}</span></label></li>`).join("")}</ul>`;
+}
+function targetOrderId(c) {
+  return c.grounding?.order?.id ?? c.tuple?.order_id ?? null;
+}
+/* ---------- conversation ---------- */
+function hl(text, turn, role, hls) {
+  text = text || "";
+  const ranges = [];
+  hls.forEach((h, i) => { if (h.turn === turn && h.role === role) { const at = text.indexOf(h.quote); if (at >= 0) ranges.push([at, at + h.quote.length, i]); } });
+  ranges.sort((a, b) => a[0] - b[0]);
+  let out = "", pos = 0;
+  for (const [s, e, i] of ranges) { if (s < pos) continue; out += esc(text.slice(pos, s)) + `<mark data-h="${i}" title="${esc(hls[i].note)}">${esc(text.slice(s, e))}</mark>`; pos = e; }
+  return out + esc(text.slice(pos));
+}
+function callHTML(t) {
+  const entries = t.args && typeof t.args === "object" ? Object.entries(t.args) : [];
+  return `<div class="call"><span class="fn">${esc(t.name)}</span>${entries.length ? "" : "()"}${t.denied ? `<span class="tag-deny">permission denied</span>` : t.ok === false ? `<span class="tag-deny">ok: false</span>` : ""}
+    ${entries.length ? `<div class="args">${entries.map(([k, v]) => `${esc(k)}: <b>${esc(JSON.stringify(v))}</b>`).join("<br>")}</div>` : ""}
+    <details><summary>result${resultSummary(t.output)}</summary>${resultHTML(t.output, t.name)}<details class="raw-toggle"><summary>raw</summary><pre>${esc(t.output)}</pre></details></details></div>`;
+}
+function open(id) {
+  if (!id) { $("#conv").innerHTML = `<div class="empty">No conversations match these filters.</div>`; $("#code").hidden = true; return; }
+  stopDictation(); S.current = id; history.replaceState(null, "", `#${id}`);
+  document.querySelectorAll("#list .item").forEach(el => el.classList.toggle("on", el.dataset.id === id));
+  $(`#list .item[data-id="${CSS.escape(id)}"]`)?.scrollIntoView({ block: "nearest" });
+  renderConv(); renderCode(); $("#conv").scrollTop = 0;
+}
+function renderConv() {
+  const c = S.byId[S.current], a = annFor(c.id), hls = a?.highlights || [], ex = c.expected, t = c.tuple;
+  const { role, intent, ...rest } = t;
+  const v = visible(), pos = v.findIndex(x => x.id === c.id);
+  let h = `<div class="inner"><div class="convnav">
+      <button class="side-toggle" id="show-list" title="Show the list (shortcut: [ )" ${document.body.classList.contains("nolist") ? "" : "hidden"}>▶ list</button>
+      <h2>${esc(c.id)}</h2>
+      <button class="side-toggle" data-step="-1" ${pos > 0 ? "" : "disabled"} title="Previous (k)">‹ prev</button>
+      <button class="side-toggle" data-step="1" ${pos >= 0 && pos < v.length - 1 ? "" : "disabled"} title="Next (j)">next ›</button>
+      ${pos >= 0 ? `<span class="pos">${pos + 1} of ${v.length} in this list</span>` : ""}</div><div class="meta">
+      <span class="pill ${c.group === "challenge" ? "challenge" : ""}">${esc(c.group)}</span>
+      <span class="pill">role: <b>${esc(role)}</b></span><span class="pill">intent: <b>${esc(intent)}</b></span>
+      ${c.dq ? `<span class="pill dq">damaged record: <b>${esc(c.dq)}</b></span>` : ""}
+      <span class="pill">${c.turns.length} messages · ${c.tool_count} tool calls · ${esc(c.model || "")}</span>
+      ${batchOf(c.id) ? `<span class="pill">batch: <b>${esc(batchOf(c.id))}</b></span>` : `<span class="pill">not in review sample</span>`}</div>
+    <div class="card key"><h4>Answer key: what the agent should do (tick each as you check it)</h4>${checklistHTML(c, a)}
+      ${ex.reason ? `<p class="muted"><b>Why:</b> ${esc(ex.reason)}</p>` : ""}
+      ${ex.source ? `<p class="muted small"><b>Source (${esc(ex.source.type)}):</b> <span class="mono">${esc(ex.source.reference)}</span></p>` : ""}</div>
+    <details class="card"><summary>Scenario details and grounding data</summary><div class="meta" style="margin-top:8px">${Object.entries(rest).map(([k, v]) => `<span class="pill">${esc(k.replace(/_/g, " "))}: <b>${esc(v)}</b></span>`).join("")}</div><pre>${esc(JSON.stringify(c.grounding, null, 2))}</pre></details>`;
+  if (c.earlier_attempts.length) h += `<details class="card"><summary>${c.earlier_attempts.length} earlier attempt(s) that timed out, not graded</summary>${c.earlier_attempts.flat().map(x => `<p class="mono small">${esc(x.user)} → ${x.tools.map(y => esc(y.name)).join(", ") || "no tools"} → ${esc(x.agent || "(no reply: request timed out)")}</p>`).join("")}</details>`;
+  c.turns.forEach((tn, i) => {
+    const cards = r => hls.map((x, j) => [x, j]).filter(([x]) => x.turn === i && x.role === r)
+      .map(([x, j]) => `<div class="ncard" data-card="${j}"><div class="q">“${esc(x.quote)}”</div>${esc(x.note)}</div>`).join("");
+    const row = (inner, r) => `<div class="row"><div>${inner}</div><div class="margin">${r ? cards(r) : ""}</div></div>`;
+    h += `<div class="turn-h">Message ${i + 1}</div>` +
+      row(`<div class="msg user"><div class="who">User · ${esc(role)}</div><div class="text" data-turn="${i}" data-role="user">${hl(tn.user, i, "user", hls)}</div></div>`, "user");
+    if (tn.tools.length) h += row(`<details class="msg tool" open><summary>Tool calls (${tn.tools.length}): ${tn.tools.map(x => esc(x.name)).join(", ")}</summary>${tn.tools.map(callHTML).join("")}</details>`);
+    h += row(`<div class="msg agent"><div class="who">Agent</div><div class="text" data-turn="${i}" data-role="agent">${hl(tn.agent || "(no reply)", i, "agent", hls)}</div></div>`, "agent");
+  });
+  $("#conv").innerHTML = h + `<p class="hint" style="margin-top:20px">Tip: select any text above to attach a note to it.</p></div>`;
+}
+$("#conv").addEventListener("change", e => {
+  const box = e.target.closest("[data-chk]"); if (!box) return;
+  const a = ensureAnn(S.byId[S.current]); a.checks = { ...(a.checks || {}), [box.dataset.chk]: box.checked };
+  box.closest("li").classList.toggle("done", box.checked); persist("annotations");
+});
+$("#conv").addEventListener("click", e => {
+  const m = e.target.closest("mark[data-h]"); if (m) return showNote(+m.dataset.h, m);
+  const card = e.target.closest(".ncard"); if (card) return showNote(+card.dataset.card, card);
+  const st = e.target.closest("[data-step]"); if (st) return step(+st.dataset.step);
+  if (e.target.closest("#show-list")) setListHidden(false);
+});
+$("#conv").addEventListener("mouseover", e => {
+  const card = e.target.closest(".ncard");
+  document.querySelectorAll("mark.hot").forEach(x => x.classList.remove("hot"));
+  if (card) document.querySelector(`mark[data-h="${card.dataset.card}"]`)?.classList.add("hot");
+});
+function step(d) { const v = visible(), i = v.findIndex(c => c.id === S.current); if (v[i + d]) open(v[i + d].id); }
+function setListHidden(hide) {
+  document.body.classList.toggle("nolist", hide);
+  try { localStorage.setItem("listHidden", hide ? "1" : ""); } catch {}
+  if (S.current) renderConv();
+}
+$("#toggle-list").onclick = () => setListHidden(!document.body.classList.contains("nolist"));
+try { if (localStorage.getItem("listHidden")) document.body.classList.add("nolist"); } catch {}
+
+/* ---------- open coding panel ---------- */
+function renderCode() {
+  const c = S.byId[S.current], a = annFor(c.id), saved = isReviewed(a);
+  const live = $("#note");
+  if (live && live.dataset.cid === c.id && live.value !== (a?.note || "")) S.draft[c.id] = live.value;
+  const draft = S.draft[c.id] ?? (a?.no_failure ? "" : (a?.note || ""));
+  const known = Object.keys(tagCounts()).sort();
+  $("#code").hidden = false;
+  $("#code").innerHTML = `
+    <div class="label">First failure: the earliest step that went wrong, in your own words <span class="keys">&nbsp; <kbd>P</kbd> pass · <kbd>F</kbd> write note · <kbd>⌘↵</kbd> save note · <kbd>→</kbd>/<kbd>←</kbd> next/prev</span></div>
+    <div class="row">
+      <textarea id="note" data-cid="${esc(c.id)}" placeholder="e.g. Didn't call any tools, so it never read the escalation policy and gave a vague range instead of 24 hours.">${esc(draft)}</textarea>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <button class="mic" id="mic-note" title="Dictate into the note (shortcut: Option+D)">🎤 Dictate</button>
+        <button class="btn primary" id="save-note">Save note</button>
+        <button class="btn" id="no-fail">No failure observed</button>
+      </div>
+    </div>
+    <div class="interim" id="interim"></div>
+    ${(a?.highlights || []).length ? `<div class="hls"><div class="label" style="margin:8px 0 2px">Your highlight notes (${a.highlights.length}): saved. Promote one, or summarize them above, to mark this conversation reviewed</div>${a.highlights.map((h, i) => `<div class="hlrow"><span class="muted small">msg ${h.turn + 1} ${esc(h.role)}:</span> ${esc(h.note)} <button class="btn small" data-use="${i}">Use as first-failure note ↑</button></div>`).join("")}</div>` : ""}
+    ${saved ? `<div class="saved-note">✓ ${a.no_failure ? "Recorded: no failure observed" : "Note saved"} ${a.history.length ? `· ${a.history.length} earlier version(s) kept` : ""}</div>` : ""}
+    ${saved && !a.no_failure ? `<div class="qtags">${topTags().map(t => `<button data-qt="${esc(t)}" class="${a.tags.includes(t) ? "on" : ""}">${esc(t.replace(/_/g, " "))}</button>`).join("")}</div>` : ""}
+    <div class="tags">
+      <span class="label" style="margin:0">Working tags</span>
+      ${(a?.tags || []).map(t => `<span class="pill tag">${esc(t)}<button data-untag="${esc(t)}" title="remove">×</button></span>`).join("")}
+      <input id="tag-in" list="tag-list" placeholder="${saved && !a.no_failure ? "add a tag, press Enter" : "save your note first"}" ${saved && !a.no_failure ? "" : "disabled"} style="width:220px;font-size:13px">
+      <datalist id="tag-list">${known.map(t => `<option value="${esc(t)}">`).join("")}</datalist>
+    </div>`;
+  const keep = e => { S.draft[c.id] = e.target.value; };
+  ["input", "change", "keyup", "paste", "blur", "compositionend"].forEach(ev => $("#note").addEventListener(ev, keep));
+  $("#code").querySelectorAll("[data-use]").forEach(b => b.onclick = () => {
+    const h = annFor(c.id).highlights[+b.dataset.use];
+    $("#note").value = `Message ${h.turn + 1} (${h.role}): ${h.note}`; S.draft[c.id] = $("#note").value; $("#note").focus();
+  });
+  $("#mic-note").onclick = () => toggleDictation($("#note"), $("#mic-note"), $("#interim"), v => { S.draft[c.id] = v; });
+  $("#save-note").onclick = () => { stopDictation(); saveNote(false); };
+  $("#no-fail").onclick = () => saveNote(true);
+  $("#tag-in").onkeydown = e => {
+    if (e.key !== "Enter") return;
+    const t = e.target.value.trim().toLowerCase().replace(/\s+/g, "_");
+    if (!t) return;
+    const ann = annFor(c.id);
+    if (!ann.tags.includes(t)) ann.tags.push(t);
+    S.st.themes.tags[t] ||= { memo: "", created: now() };
+    persist("annotations"); persist("themes"); refreshItem(c.id); renderCode(); $("#tag-in").focus();
+  };
+  $("#code").querySelectorAll("[data-qt]").forEach(b => b.onclick = () => {
+    const ann = annFor(c.id), t = b.dataset.qt;
+    ann.tags = ann.tags.includes(t) ? ann.tags.filter(x => x !== t) : [...ann.tags, t];
+    persist("annotations"); refreshItem(c.id); renderCode();
+  });
+  $("#code").querySelectorAll("[data-untag]").forEach(b => b.onclick = () => {
+    const ann = annFor(c.id); ann.tags = ann.tags.filter(x => x !== b.dataset.untag);
+    persist("annotations"); refreshItem(c.id); renderCode();
+  });
+}
+function saveNote(noFailure) {
+  const c = S.byId[S.current];
+  let note = noFailure ? "no failure observed" : ($("#note").value || "").trim();
+  if (/^no failure( observed)?\.?$/i.test(note)) { noFailure = true; note = "no failure observed"; }
+  if (!noFailure && !note) { const a0 = annFor(c.id); if (a0?.no_failure && a0.saved_ts) return; $("#note").focus(); return; }
+  const a = ensureAnn(c);
+  if (a.saved_ts && (a.note !== note || a.no_failure !== noFailure)) a.history.push({ note: a.note, no_failure: a.no_failure, tags: [...a.tags], ts: a.saved_ts });
+  a.note = note; a.no_failure = noFailure; a.saved_ts = now(); a.ts = a.ts || a.saved_ts; a.batch = batchOf(c.id);
+  if (noFailure) a.tags = [];
+  delete S.draft[c.id];
+  persist("annotations", 0); refreshItem(c.id); renderCode(); renderStatus();
+}
+
+
+/* ---------- built-in dictation (Chrome speech recognition) ---------- */
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+let rec = null, recTarget = null;
+function stopDictation() {
+  if (rec) { const r = rec; rec = null; try { r.stop(); } catch {} }
+  document.querySelectorAll(".mic.on").forEach(b => { b.classList.remove("on"); b.textContent = b.id === "pop-mic" ? "🎤" : "🎤 Dictate"; });
+  const fm = document.getElementById("fmic"); if (fm) { fm.classList.remove("on"); fm.textContent = "🎤"; }
+  const ft = document.getElementById("ftip"); if (ft) { ft.style.display = "none"; ft.textContent = ""; }
+}
+function toggleDictation(field, btn, interimEl, onText = () => {}) {
+  if (!SR) { alert("Dictation needs Google Chrome."); return; }
+  if (rec && recTarget === field) return stopDictation();
+  stopDictation();
+  rec = new SR(); recTarget = field;
+  rec.lang = "en-US"; rec.continuous = true; rec.interimResults = true;
+  const base = () => field.value && !/\s$/.test(field.value) ? " " : "";
+  rec.onresult = e => {
+    let interim = "";
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      const t = e.results[i][0].transcript;
+      if (e.results[i].isFinal) { field.value += base() + t.trim(); onText(field.value); field.dispatchEvent(new Event("input")); }
+      else interim += t;
+    }
+    if (interimEl) interimEl.textContent = interim;
+  };
+  rec.onerror = e => { if (interimEl) interimEl.textContent = e.error === "not-allowed" ? "Microphone blocked: allow it in Chrome's address bar." : `Dictation stopped (${e.error}).`; stopDictation(); };
+  rec.onend = () => { if (rec) { try { rec.start(); } catch { stopDictation(); } } else if (interimEl) interimEl.textContent = ""; };
+  btn.classList.add("on"); btn.textContent = (btn.id === "pop-mic" || btn.id === "fmic") ? "■" : "■ Stop";
+  field.focus(); rec.start();
+}
+
+/* floating mic for any other text box */
+const fmic = $("#fmic"), ftip = $("#ftip");
+let fField = null;
+const isTextField = el => el && (el.tagName === "TEXTAREA" || (el.tagName === "INPUT" && /^(text|search|)$/.test(el.type))) && !el.disabled && el.id !== "note" && el.id !== "pop-in";
+function placeFmic() {
+  if (!fField || !document.body.contains(fField)) { if (!fmic.classList.contains("on")) fmic.style.display = "none"; return; }
+  const r = fField.getBoundingClientRect();
+  fmic.style.left = `${Math.min(r.right + 4, innerWidth - 34)}px`; fmic.style.top = `${r.top + Math.max(0, (Math.min(r.height, 34) - 26) / 2)}px`;
+  ftip.style.left = `${r.left}px`; ftip.style.top = `${r.bottom + 2}px`;
+}
+document.addEventListener("focusin", e => {
+  if (isTextField(e.target)) { fField = e.target; fmic.style.display = "block"; placeFmic(); }
+});
+document.addEventListener("focusout", () => setTimeout(() => {
+  if (!isTextField(document.activeElement) && !fmic.classList.contains("on")) { fmic.style.display = "none"; fField = null; }
+}, 120));
+document.addEventListener("scroll", placeFmic, true); window.addEventListener("resize", placeFmic);
+fmic.addEventListener("mousedown", e => e.preventDefault());  // keep focus in the field
+fmic.onclick = () => {
+  if (!fField) return;
+  const field = fField;
+  ftip.style.display = "block"; placeFmic();
+  toggleDictation(field, fmic, ftip, () => {});
+  if (!fmic.classList.contains("on")) { ftip.style.display = "none"; fmic.textContent = "🎤"; }
+  else fmic.textContent = "■";
+};
+document.addEventListener("keydown", e => {
+  if (e.altKey && (e.code === "KeyD")) {
+    e.preventDefault();
+    const a = document.activeElement;
+    if (pop.style.display === "block" && $("#pop-mic")) $("#pop-mic").click();
+    else if (isTextField(a)) { fField = a; fmic.click(); }
+    else if ($("#mic-note")) $("#mic-note").click();
+  }
+});
+
+
+/* ---------- quick tags + keyboard ---------- */
+function topTags(n = 8) {
+  const c = tagCounts(); return Object.keys(c).filter(t => c[t] > 0).sort((a, b) => c[b] - c[a]).slice(0, n);
+}
+document.addEventListener("keydown", e => {
+  if (S.view !== "review" || !S.current) return;
+  if (e.target.id === "note" && (e.metaKey || e.ctrlKey) && e.key === "Enter") { e.preventDefault(); stopDictation(); saveNote(false); return; }
+  if (e.target.matches("input, textarea, select") || e.metaKey || e.ctrlKey || e.altKey) return;
+  if (e.key === "p" || e.key === "P") { e.preventDefault(); stopDictation(); saveNote(true); }
+  else if (e.key === "f" || e.key === "F") { e.preventDefault(); $("#note")?.focus(); }
+  else if (e.key === "ArrowRight") { e.preventDefault(); step(1); }
+  else if (e.key === "ArrowLeft") { e.preventDefault(); step(-1); }
+});
+
+/* ---------- highlight notes ---------- */
+const pop = $("#pop");
+function placePop(rect) { pop.style.display = "block"; pop.style.top = `${Math.min(rect.bottom + 6, innerHeight - pop.offsetHeight - 10)}px`; pop.style.left = `${Math.max(10, Math.min(rect.left, innerWidth - 360))}px`; }
+const hidePop = () => { pop.style.display = "none"; };
+$("#conv").addEventListener("mouseup", () => {
+  const sel = getSelection(); if (!sel || sel.isCollapsed) return;
+  const quote = sel.toString().trim();
+  const box = n => n && (n.nodeType === 1 ? n : n.parentElement).closest(".text[data-turn]");
+  const b1 = box(sel.anchorNode), b2 = box(sel.focusNode);
+  if (!quote || !b1 || b1 !== b2) return;
+  pop.innerHTML = `<div class="quote">“${esc(quote)}”</div><div style="display:flex;gap:6px"><input id="pop-in" placeholder="What do you notice here?"><button class="mic" id="pop-mic" title="Dictate (Option+D)">🎤</button></div><div class="interim" id="pop-interim"></div><div class="hint">Enter to save · Esc to cancel</div>`;
+  placePop(sel.getRangeAt(0).getBoundingClientRect());
+  const inp = $("#pop-in"); inp.focus();
+  $("#pop-mic").onclick = () => toggleDictation(inp, $("#pop-mic"), $("#pop-interim"));
+  inp.onkeydown = ev => {
+    if (ev.key === "Escape") { stopDictation(); hidePop(); }
+    if (ev.key === "Enter" && inp.value.trim()) {
+      stopDictation();
+      const a = ensureAnn(S.byId[S.current]);
+      a.highlights.push({ id: `${a.id}-h${a.highlights.length}`, turn: +b1.dataset.turn, role: b1.dataset.role, quote, note: inp.value.trim(), ts: now() });
+      persist("annotations"); hidePop(); getSelection().removeAllRanges(); renderConv(); refreshItem(S.current);
+    }
+  };
+});
+function showNote(i, el) {
+  const a = annFor(S.current), h = a.highlights[i];
+  pop.innerHTML = `<div class="quote">“${esc(h.quote)}”</div><input id="pop-in" value="${esc(h.note)}"><div style="display:flex;justify-content:space-between"><span class="hint">Enter to save · Esc to close</span><button class="del" id="pop-del">Delete</button></div>`;
+  placePop(el.getBoundingClientRect());
+  const inp = $("#pop-in"); inp.focus();
+  inp.onkeydown = ev => { if (ev.key === "Escape") hidePop(); if (ev.key === "Enter") { h.note = inp.value.trim(); persist("annotations"); hidePop(); renderConv(); } };
+  $("#pop-del").onclick = () => { a.highlights.splice(i, 1); persist("annotations"); hidePop(); renderConv(); refreshItem(S.current); };
+}
+document.addEventListener("mousedown", e => { if (!pop.contains(e.target) && !e.target.closest("mark, .ncard")) hidePop(); });
+document.addEventListener("keydown", e => {
+  if (e.target.matches("input, textarea, select") || S.view !== "review") return;
+  if (e.key === "[") setListHidden(!document.body.classList.contains("nolist"));
+  if (e.key === "j") step(1);
+  if (e.key === "k") step(-1);
+});
+
+/* ---------- tabs ---------- */
+$("#tabs").onclick = e => {
+  const b = e.target.closest("button"); if (!b) return;
+  S.view = b.dataset.view;
+  document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("on", x === b));
+  document.querySelectorAll(".view").forEach(v => v.classList.toggle("on", v.id === `view-${S.view}`));
+  if (S.view === "themes") renderThemes(); if (S.view === "table") renderTable(); if (S.view === "labels") renderLabels(); if (S.view === "progress") renderProgress();
+};
+function goTo(id) { $('#tabs button[data-view="review"]').click(); if (!visible().some(c => c.id === id)) { $("#f-batch").value = ""; renderList(); } open(id); }
+
+/* ---------- themes & taxonomy ---------- */
+function renameTag(from, to, why) {
+  to = to.trim().toLowerCase().replace(/\s+/g, "_"); if (!to || to === from) return;
+  for (const a of annList()) {
+    if (a.tags.includes(from)) a.tags = [...new Set(a.tags.map(t => t === from ? to : t))];
+    for (const h of a.highlights || []) if ((h.tags || []).includes(from)) h.tags = [...new Set(h.tags.map(t => t === from ? to : t))];
+  }
+  const T = S.st.themes.tags, old = T[from] || { memo: "" };
+  T[to] = T[to] ? { ...T[to], memo: [T[to].memo, old.memo].filter(Boolean).join("\n") } : { ...old, created: old.created || now() };
+  T[from] = { ...old, merged_into: to };
+  S.st.themes.history.push({ action: why || "rename", from, to, ts: now() });
+  for (const m of S.st.patterns.modes) m.from_tags = [...new Set((m.from_tags || []).map(t => t === from ? to : t))];
+  persist("annotations"); persist("themes"); persist("patterns");
+}
+function renderThemes() {
+  const counts = tagCounts(), T = S.st.themes.tags;
+  const tags = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+  const pending = S.st.suggestions.filter(s => s.status === "pending" && s.kind.startsWith("theme_"));
+  let h = `<div class="cols"><div>
+    <h3>Emerging themes <span class="muted small">(your working tags, by count)</span></h3>
+    <p class="hint">Rename or merge freely; the original names stay in the history. When you want help with wording, press a button below. It only works on tags you've made.</p>
+    <div style="display:flex;gap:6px;margin-bottom:12px">
+      <button class="btn ai" id="sug-rename" ${tags.length ? "" : "disabled"}>Suggest clearer names</button>
+      <button class="btn ai" id="sug-struct" ${tags.length > 1 ? "" : "disabled"}>Suggest merges / splits</button>
+      <span class="hint" id="sug-status"></span></div>`;
+  if (pending.length) h += `<div class="ai-box"><h4>AI suggestions: accept or reject each</h4>${pending.map(s => `
+      <div class="sug"><b>${esc(s.kind.replace("theme_", ""))}</b> <span class="mono">${s.tags.map(esc).join(" + ")}</span> → <b>${esc(s.proposal)}</b>
+        <div class="muted small">${esc(s.reason)}</div>
+        <div class="acts"><button class="btn" data-acc="${s.id}">Accept</button><button class="btn" data-rej="${s.id}">Reject</button></div></div>`).join("")}</div>`;
+  if (!tags.length) h += `<div class="empty">No tags yet. Save a first-failure note in Review, then add a working tag.</div>`;
+  S.themeOpen ||= {};
+  h += `<div style="display:flex;gap:6px;margin:0 0 10px"><button class="btn small" id="zoom-themes-out">Zoom out: collapse all</button><button class="btn small" id="zoom-themes-in">Zoom in: show all notes</button></div>`;
+  for (const t of tags) {
+    const notes = annList().filter(a => convTags(a).includes(t) && (a.note || a.highlights?.length));
+    // clearest example: prefer a failure note that names the failure after "but", then the shortest note
+    const rank = a => (/(\bbut\b|instead of)/i.test(a.note || "") ? 0 : 1) * 1000 + (a.note || "").length;
+    const best = [...notes].filter(a => !a.no_failure).sort((x, y) => rank(x) - rank(y))[0] || notes[0];
+    const st = S.themeOpen[t] || {};
+    h += `<div class="theme" data-theme="${esc(t)}"><div class="head"><span class="name">${esc(t)}</span><span class="count">${counts[t]} conversation${counts[t] === 1 ? "" : "s"}</span>
+        <span class="spacer"></span><button class="btn small" data-ren="${esc(t)}">Rename / merge</button></div>
+      ${best ? `<div class="example"><span class="lbl">Clearest example</span> <a href="#" data-go="${esc(best.scenario_id)}">${esc(best.scenario_id.slice(-4))}</a> ${noteHTML(best.note)}</div>` : ""}
+      <div class="cases">${notes.map(a => `<button class="case ${st.one === a.scenario_id ? "on" : ""}" data-one="${esc(a.scenario_id)}" title="Show this note">${esc(a.scenario_id.slice(-4))}</button>`).join("")}
+        ${notes.length > 1 ? `<button class="case all ${st.all ? "on" : ""}" data-all="1">${st.all ? "Hide all" : `Show all ${notes.length}`}</button>` : ""}</div>
+      ${st.all ? `<ul>${notes.map(a => `<li><a href="#" data-go="${esc(a.scenario_id)}">${esc(a.scenario_id.slice(-4))}</a> ${noteHTML(a.note)}</li>`).join("")}</ul>`
+        : st.one ? (() => { const a = notes.find(x => x.scenario_id === st.one); return a ? `<div class="example one"><a href="#" data-go="${esc(a.scenario_id)}">${esc(a.scenario_id)}</a> ${noteHTML(a.note)}</div>` : ""; })() : ""}
+      <details class="memo" ${T[t]?.memo ? "open" : ""}><summary>Memo</summary><textarea data-memo="${esc(t)}" placeholder="Memo: think out loud about this theme…">${esc(T[t]?.memo || "")}</textarea></details></div>`;
+  }
+  if (S.st.themes.history.length) h += `<details><summary>Tag history (${S.st.themes.history.length})</summary><ul class="small">${S.st.themes.history.map(x => `<li>${esc(x.ts.slice(0, 16))} ${esc(x.action)}: ${esc(x.from)} → ${esc(x.to)}</li>`).join("")}</ul></details>`;
+  h += `</div><div><h3>Failure modes <span class="muted small">(build these after a few batches)</span></h3>
+    <p class="hint">Each mode needs a yes/no definition, a boundary from its nearest neighbor, an evaluator type, and a SPEC.md requirement (or a spec revision).</p>
+    ${S.st.patterns.modes.map((m, i) => modeHTML(m, i, tags)).join("")}
+    <button class="btn primary" id="add-mode">+ New failure mode</button></div></div>`;
+  $("#themes").innerHTML = h;
+  $("#themes").querySelectorAll(".theme").forEach(card => {
+    const t = card.dataset.theme;
+    card.querySelectorAll("[data-one]").forEach(b => b.onclick = () => { const st = S.themeOpen[t] || {}; S.themeOpen[t] = { one: st.one === b.dataset.one ? null : b.dataset.one, all: false }; renderThemes(); });
+    card.querySelector("[data-all]")?.addEventListener("click", () => { const st = S.themeOpen[t] || {}; S.themeOpen[t] = { all: !st.all, one: null }; renderThemes(); });
+  });
+  $("#zoom-themes-out").onclick = () => { S.themeOpen = {}; renderThemes(); };
+  $("#zoom-themes-in").onclick = () => { for (const t of tags) S.themeOpen[t] = { all: true }; renderThemes(); };
+  $("#themes").querySelectorAll("[data-memo]").forEach(el => el.oninput = () => { (T[el.dataset.memo] ||= { memo: "", created: now() }).memo = el.value; persist("themes", 600); });
+  $("#themes").querySelectorAll("[data-ren]").forEach(b => b.onclick = () => {
+    const to = prompt(`Rename "${b.dataset.ren}" to… (use an existing tag name to merge)`, b.dataset.ren);
+    if (to) { renameTag(b.dataset.ren, to, Object.keys(tagCounts()).includes(to.trim()) ? "merge" : "rename"); renderThemes(); }
+  });
+  $("#themes").querySelectorAll("[data-go]").forEach(a => a.onclick = e => { e.preventDefault(); goTo(a.dataset.go); });
+  const ask = async kind => {
+    $("#sug-status").textContent = "asking…";
+    try {
+      const r = await fetch("/api/suggest", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ kind, tags }) });
+      const out = await r.json(); if (!r.ok) throw new Error(out.error);
+      S.st.suggestions.push(...out); renderThemes(); if (!out.length) $("#sug-status").textContent = "No suggestions; your names look clear.";
+    } catch (err) { $("#sug-status").textContent = `Couldn't get suggestions: ${err.message}`; }
+  };
+  $("#sug-rename") && ($("#sug-rename").onclick = () => ask("rename"));
+  $("#sug-struct") && ($("#sug-struct").onclick = () => ask("structure"));
+  $("#themes").querySelectorAll("[data-acc],[data-rej]").forEach(b => b.onclick = () => {
+    const s = S.st.suggestions.find(x => x.id === (b.dataset.acc || b.dataset.rej));
+    s.status = b.dataset.acc ? "accepted" : "rejected"; s.decided_ts = now();
+    if (b.dataset.acc && s.kind === "theme_rename" && s.tags.length === 1) renameTag(s.tags[0], s.proposal, "rename (accepted AI suggestion)");
+    if (b.dataset.acc && s.kind === "theme_merge") for (const t of s.tags) renameTag(t, s.proposal, "merge (accepted AI suggestion)");
+    persist("suggestions"); renderThemes();
+  });
+  $("#themes").querySelectorAll("[data-mode]").forEach(el => el.oninput = el.onchange = () => {
+    const m = S.st.patterns.modes[+el.dataset.mode], f = el.dataset.f;
+    if (f === "from_tags") m.from_tags = [...el.selectedOptions].map(o => o.value); else m[f] = el.value;
+    m.created_from = annList().filter(a => convTags(a).some(t => (m.from_tags || []).includes(t))).map(a => a.id);
+    m.updated_ts = now(); persist("patterns", 500);
+  });
+  $("#themes").querySelectorAll("[data-delmode]").forEach(b => b.onclick = () => { if (confirm("Delete this mode? Its labels stay in the files.")) { S.st.patterns.modes.splice(+b.dataset.delmode, 1); persist("patterns"); renderThemes(); } });
+  $("#add-mode").onclick = () => { S.st.patterns.modes.push({ name: "", definition: "", boundary: "", evaluator: "llm_judge", spec_ref: "", status: "candidate", from_tags: [], created_from: [], created_ts: now() }); persist("patterns"); renderThemes(); };
+}
+function modeHTML(m, i, tags) {
+  const f = (k, label, type = "input", ph = "") => `<label>${label}</label>${type === "input" ? `<input data-mode="${i}" data-f="${k}" value="${esc(m[k])}" placeholder="${esc(ph)}">` : `<textarea data-mode="${i}" data-f="${k}" placeholder="${esc(ph)}">${esc(m[k])}</textarea>`}`;
+  return `<div class="mode">
+    ${f("name", "Name (snake_case)", "input", "e.g. unconfirmed_write")}
+    ${f("definition", "Binary definition: present when…", "ta", "The reply states a write succeeded, but the latest tool result does not confirm it.")}
+    ${f("boundary", "Boundary: how it differs from the nearest mode", "ta")}
+    ${f("spec_ref", "SPEC.md requirement or spec revision", "input", "e.g. RESP-2")}
+    <label>Built from your tags (hold Cmd to pick several)</label><select multiple size="${Math.min(5, Math.max(2, tags.length))}" data-mode="${i}" data-f="from_tags">${tags.map(t => `<option ${(m.from_tags || []).includes(t) ? "selected" : ""}>${esc(t)}</option>`).join("")}</select>
+    <div style="display:flex;gap:10px"><div style="flex:1"><label>Likely evaluator</label><select data-mode="${i}" data-f="evaluator"><option value="code" ${m.evaluator === "code" ? "selected" : ""}>Code check</option><option value="llm_judge" ${m.evaluator !== "code" ? "selected" : ""}>LLM judge</option></select></div>
+    <div style="flex:1"><label>Status</label><select data-mode="${i}" data-f="status">${["candidate", "confirmed", "rejected"].map(s => `<option ${m.status === s ? "selected" : ""}>${s}</option>`).join("")}</select></div></div>
+    <div class="hint" style="margin-top:6px">${(m.created_from || []).length} supporting annotations · <button class="del" data-delmode="${i}" style="border:none;background:none;color:var(--deny)">delete mode</button></div></div>`;
+}
+
+
+
+/* ---------- scannable notes: bold the headline, mark spec rules and ids (no AI) ---------- */
+function noteHTML(text) {
+  const t = String(text ?? "");
+  const deco = x => esc(x)
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\b((?:RESP|ESC|AUTH|TOOL|PURPOSE)-\d+)\b/g, '<span class="ref">$1</span>')
+    .replace(/(#\d{1,5}\b|\bsupport-\d{4}\b|\b0\d{3}\b)/g, '<span class="ref">$1</span>');
+  // If the note says "X but Y" (or "instead of"), the failure is Y: bold that clause; otherwise bold the first sentence.
+  const turn = t.match(/^([\s\S]*?\b(?:but|however|instead of)\b,?\s+)([\s\S]+?[.;!?])(?=\s|$)/i);
+  if (turn && turn[1].length < 220) {
+    const before = turn[1], lead = turn[2], after = t.slice(before.length + lead.length);
+    return `<span class="nt">${deco(before)}<span class="lead">${deco(lead)}</span>${deco(after)}</span>`;
+  }
+  const m = t.match(/^([\s\S]{12,180}?[.;!?])(\s|$)/);
+  const lead = m ? m[1] : (t.length <= 180 ? t : ""), rest = lead ? t.slice(lead.length) : t;
+  return `<span class="nt">${lead ? `<span class="lead">${deco(lead)}</span>` : ""}${deco(rest)}</span>`;
+}
+/* ---------- axial coding table ---------- */
+const PALETTE = [["#e8f0fc","#2f62ad"],["#fde9ec","#b3384f"],["#e6f4e7","#2f7a3a"],["#fff0e0","#b0541a"],["#efe8fb","#6b3fb8"],["#e3f4f6","#1f7480"],["#fbf2dc","#8a6410"],["#f1f1ef","#55534e"],["#fde7f3","#a3337a"],["#e9f2e0","#4b7a1f"]];
+function codeStyle(t) { let h = 0; for (const ch of t) h = (h * 31 + ch.charCodeAt(0)) >>> 0; const [bg, fg] = PALETTE[h % PALETTE.length]; return `background:${bg};color:${fg}`; }
+S.tbl = { q: "", only: "noted", code: null };
+function openCodes(a) {
+  const out = [];
+  if (isReviewed(a) && !a.no_failure) out.push({ kind: "first", text: a.note, tags: a.tags || [], ref: -1 });
+  (a.highlights || []).forEach((h, i) => out.push({ kind: "hl", text: h.note, quote: h.quote, where: `msg ${h.turn + 1}`, tags: h.tags || [], ref: i }));
+  return out;
+}
+function renderTable() {
+  const anns = annList().filter(a => isReviewed(a) || (a.highlights || []).length);
+  const codeCount = {};
+  for (const a of anns) for (const oc of openCodes(a)) for (const t of oc.tags) codeCount[t] = (codeCount[t] || 0) + 1;
+  const codes = Object.keys(codeCount).sort((x, y) => codeCount[y] - codeCount[x]);
+  const q = S.tbl.q.toLowerCase();
+  const rows = anns.filter(a => {
+    const ocs = openCodes(a);
+    if (S.tbl.only === "noted" && !ocs.length) return false;
+    if (S.tbl.only === "fail" && (a.no_failure || !isReviewed(a))) return false;
+    if (S.tbl.code && !ocs.some(oc => oc.tags.includes(S.tbl.code))) return false;
+    if (q && ![a.scenario_id, a.note, ...ocs.flatMap(oc => [oc.text, oc.quote, ...oc.tags])].join(" ").toLowerCase().includes(q)) return false;
+    return true;
+  }).sort((x, y) => x.scenario_id.localeCompare(y.scenario_id));
+  const known = Object.keys(tagCounts()).sort();
+  let h = `<div class="tbar"><input type="search" id="t-q" placeholder="Search conversations, notes, or codes" value="${esc(S.tbl.q)}">
+      <select id="t-only"><option value="noted">Only conversations with notes</option><option value="fail">Only failures</option><option value="all">All reviewed</option></select>
+      <span class="muted small">${rows.length} of ${anns.length} conversations</span>
+      ${S.tbl.code ? `<button class="btn small" id="t-clear">clear filter: ${esc(S.tbl.code)}</button>` : ""}</div>
+    <div class="chips">${codes.map(t => `<span class="code ${S.tbl.code === t ? "sel" : ""}" data-filter="${esc(t)}" style="${codeStyle(t)}">${esc(t.replace(/_/g, " "))}<span class="n">${codeCount[t]}</span></span>`).join("") || `<span class="muted small">No codes yet. Use “+ code” on an open code below, or add tags while reviewing.</span>`}</div>
+    <datalist id="code-list">${known.map(t => `<option value="${esc(t)}">`).join("")}</datalist>
+    <table class="axial"><tr><th>Conversation</th><th>Open codes</th><th>Axial codes</th></tr>`;
+  for (const a of rows) {
+    const c = S.byId[a.scenario_id], ocs = openCodes(a), tally = {};
+    for (const oc of ocs) for (const t of oc.tags) tally[t] = (tally[t] || 0) + 1;
+    h += `<tr><td class="cid"><a href="#" data-go="${esc(a.scenario_id)}">${esc(a.scenario_id)}</a><div class="small muted">${esc(c?.tuple.role || "")}${c?.group === "challenge" ? " · challenge" : ""}</div>
+        <div style="margin-top:4px">${a.no_failure ? `<span class="pill" style="color:var(--ok)">no failure</span>` : isReviewed(a) ? `<span class="pill" style="color:var(--deny)">failure</span>` : `<span class="pill">not reviewed</span>`}</div></td>
+      <td><ul>${ocs.map(oc => `<li>${oc.kind === "first" ? `<span class="first">first failure</span>` : ""}${noteHTML(oc.text)}${oc.where ? `<span class="where">${oc.where}</span>` : ""}
+          ${oc.tags.map(t => `<span class="code sm" style="${codeStyle(t)}">${esc(t.replace(/_/g, " "))}<button class="rm" data-rm="${esc(a.scenario_id)}|${oc.ref}|${esc(t)}" title="remove code">×</button></span>`).join(" ")}
+          <button class="addcode" data-add="${esc(a.scenario_id)}|${oc.ref}">+ code</button></li>`).join("") || `<li class="muted">no failure observed</li>`}</ul></td>
+      <td class="ax">${Object.entries(tally).sort((x, y) => y[1] - x[1]).map(([t, n]) => `<span class="code sm" style="${codeStyle(t)}">${esc(t.replace(/_/g, " "))}${n > 1 ? ` ×${n}` : ""}</span>`).join("")}</td></tr>`;
+  }
+  $("#table").innerHTML = h + `</table>`;
+  $("#t-only").value = S.tbl.only;
+  $("#t-q").oninput = e => { S.tbl.q = e.target.value; const pos = e.target.selectionStart; renderTable(); const el = $("#t-q"); el.focus(); el.setSelectionRange(pos, pos); };
+  $("#t-only").onchange = e => { S.tbl.only = e.target.value; renderTable(); };
+  $("#t-clear") && ($("#t-clear").onclick = () => { S.tbl.code = null; renderTable(); });
+  $("#table").querySelectorAll("[data-filter]").forEach(el => el.onclick = () => { S.tbl.code = S.tbl.code === el.dataset.filter ? null : el.dataset.filter; renderTable(); });
+  $("#table").querySelectorAll("[data-go]").forEach(el => el.onclick = e => { e.preventDefault(); goTo(el.dataset.go); });
+  $("#table").querySelectorAll("[data-add]").forEach(btn => btn.onclick = () => {
+    const [sid, ref] = btn.dataset.add.split("|");
+    const inp = document.createElement("input");
+    inp.setAttribute("list", "code-list"); inp.placeholder = "code, Enter"; inp.style.cssText = "font-size:12px;width:200px;padding:1px 6px";
+    btn.replaceWith(inp); inp.focus();
+    inp.onkeydown = ev => {
+      if (ev.key === "Escape") return renderTable();
+      if (ev.key !== "Enter") return;
+      const t = inp.value.trim().toLowerCase().replace(/\s+/g, "_"); if (!t) return renderTable();
+      const a = annFor(sid), target = +ref < 0 ? a : a.highlights[+ref];
+      target.tags = [...new Set([...(target.tags || []), t])];
+      S.st.themes.tags[t] ||= { memo: "", created: now() };
+      persist("annotations"); persist("themes"); renderTable();
+    };
+    inp.onblur = () => setTimeout(() => { if (document.body.contains(inp)) renderTable(); }, 150);
+  });
+  $("#table").querySelectorAll("[data-rm]").forEach(btn => btn.onclick = () => {
+    const [sid, ref, t] = btn.dataset.rm.split("|");
+    const a = annFor(sid), target = +ref < 0 ? a : a.highlights[+ref];
+    target.tags = (target.tags || []).filter(x => x !== t);
+    persist("annotations"); renderTable();
+  });
+}
+
+/* ---------- labels ---------- */
+function renderLabels() {
+  const modes = S.st.patterns.modes.filter(m => m.name && m.status !== "rejected");
+  const rows = S.convs.filter(c => isReviewed(annFor(c.id)));
+  if (!modes.length || !rows.length) { $("#labels").innerHTML = `<div class="empty">Labels come last: first review conversations and define at least one failure mode in Themes &amp; taxonomy.</div>`; return; }
+  const L = S.st.labels;
+  let h = `<h3>Structured labels</h3><p class="hint">Click a cell to cycle: blank → <b style="color:var(--deny)">present</b> → <b style="color:var(--ok)">absent</b> → blank. Every reviewed conversation needs a judgment for every mode. Each change is saved to analysis/state/labels/ and to Langfuse as a score.</p>
+    <table class="grid"><tr><th>conversation</th><th>your note</th>${modes.map(m => `<th title="${esc(m.definition)}">${esc(m.name)}</th>`).join("")}</tr>`;
+  for (const c of rows) {
+    const a = annFor(c.id);
+    h += `<tr><td class="id" data-go="${esc(c.id)}">${esc(c.id)}</td><td style="text-align:left;max-width:320px" class="small">${esc(a.note)}</td>${modes.map(m => {
+      const v = L[m.name]?.[c.id]?.label;
+      return `<td class="cell ${v === 1 ? "p1" : v === 0 ? "p0" : ""}" data-m="${esc(m.name)}" data-c="${esc(c.id)}">${v === 1 ? "present" : v === 0 ? "absent" : ""}</td>`; }).join("")}</tr>`;
+  }
+  $("#labels").innerHTML = h + `</table>`;
+  $("#labels").querySelectorAll("[data-go]").forEach(td => td.onclick = () => goTo(td.dataset.go));
+  $("#labels").querySelectorAll("td.cell").forEach(td => td.onclick = async () => {
+    const m = td.dataset.m, id = td.dataset.c, cur = L[m]?.[id]?.label;
+    const next = cur == null ? 1 : cur === 1 ? 0 : null;
+    setStatus("saving…");
+    const r = await fetch("/api/label", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ mode: m, scenario_id: id, label: next }) });
+    const rec = await r.json();
+    if (!r.ok) { setStatus(`label failed: ${rec.error}`); return; }
+    (L[m] ||= {})[id] = rec; setStatus("saved"); renderLabels();
+  });
+}
+
+/* ---------- progress ---------- */
+function renderProgress() {
+  const anns = annList().filter(isReviewed), counts = tagCounts();
+  const modes = S.st.patterns.modes.filter(m => m.name && m.status !== "rejected");
+  const batches = S.st.sample_manifest.batches;
+  let h = `<div class="stats">
+    <div class="stat"><b>${anns.length}</b><span>conversations reviewed (goal 100)</span></div>
+    <div class="stat"><b>${anns.filter(a => !a.no_failure).length}</b><span>with a failure noted</span></div>
+    <div class="stat"><b>${anns.filter(a => a.no_failure).length}</b><span>no failure observed</span></div>
+    <div class="stat"><b>${Object.keys(counts).length}</b><span>working tags</span></div>
+    <div class="stat"><b>${modes.length}</b><span>failure modes (goal 5–8)</span></div></div>
+`;
+  if (modes.length) {
+    const reviewed = S.convs.filter(c => isReviewed(annFor(c.id)));
+    h += `<h3>Label completeness</h3><table class="plain"><tr><th>mode</th><th>judged</th><th>present</th><th>absent</th><th>sample fraction present</th><th>Langfuse</th></tr>`;
+    for (const m of modes) {
+      const L = S.st.labels[m.name] || {}, vals = reviewed.map(c => L[c.id]?.label);
+      const p = vals.filter(v => v === 1).length, a = vals.filter(v => v === 0).length;
+      const sync = Object.values(S.st.langfuse_sync?.[m.name] || {}), ok = sync.filter(s => s.result === "ok").length;
+      h += `<tr><td class="mono">${esc(m.name)}</td><td>${p + a} / ${reviewed.length}</td><td>${p}</td><td>${a}</td><td>${p + a ? Math.round(100 * p / (p + a)) + "%" : "—"}</td><td class="small">${ok}/${sync.length} synced</td></tr>`;
+    }
+    h += `</table>`;
+  }
+  h += `<h3>Conversations still missing a judgment</h3><p class="small muted">${S.convs.filter(c => sampleIds().has(c.id) && !isReviewed(annFor(c.id))).map(c => c.id).join(", ") || "None in the sample."}</p>`;
+  $("#progress").innerHTML = samplingHTML() + h;
+  wireSampling();
+}
+
+/* ---------- sampling ---------- */
+const BATCHES = [
+  { id: "b1", name: "Batch 1: 15 random + 15 cluster representatives", hint: "Draw 15 with Random and 15 with Cluster representatives." },
+  { id: "b2", name: "Batch 2: 30 spread across one dimension", hint: "Pick the dimension BEFORE looking at outcomes, then use Stratified." },
+  { id: "b3", name: "Batch 3: 25 from depth searches + close negatives", hint: "Filled later from searches for candidate modes." },
+  { id: "b4", name: "Batch 4: 15 final random (stability check)", hint: "Drawn after the taxonomy is drafted. Use Random." },
+];
+S.preview = null;
+function samplingHTML() {
+  const man = S.st.sample_manifest, p = S.preview;
+  const dims = ["role", "intent", "scenario_group", "difficulty", "tools_needed", "applicable_policy", "record_state", "user_style"];
+  return `<h3>Sampling</h3>
+  <p class="hint">Draws only from conversations not already in a batch, and only uses each conversation's shape (role, intent, length, tools), never whether the agent failed.</p>
+  <div class="card" style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end">
+    <div><div class="small muted">Method</div><select id="s-method">
+      <option value="random">Random</option><option value="cluster">Cluster representatives</option>
+      <option value="stratified">Stratified by one dimension</option><option value="outlier">Outliers (unusual shape)</option></select></div>
+    <div id="s-dim-wrap" hidden><div class="small muted">Dimension</div><select id="s-dim">${dims.map(d => `<option>${d}</option>`).join("")}</select></div>
+    <div><div class="small muted">How many</div><input id="s-n" type="number" min="1" max="60" value="15" style="width:70px"></div>
+    <div><div class="small muted">Add to</div><select id="s-batch">${BATCHES.map(b => `<option value="${b.id}">${esc(b.name)}</option>`).join("")}</select></div>
+    <button class="btn primary" id="s-draw">Draw preview</button>
+    <span class="hint" id="s-hint"></span>
+  </div>
+  ${p ? `<div class="ai-box" style="border-color:var(--border);background:var(--panel)"><h4 style="color:var(--muted)">Preview: ${p.picks.length} picks · ${esc(p.method)}${p.dimension ? ` by ${esc(p.dimension)}` : ""} · seed ${p.seed}</h4>
+    <table class="plain"><tr><th>conversation</th><th>role · intent</th><th>why picked</th></tr>${p.picks.map(x => { const c = S.byId[x.scenario_id]; return `<tr><td class="mono">${esc(x.scenario_id)}</td><td class="small">${esc(c.tuple.role)} · ${esc(c.tuple.intent)}</td><td class="small muted">${esc(x.reason)}</td></tr>`; }).join("")}</table>
+    <div style="display:flex;gap:8px"><button class="btn primary" id="s-save">Save to ${esc(BATCHES.find(b => b.id === p.batch).name.split(":")[0])}</button><button class="btn" id="s-reroll">Re-roll</button><button class="btn" id="s-cancel">Discard</button></div></div>` : ""}
+  <table class="plain"><tr><th>batch</th><th>picks by method</th><th>reviewed</th><th></th></tr>${BATCHES.map(def => {
+    const b = man.batches.find(x => x.id === def.id), ids = b?.scenario_ids || [];
+    const by = {}; (b?.picks || []).forEach(x => by[x.method] = (by[x.method] || 0) + 1);
+    return `<tr><td>${esc(def.name)}<div class="hint">${esc(def.hint)}</div></td><td class="small">${Object.entries(by).map(([m, n]) => `${n} ${esc(m)}`).join(", ") || "—"}</td>
+      <td>${ids.filter(id => isReviewed(annFor(id))).length} / ${ids.length}</td>
+      <td>${ids.length && !ids.some(id => isReviewed(annFor(id))) ? `<button class="btn small" data-clear="${def.id}">empty batch</button>` : ""}</td></tr>`; }).join("")}</table>`;
+}
+function wireSampling() {
+  const m = $("#s-method");
+  const syncDim = () => { $("#s-dim-wrap").hidden = m.value !== "stratified"; };
+  m.onchange = syncDim;
+  if (S.preview) { m.value = S.preview.method; $("#s-n").value = S.preview.n; $("#s-batch").value = S.preview.batch; if (S.preview.dimension) $("#s-dim").value = S.preview.dimension; }
+  syncDim();
+  const draw = async seed => {
+    const body = { method: m.value, n: +$("#s-n").value, seed, dimension: m.value === "stratified" ? $("#s-dim").value : null };
+    $("#s-hint").textContent = "drawing…";
+    const r = await fetch("/api/sample", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    const picks = await r.json();
+    if (!r.ok) { $("#s-hint").textContent = picks.error; return; }
+    S.preview = { ...body, batch: $("#s-batch").value, picks }; renderProgress();
+  };
+  $("#s-draw").onclick = () => draw(Math.floor(Math.random() * 1e6));
+  $("#s-reroll") && ($("#s-reroll").onclick = () => draw(S.preview.seed + 1));
+  $("#s-cancel") && ($("#s-cancel").onclick = () => { S.preview = null; renderProgress(); });
+  $("#s-save") && ($("#s-save").onclick = () => {
+    const p = S.preview, man = S.st.sample_manifest, def = BATCHES.find(b => b.id === p.batch);
+    let b = man.batches.find(x => x.id === p.batch);
+    if (!b) { b = { id: def.id, name: def.name, scenario_ids: [], picks: [] }; man.batches.push(b); man.batches.sort((x, y) => x.id.localeCompare(y.id)); }
+    for (const x of p.picks) if (!b.scenario_ids.includes(x.scenario_id)) {
+      b.scenario_ids.push(x.scenario_id);
+      b.picks.push({ ...x, method: p.method, dimension: p.dimension, seed: p.seed, ts: now(), trace_id: S.byId[x.scenario_id].trace_id });
+    }
+    S.preview = null; persist("sample_manifest", 0); buildBatchSelect(); renderList(); renderProgress(); renderStatus();
+  });
+  $("#progress").querySelectorAll("[data-clear]").forEach(btn => btn.onclick = () => {
+    if (!confirm("Remove every conversation from this batch? (Only allowed while none are reviewed.)")) return;
+    const man = S.st.sample_manifest; man.batches = man.batches.filter(x => x.id !== btn.dataset.clear);
+    persist("sample_manifest", 0); buildBatchSelect(); renderList(); renderProgress(); renderStatus();
+  });
+}
+
+
+/* ---------- light / dark ---------- */
+let theme = "light"; try { theme = localStorage.getItem("theme") || "light"; } catch {}
+function applyTheme() {
+  document.documentElement.setAttribute("data-theme", theme);
+  $("#theme-btn").textContent = theme === "light" ? "◐ Dark mode" : "◐ Light mode";
+  try { localStorage.setItem("theme", theme); } catch {}
+}
+$("#theme-btn").onclick = () => { theme = theme === "light" ? "dark" : "light"; applyTheme(); };
+applyTheme();
+
+/* ---------- text size ---------- */
+let zoom = 1; try { zoom = +localStorage.getItem("textZoom") || 1; } catch {}
+function applyZoom() {
+  // zoom the page content, not the floating mic/popups, so their positions stay correct
+  document.querySelector("header").style.zoom = zoom; document.querySelector("main").style.zoom = zoom; $("#zoom-val").textContent = `${Math.round(zoom * 100)}%`;
+  try { localStorage.setItem("textZoom", zoom); } catch {}
+}
+$("#zoom-in").onclick = () => { zoom = Math.min(2, +(zoom + 0.1).toFixed(2)); applyZoom(); };
+$("#zoom-out").onclick = () => { zoom = Math.max(0.7, +(zoom - 0.1).toFixed(2)); applyZoom(); };
+applyZoom();
+
+init().catch(err => { $("#conv").innerHTML = `<div class="empty">Could not load: ${esc(err.message)}</div>`; });
+</script>
+</body>
+</html>

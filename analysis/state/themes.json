@@ -1,0 +1,250 @@
+{
+  "tags": {
+    "claims_policy_without_checking": {
+      "memo": "",
+      "created": "2026-10-31T14:45:50.264Z"
+    },
+    "acts_without_confirmation": {
+      "memo": "",
+      "created": "2026-10-31T14:45:55.393Z"
+    },
+    "incomplete_response": {
+      "memo": "When it clearly feels that it can give back to the user, and it decided not to.\n",
+      "created": "2026-10-31T18:02:15.246Z",
+      "merged_into": "omits_critical_detail"
+    },
+    "didn't_escalate_bad_data": {
+      "memo": "",
+      "created": "2026-10-31T23:25:41.924Z"
+    },
+    "unnecessary_confirmation": {
+      "memo": "",
+      "created": "2026-10-31T23:54:47.123Z",
+      "merged_into": "stalls_instead_of_acting"
+    },
+    "too_verbose": {
+      "memo": "",
+      "created": "2026-11-01T00:17:48.524Z",
+      "merged_into": "unnatural_or_verbose_language"
+    },
+    "unncessary_backend_language_to_the_user": {
+      "memo": "",
+      "created": "2026-11-01T02:28:51.616Z"
+    },
+    "doesnt_escalate_when_required": {
+      "memo": "",
+      "created": "2026-11-03T03:33:45.257Z"
+    },
+    "ambiguous_stalling_answer_instead_of_action": {
+      "memo": "",
+      "created": "2026-11-03T04:00:51.184Z",
+      "merged_into": "stalls_instead_of_acting"
+    },
+    "contradicts_tool_result": {
+      "memo": "",
+      "created": "2026-11-03T04:07:54.779Z",
+      "merged_into": "wrong_about_order_records"
+    },
+    "act_on_wrong_record": {
+      "memo": "",
+      "created": "2026-11-03T04:08:15.542Z",
+      "merged_into": "wrong_about_order_records"
+    },
+    "omitted_critical_detail_in_the_answer": {
+      "memo": "",
+      "created": "2026-11-03T04:12:40.170Z",
+      "merged_into": "omits_critical_detail"
+    },
+    "misinterprets_policy": {
+      "memo": "",
+      "created": "2026-11-03T04:18:29.662Z",
+      "merged_into": "claims_policy_without_checking"
+    },
+    "wrong_tool_call": {
+      "memo": "",
+      "created": "2026-11-03T04:24:51.827Z",
+      "merged_into": "wrong_about_order_records"
+    },
+    "falsely_says_cannot_find_order": {
+      "memo": "",
+      "created": "2026-11-03T04:25:07.096Z",
+      "merged_into": "wrong_about_order_records"
+    },
+    "ignores_users_constraint": {
+      "memo": "",
+      "created": "2026-11-03T04:37:30.580Z",
+      "merged_into": "ignores_user_constraint"
+    },
+    "ignores_users_request": {
+      "memo": "",
+      "created": "2026-11-03T04:37:35.916Z",
+      "merged_into": "ignores_user_constraint"
+    },
+    "unstated_assumption": {
+      "memo": "",
+      "created": "2026-11-03T04:48:18.886Z"
+    },
+    "stalls_instead_of_acting": {
+      "memo": "",
+      "created": "2026-11-03T04:56:56.127Z"
+    },
+    "wrong_about_order_records": {
+      "memo": "",
+      "created": "2026-11-03T04:56:56.127Z"
+    },
+    "omits_critical_detail": {
+      "memo": "",
+      "created": "2026-11-03T04:56:56.127Z"
+    },
+    "unnatural_or_verbose_language": {
+      "memo": "",
+      "created": "2026-11-03T04:56:56.127Z"
+    },
+    "ignores_user_constraint": {
+      "memo": "",
+      "created": "2026-11-03T04:56:56.127Z"
+    }
+  },
+  "history": [
+    {
+      "action": "merge",
+      "from": "unnecessary_confirmation",
+      "to": "stalls_instead_of_acting",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "Batch 2 consolidation by shared fix; approved by Eve"
+    },
+    {
+      "action": "merge",
+      "from": "ambiguous_stalling_answer_instead_of_action",
+      "to": "stalls_instead_of_acting",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "Batch 2 consolidation by shared fix; approved by Eve"
+    },
+    {
+      "action": "merge",
+      "from": "contradicts_tool_result",
+      "to": "wrong_about_order_records",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "Batch 2 consolidation by shared fix; approved by Eve"
+    },
+    {
+      "action": "merge",
+      "from": "falsely_says_cannot_find_order",
+      "to": "wrong_about_order_records",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "Batch 2 consolidation by shared fix; approved by Eve"
+    },
+    {
+      "action": "merge",
+      "from": "wrong_tool_call",
+      "to": "wrong_about_order_records",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "Batch 2 consolidation by shared fix; approved by Eve"
+    },
+    {
+      "action": "merge",
+      "from": "act_on_wrong_record",
+      "to": "wrong_about_order_records",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "Batch 2 consolidation by shared fix; approved by Eve"
+    },
+    {
+      "action": "merge",
+      "from": "misinterprets_policy",
+      "to": "claims_policy_without_checking",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "Batch 2 consolidation by shared fix; approved by Eve"
+    },
+    {
+      "action": "merge",
+      "from": "incomplete_response",
+      "to": "omits_critical_detail",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "Batch 2 consolidation by shared fix; approved by Eve"
+    },
+    {
+      "action": "merge",
+      "from": "omitted_critical_detail_in_the_answer",
+      "to": "omits_critical_detail",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "Batch 2 consolidation by shared fix; approved by Eve"
+    },
+    {
+      "action": "merge",
+      "from": "too_verbose",
+      "to": "unnatural_or_verbose_language",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "Batch 2 consolidation by shared fix; approved by Eve"
+    },
+    {
+      "action": "merge",
+      "from": "unnecessary_backend_language_to_the_user",
+      "to": "unnatural_or_verbose_language",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "Batch 2 consolidation by shared fix; approved by Eve"
+    },
+    {
+      "action": "merge",
+      "from": "ignores_users_constraint",
+      "to": "ignores_user_constraint",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "Batch 2 consolidation by shared fix; approved by Eve"
+    },
+    {
+      "action": "merge",
+      "from": "ignores_users_request",
+      "to": "ignores_user_constraint",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "Batch 2 consolidation by shared fix; approved by Eve"
+    },
+    {
+      "action": "assign",
+      "from": "support-0077",
+      "to": "wrong_about_order_records, doesnt_escalate_when_required",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "untagged failure; assigned from Eve's note, approved by Eve"
+    },
+    {
+      "action": "assign",
+      "from": "support-0107",
+      "to": "wrong_about_order_records",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "untagged failure; assigned from Eve's note, approved by Eve"
+    },
+    {
+      "action": "assign",
+      "from": "support-0183",
+      "to": "wrong_about_order_records",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "untagged failure; assigned from Eve's note, approved by Eve"
+    },
+    {
+      "action": "assign",
+      "from": "support-0131",
+      "to": "unnatural_or_verbose_language",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "untagged failure; assigned from Eve's note, approved by Eve"
+    },
+    {
+      "action": "assign",
+      "from": "support-0162",
+      "to": "omits_critical_detail",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "untagged failure; assigned from Eve's note, approved by Eve"
+    },
+    {
+      "action": "assign",
+      "from": "support-0177",
+      "to": "stalls_instead_of_acting",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "untagged failure; assigned from Eve's note, approved by Eve"
+    },
+    {
+      "action": "assign",
+      "from": "support-0231",
+      "to": "doesnt_escalate_when_required",
+      "ts": "2026-11-03T04:56:56.127Z",
+      "why": "untagged failure; assigned from Eve's note, approved by Eve"
+    }
+  ]
+}
