@@ -2,6 +2,7 @@
 
 Reviewer: Eve (human open coding and all final decisions). Agent model under review: `gpt-4o-mini`, HW3 final run (250 support scenarios).
 Review interface: `analysis/review_app/` (see `interface_comparison.md`).
+Walkthrough video (4:54): https://share.descript.com/view/9piAAkpMugc
 
 ## Reviewed sample
 
