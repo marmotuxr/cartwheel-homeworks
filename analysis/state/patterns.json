@@ -1,1 +1,341 @@
-{"modes": []}
+{
+  "modes": [
+    {
+      "name": "falsely_reports_record_missing",
+      "from_tags": [
+        "wrong_about_order_records"
+      ],
+      "definition": "FAIL when the agent says an order or product doesn't exist or can't be found, but it is in the tool results, or the agent caused the empty result itself (wrong tool, made-up filter). PASS when every sensible search truly returned nothing.",
+      "boundary": "All false 'not found' cases count here, not under claims_not_grounded_in_tools. If the record exists but is damaged, use mishandles_damaged_data (a conversation can carry both).",
+      "spec_ref": "RESP-3, RESP-6",
+      "evaluator": "code",
+      "positives": [
+        "support-0068",
+        "support-0077",
+        "support-0080",
+        "support-0095",
+        "support-0100",
+        "support-0103",
+        "support-0104",
+        "support-0107",
+        "support-0109",
+        "support-0110",
+        "support-0114",
+        "support-0115",
+        "support-0176",
+        "support-0183",
+        "support-0209"
+      ],
+      "close_negatives": [
+        "support-0117",
+        "support-0003",
+        "support-0011"
+      ],
+      "status": "confirmed",
+      "count": 15,
+      "confirmed_ts": "2026-11-05T14:54:16+00:00",
+      "created_from": [
+        "ann-support-0068",
+        "ann-support-0077",
+        "ann-support-0080",
+        "ann-support-0095",
+        "ann-support-0100",
+        "ann-support-0103",
+        "ann-support-0104",
+        "ann-support-0107",
+        "ann-support-0109",
+        "ann-support-0110",
+        "ann-support-0114",
+        "ann-support-0115",
+        "ann-support-0176",
+        "ann-support-0183",
+        "ann-support-0209"
+      ],
+      "decided_by": "Eve (voice review 2026-11-05); drafted by Claude"
+    },
+    {
+      "name": "doesnt_escalate_when_required",
+      "from_tags": [
+        "doesnt_escalate_when_required"
+      ],
+      "definition": "FAIL when the case must go to a human (refund over $100, account change, dispute, or unsure about policy) and the agent neither escalates nor says it will. PASS when it escalates, or explains the refund was queued for human approval.",
+      "boundary": "Damaged-data cases moved to mishandles_damaged_data. Not stalls_instead_of_acting: this is about cases the agent must hand off, not allowed actions it fails to take.",
+      "spec_ref": "ESC-1, ESC-2, ESC-3, ESC-4",
+      "evaluator": "code",
+      "positives": [
+        "support-0220",
+        "support-0222",
+        "support-0228",
+        "support-0231",
+        "support-0233",
+        "support-0235",
+        "support-0237"
+      ],
+      "close_negatives": [
+        "support-0214",
+        "support-0216",
+        "support-0049"
+      ],
+      "status": "confirmed",
+      "count": 7,
+      "confirmed_ts": "2026-11-05T14:54:16+00:00",
+      "created_from": [
+        "ann-support-0220",
+        "ann-support-0222",
+        "ann-support-0228",
+        "ann-support-0231",
+        "ann-support-0233",
+        "ann-support-0235",
+        "ann-support-0237"
+      ],
+      "decided_by": "Eve (voice review 2026-11-05); drafted by Claude",
+      "revision_note": "2026-11-05T15:09:30+00:00: added support-0237 (untagged phone reviews / secondary claim), approved by Eve"
+    },
+    {
+      "name": "claims_not_grounded_in_tools",
+      "from_tags": [
+        "claims_policy_without_checking",
+        "states_unverified_facts"
+      ],
+      "definition": "FAIL when the reply states a policy, deadline, number, product detail or availability that no tool result or looked-up policy supports, or cites a policy for something it doesn't say. PASS when every claim traces to a tool result or a cited policy.",
+      "boundary": "Saying something unsupported; omits_decisive_detail is leaving out something true. False 'not found' belongs to falsely_reports_record_missing.",
+      "spec_ref": "RESP-1, RESP-3",
+      "evaluator": "code",
+      "positives": [
+        "support-0002",
+        "support-0080",
+        "support-0083",
+        "support-0112",
+        "support-0127",
+        "support-0132",
+        "support-0149",
+        "support-0154",
+        "support-0168",
+        "support-0180",
+        "support-0194",
+        "support-0196"
+      ],
+      "close_negatives": [
+        "support-0159",
+        "support-0175"
+      ],
+      "status": "confirmed",
+      "count": 12,
+      "confirmed_ts": "2026-11-05T14:54:16+00:00",
+      "created_from": [
+        "ann-support-0088",
+        "ann-support-0002",
+        "ann-support-0149",
+        "ann-support-0080",
+        "ann-support-0083",
+        "ann-support-0112",
+        "ann-support-0132",
+        "ann-support-0180",
+        "ann-support-0194",
+        "ann-support-0196",
+        "ann-support-0127",
+        "ann-support-0154",
+        "ann-support-0168"
+      ],
+      "decided_by": "Eve (voice review 2026-11-05); drafted by Claude",
+      "updated_ts": "2026-11-05T14:59:38.351Z",
+      "revision_note": "2026-11-05T15:09:30+00:00: added support-0127, support-0154, support-0168 (untagged phone reviews / secondary claim), approved by Eve"
+    },
+    {
+      "name": "mishandles_damaged_data",
+      "from_tags": [
+        "didn't_escalate_bad_data"
+      ],
+      "definition": "FAIL when data is missing, contradictory or invalid (no delivery date, impossible dates, negative price, duplicate product names) and the agent hides it, guesses around it, calls it 'not found', or doesn't escalate order problems. PASS when it names the problem plainly, uses IDs, and escalates order issues or asks which product for catalog issues.",
+      "boundary": "Record exists but is broken. Denying a record that exists is falsely_reports_record_missing.",
+      "spec_ref": "ESC-5, RESP-6 (HW4 revisions)",
+      "evaluator": "llm_judge",
+      "positives": [
+        "support-0043",
+        "support-0077",
+        "support-0078",
+        "support-0080",
+        "support-0194",
+        "support-0196"
+      ],
+      "close_negatives": [
+        "support-0037",
+        "support-0205"
+      ],
+      "status": "confirmed",
+      "count": 6,
+      "confirmed_ts": "2026-11-05T14:54:16+00:00",
+      "created_from": [
+        "ann-support-0043",
+        "ann-support-0077",
+        "ann-support-0078",
+        "ann-support-0080",
+        "ann-support-0194",
+        "ann-support-0196"
+      ],
+      "decided_by": "Eve (voice review 2026-11-05); drafted by Claude"
+    },
+    {
+      "name": "stalls_instead_of_acting",
+      "from_tags": [
+        "claims_policy_without_checking"
+      ],
+      "definition": "FAIL when the user clearly requests a refund or cancellation on an eligible order and the agent asks for confirmation, a reason or an amount instead of doing it. PASS when the user only asked whether it's possible, or the order is ambiguous or ineligible.",
+      "boundary": "Opposite of acting without confirmation on a question (support-0088); both follow RESP-7.",
+      "spec_ref": "RESP-7 (HW4 revision)",
+      "evaluator": "code",
+      "positives": [
+        "support-0058",
+        "support-0059",
+        "support-0062",
+        "support-0063",
+        "support-0087",
+        "support-0177"
+      ],
+      "close_negatives": [
+        "support-0096",
+        "support-0101",
+        "support-0090"
+      ],
+      "status": "confirmed",
+      "count": 6,
+      "confirmed_ts": "2026-11-05T14:54:16+00:00",
+      "created_from": [
+        "ann-support-0088",
+        "ann-support-0002",
+        "ann-support-0149",
+        "ann-support-0080",
+        "ann-support-0083",
+        "ann-support-0112",
+        "ann-support-0132"
+      ],
+      "decided_by": "Eve (voice review 2026-11-05); drafted by Claude",
+      "updated_ts": "2026-11-05T14:59:50.669Z"
+    },
+    {
+      "name": "omits_decisive_detail",
+      "from_tags": [
+        "omits_critical_detail"
+      ],
+      "definition": "FAIL when the reply is technically true but leaves out the fact that decides the user's next step (last day to return, 7-day vs 30-day window, why something isn't eligible). PASS when the decisive fact is stated.",
+      "boundary": "Leaving out something true; claims_not_grounded_in_tools is stating something unsupported. Duplicate-title cases belong to mishandles_damaged_data.",
+      "spec_ref": "RESP-5",
+      "evaluator": "llm_judge",
+      "positives": [
+        "support-0072",
+        "support-0082",
+        "support-0083",
+        "support-0092",
+        "support-0161",
+        "support-0162"
+      ],
+      "close_negatives": [
+        "support-0090",
+        "support-0159"
+      ],
+      "status": "confirmed",
+      "count": 6,
+      "confirmed_ts": "2026-11-05T14:54:16+00:00",
+      "created_from": [
+        "ann-support-0082",
+        "ann-support-0083",
+        "ann-support-0092",
+        "ann-support-0161",
+        "ann-support-0162",
+        "ann-support-0072"
+      ],
+      "decided_by": "Eve (voice review 2026-11-05); drafted by Claude",
+      "revision_note": "2026-11-05T15:09:30+00:00: added support-0072 (untagged phone reviews / secondary claim), approved by Eve"
+    },
+    {
+      "name": "hides_partial_list",
+      "from_tags": [
+        "hides_partial_list"
+      ],
+      "definition": "FAIL when the agent shows only some results as if they were everything. PASS when it shows all results, or says 'showing 10 of 20'.",
+      "boundary": "About completeness of a list, not the content of each item.",
+      "spec_ref": "Answer key 'make any displayed subset clear'; RESP-3",
+      "evaluator": "code",
+      "positives": [
+        "support-0023",
+        "support-0027",
+        "support-0180"
+      ],
+      "close_negatives": [
+        "support-0021",
+        "support-0166"
+      ],
+      "status": "confirmed",
+      "count": 3,
+      "confirmed_ts": "2026-11-05T14:54:16+00:00",
+      "created_from": [
+        "ann-support-0023",
+        "ann-support-0027",
+        "ann-support-0180"
+      ],
+      "decided_by": "Eve (voice review 2026-11-05); drafted by Claude"
+    },
+    {
+      "name": "unnatural_or_verbose_language",
+      "from_tags": [
+        "unnatural_or_verbose_language"
+      ],
+      "definition": "FAIL when the reply is much longer or more robotic than the user asked for, or uses internal jargon like 'policy ID' or 'retrieval issue'. PASS when it is short and plain when asked.",
+      "boundary": "Style only; kept because poor language is poor user experience even when the facts are right.",
+      "spec_ref": "RESP-5",
+      "evaluator": "llm_judge",
+      "positives": [
+        "support-0131",
+        "support-0149",
+        "support-0165"
+      ],
+      "close_negatives": [
+        "support-0003",
+        "support-0216"
+      ],
+      "status": "confirmed",
+      "count": 3,
+      "confirmed_ts": "2026-11-05T14:54:16+00:00",
+      "created_from": [
+        "ann-support-0131",
+        "ann-support-0149",
+        "ann-support-0165"
+      ],
+      "decided_by": "Eve (voice review 2026-11-05); drafted by Claude"
+    }
+  ],
+  "not_adopted": [
+    {
+      "name": "dismisses_repeat_request",
+      "examples": [
+        "support-0021"
+      ],
+      "why": "only new theme in final 15; too rare"
+    },
+    {
+      "name": "ignores_user_constraint",
+      "examples": [
+        "support-0168"
+      ],
+      "why": "too rare"
+    },
+    {
+      "name": "unstated_assumption",
+      "examples": [
+        "support-0185"
+      ],
+      "why": "too rare"
+    },
+    {
+      "name": "acts_without_confirmation",
+      "examples": [
+        "support-0088"
+      ],
+      "why": "practice conversation outside the sample; covered by RESP-7"
+    },
+    {
+      "name": "uses_wrong_lookup (idea)",
+      "why": "root cause of falsely_reports_record_missing rather than a separate mode"
+    }
+  ]
+}

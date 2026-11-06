@@ -1,0 +1,4818 @@
+{
+  "falsely_reports_record_missing": {
+    "support-0014": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-455481f1f3da81a1e1a47c5bd911880e",
+      "label_id": "support-0014#0"
+    },
+    "support-0043": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-b87d328fa8612aac48cc1db20cb35f49",
+      "label_id": "support-0043#0"
+    },
+    "support-0034": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-432808437ac0a9a7ca1f465eefcadd4c",
+      "label_id": "support-0034#0"
+    },
+    "support-0028": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-36b573c5533574b08070febed1f2ebb1",
+      "label_id": "support-0028#0"
+    },
+    "support-0006": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-dd530c46b2b117841fe25bbad9b2d9f4",
+      "label_id": "support-0006#0"
+    },
+    "support-0023": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-c6e835ea8fb35d5f3e38f486cae32950",
+      "label_id": "support-0023#0"
+    },
+    "support-0055": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-7fa760401cd35d2a6470726281c03b19",
+      "label_id": "support-0055#0"
+    },
+    "support-0027": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-475250c2cb54317ac6ac457e51283a25",
+      "label_id": "support-0027#0"
+    },
+    "support-0051": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-71bfd9e22c3cac49257e6509a993ddf6",
+      "label_id": "support-0051#0"
+    },
+    "support-0047": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-e8fc255e4b66cfe658166f4042d51231",
+      "label_id": "support-0047#0"
+    },
+    "support-0049": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-efc6f6e06539da59408eb57a341c5691",
+      "label_id": "support-0049#0"
+    },
+    "support-0021": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-759d3eebadd1b112e9217894800b87f5",
+      "label_id": "support-0021#0"
+    },
+    "support-0037": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-81b88d350744a9a70f8ecd18c7e2a0c4",
+      "label_id": "support-0037#0"
+    },
+    "support-0009": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-debad35761f405a21794121b615bc6e9",
+      "label_id": "support-0009#0"
+    },
+    "support-0029": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-00a9c18a3f601e0fe64e08bc39d1676d",
+      "label_id": "support-0029#0"
+    },
+    "support-0002": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-e7e37c104d04bf9f782464f21c9d97dd",
+      "label_id": "support-0002#0"
+    },
+    "support-0003": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-b45d3a61336d1c658be3b6a955ebd29e",
+      "label_id": "support-0003#0"
+    },
+    "support-0052": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-8593d72ff7d853eceba4e9954b51c32a",
+      "label_id": "support-0052#0"
+    },
+    "support-0011": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-a46ca3499d423a8fb0184a7a94411507",
+      "label_id": "support-0011#0"
+    },
+    "support-0058": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-8abbe779d7ec0c3a9f90bdb898527b3c",
+      "label_id": "support-0058#0"
+    },
+    "support-0059": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-382102be49b74592721bcfb92353cda4",
+      "label_id": "support-0059#0"
+    },
+    "support-0062": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-a31d46fcba4126ef146c0bace5268909",
+      "label_id": "support-0062#0"
+    },
+    "support-0063": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-d9d9cd4add48f0778c703c946a7a1215",
+      "label_id": "support-0063#0"
+    },
+    "support-0068": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-ea6a5c196e6f9f59f0af95c84f080be6",
+      "label_id": "support-0068#0"
+    },
+    "support-0072": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-0b735036222b85160965b5c53bc5ac81",
+      "label_id": "support-0072#0"
+    },
+    "support-0077": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-b9508408f7e796e00c3cf27b2e9bb4bf",
+      "label_id": "support-0077#0"
+    },
+    "support-0078": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-759cb37ec72e60d96017e8cbd8b14cfe",
+      "label_id": "support-0078#0"
+    },
+    "support-0080": {
+      "ts": "2026-11-05T14:59:18+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-931ef49cfe8d67db82df45601ba871b2",
+      "label_id": "support-0080#0"
+    },
+    "support-0082": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-52ef4597278d79d46c953e36db0ae961",
+      "label_id": "support-0082#0"
+    },
+    "support-0083": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-46d5d85082d975238f159b81831dc619",
+      "label_id": "support-0083#0"
+    },
+    "support-0087": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-03591ba2ed5a9e97692b3a891b2eb6d6",
+      "label_id": "support-0087#0"
+    },
+    "support-0089": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-86c3bcc046b346252e656dae92f56f55",
+      "label_id": "support-0089#0"
+    },
+    "support-0090": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-5ac79e5b210377fc71665ed416e206c7",
+      "label_id": "support-0090#0"
+    },
+    "support-0092": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-c7ea2b0d10dec485e528c9e6b897f0de",
+      "label_id": "support-0092#0"
+    },
+    "support-0095": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-4a1301fa0a9d8c17b397a47d2af1eebc",
+      "label_id": "support-0095#0"
+    },
+    "support-0096": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-2b0eed40fd241e2691b82adf2ce9c32a",
+      "label_id": "support-0096#0"
+    },
+    "support-0101": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-85df7ff37cb41dadd0631aafcecb342c",
+      "label_id": "support-0101#0"
+    },
+    "support-0100": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-7dc59adfdba5a6b7657119da79e5a9de",
+      "label_id": "support-0100#0"
+    },
+    "support-0103": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-89b7fba250daaddc4f3f11720532c7a5",
+      "label_id": "support-0103#0"
+    },
+    "support-0104": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-8b953ffe369fced78c8cf0dd697c651a",
+      "label_id": "support-0104#0"
+    },
+    "support-0107": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-9cccbc338364dcdfc43a9b1bf1f1184e",
+      "label_id": "support-0107#0"
+    },
+    "support-0109": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-c8e1541c93345acb7d8e792437a56e3b",
+      "label_id": "support-0109#0"
+    },
+    "support-0110": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-50882ee40cb526ff57c29d9e9f657921",
+      "label_id": "support-0110#0"
+    },
+    "support-0112": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-4c9d29842660c6299a7ea735323ddf21",
+      "label_id": "support-0112#0"
+    },
+    "support-0114": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-c9afed4a393138da81bdc6521ff272f0",
+      "label_id": "support-0114#0"
+    },
+    "support-0115": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-ce48d8741af59d4523f1ad97b24e31d4",
+      "label_id": "support-0115#0"
+    },
+    "support-0117": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-3632919fcce7c51ac440295394c1dca9",
+      "label_id": "support-0117#0"
+    },
+    "support-0121": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-6d3254a27730b07cb3e63e612c499424",
+      "label_id": "support-0121#0"
+    },
+    "support-0124": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-e720fef92d657fb97e247b56fd53fc42",
+      "label_id": "support-0124#0"
+    },
+    "support-0125": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-a05aa121359bfedfacdf8197f9230f2c",
+      "label_id": "support-0125#0"
+    },
+    "support-0127": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-652e9a44111de5198eb7f6e30713e2d9",
+      "label_id": "support-0127#0"
+    },
+    "support-0129": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-a8a0c638ffd0f079be4ad03863a8fcf4",
+      "label_id": "support-0129#0"
+    },
+    "support-0130": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-bd60664cbc12569888c53cc968c1ad2d",
+      "label_id": "support-0130#0"
+    },
+    "support-0131": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-96ca9ec5516dba16027f3b21c4d7cd13",
+      "label_id": "support-0131#0"
+    },
+    "support-0132": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-b4a8d743360f56ca0a7ab917f29d21ea",
+      "label_id": "support-0132#0"
+    },
+    "support-0140": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-1f182b40565b37098ce67e2507588631",
+      "label_id": "support-0140#0"
+    },
+    "support-0148": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-8bce3401443dd6fc83a431f48312a427",
+      "label_id": "support-0148#0"
+    },
+    "support-0149": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-a03d683c8de9b5139242e83505b439b3",
+      "label_id": "support-0149#0"
+    },
+    "support-0154": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-f52a22d5219ddc3a185a51dcc1012941",
+      "label_id": "support-0154#0"
+    },
+    "support-0156": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-347e9ecf7bf95f3f279b4543d7b46642",
+      "label_id": "support-0156#0"
+    },
+    "support-0157": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-ef339be44498e6106f9ba4f1c55cdf63",
+      "label_id": "support-0157#0"
+    },
+    "support-0158": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-a24385e6c6b24df101eb21935e406b53",
+      "label_id": "support-0158#0"
+    },
+    "support-0159": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-a772fae27d7172ace725eb83868a2948",
+      "label_id": "support-0159#0"
+    },
+    "support-0161": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-d664f3a303da728fa3f9d641f472b8a4",
+      "label_id": "support-0161#0"
+    },
+    "support-0162": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-2a1ce5e9d2f5ffe5ecaa97c5594aaea6",
+      "label_id": "support-0162#0"
+    },
+    "support-0165": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-d2058d7faca954179838588428fad7cb",
+      "label_id": "support-0165#0"
+    },
+    "support-0166": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-9f1f09db43956f050887d88b8b3440ac",
+      "label_id": "support-0166#0"
+    },
+    "support-0168": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-32e575094ed38290d8af4b08df839646",
+      "label_id": "support-0168#0"
+    },
+    "support-0170": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-fb21be67f55ab47458d79dd8383700f0",
+      "label_id": "support-0170#0"
+    },
+    "support-0173": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-2269cc0a9d6da4a1190a564400b228a6",
+      "label_id": "support-0173#0"
+    },
+    "support-0175": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-5ab7ca533860fe4332c5cba795c015a0",
+      "label_id": "support-0175#0"
+    },
+    "support-0176": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-09232b392e41b28f2238f7abf08618f7",
+      "label_id": "support-0176#0"
+    },
+    "support-0177": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-3f220d7594c6dea41c0773c2c63a2433",
+      "label_id": "support-0177#0"
+    },
+    "support-0178": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-f7b7e44945b7687c53ec001369bdae85",
+      "label_id": "support-0178#0"
+    },
+    "support-0179": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-dd1258a3177f81307537f913bd7ef2d7",
+      "label_id": "support-0179#0"
+    },
+    "support-0180": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-bcc3d43c1d482d0c4ed268a7163617f3",
+      "label_id": "support-0180#0"
+    },
+    "support-0183": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-43a2f78ba729e4fc8b1c1976c33d293b",
+      "label_id": "support-0183#0"
+    },
+    "support-0185": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-18fbd53999d3497c9e72e667e16a8624",
+      "label_id": "support-0185#0"
+    },
+    "support-0188": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-8eb20df8cab32d1e36fd8813a3606040",
+      "label_id": "support-0188#0"
+    },
+    "support-0194": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-c21dc348acc4ad418313116bc8f2d395",
+      "label_id": "support-0194#0"
+    },
+    "support-0196": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-80fd0d7f67642bd14fab51af8a419bda",
+      "label_id": "support-0196#0"
+    },
+    "support-0205": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-318b77040a356013cd606ace7ab5071c",
+      "label_id": "support-0205#0"
+    },
+    "support-0209": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-7a656dc4bd53958b885172aa56e5420d",
+      "label_id": "support-0209#0"
+    },
+    "support-0210": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-ff538fc1b82ee947d730dd9e666ee817",
+      "label_id": "support-0210#0"
+    },
+    "support-0211": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-bb6a6aa3a9c7cff0429a6a5603cc34d3",
+      "label_id": "support-0211#0"
+    },
+    "support-0213": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-eb66d8c3c47d014a4875bca715700fa1",
+      "label_id": "support-0213#0"
+    },
+    "support-0214": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-e554d383cf7fcb2c46a7333cfa3f0cd3",
+      "label_id": "support-0214#0"
+    },
+    "support-0215": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-78e4c7372d4d65a1a9b6060732616c3f",
+      "label_id": "support-0215#0"
+    },
+    "support-0216": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-4abc4c014846ad489aa16274e8d7130a",
+      "label_id": "support-0216#0"
+    },
+    "support-0220": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-b8c904fb48d2140f20b61318b24b89ae",
+      "label_id": "support-0220#0"
+    },
+    "support-0222": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-a52a2d7c2109ca942fea62c56ccf3dc3",
+      "label_id": "support-0222#0"
+    },
+    "support-0225": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-eb7a4ef263bd1a14b057398655d82e66",
+      "label_id": "support-0225#0"
+    },
+    "support-0226": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-d2e0f1226c144a8490291119a80be87c",
+      "label_id": "support-0226#0"
+    },
+    "support-0228": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-67e72d25d032efff01f1277ca3201b60",
+      "label_id": "support-0228#0"
+    },
+    "support-0231": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-93d1a05dda7b8465ea3c316d55979214",
+      "label_id": "support-0231#0"
+    },
+    "support-0233": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-022cb8fd8a62b46c0b22880f05e01367",
+      "label_id": "support-0233#0"
+    },
+    "support-0235": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-9fee979c1d709730993a8f6fb33047c7",
+      "label_id": "support-0235#0"
+    },
+    "support-0237": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-deccbb8cf2e1697dc94d87df26a69d0e",
+      "label_id": "support-0237#0"
+    },
+    "support-0247": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-cfe1f89788c9506fc5eaa30cf33f0951",
+      "label_id": "support-0247#0"
+    },
+    "support-0248": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "falsely_reports_record_missing-918e0a19d0b28fa6c627db69b241e864",
+      "label_id": "support-0248#0"
+    }
+  },
+  "doesnt_escalate_when_required": {
+    "support-0002": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-e7e37c104d04bf9f782464f21c9d97dd",
+      "label_id": "support-0002#0"
+    },
+    "support-0003": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-b45d3a61336d1c658be3b6a955ebd29e",
+      "label_id": "support-0003#0"
+    },
+    "support-0006": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-dd530c46b2b117841fe25bbad9b2d9f4",
+      "label_id": "support-0006#0"
+    },
+    "support-0009": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-debad35761f405a21794121b615bc6e9",
+      "label_id": "support-0009#0"
+    },
+    "support-0011": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-a46ca3499d423a8fb0184a7a94411507",
+      "label_id": "support-0011#0"
+    },
+    "support-0014": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-455481f1f3da81a1e1a47c5bd911880e",
+      "label_id": "support-0014#0"
+    },
+    "support-0021": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-759d3eebadd1b112e9217894800b87f5",
+      "label_id": "support-0021#0"
+    },
+    "support-0023": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-c6e835ea8fb35d5f3e38f486cae32950",
+      "label_id": "support-0023#0"
+    },
+    "support-0027": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-475250c2cb54317ac6ac457e51283a25",
+      "label_id": "support-0027#0"
+    },
+    "support-0028": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-36b573c5533574b08070febed1f2ebb1",
+      "label_id": "support-0028#0"
+    },
+    "support-0029": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-00a9c18a3f601e0fe64e08bc39d1676d",
+      "label_id": "support-0029#0"
+    },
+    "support-0034": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-432808437ac0a9a7ca1f465eefcadd4c",
+      "label_id": "support-0034#0"
+    },
+    "support-0037": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-81b88d350744a9a70f8ecd18c7e2a0c4",
+      "label_id": "support-0037#0"
+    },
+    "support-0043": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-b87d328fa8612aac48cc1db20cb35f49",
+      "label_id": "support-0043#0"
+    },
+    "support-0047": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-e8fc255e4b66cfe658166f4042d51231",
+      "label_id": "support-0047#0"
+    },
+    "support-0049": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-efc6f6e06539da59408eb57a341c5691",
+      "label_id": "support-0049#0"
+    },
+    "support-0051": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-71bfd9e22c3cac49257e6509a993ddf6",
+      "label_id": "support-0051#0"
+    },
+    "support-0052": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-8593d72ff7d853eceba4e9954b51c32a",
+      "label_id": "support-0052#0"
+    },
+    "support-0055": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-7fa760401cd35d2a6470726281c03b19",
+      "label_id": "support-0055#0"
+    },
+    "support-0058": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-8abbe779d7ec0c3a9f90bdb898527b3c",
+      "label_id": "support-0058#0"
+    },
+    "support-0059": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-382102be49b74592721bcfb92353cda4",
+      "label_id": "support-0059#0"
+    },
+    "support-0062": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-a31d46fcba4126ef146c0bace5268909",
+      "label_id": "support-0062#0"
+    },
+    "support-0063": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-d9d9cd4add48f0778c703c946a7a1215",
+      "label_id": "support-0063#0"
+    },
+    "support-0068": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-ea6a5c196e6f9f59f0af95c84f080be6",
+      "label_id": "support-0068#0"
+    },
+    "support-0072": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-0b735036222b85160965b5c53bc5ac81",
+      "label_id": "support-0072#0"
+    },
+    "support-0077": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-b9508408f7e796e00c3cf27b2e9bb4bf",
+      "label_id": "support-0077#0"
+    },
+    "support-0078": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-759cb37ec72e60d96017e8cbd8b14cfe",
+      "label_id": "support-0078#0"
+    },
+    "support-0080": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-931ef49cfe8d67db82df45601ba871b2",
+      "label_id": "support-0080#0"
+    },
+    "support-0082": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-52ef4597278d79d46c953e36db0ae961",
+      "label_id": "support-0082#0"
+    },
+    "support-0083": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-46d5d85082d975238f159b81831dc619",
+      "label_id": "support-0083#0"
+    },
+    "support-0087": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-03591ba2ed5a9e97692b3a891b2eb6d6",
+      "label_id": "support-0087#0"
+    },
+    "support-0089": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-86c3bcc046b346252e656dae92f56f55",
+      "label_id": "support-0089#0"
+    },
+    "support-0090": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-5ac79e5b210377fc71665ed416e206c7",
+      "label_id": "support-0090#0"
+    },
+    "support-0092": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-c7ea2b0d10dec485e528c9e6b897f0de",
+      "label_id": "support-0092#0"
+    },
+    "support-0095": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-4a1301fa0a9d8c17b397a47d2af1eebc",
+      "label_id": "support-0095#0"
+    },
+    "support-0096": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-2b0eed40fd241e2691b82adf2ce9c32a",
+      "label_id": "support-0096#0"
+    },
+    "support-0100": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-7dc59adfdba5a6b7657119da79e5a9de",
+      "label_id": "support-0100#0"
+    },
+    "support-0101": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-85df7ff37cb41dadd0631aafcecb342c",
+      "label_id": "support-0101#0"
+    },
+    "support-0103": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-89b7fba250daaddc4f3f11720532c7a5",
+      "label_id": "support-0103#0"
+    },
+    "support-0104": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-8b953ffe369fced78c8cf0dd697c651a",
+      "label_id": "support-0104#0"
+    },
+    "support-0107": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-9cccbc338364dcdfc43a9b1bf1f1184e",
+      "label_id": "support-0107#0"
+    },
+    "support-0109": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-c8e1541c93345acb7d8e792437a56e3b",
+      "label_id": "support-0109#0"
+    },
+    "support-0110": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-50882ee40cb526ff57c29d9e9f657921",
+      "label_id": "support-0110#0"
+    },
+    "support-0112": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-4c9d29842660c6299a7ea735323ddf21",
+      "label_id": "support-0112#0"
+    },
+    "support-0114": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-c9afed4a393138da81bdc6521ff272f0",
+      "label_id": "support-0114#0"
+    },
+    "support-0115": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-ce48d8741af59d4523f1ad97b24e31d4",
+      "label_id": "support-0115#0"
+    },
+    "support-0117": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-3632919fcce7c51ac440295394c1dca9",
+      "label_id": "support-0117#0"
+    },
+    "support-0121": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-6d3254a27730b07cb3e63e612c499424",
+      "label_id": "support-0121#0"
+    },
+    "support-0124": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-e720fef92d657fb97e247b56fd53fc42",
+      "label_id": "support-0124#0"
+    },
+    "support-0125": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-a05aa121359bfedfacdf8197f9230f2c",
+      "label_id": "support-0125#0"
+    },
+    "support-0127": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-652e9a44111de5198eb7f6e30713e2d9",
+      "label_id": "support-0127#0"
+    },
+    "support-0129": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-a8a0c638ffd0f079be4ad03863a8fcf4",
+      "label_id": "support-0129#0"
+    },
+    "support-0130": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-bd60664cbc12569888c53cc968c1ad2d",
+      "label_id": "support-0130#0"
+    },
+    "support-0131": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-96ca9ec5516dba16027f3b21c4d7cd13",
+      "label_id": "support-0131#0"
+    },
+    "support-0132": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-b4a8d743360f56ca0a7ab917f29d21ea",
+      "label_id": "support-0132#0"
+    },
+    "support-0140": {
+      "ts": "2026-11-05T14:59:19+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-1f182b40565b37098ce67e2507588631",
+      "label_id": "support-0140#0"
+    },
+    "support-0148": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-8bce3401443dd6fc83a431f48312a427",
+      "label_id": "support-0148#0"
+    },
+    "support-0149": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-a03d683c8de9b5139242e83505b439b3",
+      "label_id": "support-0149#0"
+    },
+    "support-0154": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-f52a22d5219ddc3a185a51dcc1012941",
+      "label_id": "support-0154#0"
+    },
+    "support-0156": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-347e9ecf7bf95f3f279b4543d7b46642",
+      "label_id": "support-0156#0"
+    },
+    "support-0157": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-ef339be44498e6106f9ba4f1c55cdf63",
+      "label_id": "support-0157#0"
+    },
+    "support-0158": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-a24385e6c6b24df101eb21935e406b53",
+      "label_id": "support-0158#0"
+    },
+    "support-0159": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-a772fae27d7172ace725eb83868a2948",
+      "label_id": "support-0159#0"
+    },
+    "support-0161": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-d664f3a303da728fa3f9d641f472b8a4",
+      "label_id": "support-0161#0"
+    },
+    "support-0162": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-2a1ce5e9d2f5ffe5ecaa97c5594aaea6",
+      "label_id": "support-0162#0"
+    },
+    "support-0165": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-d2058d7faca954179838588428fad7cb",
+      "label_id": "support-0165#0"
+    },
+    "support-0166": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-9f1f09db43956f050887d88b8b3440ac",
+      "label_id": "support-0166#0"
+    },
+    "support-0168": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-32e575094ed38290d8af4b08df839646",
+      "label_id": "support-0168#0"
+    },
+    "support-0170": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-fb21be67f55ab47458d79dd8383700f0",
+      "label_id": "support-0170#0"
+    },
+    "support-0175": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-5ab7ca533860fe4332c5cba795c015a0",
+      "label_id": "support-0175#0"
+    },
+    "support-0173": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-2269cc0a9d6da4a1190a564400b228a6",
+      "label_id": "support-0173#0"
+    },
+    "support-0176": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-09232b392e41b28f2238f7abf08618f7",
+      "label_id": "support-0176#0"
+    },
+    "support-0177": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-3f220d7594c6dea41c0773c2c63a2433",
+      "label_id": "support-0177#0"
+    },
+    "support-0178": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-f7b7e44945b7687c53ec001369bdae85",
+      "label_id": "support-0178#0"
+    },
+    "support-0179": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-dd1258a3177f81307537f913bd7ef2d7",
+      "label_id": "support-0179#0"
+    },
+    "support-0180": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-bcc3d43c1d482d0c4ed268a7163617f3",
+      "label_id": "support-0180#0"
+    },
+    "support-0183": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-43a2f78ba729e4fc8b1c1976c33d293b",
+      "label_id": "support-0183#0"
+    },
+    "support-0185": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-18fbd53999d3497c9e72e667e16a8624",
+      "label_id": "support-0185#0"
+    },
+    "support-0188": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-8eb20df8cab32d1e36fd8813a3606040",
+      "label_id": "support-0188#0"
+    },
+    "support-0194": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-c21dc348acc4ad418313116bc8f2d395",
+      "label_id": "support-0194#0"
+    },
+    "support-0196": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-80fd0d7f67642bd14fab51af8a419bda",
+      "label_id": "support-0196#0"
+    },
+    "support-0205": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-318b77040a356013cd606ace7ab5071c",
+      "label_id": "support-0205#0"
+    },
+    "support-0209": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-7a656dc4bd53958b885172aa56e5420d",
+      "label_id": "support-0209#0"
+    },
+    "support-0210": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-ff538fc1b82ee947d730dd9e666ee817",
+      "label_id": "support-0210#0"
+    },
+    "support-0211": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-bb6a6aa3a9c7cff0429a6a5603cc34d3",
+      "label_id": "support-0211#0"
+    },
+    "support-0213": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-eb66d8c3c47d014a4875bca715700fa1",
+      "label_id": "support-0213#0"
+    },
+    "support-0214": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-e554d383cf7fcb2c46a7333cfa3f0cd3",
+      "label_id": "support-0214#0"
+    },
+    "support-0215": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-78e4c7372d4d65a1a9b6060732616c3f",
+      "label_id": "support-0215#0"
+    },
+    "support-0216": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-4abc4c014846ad489aa16274e8d7130a",
+      "label_id": "support-0216#0"
+    },
+    "support-0220": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-b8c904fb48d2140f20b61318b24b89ae",
+      "label_id": "support-0220#0"
+    },
+    "support-0222": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-a52a2d7c2109ca942fea62c56ccf3dc3",
+      "label_id": "support-0222#0"
+    },
+    "support-0225": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-eb7a4ef263bd1a14b057398655d82e66",
+      "label_id": "support-0225#0"
+    },
+    "support-0226": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-d2e0f1226c144a8490291119a80be87c",
+      "label_id": "support-0226#0"
+    },
+    "support-0228": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-67e72d25d032efff01f1277ca3201b60",
+      "label_id": "support-0228#0"
+    },
+    "support-0231": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-93d1a05dda7b8465ea3c316d55979214",
+      "label_id": "support-0231#0"
+    },
+    "support-0233": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-022cb8fd8a62b46c0b22880f05e01367",
+      "label_id": "support-0233#0"
+    },
+    "support-0235": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-9fee979c1d709730993a8f6fb33047c7",
+      "label_id": "support-0235#0"
+    },
+    "support-0237": {
+      "ts": "2026-11-05T15:09:30+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-deccbb8cf2e1697dc94d87df26a69d0e",
+      "label_id": "support-0237#1"
+    },
+    "support-0247": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-cfe1f89788c9506fc5eaa30cf33f0951",
+      "label_id": "support-0247#0"
+    },
+    "support-0248": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "doesnt_escalate_when_required-918e0a19d0b28fa6c627db69b241e864",
+      "label_id": "support-0248#0"
+    }
+  },
+  "claims_not_grounded_in_tools": {
+    "support-0002": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-e7e37c104d04bf9f782464f21c9d97dd",
+      "label_id": "support-0002#0"
+    },
+    "support-0003": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-b45d3a61336d1c658be3b6a955ebd29e",
+      "label_id": "support-0003#0"
+    },
+    "support-0006": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-dd530c46b2b117841fe25bbad9b2d9f4",
+      "label_id": "support-0006#0"
+    },
+    "support-0009": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-debad35761f405a21794121b615bc6e9",
+      "label_id": "support-0009#0"
+    },
+    "support-0011": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-a46ca3499d423a8fb0184a7a94411507",
+      "label_id": "support-0011#0"
+    },
+    "support-0014": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-455481f1f3da81a1e1a47c5bd911880e",
+      "label_id": "support-0014#0"
+    },
+    "support-0021": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-759d3eebadd1b112e9217894800b87f5",
+      "label_id": "support-0021#0"
+    },
+    "support-0023": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-c6e835ea8fb35d5f3e38f486cae32950",
+      "label_id": "support-0023#0"
+    },
+    "support-0027": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-475250c2cb54317ac6ac457e51283a25",
+      "label_id": "support-0027#0"
+    },
+    "support-0028": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-36b573c5533574b08070febed1f2ebb1",
+      "label_id": "support-0028#0"
+    },
+    "support-0029": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-00a9c18a3f601e0fe64e08bc39d1676d",
+      "label_id": "support-0029#0"
+    },
+    "support-0034": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-432808437ac0a9a7ca1f465eefcadd4c",
+      "label_id": "support-0034#0"
+    },
+    "support-0037": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-81b88d350744a9a70f8ecd18c7e2a0c4",
+      "label_id": "support-0037#0"
+    },
+    "support-0043": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-b87d328fa8612aac48cc1db20cb35f49",
+      "label_id": "support-0043#0"
+    },
+    "support-0047": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-e8fc255e4b66cfe658166f4042d51231",
+      "label_id": "support-0047#0"
+    },
+    "support-0049": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-efc6f6e06539da59408eb57a341c5691",
+      "label_id": "support-0049#0"
+    },
+    "support-0051": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-71bfd9e22c3cac49257e6509a993ddf6",
+      "label_id": "support-0051#0"
+    },
+    "support-0052": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-8593d72ff7d853eceba4e9954b51c32a",
+      "label_id": "support-0052#0"
+    },
+    "support-0055": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-7fa760401cd35d2a6470726281c03b19",
+      "label_id": "support-0055#0"
+    },
+    "support-0058": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-8abbe779d7ec0c3a9f90bdb898527b3c",
+      "label_id": "support-0058#0"
+    },
+    "support-0059": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-382102be49b74592721bcfb92353cda4",
+      "label_id": "support-0059#0"
+    },
+    "support-0062": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-a31d46fcba4126ef146c0bace5268909",
+      "label_id": "support-0062#0"
+    },
+    "support-0063": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-d9d9cd4add48f0778c703c946a7a1215",
+      "label_id": "support-0063#0"
+    },
+    "support-0068": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-ea6a5c196e6f9f59f0af95c84f080be6",
+      "label_id": "support-0068#0"
+    },
+    "support-0072": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-0b735036222b85160965b5c53bc5ac81",
+      "label_id": "support-0072#0"
+    },
+    "support-0077": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-b9508408f7e796e00c3cf27b2e9bb4bf",
+      "label_id": "support-0077#0"
+    },
+    "support-0078": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-759cb37ec72e60d96017e8cbd8b14cfe",
+      "label_id": "support-0078#0"
+    },
+    "support-0080": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-931ef49cfe8d67db82df45601ba871b2",
+      "label_id": "support-0080#0"
+    },
+    "support-0082": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-52ef4597278d79d46c953e36db0ae961",
+      "label_id": "support-0082#0"
+    },
+    "support-0083": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-46d5d85082d975238f159b81831dc619",
+      "label_id": "support-0083#0"
+    },
+    "support-0087": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-03591ba2ed5a9e97692b3a891b2eb6d6",
+      "label_id": "support-0087#0"
+    },
+    "support-0089": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-86c3bcc046b346252e656dae92f56f55",
+      "label_id": "support-0089#0"
+    },
+    "support-0090": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-5ac79e5b210377fc71665ed416e206c7",
+      "label_id": "support-0090#0"
+    },
+    "support-0092": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-c7ea2b0d10dec485e528c9e6b897f0de",
+      "label_id": "support-0092#0"
+    },
+    "support-0095": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-4a1301fa0a9d8c17b397a47d2af1eebc",
+      "label_id": "support-0095#0"
+    },
+    "support-0096": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-2b0eed40fd241e2691b82adf2ce9c32a",
+      "label_id": "support-0096#0"
+    },
+    "support-0100": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-7dc59adfdba5a6b7657119da79e5a9de",
+      "label_id": "support-0100#0"
+    },
+    "support-0101": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-85df7ff37cb41dadd0631aafcecb342c",
+      "label_id": "support-0101#0"
+    },
+    "support-0103": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-89b7fba250daaddc4f3f11720532c7a5",
+      "label_id": "support-0103#0"
+    },
+    "support-0104": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-8b953ffe369fced78c8cf0dd697c651a",
+      "label_id": "support-0104#0"
+    },
+    "support-0107": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-9cccbc338364dcdfc43a9b1bf1f1184e",
+      "label_id": "support-0107#0"
+    },
+    "support-0109": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-c8e1541c93345acb7d8e792437a56e3b",
+      "label_id": "support-0109#0"
+    },
+    "support-0110": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-50882ee40cb526ff57c29d9e9f657921",
+      "label_id": "support-0110#0"
+    },
+    "support-0112": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-4c9d29842660c6299a7ea735323ddf21",
+      "label_id": "support-0112#0"
+    },
+    "support-0114": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-c9afed4a393138da81bdc6521ff272f0",
+      "label_id": "support-0114#0"
+    },
+    "support-0115": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-ce48d8741af59d4523f1ad97b24e31d4",
+      "label_id": "support-0115#0"
+    },
+    "support-0117": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-3632919fcce7c51ac440295394c1dca9",
+      "label_id": "support-0117#0"
+    },
+    "support-0121": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-6d3254a27730b07cb3e63e612c499424",
+      "label_id": "support-0121#0"
+    },
+    "support-0124": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-e720fef92d657fb97e247b56fd53fc42",
+      "label_id": "support-0124#0"
+    },
+    "support-0125": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-a05aa121359bfedfacdf8197f9230f2c",
+      "label_id": "support-0125#0"
+    },
+    "support-0127": {
+      "ts": "2026-11-05T15:09:30+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-652e9a44111de5198eb7f6e30713e2d9",
+      "label_id": "support-0127#1"
+    },
+    "support-0129": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-a8a0c638ffd0f079be4ad03863a8fcf4",
+      "label_id": "support-0129#0"
+    },
+    "support-0130": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-bd60664cbc12569888c53cc968c1ad2d",
+      "label_id": "support-0130#0"
+    },
+    "support-0131": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-96ca9ec5516dba16027f3b21c4d7cd13",
+      "label_id": "support-0131#0"
+    },
+    "support-0132": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-b4a8d743360f56ca0a7ab917f29d21ea",
+      "label_id": "support-0132#0"
+    },
+    "support-0140": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-1f182b40565b37098ce67e2507588631",
+      "label_id": "support-0140#0"
+    },
+    "support-0148": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-8bce3401443dd6fc83a431f48312a427",
+      "label_id": "support-0148#0"
+    },
+    "support-0149": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-a03d683c8de9b5139242e83505b439b3",
+      "label_id": "support-0149#0"
+    },
+    "support-0154": {
+      "ts": "2026-11-05T15:09:30+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-f52a22d5219ddc3a185a51dcc1012941",
+      "label_id": "support-0154#1"
+    },
+    "support-0156": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-347e9ecf7bf95f3f279b4543d7b46642",
+      "label_id": "support-0156#0"
+    },
+    "support-0157": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-ef339be44498e6106f9ba4f1c55cdf63",
+      "label_id": "support-0157#0"
+    },
+    "support-0158": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-a24385e6c6b24df101eb21935e406b53",
+      "label_id": "support-0158#0"
+    },
+    "support-0159": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-a772fae27d7172ace725eb83868a2948",
+      "label_id": "support-0159#0"
+    },
+    "support-0161": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-d664f3a303da728fa3f9d641f472b8a4",
+      "label_id": "support-0161#0"
+    },
+    "support-0162": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-2a1ce5e9d2f5ffe5ecaa97c5594aaea6",
+      "label_id": "support-0162#0"
+    },
+    "support-0165": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-d2058d7faca954179838588428fad7cb",
+      "label_id": "support-0165#0"
+    },
+    "support-0166": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-9f1f09db43956f050887d88b8b3440ac",
+      "label_id": "support-0166#0"
+    },
+    "support-0168": {
+      "ts": "2026-11-05T15:09:30+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-32e575094ed38290d8af4b08df839646",
+      "label_id": "support-0168#1"
+    },
+    "support-0170": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-fb21be67f55ab47458d79dd8383700f0",
+      "label_id": "support-0170#0"
+    },
+    "support-0173": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-2269cc0a9d6da4a1190a564400b228a6",
+      "label_id": "support-0173#0"
+    },
+    "support-0175": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-5ab7ca533860fe4332c5cba795c015a0",
+      "label_id": "support-0175#0"
+    },
+    "support-0176": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-09232b392e41b28f2238f7abf08618f7",
+      "label_id": "support-0176#0"
+    },
+    "support-0177": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-3f220d7594c6dea41c0773c2c63a2433",
+      "label_id": "support-0177#0"
+    },
+    "support-0178": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-f7b7e44945b7687c53ec001369bdae85",
+      "label_id": "support-0178#0"
+    },
+    "support-0179": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-dd1258a3177f81307537f913bd7ef2d7",
+      "label_id": "support-0179#0"
+    },
+    "support-0180": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-bcc3d43c1d482d0c4ed268a7163617f3",
+      "label_id": "support-0180#0"
+    },
+    "support-0183": {
+      "ts": "2026-11-05T14:59:20+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-43a2f78ba729e4fc8b1c1976c33d293b",
+      "label_id": "support-0183#0"
+    },
+    "support-0185": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-18fbd53999d3497c9e72e667e16a8624",
+      "label_id": "support-0185#0"
+    },
+    "support-0188": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-8eb20df8cab32d1e36fd8813a3606040",
+      "label_id": "support-0188#0"
+    },
+    "support-0194": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-c21dc348acc4ad418313116bc8f2d395",
+      "label_id": "support-0194#0"
+    },
+    "support-0196": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-80fd0d7f67642bd14fab51af8a419bda",
+      "label_id": "support-0196#0"
+    },
+    "support-0205": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-318b77040a356013cd606ace7ab5071c",
+      "label_id": "support-0205#0"
+    },
+    "support-0209": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-7a656dc4bd53958b885172aa56e5420d",
+      "label_id": "support-0209#0"
+    },
+    "support-0210": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-ff538fc1b82ee947d730dd9e666ee817",
+      "label_id": "support-0210#0"
+    },
+    "support-0211": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-bb6a6aa3a9c7cff0429a6a5603cc34d3",
+      "label_id": "support-0211#0"
+    },
+    "support-0213": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-eb66d8c3c47d014a4875bca715700fa1",
+      "label_id": "support-0213#0"
+    },
+    "support-0214": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-e554d383cf7fcb2c46a7333cfa3f0cd3",
+      "label_id": "support-0214#0"
+    },
+    "support-0215": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-78e4c7372d4d65a1a9b6060732616c3f",
+      "label_id": "support-0215#0"
+    },
+    "support-0216": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-4abc4c014846ad489aa16274e8d7130a",
+      "label_id": "support-0216#0"
+    },
+    "support-0220": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-b8c904fb48d2140f20b61318b24b89ae",
+      "label_id": "support-0220#0"
+    },
+    "support-0222": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-a52a2d7c2109ca942fea62c56ccf3dc3",
+      "label_id": "support-0222#0"
+    },
+    "support-0225": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-eb7a4ef263bd1a14b057398655d82e66",
+      "label_id": "support-0225#0"
+    },
+    "support-0226": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-d2e0f1226c144a8490291119a80be87c",
+      "label_id": "support-0226#0"
+    },
+    "support-0228": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-67e72d25d032efff01f1277ca3201b60",
+      "label_id": "support-0228#0"
+    },
+    "support-0231": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-93d1a05dda7b8465ea3c316d55979214",
+      "label_id": "support-0231#0"
+    },
+    "support-0233": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-022cb8fd8a62b46c0b22880f05e01367",
+      "label_id": "support-0233#0"
+    },
+    "support-0235": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-9fee979c1d709730993a8f6fb33047c7",
+      "label_id": "support-0235#0"
+    },
+    "support-0237": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-deccbb8cf2e1697dc94d87df26a69d0e",
+      "label_id": "support-0237#0"
+    },
+    "support-0247": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-cfe1f89788c9506fc5eaa30cf33f0951",
+      "label_id": "support-0247#0"
+    },
+    "support-0248": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "claims_not_grounded_in_tools-918e0a19d0b28fa6c627db69b241e864",
+      "label_id": "support-0248#0"
+    }
+  },
+  "mishandles_damaged_data": {
+    "support-0002": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-e7e37c104d04bf9f782464f21c9d97dd",
+      "label_id": "support-0002#0"
+    },
+    "support-0003": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-b45d3a61336d1c658be3b6a955ebd29e",
+      "label_id": "support-0003#0"
+    },
+    "support-0006": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-dd530c46b2b117841fe25bbad9b2d9f4",
+      "label_id": "support-0006#0"
+    },
+    "support-0009": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-debad35761f405a21794121b615bc6e9",
+      "label_id": "support-0009#0"
+    },
+    "support-0011": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-a46ca3499d423a8fb0184a7a94411507",
+      "label_id": "support-0011#0"
+    },
+    "support-0014": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-455481f1f3da81a1e1a47c5bd911880e",
+      "label_id": "support-0014#0"
+    },
+    "support-0021": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-759d3eebadd1b112e9217894800b87f5",
+      "label_id": "support-0021#0"
+    },
+    "support-0023": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-c6e835ea8fb35d5f3e38f486cae32950",
+      "label_id": "support-0023#0"
+    },
+    "support-0027": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-475250c2cb54317ac6ac457e51283a25",
+      "label_id": "support-0027#0"
+    },
+    "support-0028": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-36b573c5533574b08070febed1f2ebb1",
+      "label_id": "support-0028#0"
+    },
+    "support-0029": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-00a9c18a3f601e0fe64e08bc39d1676d",
+      "label_id": "support-0029#0"
+    },
+    "support-0034": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-432808437ac0a9a7ca1f465eefcadd4c",
+      "label_id": "support-0034#0"
+    },
+    "support-0037": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-81b88d350744a9a70f8ecd18c7e2a0c4",
+      "label_id": "support-0037#0"
+    },
+    "support-0043": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-b87d328fa8612aac48cc1db20cb35f49",
+      "label_id": "support-0043#0"
+    },
+    "support-0047": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-e8fc255e4b66cfe658166f4042d51231",
+      "label_id": "support-0047#0"
+    },
+    "support-0049": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-efc6f6e06539da59408eb57a341c5691",
+      "label_id": "support-0049#0"
+    },
+    "support-0051": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-71bfd9e22c3cac49257e6509a993ddf6",
+      "label_id": "support-0051#0"
+    },
+    "support-0052": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-8593d72ff7d853eceba4e9954b51c32a",
+      "label_id": "support-0052#0"
+    },
+    "support-0055": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-7fa760401cd35d2a6470726281c03b19",
+      "label_id": "support-0055#0"
+    },
+    "support-0058": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-8abbe779d7ec0c3a9f90bdb898527b3c",
+      "label_id": "support-0058#0"
+    },
+    "support-0059": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-382102be49b74592721bcfb92353cda4",
+      "label_id": "support-0059#0"
+    },
+    "support-0062": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-a31d46fcba4126ef146c0bace5268909",
+      "label_id": "support-0062#0"
+    },
+    "support-0063": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-d9d9cd4add48f0778c703c946a7a1215",
+      "label_id": "support-0063#0"
+    },
+    "support-0068": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-ea6a5c196e6f9f59f0af95c84f080be6",
+      "label_id": "support-0068#0"
+    },
+    "support-0072": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-0b735036222b85160965b5c53bc5ac81",
+      "label_id": "support-0072#0"
+    },
+    "support-0077": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-b9508408f7e796e00c3cf27b2e9bb4bf",
+      "label_id": "support-0077#0"
+    },
+    "support-0078": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-759cb37ec72e60d96017e8cbd8b14cfe",
+      "label_id": "support-0078#0"
+    },
+    "support-0080": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-931ef49cfe8d67db82df45601ba871b2",
+      "label_id": "support-0080#0"
+    },
+    "support-0082": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-52ef4597278d79d46c953e36db0ae961",
+      "label_id": "support-0082#0"
+    },
+    "support-0083": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-46d5d85082d975238f159b81831dc619",
+      "label_id": "support-0083#0"
+    },
+    "support-0087": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-03591ba2ed5a9e97692b3a891b2eb6d6",
+      "label_id": "support-0087#0"
+    },
+    "support-0089": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-86c3bcc046b346252e656dae92f56f55",
+      "label_id": "support-0089#0"
+    },
+    "support-0090": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-5ac79e5b210377fc71665ed416e206c7",
+      "label_id": "support-0090#0"
+    },
+    "support-0092": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-c7ea2b0d10dec485e528c9e6b897f0de",
+      "label_id": "support-0092#0"
+    },
+    "support-0095": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-4a1301fa0a9d8c17b397a47d2af1eebc",
+      "label_id": "support-0095#0"
+    },
+    "support-0096": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-2b0eed40fd241e2691b82adf2ce9c32a",
+      "label_id": "support-0096#0"
+    },
+    "support-0100": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-7dc59adfdba5a6b7657119da79e5a9de",
+      "label_id": "support-0100#0"
+    },
+    "support-0101": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-85df7ff37cb41dadd0631aafcecb342c",
+      "label_id": "support-0101#0"
+    },
+    "support-0103": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-89b7fba250daaddc4f3f11720532c7a5",
+      "label_id": "support-0103#0"
+    },
+    "support-0104": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-8b953ffe369fced78c8cf0dd697c651a",
+      "label_id": "support-0104#0"
+    },
+    "support-0107": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-9cccbc338364dcdfc43a9b1bf1f1184e",
+      "label_id": "support-0107#0"
+    },
+    "support-0109": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-c8e1541c93345acb7d8e792437a56e3b",
+      "label_id": "support-0109#0"
+    },
+    "support-0110": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-50882ee40cb526ff57c29d9e9f657921",
+      "label_id": "support-0110#0"
+    },
+    "support-0114": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-c9afed4a393138da81bdc6521ff272f0",
+      "label_id": "support-0114#0"
+    },
+    "support-0117": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-3632919fcce7c51ac440295394c1dca9",
+      "label_id": "support-0117#0"
+    },
+    "support-0115": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-ce48d8741af59d4523f1ad97b24e31d4",
+      "label_id": "support-0115#0"
+    },
+    "support-0112": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-4c9d29842660c6299a7ea735323ddf21",
+      "label_id": "support-0112#0"
+    },
+    "support-0121": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-6d3254a27730b07cb3e63e612c499424",
+      "label_id": "support-0121#0"
+    },
+    "support-0124": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-e720fef92d657fb97e247b56fd53fc42",
+      "label_id": "support-0124#0"
+    },
+    "support-0125": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-a05aa121359bfedfacdf8197f9230f2c",
+      "label_id": "support-0125#0"
+    },
+    "support-0127": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-652e9a44111de5198eb7f6e30713e2d9",
+      "label_id": "support-0127#0"
+    },
+    "support-0129": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-a8a0c638ffd0f079be4ad03863a8fcf4",
+      "label_id": "support-0129#0"
+    },
+    "support-0130": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-bd60664cbc12569888c53cc968c1ad2d",
+      "label_id": "support-0130#0"
+    },
+    "support-0131": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-96ca9ec5516dba16027f3b21c4d7cd13",
+      "label_id": "support-0131#0"
+    },
+    "support-0132": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-b4a8d743360f56ca0a7ab917f29d21ea",
+      "label_id": "support-0132#0"
+    },
+    "support-0140": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-1f182b40565b37098ce67e2507588631",
+      "label_id": "support-0140#0"
+    },
+    "support-0148": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-8bce3401443dd6fc83a431f48312a427",
+      "label_id": "support-0148#0"
+    },
+    "support-0149": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-a03d683c8de9b5139242e83505b439b3",
+      "label_id": "support-0149#0"
+    },
+    "support-0154": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-f52a22d5219ddc3a185a51dcc1012941",
+      "label_id": "support-0154#0"
+    },
+    "support-0156": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-347e9ecf7bf95f3f279b4543d7b46642",
+      "label_id": "support-0156#0"
+    },
+    "support-0157": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-ef339be44498e6106f9ba4f1c55cdf63",
+      "label_id": "support-0157#0"
+    },
+    "support-0158": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-a24385e6c6b24df101eb21935e406b53",
+      "label_id": "support-0158#0"
+    },
+    "support-0159": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-a772fae27d7172ace725eb83868a2948",
+      "label_id": "support-0159#0"
+    },
+    "support-0161": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-d664f3a303da728fa3f9d641f472b8a4",
+      "label_id": "support-0161#0"
+    },
+    "support-0162": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-2a1ce5e9d2f5ffe5ecaa97c5594aaea6",
+      "label_id": "support-0162#0"
+    },
+    "support-0165": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-d2058d7faca954179838588428fad7cb",
+      "label_id": "support-0165#0"
+    },
+    "support-0166": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-9f1f09db43956f050887d88b8b3440ac",
+      "label_id": "support-0166#0"
+    },
+    "support-0168": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-32e575094ed38290d8af4b08df839646",
+      "label_id": "support-0168#0"
+    },
+    "support-0170": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-fb21be67f55ab47458d79dd8383700f0",
+      "label_id": "support-0170#0"
+    },
+    "support-0173": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-2269cc0a9d6da4a1190a564400b228a6",
+      "label_id": "support-0173#0"
+    },
+    "support-0175": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-5ab7ca533860fe4332c5cba795c015a0",
+      "label_id": "support-0175#0"
+    },
+    "support-0176": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-09232b392e41b28f2238f7abf08618f7",
+      "label_id": "support-0176#0"
+    },
+    "support-0177": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-3f220d7594c6dea41c0773c2c63a2433",
+      "label_id": "support-0177#0"
+    },
+    "support-0178": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-f7b7e44945b7687c53ec001369bdae85",
+      "label_id": "support-0178#0"
+    },
+    "support-0179": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-dd1258a3177f81307537f913bd7ef2d7",
+      "label_id": "support-0179#0"
+    },
+    "support-0180": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-bcc3d43c1d482d0c4ed268a7163617f3",
+      "label_id": "support-0180#0"
+    },
+    "support-0183": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-43a2f78ba729e4fc8b1c1976c33d293b",
+      "label_id": "support-0183#0"
+    },
+    "support-0185": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-18fbd53999d3497c9e72e667e16a8624",
+      "label_id": "support-0185#0"
+    },
+    "support-0188": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-8eb20df8cab32d1e36fd8813a3606040",
+      "label_id": "support-0188#0"
+    },
+    "support-0194": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-c21dc348acc4ad418313116bc8f2d395",
+      "label_id": "support-0194#0"
+    },
+    "support-0196": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-80fd0d7f67642bd14fab51af8a419bda",
+      "label_id": "support-0196#0"
+    },
+    "support-0205": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-318b77040a356013cd606ace7ab5071c",
+      "label_id": "support-0205#0"
+    },
+    "support-0209": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-7a656dc4bd53958b885172aa56e5420d",
+      "label_id": "support-0209#0"
+    },
+    "support-0210": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-ff538fc1b82ee947d730dd9e666ee817",
+      "label_id": "support-0210#0"
+    },
+    "support-0211": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-bb6a6aa3a9c7cff0429a6a5603cc34d3",
+      "label_id": "support-0211#0"
+    },
+    "support-0213": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-eb66d8c3c47d014a4875bca715700fa1",
+      "label_id": "support-0213#0"
+    },
+    "support-0214": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-e554d383cf7fcb2c46a7333cfa3f0cd3",
+      "label_id": "support-0214#0"
+    },
+    "support-0215": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-78e4c7372d4d65a1a9b6060732616c3f",
+      "label_id": "support-0215#0"
+    },
+    "support-0216": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-4abc4c014846ad489aa16274e8d7130a",
+      "label_id": "support-0216#0"
+    },
+    "support-0220": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-b8c904fb48d2140f20b61318b24b89ae",
+      "label_id": "support-0220#0"
+    },
+    "support-0222": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-a52a2d7c2109ca942fea62c56ccf3dc3",
+      "label_id": "support-0222#0"
+    },
+    "support-0225": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-eb7a4ef263bd1a14b057398655d82e66",
+      "label_id": "support-0225#0"
+    },
+    "support-0226": {
+      "ts": "2026-11-05T14:59:21+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-d2e0f1226c144a8490291119a80be87c",
+      "label_id": "support-0226#0"
+    },
+    "support-0228": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-67e72d25d032efff01f1277ca3201b60",
+      "label_id": "support-0228#0"
+    },
+    "support-0231": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-93d1a05dda7b8465ea3c316d55979214",
+      "label_id": "support-0231#0"
+    },
+    "support-0233": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-022cb8fd8a62b46c0b22880f05e01367",
+      "label_id": "support-0233#0"
+    },
+    "support-0235": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-9fee979c1d709730993a8f6fb33047c7",
+      "label_id": "support-0235#0"
+    },
+    "support-0237": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-deccbb8cf2e1697dc94d87df26a69d0e",
+      "label_id": "support-0237#0"
+    },
+    "support-0247": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-cfe1f89788c9506fc5eaa30cf33f0951",
+      "label_id": "support-0247#0"
+    },
+    "support-0248": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "mishandles_damaged_data-918e0a19d0b28fa6c627db69b241e864",
+      "label_id": "support-0248#0"
+    }
+  },
+  "stalls_instead_of_acting": {
+    "support-0002": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-e7e37c104d04bf9f782464f21c9d97dd",
+      "label_id": "support-0002#0"
+    },
+    "support-0003": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-b45d3a61336d1c658be3b6a955ebd29e",
+      "label_id": "support-0003#0"
+    },
+    "support-0006": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-dd530c46b2b117841fe25bbad9b2d9f4",
+      "label_id": "support-0006#0"
+    },
+    "support-0009": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-debad35761f405a21794121b615bc6e9",
+      "label_id": "support-0009#0"
+    },
+    "support-0011": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-a46ca3499d423a8fb0184a7a94411507",
+      "label_id": "support-0011#0"
+    },
+    "support-0014": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-455481f1f3da81a1e1a47c5bd911880e",
+      "label_id": "support-0014#0"
+    },
+    "support-0021": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-759d3eebadd1b112e9217894800b87f5",
+      "label_id": "support-0021#0"
+    },
+    "support-0023": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-c6e835ea8fb35d5f3e38f486cae32950",
+      "label_id": "support-0023#0"
+    },
+    "support-0027": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-475250c2cb54317ac6ac457e51283a25",
+      "label_id": "support-0027#0"
+    },
+    "support-0028": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-36b573c5533574b08070febed1f2ebb1",
+      "label_id": "support-0028#0"
+    },
+    "support-0029": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-00a9c18a3f601e0fe64e08bc39d1676d",
+      "label_id": "support-0029#0"
+    },
+    "support-0034": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-432808437ac0a9a7ca1f465eefcadd4c",
+      "label_id": "support-0034#0"
+    },
+    "support-0037": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-81b88d350744a9a70f8ecd18c7e2a0c4",
+      "label_id": "support-0037#0"
+    },
+    "support-0043": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-b87d328fa8612aac48cc1db20cb35f49",
+      "label_id": "support-0043#0"
+    },
+    "support-0047": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-e8fc255e4b66cfe658166f4042d51231",
+      "label_id": "support-0047#0"
+    },
+    "support-0049": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-efc6f6e06539da59408eb57a341c5691",
+      "label_id": "support-0049#0"
+    },
+    "support-0051": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-71bfd9e22c3cac49257e6509a993ddf6",
+      "label_id": "support-0051#0"
+    },
+    "support-0052": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-8593d72ff7d853eceba4e9954b51c32a",
+      "label_id": "support-0052#0"
+    },
+    "support-0055": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-7fa760401cd35d2a6470726281c03b19",
+      "label_id": "support-0055#0"
+    },
+    "support-0058": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-8abbe779d7ec0c3a9f90bdb898527b3c",
+      "label_id": "support-0058#0"
+    },
+    "support-0059": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-382102be49b74592721bcfb92353cda4",
+      "label_id": "support-0059#0"
+    },
+    "support-0062": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-a31d46fcba4126ef146c0bace5268909",
+      "label_id": "support-0062#0"
+    },
+    "support-0063": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-d9d9cd4add48f0778c703c946a7a1215",
+      "label_id": "support-0063#0"
+    },
+    "support-0068": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-ea6a5c196e6f9f59f0af95c84f080be6",
+      "label_id": "support-0068#0"
+    },
+    "support-0072": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-0b735036222b85160965b5c53bc5ac81",
+      "label_id": "support-0072#0"
+    },
+    "support-0077": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-b9508408f7e796e00c3cf27b2e9bb4bf",
+      "label_id": "support-0077#0"
+    },
+    "support-0078": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-759cb37ec72e60d96017e8cbd8b14cfe",
+      "label_id": "support-0078#0"
+    },
+    "support-0080": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-931ef49cfe8d67db82df45601ba871b2",
+      "label_id": "support-0080#0"
+    },
+    "support-0082": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-52ef4597278d79d46c953e36db0ae961",
+      "label_id": "support-0082#0"
+    },
+    "support-0083": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-46d5d85082d975238f159b81831dc619",
+      "label_id": "support-0083#0"
+    },
+    "support-0087": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-03591ba2ed5a9e97692b3a891b2eb6d6",
+      "label_id": "support-0087#0"
+    },
+    "support-0089": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-86c3bcc046b346252e656dae92f56f55",
+      "label_id": "support-0089#0"
+    },
+    "support-0090": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-5ac79e5b210377fc71665ed416e206c7",
+      "label_id": "support-0090#0"
+    },
+    "support-0092": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-c7ea2b0d10dec485e528c9e6b897f0de",
+      "label_id": "support-0092#0"
+    },
+    "support-0095": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-4a1301fa0a9d8c17b397a47d2af1eebc",
+      "label_id": "support-0095#0"
+    },
+    "support-0096": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-2b0eed40fd241e2691b82adf2ce9c32a",
+      "label_id": "support-0096#0"
+    },
+    "support-0100": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-7dc59adfdba5a6b7657119da79e5a9de",
+      "label_id": "support-0100#0"
+    },
+    "support-0101": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-85df7ff37cb41dadd0631aafcecb342c",
+      "label_id": "support-0101#0"
+    },
+    "support-0103": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-89b7fba250daaddc4f3f11720532c7a5",
+      "label_id": "support-0103#0"
+    },
+    "support-0104": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-8b953ffe369fced78c8cf0dd697c651a",
+      "label_id": "support-0104#0"
+    },
+    "support-0107": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-9cccbc338364dcdfc43a9b1bf1f1184e",
+      "label_id": "support-0107#0"
+    },
+    "support-0109": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-c8e1541c93345acb7d8e792437a56e3b",
+      "label_id": "support-0109#0"
+    },
+    "support-0110": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-50882ee40cb526ff57c29d9e9f657921",
+      "label_id": "support-0110#0"
+    },
+    "support-0112": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-4c9d29842660c6299a7ea735323ddf21",
+      "label_id": "support-0112#0"
+    },
+    "support-0114": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-c9afed4a393138da81bdc6521ff272f0",
+      "label_id": "support-0114#0"
+    },
+    "support-0115": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-ce48d8741af59d4523f1ad97b24e31d4",
+      "label_id": "support-0115#0"
+    },
+    "support-0117": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-3632919fcce7c51ac440295394c1dca9",
+      "label_id": "support-0117#0"
+    },
+    "support-0121": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-6d3254a27730b07cb3e63e612c499424",
+      "label_id": "support-0121#0"
+    },
+    "support-0124": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-e720fef92d657fb97e247b56fd53fc42",
+      "label_id": "support-0124#0"
+    },
+    "support-0125": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-a05aa121359bfedfacdf8197f9230f2c",
+      "label_id": "support-0125#0"
+    },
+    "support-0127": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-652e9a44111de5198eb7f6e30713e2d9",
+      "label_id": "support-0127#0"
+    },
+    "support-0129": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-a8a0c638ffd0f079be4ad03863a8fcf4",
+      "label_id": "support-0129#0"
+    },
+    "support-0130": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-bd60664cbc12569888c53cc968c1ad2d",
+      "label_id": "support-0130#0"
+    },
+    "support-0131": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-96ca9ec5516dba16027f3b21c4d7cd13",
+      "label_id": "support-0131#0"
+    },
+    "support-0132": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-b4a8d743360f56ca0a7ab917f29d21ea",
+      "label_id": "support-0132#0"
+    },
+    "support-0140": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-1f182b40565b37098ce67e2507588631",
+      "label_id": "support-0140#0"
+    },
+    "support-0148": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-8bce3401443dd6fc83a431f48312a427",
+      "label_id": "support-0148#0"
+    },
+    "support-0149": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-a03d683c8de9b5139242e83505b439b3",
+      "label_id": "support-0149#0"
+    },
+    "support-0154": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-f52a22d5219ddc3a185a51dcc1012941",
+      "label_id": "support-0154#0"
+    },
+    "support-0156": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-347e9ecf7bf95f3f279b4543d7b46642",
+      "label_id": "support-0156#0"
+    },
+    "support-0157": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-ef339be44498e6106f9ba4f1c55cdf63",
+      "label_id": "support-0157#0"
+    },
+    "support-0158": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-a24385e6c6b24df101eb21935e406b53",
+      "label_id": "support-0158#0"
+    },
+    "support-0159": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-a772fae27d7172ace725eb83868a2948",
+      "label_id": "support-0159#0"
+    },
+    "support-0161": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-d664f3a303da728fa3f9d641f472b8a4",
+      "label_id": "support-0161#0"
+    },
+    "support-0162": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-2a1ce5e9d2f5ffe5ecaa97c5594aaea6",
+      "label_id": "support-0162#0"
+    },
+    "support-0165": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-d2058d7faca954179838588428fad7cb",
+      "label_id": "support-0165#0"
+    },
+    "support-0166": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-9f1f09db43956f050887d88b8b3440ac",
+      "label_id": "support-0166#0"
+    },
+    "support-0168": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-32e575094ed38290d8af4b08df839646",
+      "label_id": "support-0168#0"
+    },
+    "support-0170": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-fb21be67f55ab47458d79dd8383700f0",
+      "label_id": "support-0170#0"
+    },
+    "support-0173": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-2269cc0a9d6da4a1190a564400b228a6",
+      "label_id": "support-0173#0"
+    },
+    "support-0175": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-5ab7ca533860fe4332c5cba795c015a0",
+      "label_id": "support-0175#0"
+    },
+    "support-0176": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-09232b392e41b28f2238f7abf08618f7",
+      "label_id": "support-0176#0"
+    },
+    "support-0177": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-3f220d7594c6dea41c0773c2c63a2433",
+      "label_id": "support-0177#0"
+    },
+    "support-0178": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-f7b7e44945b7687c53ec001369bdae85",
+      "label_id": "support-0178#0"
+    },
+    "support-0179": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-dd1258a3177f81307537f913bd7ef2d7",
+      "label_id": "support-0179#0"
+    },
+    "support-0180": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-bcc3d43c1d482d0c4ed268a7163617f3",
+      "label_id": "support-0180#0"
+    },
+    "support-0183": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-43a2f78ba729e4fc8b1c1976c33d293b",
+      "label_id": "support-0183#0"
+    },
+    "support-0185": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-18fbd53999d3497c9e72e667e16a8624",
+      "label_id": "support-0185#0"
+    },
+    "support-0188": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-8eb20df8cab32d1e36fd8813a3606040",
+      "label_id": "support-0188#0"
+    },
+    "support-0194": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-c21dc348acc4ad418313116bc8f2d395",
+      "label_id": "support-0194#0"
+    },
+    "support-0196": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-80fd0d7f67642bd14fab51af8a419bda",
+      "label_id": "support-0196#0"
+    },
+    "support-0205": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-318b77040a356013cd606ace7ab5071c",
+      "label_id": "support-0205#0"
+    },
+    "support-0209": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-7a656dc4bd53958b885172aa56e5420d",
+      "label_id": "support-0209#0"
+    },
+    "support-0210": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-ff538fc1b82ee947d730dd9e666ee817",
+      "label_id": "support-0210#0"
+    },
+    "support-0211": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-bb6a6aa3a9c7cff0429a6a5603cc34d3",
+      "label_id": "support-0211#0"
+    },
+    "support-0213": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-eb66d8c3c47d014a4875bca715700fa1",
+      "label_id": "support-0213#0"
+    },
+    "support-0214": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-e554d383cf7fcb2c46a7333cfa3f0cd3",
+      "label_id": "support-0214#0"
+    },
+    "support-0215": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-78e4c7372d4d65a1a9b6060732616c3f",
+      "label_id": "support-0215#0"
+    },
+    "support-0216": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-4abc4c014846ad489aa16274e8d7130a",
+      "label_id": "support-0216#0"
+    },
+    "support-0220": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-b8c904fb48d2140f20b61318b24b89ae",
+      "label_id": "support-0220#0"
+    },
+    "support-0222": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-a52a2d7c2109ca942fea62c56ccf3dc3",
+      "label_id": "support-0222#0"
+    },
+    "support-0225": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-eb7a4ef263bd1a14b057398655d82e66",
+      "label_id": "support-0225#0"
+    },
+    "support-0226": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-d2e0f1226c144a8490291119a80be87c",
+      "label_id": "support-0226#0"
+    },
+    "support-0228": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-67e72d25d032efff01f1277ca3201b60",
+      "label_id": "support-0228#0"
+    },
+    "support-0231": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-93d1a05dda7b8465ea3c316d55979214",
+      "label_id": "support-0231#0"
+    },
+    "support-0233": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-022cb8fd8a62b46c0b22880f05e01367",
+      "label_id": "support-0233#0"
+    },
+    "support-0235": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-9fee979c1d709730993a8f6fb33047c7",
+      "label_id": "support-0235#0"
+    },
+    "support-0237": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-deccbb8cf2e1697dc94d87df26a69d0e",
+      "label_id": "support-0237#0"
+    },
+    "support-0247": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-cfe1f89788c9506fc5eaa30cf33f0951",
+      "label_id": "support-0247#0"
+    },
+    "support-0248": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "stalls_instead_of_acting-918e0a19d0b28fa6c627db69b241e864",
+      "label_id": "support-0248#0"
+    }
+  },
+  "omits_decisive_detail": {
+    "support-0002": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-e7e37c104d04bf9f782464f21c9d97dd",
+      "label_id": "support-0002#0"
+    },
+    "support-0003": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-b45d3a61336d1c658be3b6a955ebd29e",
+      "label_id": "support-0003#0"
+    },
+    "support-0006": {
+      "ts": "2026-11-05T14:59:22+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-dd530c46b2b117841fe25bbad9b2d9f4",
+      "label_id": "support-0006#0"
+    },
+    "support-0009": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-debad35761f405a21794121b615bc6e9",
+      "label_id": "support-0009#0"
+    },
+    "support-0011": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-a46ca3499d423a8fb0184a7a94411507",
+      "label_id": "support-0011#0"
+    },
+    "support-0014": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-455481f1f3da81a1e1a47c5bd911880e",
+      "label_id": "support-0014#0"
+    },
+    "support-0021": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-759d3eebadd1b112e9217894800b87f5",
+      "label_id": "support-0021#0"
+    },
+    "support-0023": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-c6e835ea8fb35d5f3e38f486cae32950",
+      "label_id": "support-0023#0"
+    },
+    "support-0027": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-475250c2cb54317ac6ac457e51283a25",
+      "label_id": "support-0027#0"
+    },
+    "support-0028": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-36b573c5533574b08070febed1f2ebb1",
+      "label_id": "support-0028#0"
+    },
+    "support-0034": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-432808437ac0a9a7ca1f465eefcadd4c",
+      "label_id": "support-0034#0"
+    },
+    "support-0029": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-00a9c18a3f601e0fe64e08bc39d1676d",
+      "label_id": "support-0029#0"
+    },
+    "support-0037": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-81b88d350744a9a70f8ecd18c7e2a0c4",
+      "label_id": "support-0037#0"
+    },
+    "support-0043": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-b87d328fa8612aac48cc1db20cb35f49",
+      "label_id": "support-0043#0"
+    },
+    "support-0047": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-e8fc255e4b66cfe658166f4042d51231",
+      "label_id": "support-0047#0"
+    },
+    "support-0049": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-efc6f6e06539da59408eb57a341c5691",
+      "label_id": "support-0049#0"
+    },
+    "support-0051": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-71bfd9e22c3cac49257e6509a993ddf6",
+      "label_id": "support-0051#0"
+    },
+    "support-0052": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-8593d72ff7d853eceba4e9954b51c32a",
+      "label_id": "support-0052#0"
+    },
+    "support-0055": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-7fa760401cd35d2a6470726281c03b19",
+      "label_id": "support-0055#0"
+    },
+    "support-0058": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-8abbe779d7ec0c3a9f90bdb898527b3c",
+      "label_id": "support-0058#0"
+    },
+    "support-0059": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-382102be49b74592721bcfb92353cda4",
+      "label_id": "support-0059#0"
+    },
+    "support-0062": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-a31d46fcba4126ef146c0bace5268909",
+      "label_id": "support-0062#0"
+    },
+    "support-0063": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-d9d9cd4add48f0778c703c946a7a1215",
+      "label_id": "support-0063#0"
+    },
+    "support-0068": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-ea6a5c196e6f9f59f0af95c84f080be6",
+      "label_id": "support-0068#0"
+    },
+    "support-0072": {
+      "ts": "2026-11-05T15:09:30+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-0b735036222b85160965b5c53bc5ac81",
+      "label_id": "support-0072#1"
+    },
+    "support-0077": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-b9508408f7e796e00c3cf27b2e9bb4bf",
+      "label_id": "support-0077#0"
+    },
+    "support-0078": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-759cb37ec72e60d96017e8cbd8b14cfe",
+      "label_id": "support-0078#0"
+    },
+    "support-0080": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-931ef49cfe8d67db82df45601ba871b2",
+      "label_id": "support-0080#0"
+    },
+    "support-0082": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-52ef4597278d79d46c953e36db0ae961",
+      "label_id": "support-0082#0"
+    },
+    "support-0083": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-46d5d85082d975238f159b81831dc619",
+      "label_id": "support-0083#0"
+    },
+    "support-0087": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-03591ba2ed5a9e97692b3a891b2eb6d6",
+      "label_id": "support-0087#0"
+    },
+    "support-0089": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-86c3bcc046b346252e656dae92f56f55",
+      "label_id": "support-0089#0"
+    },
+    "support-0090": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-5ac79e5b210377fc71665ed416e206c7",
+      "label_id": "support-0090#0"
+    },
+    "support-0092": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-c7ea2b0d10dec485e528c9e6b897f0de",
+      "label_id": "support-0092#0"
+    },
+    "support-0095": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-4a1301fa0a9d8c17b397a47d2af1eebc",
+      "label_id": "support-0095#0"
+    },
+    "support-0096": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-2b0eed40fd241e2691b82adf2ce9c32a",
+      "label_id": "support-0096#0"
+    },
+    "support-0100": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-7dc59adfdba5a6b7657119da79e5a9de",
+      "label_id": "support-0100#0"
+    },
+    "support-0101": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-85df7ff37cb41dadd0631aafcecb342c",
+      "label_id": "support-0101#0"
+    },
+    "support-0103": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-89b7fba250daaddc4f3f11720532c7a5",
+      "label_id": "support-0103#0"
+    },
+    "support-0104": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-8b953ffe369fced78c8cf0dd697c651a",
+      "label_id": "support-0104#0"
+    },
+    "support-0107": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-9cccbc338364dcdfc43a9b1bf1f1184e",
+      "label_id": "support-0107#0"
+    },
+    "support-0109": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-c8e1541c93345acb7d8e792437a56e3b",
+      "label_id": "support-0109#0"
+    },
+    "support-0110": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-50882ee40cb526ff57c29d9e9f657921",
+      "label_id": "support-0110#0"
+    },
+    "support-0112": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-4c9d29842660c6299a7ea735323ddf21",
+      "label_id": "support-0112#0"
+    },
+    "support-0114": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-c9afed4a393138da81bdc6521ff272f0",
+      "label_id": "support-0114#0"
+    },
+    "support-0115": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-ce48d8741af59d4523f1ad97b24e31d4",
+      "label_id": "support-0115#0"
+    },
+    "support-0117": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-3632919fcce7c51ac440295394c1dca9",
+      "label_id": "support-0117#0"
+    },
+    "support-0121": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-6d3254a27730b07cb3e63e612c499424",
+      "label_id": "support-0121#0"
+    },
+    "support-0124": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-e720fef92d657fb97e247b56fd53fc42",
+      "label_id": "support-0124#0"
+    },
+    "support-0125": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-a05aa121359bfedfacdf8197f9230f2c",
+      "label_id": "support-0125#0"
+    },
+    "support-0127": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-652e9a44111de5198eb7f6e30713e2d9",
+      "label_id": "support-0127#0"
+    },
+    "support-0129": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-a8a0c638ffd0f079be4ad03863a8fcf4",
+      "label_id": "support-0129#0"
+    },
+    "support-0130": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-bd60664cbc12569888c53cc968c1ad2d",
+      "label_id": "support-0130#0"
+    },
+    "support-0131": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-96ca9ec5516dba16027f3b21c4d7cd13",
+      "label_id": "support-0131#0"
+    },
+    "support-0132": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-b4a8d743360f56ca0a7ab917f29d21ea",
+      "label_id": "support-0132#0"
+    },
+    "support-0140": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-1f182b40565b37098ce67e2507588631",
+      "label_id": "support-0140#0"
+    },
+    "support-0148": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-8bce3401443dd6fc83a431f48312a427",
+      "label_id": "support-0148#0"
+    },
+    "support-0149": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-a03d683c8de9b5139242e83505b439b3",
+      "label_id": "support-0149#0"
+    },
+    "support-0154": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-f52a22d5219ddc3a185a51dcc1012941",
+      "label_id": "support-0154#0"
+    },
+    "support-0156": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-347e9ecf7bf95f3f279b4543d7b46642",
+      "label_id": "support-0156#0"
+    },
+    "support-0157": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-ef339be44498e6106f9ba4f1c55cdf63",
+      "label_id": "support-0157#0"
+    },
+    "support-0158": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-a24385e6c6b24df101eb21935e406b53",
+      "label_id": "support-0158#0"
+    },
+    "support-0159": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-a772fae27d7172ace725eb83868a2948",
+      "label_id": "support-0159#0"
+    },
+    "support-0161": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-d664f3a303da728fa3f9d641f472b8a4",
+      "label_id": "support-0161#0"
+    },
+    "support-0162": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-2a1ce5e9d2f5ffe5ecaa97c5594aaea6",
+      "label_id": "support-0162#0"
+    },
+    "support-0165": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-d2058d7faca954179838588428fad7cb",
+      "label_id": "support-0165#0"
+    },
+    "support-0166": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-9f1f09db43956f050887d88b8b3440ac",
+      "label_id": "support-0166#0"
+    },
+    "support-0168": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-32e575094ed38290d8af4b08df839646",
+      "label_id": "support-0168#0"
+    },
+    "support-0170": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-fb21be67f55ab47458d79dd8383700f0",
+      "label_id": "support-0170#0"
+    },
+    "support-0173": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-2269cc0a9d6da4a1190a564400b228a6",
+      "label_id": "support-0173#0"
+    },
+    "support-0175": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-5ab7ca533860fe4332c5cba795c015a0",
+      "label_id": "support-0175#0"
+    },
+    "support-0176": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-09232b392e41b28f2238f7abf08618f7",
+      "label_id": "support-0176#0"
+    },
+    "support-0177": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-3f220d7594c6dea41c0773c2c63a2433",
+      "label_id": "support-0177#0"
+    },
+    "support-0178": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-f7b7e44945b7687c53ec001369bdae85",
+      "label_id": "support-0178#0"
+    },
+    "support-0179": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-dd1258a3177f81307537f913bd7ef2d7",
+      "label_id": "support-0179#0"
+    },
+    "support-0180": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-bcc3d43c1d482d0c4ed268a7163617f3",
+      "label_id": "support-0180#0"
+    },
+    "support-0183": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-43a2f78ba729e4fc8b1c1976c33d293b",
+      "label_id": "support-0183#0"
+    },
+    "support-0185": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-18fbd53999d3497c9e72e667e16a8624",
+      "label_id": "support-0185#0"
+    },
+    "support-0188": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-8eb20df8cab32d1e36fd8813a3606040",
+      "label_id": "support-0188#0"
+    },
+    "support-0194": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-c21dc348acc4ad418313116bc8f2d395",
+      "label_id": "support-0194#0"
+    },
+    "support-0196": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-80fd0d7f67642bd14fab51af8a419bda",
+      "label_id": "support-0196#0"
+    },
+    "support-0205": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-318b77040a356013cd606ace7ab5071c",
+      "label_id": "support-0205#0"
+    },
+    "support-0209": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-7a656dc4bd53958b885172aa56e5420d",
+      "label_id": "support-0209#0"
+    },
+    "support-0210": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-ff538fc1b82ee947d730dd9e666ee817",
+      "label_id": "support-0210#0"
+    },
+    "support-0211": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-bb6a6aa3a9c7cff0429a6a5603cc34d3",
+      "label_id": "support-0211#0"
+    },
+    "support-0213": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-eb66d8c3c47d014a4875bca715700fa1",
+      "label_id": "support-0213#0"
+    },
+    "support-0214": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-e554d383cf7fcb2c46a7333cfa3f0cd3",
+      "label_id": "support-0214#0"
+    },
+    "support-0215": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-78e4c7372d4d65a1a9b6060732616c3f",
+      "label_id": "support-0215#0"
+    },
+    "support-0216": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-4abc4c014846ad489aa16274e8d7130a",
+      "label_id": "support-0216#0"
+    },
+    "support-0220": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-b8c904fb48d2140f20b61318b24b89ae",
+      "label_id": "support-0220#0"
+    },
+    "support-0222": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-a52a2d7c2109ca942fea62c56ccf3dc3",
+      "label_id": "support-0222#0"
+    },
+    "support-0225": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-eb7a4ef263bd1a14b057398655d82e66",
+      "label_id": "support-0225#0"
+    },
+    "support-0226": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-d2e0f1226c144a8490291119a80be87c",
+      "label_id": "support-0226#0"
+    },
+    "support-0228": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-67e72d25d032efff01f1277ca3201b60",
+      "label_id": "support-0228#0"
+    },
+    "support-0231": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-93d1a05dda7b8465ea3c316d55979214",
+      "label_id": "support-0231#0"
+    },
+    "support-0233": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-022cb8fd8a62b46c0b22880f05e01367",
+      "label_id": "support-0233#0"
+    },
+    "support-0235": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-9fee979c1d709730993a8f6fb33047c7",
+      "label_id": "support-0235#0"
+    },
+    "support-0237": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-deccbb8cf2e1697dc94d87df26a69d0e",
+      "label_id": "support-0237#0"
+    },
+    "support-0247": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-cfe1f89788c9506fc5eaa30cf33f0951",
+      "label_id": "support-0247#0"
+    },
+    "support-0248": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "omits_decisive_detail-918e0a19d0b28fa6c627db69b241e864",
+      "label_id": "support-0248#0"
+    }
+  },
+  "hides_partial_list": {
+    "support-0002": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-e7e37c104d04bf9f782464f21c9d97dd",
+      "label_id": "support-0002#0"
+    },
+    "support-0003": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-b45d3a61336d1c658be3b6a955ebd29e",
+      "label_id": "support-0003#0"
+    },
+    "support-0006": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-dd530c46b2b117841fe25bbad9b2d9f4",
+      "label_id": "support-0006#0"
+    },
+    "support-0009": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-debad35761f405a21794121b615bc6e9",
+      "label_id": "support-0009#0"
+    },
+    "support-0011": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-a46ca3499d423a8fb0184a7a94411507",
+      "label_id": "support-0011#0"
+    },
+    "support-0014": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-455481f1f3da81a1e1a47c5bd911880e",
+      "label_id": "support-0014#0"
+    },
+    "support-0021": {
+      "ts": "2026-11-05T14:59:23+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-759d3eebadd1b112e9217894800b87f5",
+      "label_id": "support-0021#0"
+    },
+    "support-0023": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-c6e835ea8fb35d5f3e38f486cae32950",
+      "label_id": "support-0023#0"
+    },
+    "support-0027": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-475250c2cb54317ac6ac457e51283a25",
+      "label_id": "support-0027#0"
+    },
+    "support-0028": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-36b573c5533574b08070febed1f2ebb1",
+      "label_id": "support-0028#0"
+    },
+    "support-0029": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-00a9c18a3f601e0fe64e08bc39d1676d",
+      "label_id": "support-0029#0"
+    },
+    "support-0034": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-432808437ac0a9a7ca1f465eefcadd4c",
+      "label_id": "support-0034#0"
+    },
+    "support-0037": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-81b88d350744a9a70f8ecd18c7e2a0c4",
+      "label_id": "support-0037#0"
+    },
+    "support-0043": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-b87d328fa8612aac48cc1db20cb35f49",
+      "label_id": "support-0043#0"
+    },
+    "support-0047": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-e8fc255e4b66cfe658166f4042d51231",
+      "label_id": "support-0047#0"
+    },
+    "support-0049": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-efc6f6e06539da59408eb57a341c5691",
+      "label_id": "support-0049#0"
+    },
+    "support-0051": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-71bfd9e22c3cac49257e6509a993ddf6",
+      "label_id": "support-0051#0"
+    },
+    "support-0055": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-7fa760401cd35d2a6470726281c03b19",
+      "label_id": "support-0055#0"
+    },
+    "support-0052": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-8593d72ff7d853eceba4e9954b51c32a",
+      "label_id": "support-0052#0"
+    },
+    "support-0058": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-8abbe779d7ec0c3a9f90bdb898527b3c",
+      "label_id": "support-0058#0"
+    },
+    "support-0059": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-382102be49b74592721bcfb92353cda4",
+      "label_id": "support-0059#0"
+    },
+    "support-0062": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-a31d46fcba4126ef146c0bace5268909",
+      "label_id": "support-0062#0"
+    },
+    "support-0063": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-d9d9cd4add48f0778c703c946a7a1215",
+      "label_id": "support-0063#0"
+    },
+    "support-0068": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-ea6a5c196e6f9f59f0af95c84f080be6",
+      "label_id": "support-0068#0"
+    },
+    "support-0072": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-0b735036222b85160965b5c53bc5ac81",
+      "label_id": "support-0072#0"
+    },
+    "support-0077": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-b9508408f7e796e00c3cf27b2e9bb4bf",
+      "label_id": "support-0077#0"
+    },
+    "support-0078": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-759cb37ec72e60d96017e8cbd8b14cfe",
+      "label_id": "support-0078#0"
+    },
+    "support-0080": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-931ef49cfe8d67db82df45601ba871b2",
+      "label_id": "support-0080#0"
+    },
+    "support-0082": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-52ef4597278d79d46c953e36db0ae961",
+      "label_id": "support-0082#0"
+    },
+    "support-0083": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-46d5d85082d975238f159b81831dc619",
+      "label_id": "support-0083#0"
+    },
+    "support-0087": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-03591ba2ed5a9e97692b3a891b2eb6d6",
+      "label_id": "support-0087#0"
+    },
+    "support-0089": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-86c3bcc046b346252e656dae92f56f55",
+      "label_id": "support-0089#0"
+    },
+    "support-0090": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-5ac79e5b210377fc71665ed416e206c7",
+      "label_id": "support-0090#0"
+    },
+    "support-0092": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-c7ea2b0d10dec485e528c9e6b897f0de",
+      "label_id": "support-0092#0"
+    },
+    "support-0095": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-4a1301fa0a9d8c17b397a47d2af1eebc",
+      "label_id": "support-0095#0"
+    },
+    "support-0096": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-2b0eed40fd241e2691b82adf2ce9c32a",
+      "label_id": "support-0096#0"
+    },
+    "support-0100": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-7dc59adfdba5a6b7657119da79e5a9de",
+      "label_id": "support-0100#0"
+    },
+    "support-0101": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-85df7ff37cb41dadd0631aafcecb342c",
+      "label_id": "support-0101#0"
+    },
+    "support-0103": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-89b7fba250daaddc4f3f11720532c7a5",
+      "label_id": "support-0103#0"
+    },
+    "support-0104": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-8b953ffe369fced78c8cf0dd697c651a",
+      "label_id": "support-0104#0"
+    },
+    "support-0107": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-9cccbc338364dcdfc43a9b1bf1f1184e",
+      "label_id": "support-0107#0"
+    },
+    "support-0109": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-c8e1541c93345acb7d8e792437a56e3b",
+      "label_id": "support-0109#0"
+    },
+    "support-0110": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-50882ee40cb526ff57c29d9e9f657921",
+      "label_id": "support-0110#0"
+    },
+    "support-0112": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-4c9d29842660c6299a7ea735323ddf21",
+      "label_id": "support-0112#0"
+    },
+    "support-0114": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-c9afed4a393138da81bdc6521ff272f0",
+      "label_id": "support-0114#0"
+    },
+    "support-0115": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-ce48d8741af59d4523f1ad97b24e31d4",
+      "label_id": "support-0115#0"
+    },
+    "support-0117": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-3632919fcce7c51ac440295394c1dca9",
+      "label_id": "support-0117#0"
+    },
+    "support-0121": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-6d3254a27730b07cb3e63e612c499424",
+      "label_id": "support-0121#0"
+    },
+    "support-0124": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-e720fef92d657fb97e247b56fd53fc42",
+      "label_id": "support-0124#0"
+    },
+    "support-0125": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-a05aa121359bfedfacdf8197f9230f2c",
+      "label_id": "support-0125#0"
+    },
+    "support-0127": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-652e9a44111de5198eb7f6e30713e2d9",
+      "label_id": "support-0127#0"
+    },
+    "support-0129": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-a8a0c638ffd0f079be4ad03863a8fcf4",
+      "label_id": "support-0129#0"
+    },
+    "support-0130": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-bd60664cbc12569888c53cc968c1ad2d",
+      "label_id": "support-0130#0"
+    },
+    "support-0131": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-96ca9ec5516dba16027f3b21c4d7cd13",
+      "label_id": "support-0131#0"
+    },
+    "support-0132": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-b4a8d743360f56ca0a7ab917f29d21ea",
+      "label_id": "support-0132#0"
+    },
+    "support-0140": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-1f182b40565b37098ce67e2507588631",
+      "label_id": "support-0140#0"
+    },
+    "support-0148": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-8bce3401443dd6fc83a431f48312a427",
+      "label_id": "support-0148#0"
+    },
+    "support-0149": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-a03d683c8de9b5139242e83505b439b3",
+      "label_id": "support-0149#0"
+    },
+    "support-0154": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-f52a22d5219ddc3a185a51dcc1012941",
+      "label_id": "support-0154#0"
+    },
+    "support-0156": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-347e9ecf7bf95f3f279b4543d7b46642",
+      "label_id": "support-0156#0"
+    },
+    "support-0157": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-ef339be44498e6106f9ba4f1c55cdf63",
+      "label_id": "support-0157#0"
+    },
+    "support-0158": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-a24385e6c6b24df101eb21935e406b53",
+      "label_id": "support-0158#0"
+    },
+    "support-0159": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-a772fae27d7172ace725eb83868a2948",
+      "label_id": "support-0159#0"
+    },
+    "support-0161": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-d664f3a303da728fa3f9d641f472b8a4",
+      "label_id": "support-0161#0"
+    },
+    "support-0162": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-2a1ce5e9d2f5ffe5ecaa97c5594aaea6",
+      "label_id": "support-0162#0"
+    },
+    "support-0165": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-d2058d7faca954179838588428fad7cb",
+      "label_id": "support-0165#0"
+    },
+    "support-0166": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-9f1f09db43956f050887d88b8b3440ac",
+      "label_id": "support-0166#0"
+    },
+    "support-0168": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-32e575094ed38290d8af4b08df839646",
+      "label_id": "support-0168#0"
+    },
+    "support-0170": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-fb21be67f55ab47458d79dd8383700f0",
+      "label_id": "support-0170#0"
+    },
+    "support-0173": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-2269cc0a9d6da4a1190a564400b228a6",
+      "label_id": "support-0173#0"
+    },
+    "support-0175": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-5ab7ca533860fe4332c5cba795c015a0",
+      "label_id": "support-0175#0"
+    },
+    "support-0176": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-09232b392e41b28f2238f7abf08618f7",
+      "label_id": "support-0176#0"
+    },
+    "support-0177": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-3f220d7594c6dea41c0773c2c63a2433",
+      "label_id": "support-0177#0"
+    },
+    "support-0178": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-f7b7e44945b7687c53ec001369bdae85",
+      "label_id": "support-0178#0"
+    },
+    "support-0179": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-dd1258a3177f81307537f913bd7ef2d7",
+      "label_id": "support-0179#0"
+    },
+    "support-0180": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-bcc3d43c1d482d0c4ed268a7163617f3",
+      "label_id": "support-0180#0"
+    },
+    "support-0183": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-43a2f78ba729e4fc8b1c1976c33d293b",
+      "label_id": "support-0183#0"
+    },
+    "support-0185": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-18fbd53999d3497c9e72e667e16a8624",
+      "label_id": "support-0185#0"
+    },
+    "support-0188": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-8eb20df8cab32d1e36fd8813a3606040",
+      "label_id": "support-0188#0"
+    },
+    "support-0194": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-c21dc348acc4ad418313116bc8f2d395",
+      "label_id": "support-0194#0"
+    },
+    "support-0196": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-80fd0d7f67642bd14fab51af8a419bda",
+      "label_id": "support-0196#0"
+    },
+    "support-0205": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-318b77040a356013cd606ace7ab5071c",
+      "label_id": "support-0205#0"
+    },
+    "support-0209": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-7a656dc4bd53958b885172aa56e5420d",
+      "label_id": "support-0209#0"
+    },
+    "support-0210": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-ff538fc1b82ee947d730dd9e666ee817",
+      "label_id": "support-0210#0"
+    },
+    "support-0211": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-bb6a6aa3a9c7cff0429a6a5603cc34d3",
+      "label_id": "support-0211#0"
+    },
+    "support-0213": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-eb66d8c3c47d014a4875bca715700fa1",
+      "label_id": "support-0213#0"
+    },
+    "support-0214": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-e554d383cf7fcb2c46a7333cfa3f0cd3",
+      "label_id": "support-0214#0"
+    },
+    "support-0215": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-78e4c7372d4d65a1a9b6060732616c3f",
+      "label_id": "support-0215#0"
+    },
+    "support-0216": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-4abc4c014846ad489aa16274e8d7130a",
+      "label_id": "support-0216#0"
+    },
+    "support-0220": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-b8c904fb48d2140f20b61318b24b89ae",
+      "label_id": "support-0220#0"
+    },
+    "support-0222": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-a52a2d7c2109ca942fea62c56ccf3dc3",
+      "label_id": "support-0222#0"
+    },
+    "support-0225": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-eb7a4ef263bd1a14b057398655d82e66",
+      "label_id": "support-0225#0"
+    },
+    "support-0226": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-d2e0f1226c144a8490291119a80be87c",
+      "label_id": "support-0226#0"
+    },
+    "support-0228": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-67e72d25d032efff01f1277ca3201b60",
+      "label_id": "support-0228#0"
+    },
+    "support-0231": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-93d1a05dda7b8465ea3c316d55979214",
+      "label_id": "support-0231#0"
+    },
+    "support-0233": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-022cb8fd8a62b46c0b22880f05e01367",
+      "label_id": "support-0233#0"
+    },
+    "support-0235": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-9fee979c1d709730993a8f6fb33047c7",
+      "label_id": "support-0235#0"
+    },
+    "support-0237": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-deccbb8cf2e1697dc94d87df26a69d0e",
+      "label_id": "support-0237#0"
+    },
+    "support-0247": {
+      "ts": "2026-11-05T14:59:24+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-cfe1f89788c9506fc5eaa30cf33f0951",
+      "label_id": "support-0247#0"
+    },
+    "support-0248": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "hides_partial_list-918e0a19d0b28fa6c627db69b241e864",
+      "label_id": "support-0248#0"
+    }
+  },
+  "unnatural_or_verbose_language": {
+    "support-0002": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-e7e37c104d04bf9f782464f21c9d97dd",
+      "label_id": "support-0002#0"
+    },
+    "support-0003": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-b45d3a61336d1c658be3b6a955ebd29e",
+      "label_id": "support-0003#0"
+    },
+    "support-0006": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-dd530c46b2b117841fe25bbad9b2d9f4",
+      "label_id": "support-0006#0"
+    },
+    "support-0009": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-debad35761f405a21794121b615bc6e9",
+      "label_id": "support-0009#0"
+    },
+    "support-0011": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-a46ca3499d423a8fb0184a7a94411507",
+      "label_id": "support-0011#0"
+    },
+    "support-0014": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-455481f1f3da81a1e1a47c5bd911880e",
+      "label_id": "support-0014#0"
+    },
+    "support-0021": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-759d3eebadd1b112e9217894800b87f5",
+      "label_id": "support-0021#0"
+    },
+    "support-0023": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-c6e835ea8fb35d5f3e38f486cae32950",
+      "label_id": "support-0023#0"
+    },
+    "support-0027": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-475250c2cb54317ac6ac457e51283a25",
+      "label_id": "support-0027#0"
+    },
+    "support-0028": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-36b573c5533574b08070febed1f2ebb1",
+      "label_id": "support-0028#0"
+    },
+    "support-0029": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-00a9c18a3f601e0fe64e08bc39d1676d",
+      "label_id": "support-0029#0"
+    },
+    "support-0034": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-432808437ac0a9a7ca1f465eefcadd4c",
+      "label_id": "support-0034#0"
+    },
+    "support-0037": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-81b88d350744a9a70f8ecd18c7e2a0c4",
+      "label_id": "support-0037#0"
+    },
+    "support-0043": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-b87d328fa8612aac48cc1db20cb35f49",
+      "label_id": "support-0043#0"
+    },
+    "support-0047": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-e8fc255e4b66cfe658166f4042d51231",
+      "label_id": "support-0047#0"
+    },
+    "support-0049": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-efc6f6e06539da59408eb57a341c5691",
+      "label_id": "support-0049#0"
+    },
+    "support-0051": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-71bfd9e22c3cac49257e6509a993ddf6",
+      "label_id": "support-0051#0"
+    },
+    "support-0052": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-8593d72ff7d853eceba4e9954b51c32a",
+      "label_id": "support-0052#0"
+    },
+    "support-0055": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-7fa760401cd35d2a6470726281c03b19",
+      "label_id": "support-0055#0"
+    },
+    "support-0058": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-8abbe779d7ec0c3a9f90bdb898527b3c",
+      "label_id": "support-0058#0"
+    },
+    "support-0059": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-382102be49b74592721bcfb92353cda4",
+      "label_id": "support-0059#0"
+    },
+    "support-0062": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-a31d46fcba4126ef146c0bace5268909",
+      "label_id": "support-0062#0"
+    },
+    "support-0063": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-d9d9cd4add48f0778c703c946a7a1215",
+      "label_id": "support-0063#0"
+    },
+    "support-0068": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-ea6a5c196e6f9f59f0af95c84f080be6",
+      "label_id": "support-0068#0"
+    },
+    "support-0072": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-0b735036222b85160965b5c53bc5ac81",
+      "label_id": "support-0072#0"
+    },
+    "support-0077": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-b9508408f7e796e00c3cf27b2e9bb4bf",
+      "label_id": "support-0077#0"
+    },
+    "support-0078": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-759cb37ec72e60d96017e8cbd8b14cfe",
+      "label_id": "support-0078#0"
+    },
+    "support-0080": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-931ef49cfe8d67db82df45601ba871b2",
+      "label_id": "support-0080#0"
+    },
+    "support-0082": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-52ef4597278d79d46c953e36db0ae961",
+      "label_id": "support-0082#0"
+    },
+    "support-0083": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-46d5d85082d975238f159b81831dc619",
+      "label_id": "support-0083#0"
+    },
+    "support-0087": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-03591ba2ed5a9e97692b3a891b2eb6d6",
+      "label_id": "support-0087#0"
+    },
+    "support-0089": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-86c3bcc046b346252e656dae92f56f55",
+      "label_id": "support-0089#0"
+    },
+    "support-0090": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-5ac79e5b210377fc71665ed416e206c7",
+      "label_id": "support-0090#0"
+    },
+    "support-0092": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-c7ea2b0d10dec485e528c9e6b897f0de",
+      "label_id": "support-0092#0"
+    },
+    "support-0095": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-4a1301fa0a9d8c17b397a47d2af1eebc",
+      "label_id": "support-0095#0"
+    },
+    "support-0096": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-2b0eed40fd241e2691b82adf2ce9c32a",
+      "label_id": "support-0096#0"
+    },
+    "support-0100": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-7dc59adfdba5a6b7657119da79e5a9de",
+      "label_id": "support-0100#0"
+    },
+    "support-0101": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-85df7ff37cb41dadd0631aafcecb342c",
+      "label_id": "support-0101#0"
+    },
+    "support-0103": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-89b7fba250daaddc4f3f11720532c7a5",
+      "label_id": "support-0103#0"
+    },
+    "support-0104": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-8b953ffe369fced78c8cf0dd697c651a",
+      "label_id": "support-0104#0"
+    },
+    "support-0107": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-9cccbc338364dcdfc43a9b1bf1f1184e",
+      "label_id": "support-0107#0"
+    },
+    "support-0109": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-c8e1541c93345acb7d8e792437a56e3b",
+      "label_id": "support-0109#0"
+    },
+    "support-0110": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-50882ee40cb526ff57c29d9e9f657921",
+      "label_id": "support-0110#0"
+    },
+    "support-0112": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-4c9d29842660c6299a7ea735323ddf21",
+      "label_id": "support-0112#0"
+    },
+    "support-0114": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-c9afed4a393138da81bdc6521ff272f0",
+      "label_id": "support-0114#0"
+    },
+    "support-0115": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-ce48d8741af59d4523f1ad97b24e31d4",
+      "label_id": "support-0115#0"
+    },
+    "support-0117": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-3632919fcce7c51ac440295394c1dca9",
+      "label_id": "support-0117#0"
+    },
+    "support-0121": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-6d3254a27730b07cb3e63e612c499424",
+      "label_id": "support-0121#0"
+    },
+    "support-0124": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-e720fef92d657fb97e247b56fd53fc42",
+      "label_id": "support-0124#0"
+    },
+    "support-0125": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-a05aa121359bfedfacdf8197f9230f2c",
+      "label_id": "support-0125#0"
+    },
+    "support-0127": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-652e9a44111de5198eb7f6e30713e2d9",
+      "label_id": "support-0127#0"
+    },
+    "support-0129": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-a8a0c638ffd0f079be4ad03863a8fcf4",
+      "label_id": "support-0129#0"
+    },
+    "support-0130": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-bd60664cbc12569888c53cc968c1ad2d",
+      "label_id": "support-0130#0"
+    },
+    "support-0131": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-96ca9ec5516dba16027f3b21c4d7cd13",
+      "label_id": "support-0131#0"
+    },
+    "support-0132": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-b4a8d743360f56ca0a7ab917f29d21ea",
+      "label_id": "support-0132#0"
+    },
+    "support-0140": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-1f182b40565b37098ce67e2507588631",
+      "label_id": "support-0140#0"
+    },
+    "support-0148": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-8bce3401443dd6fc83a431f48312a427",
+      "label_id": "support-0148#0"
+    },
+    "support-0149": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-a03d683c8de9b5139242e83505b439b3",
+      "label_id": "support-0149#0"
+    },
+    "support-0154": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-f52a22d5219ddc3a185a51dcc1012941",
+      "label_id": "support-0154#0"
+    },
+    "support-0156": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-347e9ecf7bf95f3f279b4543d7b46642",
+      "label_id": "support-0156#0"
+    },
+    "support-0157": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-ef339be44498e6106f9ba4f1c55cdf63",
+      "label_id": "support-0157#0"
+    },
+    "support-0158": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-a24385e6c6b24df101eb21935e406b53",
+      "label_id": "support-0158#0"
+    },
+    "support-0159": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-a772fae27d7172ace725eb83868a2948",
+      "label_id": "support-0159#0"
+    },
+    "support-0161": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-d664f3a303da728fa3f9d641f472b8a4",
+      "label_id": "support-0161#0"
+    },
+    "support-0162": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-2a1ce5e9d2f5ffe5ecaa97c5594aaea6",
+      "label_id": "support-0162#0"
+    },
+    "support-0165": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-d2058d7faca954179838588428fad7cb",
+      "label_id": "support-0165#0"
+    },
+    "support-0166": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-9f1f09db43956f050887d88b8b3440ac",
+      "label_id": "support-0166#0"
+    },
+    "support-0168": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-32e575094ed38290d8af4b08df839646",
+      "label_id": "support-0168#0"
+    },
+    "support-0170": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-fb21be67f55ab47458d79dd8383700f0",
+      "label_id": "support-0170#0"
+    },
+    "support-0173": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-2269cc0a9d6da4a1190a564400b228a6",
+      "label_id": "support-0173#0"
+    },
+    "support-0175": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-5ab7ca533860fe4332c5cba795c015a0",
+      "label_id": "support-0175#0"
+    },
+    "support-0176": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-09232b392e41b28f2238f7abf08618f7",
+      "label_id": "support-0176#0"
+    },
+    "support-0177": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-3f220d7594c6dea41c0773c2c63a2433",
+      "label_id": "support-0177#0"
+    },
+    "support-0178": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-f7b7e44945b7687c53ec001369bdae85",
+      "label_id": "support-0178#0"
+    },
+    "support-0179": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-dd1258a3177f81307537f913bd7ef2d7",
+      "label_id": "support-0179#0"
+    },
+    "support-0180": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-bcc3d43c1d482d0c4ed268a7163617f3",
+      "label_id": "support-0180#0"
+    },
+    "support-0183": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-43a2f78ba729e4fc8b1c1976c33d293b",
+      "label_id": "support-0183#0"
+    },
+    "support-0185": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-18fbd53999d3497c9e72e667e16a8624",
+      "label_id": "support-0185#0"
+    },
+    "support-0188": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-8eb20df8cab32d1e36fd8813a3606040",
+      "label_id": "support-0188#0"
+    },
+    "support-0194": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-c21dc348acc4ad418313116bc8f2d395",
+      "label_id": "support-0194#0"
+    },
+    "support-0196": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-80fd0d7f67642bd14fab51af8a419bda",
+      "label_id": "support-0196#0"
+    },
+    "support-0205": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-318b77040a356013cd606ace7ab5071c",
+      "label_id": "support-0205#0"
+    },
+    "support-0209": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-7a656dc4bd53958b885172aa56e5420d",
+      "label_id": "support-0209#0"
+    },
+    "support-0210": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-ff538fc1b82ee947d730dd9e666ee817",
+      "label_id": "support-0210#0"
+    },
+    "support-0211": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-bb6a6aa3a9c7cff0429a6a5603cc34d3",
+      "label_id": "support-0211#0"
+    },
+    "support-0213": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-eb66d8c3c47d014a4875bca715700fa1",
+      "label_id": "support-0213#0"
+    },
+    "support-0214": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-e554d383cf7fcb2c46a7333cfa3f0cd3",
+      "label_id": "support-0214#0"
+    },
+    "support-0215": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-78e4c7372d4d65a1a9b6060732616c3f",
+      "label_id": "support-0215#0"
+    },
+    "support-0216": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-4abc4c014846ad489aa16274e8d7130a",
+      "label_id": "support-0216#0"
+    },
+    "support-0220": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-b8c904fb48d2140f20b61318b24b89ae",
+      "label_id": "support-0220#0"
+    },
+    "support-0222": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-a52a2d7c2109ca942fea62c56ccf3dc3",
+      "label_id": "support-0222#0"
+    },
+    "support-0225": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-eb7a4ef263bd1a14b057398655d82e66",
+      "label_id": "support-0225#0"
+    },
+    "support-0226": {
+      "ts": "2026-11-05T14:59:25+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-d2e0f1226c144a8490291119a80be87c",
+      "label_id": "support-0226#0"
+    },
+    "support-0228": {
+      "ts": "2026-11-05T14:59:26+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-67e72d25d032efff01f1277ca3201b60",
+      "label_id": "support-0228#0"
+    },
+    "support-0231": {
+      "ts": "2026-11-05T14:59:26+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-93d1a05dda7b8465ea3c316d55979214",
+      "label_id": "support-0231#0"
+    },
+    "support-0233": {
+      "ts": "2026-11-05T14:59:26+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-022cb8fd8a62b46c0b22880f05e01367",
+      "label_id": "support-0233#0"
+    },
+    "support-0235": {
+      "ts": "2026-11-05T14:59:26+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-9fee979c1d709730993a8f6fb33047c7",
+      "label_id": "support-0235#0"
+    },
+    "support-0237": {
+      "ts": "2026-11-05T14:59:26+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-deccbb8cf2e1697dc94d87df26a69d0e",
+      "label_id": "support-0237#0"
+    },
+    "support-0247": {
+      "ts": "2026-11-05T14:59:26+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-cfe1f89788c9506fc5eaa30cf33f0951",
+      "label_id": "support-0247#0"
+    },
+    "support-0248": {
+      "ts": "2026-11-05T14:59:26+00:00",
+      "result": "ok",
+      "score_id": "unnatural_or_verbose_language-918e0a19d0b28fa6c627db69b241e864",
+      "label_id": "support-0248#0"
+    }
+  }
+}

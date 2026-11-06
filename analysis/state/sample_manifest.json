@@ -1,0 +1,1026 @@
+{
+  "unit": "conversation",
+  "batches": [
+    {
+      "id": "b1",
+      "name": "Batch 1: 15 random + 15 cluster representatives",
+      "scenario_ids": [
+        "support-0002",
+        "support-0215",
+        "support-0188",
+        "support-0170",
+        "support-0149",
+        "support-0055",
+        "support-0211",
+        "support-0090",
+        "support-0027",
+        "support-0014",
+        "support-0059",
+        "support-0130",
+        "support-0225",
+        "support-0043",
+        "support-0158",
+        "support-0023",
+        "support-0161",
+        "support-0140",
+        "support-0220",
+        "support-0148",
+        "support-0178",
+        "support-0233",
+        "support-0247",
+        "support-0165",
+        "support-0129",
+        "support-0157",
+        "support-0063",
+        "support-0179",
+        "support-0052",
+        "support-0006"
+      ],
+      "picks": [
+        {
+          "scenario_id": "support-0002",
+          "reason": "uniform random draw",
+          "method": "random",
+          "dimension": null,
+          "seed": 912236,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "e7e37c104d04bf9f782464f21c9d97dd"
+        },
+        {
+          "scenario_id": "support-0215",
+          "reason": "uniform random draw",
+          "method": "random",
+          "dimension": null,
+          "seed": 912236,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "78e4c7372d4d65a1a9b6060732616c3f"
+        },
+        {
+          "scenario_id": "support-0188",
+          "reason": "uniform random draw",
+          "method": "random",
+          "dimension": null,
+          "seed": 912236,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "8eb20df8cab32d1e36fd8813a3606040"
+        },
+        {
+          "scenario_id": "support-0170",
+          "reason": "uniform random draw",
+          "method": "random",
+          "dimension": null,
+          "seed": 912236,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "fb21be67f55ab47458d79dd8383700f0"
+        },
+        {
+          "scenario_id": "support-0149",
+          "reason": "uniform random draw",
+          "method": "random",
+          "dimension": null,
+          "seed": 912236,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "a03d683c8de9b5139242e83505b439b3"
+        },
+        {
+          "scenario_id": "support-0055",
+          "reason": "uniform random draw",
+          "method": "random",
+          "dimension": null,
+          "seed": 912236,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "7fa760401cd35d2a6470726281c03b19"
+        },
+        {
+          "scenario_id": "support-0211",
+          "reason": "uniform random draw",
+          "method": "random",
+          "dimension": null,
+          "seed": 912236,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "bb6a6aa3a9c7cff0429a6a5603cc34d3"
+        },
+        {
+          "scenario_id": "support-0090",
+          "reason": "uniform random draw",
+          "method": "random",
+          "dimension": null,
+          "seed": 912236,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "5ac79e5b210377fc71665ed416e206c7"
+        },
+        {
+          "scenario_id": "support-0027",
+          "reason": "uniform random draw",
+          "method": "random",
+          "dimension": null,
+          "seed": 912236,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "475250c2cb54317ac6ac457e51283a25"
+        },
+        {
+          "scenario_id": "support-0014",
+          "reason": "uniform random draw",
+          "method": "random",
+          "dimension": null,
+          "seed": 912236,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "455481f1f3da81a1e1a47c5bd911880e"
+        },
+        {
+          "scenario_id": "support-0059",
+          "reason": "uniform random draw",
+          "method": "random",
+          "dimension": null,
+          "seed": 912236,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "382102be49b74592721bcfb92353cda4"
+        },
+        {
+          "scenario_id": "support-0130",
+          "reason": "uniform random draw",
+          "method": "random",
+          "dimension": null,
+          "seed": 912236,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "bd60664cbc12569888c53cc968c1ad2d"
+        },
+        {
+          "scenario_id": "support-0225",
+          "reason": "uniform random draw",
+          "method": "random",
+          "dimension": null,
+          "seed": 912236,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "eb7a4ef263bd1a14b057398655d82e66"
+        },
+        {
+          "scenario_id": "support-0043",
+          "reason": "uniform random draw",
+          "method": "random",
+          "dimension": null,
+          "seed": 912236,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "b87d328fa8612aac48cc1db20cb35f49"
+        },
+        {
+          "scenario_id": "support-0158",
+          "reason": "uniform random draw",
+          "method": "random",
+          "dimension": null,
+          "seed": 912236,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "a24385e6c6b24df101eb21935e406b53"
+        },
+        {
+          "scenario_id": "support-0023",
+          "reason": "typical of a group of 17: merchant, order_status, 1 msg, 1 tool calls (list_my_orders)",
+          "method": "cluster",
+          "dimension": null,
+          "seed": 89590,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "c6e835ea8fb35d5f3e38f486cae32950"
+        },
+        {
+          "scenario_id": "support-0161",
+          "reason": "typical of a group of 17: support, policy_question, 1 msg, 0 tool calls",
+          "method": "cluster",
+          "dimension": null,
+          "seed": 89590,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "d664f3a303da728fa3f9d641f472b8a4"
+        },
+        {
+          "scenario_id": "support-0140",
+          "reason": "typical of a group of 1: merchant, policy_question, 2 msg, 2 tool calls (get_policy, search_help_center)",
+          "method": "cluster",
+          "dimension": null,
+          "seed": 89590,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "1f182b40565b37098ce67e2507588631"
+        },
+        {
+          "scenario_id": "support-0220",
+          "reason": "typical of a group of 9: shopper, dispute, 1 msg, 0 tool calls",
+          "method": "cluster",
+          "dimension": null,
+          "seed": 89590,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "b8c904fb48d2140f20b61318b24b89ae"
+        },
+        {
+          "scenario_id": "support-0148",
+          "reason": "typical of a group of 14: merchant, policy_question, 1 msg, 1 tool calls (search_help_center)",
+          "method": "cluster",
+          "dimension": null,
+          "seed": 89590,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "8bce3401443dd6fc83a431f48312a427"
+        },
+        {
+          "scenario_id": "support-0178",
+          "reason": "typical of a group of 30: shopper, product_search, 1 msg, 1 tool calls (search_products)",
+          "method": "cluster",
+          "dimension": null,
+          "seed": 89590,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "f7b7e44945b7687c53ec001369bdae85"
+        },
+        {
+          "scenario_id": "support-0233",
+          "reason": "typical of a group of 14: merchant, account_change, 1 msg, 0 tool calls",
+          "method": "cluster",
+          "dimension": null,
+          "seed": 89590,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "022cb8fd8a62b46c0b22880f05e01367"
+        },
+        {
+          "scenario_id": "support-0247",
+          "reason": "typical of a group of 10: shopper, out_of_scope, 2 msg, 0 tool calls",
+          "method": "cluster",
+          "dimension": null,
+          "seed": 89590,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "cfe1f89788c9506fc5eaa30cf33f0951"
+        },
+        {
+          "scenario_id": "support-0165",
+          "reason": "typical of a group of 7: support, policy_question, 1 msg, 1 tool calls (search_help_center)",
+          "method": "cluster",
+          "dimension": null,
+          "seed": 89590,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "d2058d7faca954179838588428fad7cb"
+        },
+        {
+          "scenario_id": "support-0129",
+          "reason": "typical of a group of 1: shopper, policy_question, 1 msg, 2 tool calls (get_policy, search_help_center)",
+          "method": "cluster",
+          "dimension": null,
+          "seed": 89590,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "a8a0c638ffd0f079be4ad03863a8fcf4"
+        },
+        {
+          "scenario_id": "support-0157",
+          "reason": "typical of a group of 18: merchant, policy_question, 1 msg, 0 tool calls",
+          "method": "cluster",
+          "dimension": null,
+          "seed": 89590,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "ef339be44498e6106f9ba4f1c55cdf63"
+        },
+        {
+          "scenario_id": "support-0063",
+          "reason": "typical of a group of 47: shopper, refund, 1 msg, 1 tool calls (find_order)",
+          "method": "cluster",
+          "dimension": null,
+          "seed": 89590,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "d9d9cd4add48f0778c703c946a7a1215"
+        },
+        {
+          "scenario_id": "support-0179",
+          "reason": "typical of a group of 10: merchant, product_search, 3 msg, 3 tool calls (search_products)",
+          "method": "cluster",
+          "dimension": null,
+          "seed": 89590,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "dd1258a3177f81307537f913bd7ef2d7"
+        },
+        {
+          "scenario_id": "support-0052",
+          "reason": "typical of a group of 7: shopper, refund, 1 msg, 2 tool calls (find_order, issue_refund)",
+          "method": "cluster",
+          "dimension": null,
+          "seed": 89590,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "8593d72ff7d853eceba4e9954b51c32a"
+        },
+        {
+          "scenario_id": "support-0006",
+          "reason": "typical of a group of 32: shopper, order_status, 1 msg, 1 tool calls (list_my_orders)",
+          "method": "cluster",
+          "dimension": null,
+          "seed": 89590,
+          "ts": "2026-10-31T14:48:55+00:00",
+          "trace_id": "dd530c46b2b117841fe25bbad9b2d9f4"
+        }
+      ],
+      "note": "Drawn by Claude at Eve's request; practice conversation support-0088 excluded."
+    },
+    {
+      "id": "b2",
+      "name": "Batch 2: 30 spread across one dimension",
+      "scenario_ids": [
+        "support-0028",
+        "support-0083",
+        "support-0183",
+        "support-0248",
+        "support-0009",
+        "support-0177",
+        "support-0162",
+        "support-0101",
+        "support-0205",
+        "support-0173",
+        "support-0080",
+        "support-0210",
+        "support-0185",
+        "support-0062",
+        "support-0213",
+        "support-0156",
+        "support-0107",
+        "support-0034",
+        "support-0124",
+        "support-0082",
+        "support-0131",
+        "support-0029",
+        "support-0226",
+        "support-0125",
+        "support-0121",
+        "support-0077",
+        "support-0231",
+        "support-0049",
+        "support-0103",
+        "support-0168"
+      ],
+      "picks": [
+        {
+          "scenario_id": "support-0028",
+          "reason": "role = merchant",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "36b573c5533574b08070febed1f2ebb1"
+        },
+        {
+          "scenario_id": "support-0083",
+          "reason": "role = shopper",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "46d5d85082d975238f159b81831dc619"
+        },
+        {
+          "scenario_id": "support-0183",
+          "reason": "role = support",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "43a2f78ba729e4fc8b1c1976c33d293b"
+        },
+        {
+          "scenario_id": "support-0248",
+          "reason": "role = merchant",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "918e0a19d0b28fa6c627db69b241e864"
+        },
+        {
+          "scenario_id": "support-0009",
+          "reason": "role = shopper",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "debad35761f405a21794121b615bc6e9"
+        },
+        {
+          "scenario_id": "support-0177",
+          "reason": "role = support",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "3f220d7594c6dea41c0773c2c63a2433"
+        },
+        {
+          "scenario_id": "support-0162",
+          "reason": "role = merchant",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "2a1ce5e9d2f5ffe5ecaa97c5594aaea6"
+        },
+        {
+          "scenario_id": "support-0101",
+          "reason": "role = shopper",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "85df7ff37cb41dadd0631aafcecb342c"
+        },
+        {
+          "scenario_id": "support-0205",
+          "reason": "role = support",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "318b77040a356013cd606ace7ab5071c"
+        },
+        {
+          "scenario_id": "support-0173",
+          "reason": "role = merchant",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "2269cc0a9d6da4a1190a564400b228a6"
+        },
+        {
+          "scenario_id": "support-0080",
+          "reason": "role = shopper",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "931ef49cfe8d67db82df45601ba871b2"
+        },
+        {
+          "scenario_id": "support-0210",
+          "reason": "role = support",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "ff538fc1b82ee947d730dd9e666ee817"
+        },
+        {
+          "scenario_id": "support-0185",
+          "reason": "role = merchant",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "18fbd53999d3497c9e72e667e16a8624"
+        },
+        {
+          "scenario_id": "support-0062",
+          "reason": "role = shopper",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "a31d46fcba4126ef146c0bace5268909"
+        },
+        {
+          "scenario_id": "support-0213",
+          "reason": "role = support",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "eb66d8c3c47d014a4875bca715700fa1"
+        },
+        {
+          "scenario_id": "support-0156",
+          "reason": "role = merchant",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "347e9ecf7bf95f3f279b4543d7b46642"
+        },
+        {
+          "scenario_id": "support-0107",
+          "reason": "role = shopper",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "9cccbc338364dcdfc43a9b1bf1f1184e"
+        },
+        {
+          "scenario_id": "support-0034",
+          "reason": "role = support",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "432808437ac0a9a7ca1f465eefcadd4c"
+        },
+        {
+          "scenario_id": "support-0124",
+          "reason": "role = merchant",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "e720fef92d657fb97e247b56fd53fc42"
+        },
+        {
+          "scenario_id": "support-0082",
+          "reason": "role = shopper",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "52ef4597278d79d46c953e36db0ae961"
+        },
+        {
+          "scenario_id": "support-0131",
+          "reason": "role = support",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "96ca9ec5516dba16027f3b21c4d7cd13"
+        },
+        {
+          "scenario_id": "support-0029",
+          "reason": "role = merchant",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "00a9c18a3f601e0fe64e08bc39d1676d"
+        },
+        {
+          "scenario_id": "support-0226",
+          "reason": "role = shopper",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "d2e0f1226c144a8490291119a80be87c"
+        },
+        {
+          "scenario_id": "support-0125",
+          "reason": "role = support",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "a05aa121359bfedfacdf8197f9230f2c"
+        },
+        {
+          "scenario_id": "support-0121",
+          "reason": "role = merchant",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "6d3254a27730b07cb3e63e612c499424"
+        },
+        {
+          "scenario_id": "support-0077",
+          "reason": "role = shopper",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "b9508408f7e796e00c3cf27b2e9bb4bf"
+        },
+        {
+          "scenario_id": "support-0231",
+          "reason": "role = support",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "93d1a05dda7b8465ea3c316d55979214"
+        },
+        {
+          "scenario_id": "support-0049",
+          "reason": "role = merchant",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "efc6f6e06539da59408eb57a341c5691"
+        },
+        {
+          "scenario_id": "support-0103",
+          "reason": "role = shopper",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "89b7fba250daaddc4f3f11720532c7a5"
+        },
+        {
+          "scenario_id": "support-0168",
+          "reason": "role = support",
+          "method": "stratified",
+          "dimension": "role",
+          "seed": 51134,
+          "ts": "2026-11-03T03:10:08+00:00",
+          "trace_id": "32e575094ed38290d8af4b08df839646"
+        }
+      ],
+      "note": "Dimension (role) chosen before reviewing outcomes; drawn by Claude at Eve's request. Excludes every conversation already reviewed or in Batch 1."
+    },
+    {
+      "id": "b3",
+      "name": "Batch 3: 25 from depth searches + close negatives",
+      "scenario_ids": [
+        "support-0051",
+        "support-0127",
+        "support-0154",
+        "support-0072",
+        "support-0237",
+        "support-0037",
+        "support-0228",
+        "support-0235",
+        "support-0112",
+        "support-0068",
+        "support-0095",
+        "support-0087",
+        "support-0115",
+        "support-0104",
+        "support-0110",
+        "support-0100",
+        "support-0089",
+        "support-0114",
+        "support-0078",
+        "support-0092",
+        "support-0216",
+        "support-0214",
+        "support-0159",
+        "support-0132",
+        "support-0096"
+      ],
+      "picks": [
+        {
+          "scenario_id": "support-0051",
+          "mode": "claims_policy_without_checking",
+          "kind": "candidate positive",
+          "reason": "reply makes policy-style claims with no policy/help-center lookup",
+          "trace_id": "71bfd9e22c3cac49257e6509a993ddf6",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0127",
+          "mode": "claims_policy_without_checking",
+          "kind": "candidate positive",
+          "reason": "reply makes policy-style claims with no policy/help-center lookup",
+          "trace_id": "652e9a44111de5198eb7f6e30713e2d9",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0154",
+          "mode": "claims_policy_without_checking",
+          "kind": "candidate positive",
+          "reason": "reply makes policy-style claims with no policy/help-center lookup",
+          "trace_id": "f52a22d5219ddc3a185a51dcc1012941",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0072",
+          "mode": "claims_policy_without_checking",
+          "kind": "candidate positive",
+          "reason": "reply makes policy-style claims with no policy/help-center lookup",
+          "trace_id": "0b735036222b85160965b5c53bc5ac81",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0237",
+          "mode": "doesnt_escalate_when_required",
+          "kind": "candidate positive",
+          "reason": "account_change, no escalate_to_human call",
+          "trace_id": "deccbb8cf2e1697dc94d87df26a69d0e",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0037",
+          "mode": "doesnt_escalate_when_required",
+          "kind": "candidate positive",
+          "reason": "order_status / dq-order-reversed-dates, no escalate_to_human call",
+          "trace_id": "81b88d350744a9a70f8ecd18c7e2a0c4",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0228",
+          "mode": "doesnt_escalate_when_required",
+          "kind": "candidate positive",
+          "reason": "account_change, no escalate_to_human call",
+          "trace_id": "67e72d25d032efff01f1277ca3201b60",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0235",
+          "mode": "doesnt_escalate_when_required",
+          "kind": "candidate positive",
+          "reason": "account_change, no escalate_to_human call",
+          "trace_id": "9fee979c1d709730993a8f6fb33047c7",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0112",
+          "mode": "stalls_instead_of_acting",
+          "kind": "candidate positive",
+          "reason": "cancellation request, no refund/cancel call, reply asks to confirm",
+          "trace_id": "4c9d29842660c6299a7ea735323ddf21",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0068",
+          "mode": "stalls_instead_of_acting",
+          "kind": "candidate positive",
+          "reason": "refund request, no refund/cancel call, reply asks to confirm",
+          "trace_id": "ea6a5c196e6f9f59f0af95c84f080be6",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0095",
+          "mode": "stalls_instead_of_acting",
+          "kind": "candidate positive",
+          "reason": "refund request, no refund/cancel call, reply asks to confirm",
+          "trace_id": "4a1301fa0a9d8c17b397a47d2af1eebc",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0087",
+          "mode": "stalls_instead_of_acting",
+          "kind": "candidate positive",
+          "reason": "refund request, no refund/cancel call, reply asks to confirm",
+          "trace_id": "03591ba2ed5a9e97692b3a891b2eb6d6",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0115",
+          "mode": "wrong_about_order_records",
+          "kind": "candidate positive",
+          "reason": "reply says order not found although an order lookup returned matches",
+          "trace_id": "ce48d8741af59d4523f1ad97b24e31d4",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0104",
+          "mode": "wrong_about_order_records",
+          "kind": "candidate positive",
+          "reason": "reply says order not found although an order lookup returned matches",
+          "trace_id": "8b953ffe369fced78c8cf0dd697c651a",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0110",
+          "mode": "wrong_about_order_records",
+          "kind": "candidate positive",
+          "reason": "reply says order not found although an order lookup returned matches",
+          "trace_id": "50882ee40cb526ff57c29d9e9f657921",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0100",
+          "mode": "wrong_about_order_records",
+          "kind": "candidate positive",
+          "reason": "reply says order not found although an order lookup returned matches",
+          "trace_id": "7dc59adfdba5a6b7657119da79e5a9de",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0089",
+          "mode": "omits_critical_detail",
+          "kind": "candidate positive",
+          "reason": "refund / boundary: deadline or boundary question",
+          "trace_id": "86c3bcc046b346252e656dae92f56f55",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0114",
+          "mode": "omits_critical_detail",
+          "kind": "candidate positive",
+          "reason": "cancellation / boundary: deadline or boundary question",
+          "trace_id": "c9afed4a393138da81bdc6521ff272f0",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0078",
+          "mode": "omits_critical_detail",
+          "kind": "candidate positive",
+          "reason": "return_deadline / missing_information: deadline or boundary question",
+          "trace_id": "759cb37ec72e60d96017e8cbd8b14cfe",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0092",
+          "mode": "omits_critical_detail",
+          "kind": "candidate positive",
+          "reason": "refund / boundary: deadline or boundary question",
+          "trace_id": "c7ea2b0d10dec485e528c9e6b897f0de",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0216",
+          "mode": "doesnt_escalate_when_required",
+          "kind": "close negative",
+          "reason": "escalate_to_human was called (likely correct handoff)",
+          "trace_id": "4abc4c014846ad489aa16274e8d7130a",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0214",
+          "mode": "doesnt_escalate_when_required",
+          "kind": "close negative",
+          "reason": "escalate_to_human was called (likely correct handoff)",
+          "trace_id": "e554d383cf7fcb2c46a7333cfa3f0cd3",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0159",
+          "mode": "claims_policy_without_checking",
+          "kind": "close negative",
+          "reason": "policy question answered after a policy lookup",
+          "trace_id": "a772fae27d7172ace725eb83868a2948",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0132",
+          "mode": "claims_policy_without_checking",
+          "kind": "close negative",
+          "reason": "policy question answered after a policy lookup",
+          "trace_id": "b4a8d743360f56ca0a7ab917f29d21ea",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        },
+        {
+          "scenario_id": "support-0096",
+          "mode": "stalls_instead_of_acting",
+          "kind": "close negative",
+          "reason": "refund/cancel was executed (likely no stall)",
+          "trace_id": "2b0eed40fd241e2691b82adf2ce9c32a",
+          "method": "depth_search",
+          "ts": "2026-11-03T04:59:08+00:00"
+        }
+      ],
+      "note": "Deterministic filters over unreviewed conversations, one search per candidate mode (retrieval signals, not labels). Eve reviews each and accepts or rejects."
+    },
+    {
+      "id": "b4",
+      "name": "Batch 4: 15 final random (stability check)",
+      "scenario_ids": [
+        "support-0109",
+        "support-0176",
+        "support-0011",
+        "support-0209",
+        "support-0117",
+        "support-0180",
+        "support-0021",
+        "support-0196",
+        "support-0003",
+        "support-0194",
+        "support-0166",
+        "support-0058",
+        "support-0047",
+        "support-0175",
+        "support-0222"
+      ],
+      "picks": [
+        {
+          "scenario_id": "support-0109",
+          "reason": "uniform random draw",
+          "method": "random",
+          "seed": 311799,
+          "ts": "2026-11-04T04:17:47+00:00",
+          "trace_id": "c8e1541c93345acb7d8e792437a56e3b"
+        },
+        {
+          "scenario_id": "support-0176",
+          "reason": "uniform random draw",
+          "method": "random",
+          "seed": 311799,
+          "ts": "2026-11-04T04:17:47+00:00",
+          "trace_id": "09232b392e41b28f2238f7abf08618f7"
+        },
+        {
+          "scenario_id": "support-0011",
+          "reason": "uniform random draw",
+          "method": "random",
+          "seed": 311799,
+          "ts": "2026-11-04T04:17:47+00:00",
+          "trace_id": "a46ca3499d423a8fb0184a7a94411507"
+        },
+        {
+          "scenario_id": "support-0209",
+          "reason": "uniform random draw",
+          "method": "random",
+          "seed": 311799,
+          "ts": "2026-11-04T04:17:47+00:00",
+          "trace_id": "7a656dc4bd53958b885172aa56e5420d"
+        },
+        {
+          "scenario_id": "support-0117",
+          "reason": "uniform random draw",
+          "method": "random",
+          "seed": 311799,
+          "ts": "2026-11-04T04:17:47+00:00",
+          "trace_id": "3632919fcce7c51ac440295394c1dca9"
+        },
+        {
+          "scenario_id": "support-0180",
+          "reason": "uniform random draw",
+          "method": "random",
+          "seed": 311799,
+          "ts": "2026-11-04T04:17:47+00:00",
+          "trace_id": "bcc3d43c1d482d0c4ed268a7163617f3"
+        },
+        {
+          "scenario_id": "support-0021",
+          "reason": "uniform random draw",
+          "method": "random",
+          "seed": 311799,
+          "ts": "2026-11-04T04:17:47+00:00",
+          "trace_id": "759d3eebadd1b112e9217894800b87f5"
+        },
+        {
+          "scenario_id": "support-0196",
+          "reason": "uniform random draw",
+          "method": "random",
+          "seed": 311799,
+          "ts": "2026-11-04T04:17:47+00:00",
+          "trace_id": "80fd0d7f67642bd14fab51af8a419bda"
+        },
+        {
+          "scenario_id": "support-0003",
+          "reason": "uniform random draw",
+          "method": "random",
+          "seed": 311799,
+          "ts": "2026-11-04T04:17:47+00:00",
+          "trace_id": "b45d3a61336d1c658be3b6a955ebd29e"
+        },
+        {
+          "scenario_id": "support-0194",
+          "reason": "uniform random draw",
+          "method": "random",
+          "seed": 311799,
+          "ts": "2026-11-04T04:17:47+00:00",
+          "trace_id": "c21dc348acc4ad418313116bc8f2d395"
+        },
+        {
+          "scenario_id": "support-0166",
+          "reason": "uniform random draw",
+          "method": "random",
+          "seed": 311799,
+          "ts": "2026-11-04T04:17:47+00:00",
+          "trace_id": "9f1f09db43956f050887d88b8b3440ac"
+        },
+        {
+          "scenario_id": "support-0058",
+          "reason": "uniform random draw",
+          "method": "random",
+          "seed": 311799,
+          "ts": "2026-11-04T04:17:47+00:00",
+          "trace_id": "8abbe779d7ec0c3a9f90bdb898527b3c"
+        },
+        {
+          "scenario_id": "support-0047",
+          "reason": "uniform random draw",
+          "method": "random",
+          "seed": 311799,
+          "ts": "2026-11-04T04:17:47+00:00",
+          "trace_id": "e8fc255e4b66cfe658166f4042d51231"
+        },
+        {
+          "scenario_id": "support-0175",
+          "reason": "uniform random draw",
+          "method": "random",
+          "seed": 311799,
+          "ts": "2026-11-04T04:17:47+00:00",
+          "trace_id": "5ab7ca533860fe4332c5cba795c015a0"
+        },
+        {
+          "scenario_id": "support-0222",
+          "reason": "uniform random draw",
+          "method": "random",
+          "seed": 311799,
+          "ts": "2026-11-04T04:17:47+00:00",
+          "trace_id": "a52a2d7c2109ca942fea62c56ccf3dc3"
+        }
+      ],
+      "note": "Uniform random draw after the draft taxonomy (7 themes) was consolidated; excludes everything already reviewed."
+    }
+  ]
+}

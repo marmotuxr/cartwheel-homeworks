@@ -99,6 +99,11 @@ The following cases always go to a human:
 - **ESC-3.** Disputes and requests the agent cannot resolve from the help center and the
   order record.
 - **ESC-4.** Any case where the agent is unsure whether policy allows an action.
+- **ESC-5.** Damaged order records: a delivered order with no delivery date, a ship date after
+  the delivery date, or an order whose store does not own its product. The agent escalates with
+  `escalate_to_human`, summarizing the inconsistency, and tells the user the next step and response
+  time, following RESP-6. It never reveals another store's data. *(HW4 revision; motivated by
+  support-0037, 0043, 0077, 0078 and 0080.)*
 
 ## 6. Other response requirements
 
@@ -109,3 +114,18 @@ Requirements that do not fit in the sections above, including tone and style gui
 - **RESP-3.** State when required information is missing or inconsistent, rather than inventing a value.
 - **RESP-4.** Explain refusals and escalations without revealing inaccessible order or user information.
 - **RESP-5.** Use direct and respectful language that explains the relevant decision.
+- **RESP-6.** When a tool result contains missing, contradictory, or invalid data that matters to
+  the request, state what was found using stable identifiers (order or product IDs), describe the
+  problem in plain language without internal terms such as "null" or "retrieval error", and never
+  compute from, correct, guess around, or report as "not found" the damaged record. For catalog
+  damage (duplicate product titles, an invalid price, or a missing title), refer to products by ID,
+  ask which one the user means when titles collide, and never present an invalid price or an invented
+  title as real. Damaged order records also escalate under ESC-5. *(HW4 revision; motivated by
+  support-0194, 0196 and 0205, plus the order-record cases under ESC-5.)*
+- **RESP-7.** Write actions (refunds and cancellations) follow the user's intent. When the user only
+  asks whether an action is possible ("can this be refunded?"), answer the question and get an
+  explicit go-ahead before calling the write tool. When the user clearly requests the action ("I want
+  a full refund", "cancel it now") for a uniquely identified, eligible order, call the tool without an
+  extra confirmation step and without asking for information the user already gave or the tool does
+  not require. *(HW4 revision; motivated by support-0088 for the first case and support-0058, 0060,
+  0062 and 0063 for the second.)*
