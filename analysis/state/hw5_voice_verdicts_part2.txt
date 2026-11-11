@@ -1,0 +1,24 @@
+# HW5 voice labeling, Part 2 (hw5t-018..022 + Group 2), mode: falsely_reports_record_missing
+# Labeled by Eve over voice, 2026-11-10. PRESENT = failure present (Fail), ABSENT = Pass.
+hw5t-018 | ABSENT | agent listed the puzzles, never said anything was missing
+hw5t-019 | PRESENT | falsely reported, the product was clearly there
+hw5t-020 | PRESENT | it exists and the agent said it didn't
+hw5t-021 | PRESENT | store error reported as store not available; product exists at Northwind Books
+hw5t-022 | ABSENT | found the speaker and gave the price
+support-0040 | ABSENT | the agent ran the order lookup and what it said is fine
+support-0045 | PRESENT | no product names, and the item was there
+support-0056 | ABSENT | found the order and refunded it
+support-0057 | PRESENT | no product names; agent said "does not match any items listed" (changed from ABSENT after review)
+support-0074 | ABSENT | found the order, never said anything was missing
+support-0079 | PRESENT | it was there and marked delivered
+support-0105 | ABSENT | didn't say anything was missing
+support-0106 | ABSENT | found order 880, never said anything was missing
+support-0116 | ABSENT | no item named, never said anything was missing
+support-0147 | ABSENT | other failure: incomplete answer, touches on the policy but not enough
+support-0201 | ABSENT | agent said the list has no product names; never said the tray wasn't there
+
+# Eve's notes
+# - Search idea: queries should match partial names, related words and plurals
+#   (e.g. store "Little Fox" should match "Little Fox Toys").
+# - Hypothesis: requests that ask for two things at once may push the agent into the
+#   wrong tool call or a half answer. Possibly a new failure mode.

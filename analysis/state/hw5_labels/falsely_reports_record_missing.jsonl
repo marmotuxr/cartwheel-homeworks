@@ -1,0 +1,141 @@
+{"trace_id": "e7e37c104d04bf9f782464f21c9d97dd", "scenario_id": "support-0002", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "b45d3a61336d1c658be3b6a955ebd29e", "scenario_id": "support-0003", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "dd530c46b2b117841fe25bbad9b2d9f4", "scenario_id": "support-0006", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "debad35761f405a21794121b615bc6e9", "scenario_id": "support-0009", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "a46ca3499d423a8fb0184a7a94411507", "scenario_id": "support-0011", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "455481f1f3da81a1e1a47c5bd911880e", "scenario_id": "support-0014", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "759d3eebadd1b112e9217894800b87f5", "scenario_id": "support-0021", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "c6e835ea8fb35d5f3e38f486cae32950", "scenario_id": "support-0023", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "475250c2cb54317ac6ac457e51283a25", "scenario_id": "support-0027", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "36b573c5533574b08070febed1f2ebb1", "scenario_id": "support-0028", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "00a9c18a3f601e0fe64e08bc39d1676d", "scenario_id": "support-0029", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "432808437ac0a9a7ca1f465eefcadd4c", "scenario_id": "support-0034", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "81b88d350744a9a70f8ecd18c7e2a0c4", "scenario_id": "support-0037", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "b87d328fa8612aac48cc1db20cb35f49", "scenario_id": "support-0043", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "e8fc255e4b66cfe658166f4042d51231", "scenario_id": "support-0047", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "efc6f6e06539da59408eb57a341c5691", "scenario_id": "support-0049", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "71bfd9e22c3cac49257e6509a993ddf6", "scenario_id": "support-0051", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "8593d72ff7d853eceba4e9954b51c32a", "scenario_id": "support-0052", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "7fa760401cd35d2a6470726281c03b19", "scenario_id": "support-0055", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "8abbe779d7ec0c3a9f90bdb898527b3c", "scenario_id": "support-0058", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "382102be49b74592721bcfb92353cda4", "scenario_id": "support-0059", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "a31d46fcba4126ef146c0bace5268909", "scenario_id": "support-0062", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "d9d9cd4add48f0778c703c946a7a1215", "scenario_id": "support-0063", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "ea6a5c196e6f9f59f0af95c84f080be6", "scenario_id": "support-0068", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "0b735036222b85160965b5c53bc5ac81", "scenario_id": "support-0072", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "b9508408f7e796e00c3cf27b2e9bb4bf", "scenario_id": "support-0077", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "759cb37ec72e60d96017e8cbd8b14cfe", "scenario_id": "support-0078", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "931ef49cfe8d67db82df45601ba871b2", "scenario_id": "support-0080", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "52ef4597278d79d46c953e36db0ae961", "scenario_id": "support-0082", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "46d5d85082d975238f159b81831dc619", "scenario_id": "support-0083", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "03591ba2ed5a9e97692b3a891b2eb6d6", "scenario_id": "support-0087", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "86c3bcc046b346252e656dae92f56f55", "scenario_id": "support-0089", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "5ac79e5b210377fc71665ed416e206c7", "scenario_id": "support-0090", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "c7ea2b0d10dec485e528c9e6b897f0de", "scenario_id": "support-0092", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "4a1301fa0a9d8c17b397a47d2af1eebc", "scenario_id": "support-0095", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "2b0eed40fd241e2691b82adf2ce9c32a", "scenario_id": "support-0096", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "7dc59adfdba5a6b7657119da79e5a9de", "scenario_id": "support-0100", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "85df7ff37cb41dadd0631aafcecb342c", "scenario_id": "support-0101", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "89b7fba250daaddc4f3f11720532c7a5", "scenario_id": "support-0103", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "8b953ffe369fced78c8cf0dd697c651a", "scenario_id": "support-0104", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "c8e1541c93345acb7d8e792437a56e3b", "scenario_id": "support-0109", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "50882ee40cb526ff57c29d9e9f657921", "scenario_id": "support-0110", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "4c9d29842660c6299a7ea735323ddf21", "scenario_id": "support-0112", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "c9afed4a393138da81bdc6521ff272f0", "scenario_id": "support-0114", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "ce48d8741af59d4523f1ad97b24e31d4", "scenario_id": "support-0115", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "3632919fcce7c51ac440295394c1dca9", "scenario_id": "support-0117", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "6d3254a27730b07cb3e63e612c499424", "scenario_id": "support-0121", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "e720fef92d657fb97e247b56fd53fc42", "scenario_id": "support-0124", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "a05aa121359bfedfacdf8197f9230f2c", "scenario_id": "support-0125", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "652e9a44111de5198eb7f6e30713e2d9", "scenario_id": "support-0127", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "a8a0c638ffd0f079be4ad03863a8fcf4", "scenario_id": "support-0129", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "bd60664cbc12569888c53cc968c1ad2d", "scenario_id": "support-0130", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "96ca9ec5516dba16027f3b21c4d7cd13", "scenario_id": "support-0131", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "b4a8d743360f56ca0a7ab917f29d21ea", "scenario_id": "support-0132", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "1f182b40565b37098ce67e2507588631", "scenario_id": "support-0140", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "8bce3401443dd6fc83a431f48312a427", "scenario_id": "support-0148", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "a03d683c8de9b5139242e83505b439b3", "scenario_id": "support-0149", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "f52a22d5219ddc3a185a51dcc1012941", "scenario_id": "support-0154", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "347e9ecf7bf95f3f279b4543d7b46642", "scenario_id": "support-0156", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "ef339be44498e6106f9ba4f1c55cdf63", "scenario_id": "support-0157", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "a24385e6c6b24df101eb21935e406b53", "scenario_id": "support-0158", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "a772fae27d7172ace725eb83868a2948", "scenario_id": "support-0159", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "d664f3a303da728fa3f9d641f472b8a4", "scenario_id": "support-0161", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "2a1ce5e9d2f5ffe5ecaa97c5594aaea6", "scenario_id": "support-0162", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "d2058d7faca954179838588428fad7cb", "scenario_id": "support-0165", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "9f1f09db43956f050887d88b8b3440ac", "scenario_id": "support-0166", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "32e575094ed38290d8af4b08df839646", "scenario_id": "support-0168", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "fb21be67f55ab47458d79dd8383700f0", "scenario_id": "support-0170", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "2269cc0a9d6da4a1190a564400b228a6", "scenario_id": "support-0173", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "5ab7ca533860fe4332c5cba795c015a0", "scenario_id": "support-0175", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "09232b392e41b28f2238f7abf08618f7", "scenario_id": "support-0176", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "3f220d7594c6dea41c0773c2c63a2433", "scenario_id": "support-0177", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "f7b7e44945b7687c53ec001369bdae85", "scenario_id": "support-0178", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "dd1258a3177f81307537f913bd7ef2d7", "scenario_id": "support-0179", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "bcc3d43c1d482d0c4ed268a7163617f3", "scenario_id": "support-0180", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "43a2f78ba729e4fc8b1c1976c33d293b", "scenario_id": "support-0183", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "18fbd53999d3497c9e72e667e16a8624", "scenario_id": "support-0185", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "8eb20df8cab32d1e36fd8813a3606040", "scenario_id": "support-0188", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "c21dc348acc4ad418313116bc8f2d395", "scenario_id": "support-0194", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "80fd0d7f67642bd14fab51af8a419bda", "scenario_id": "support-0196", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "318b77040a356013cd606ace7ab5071c", "scenario_id": "support-0205", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "7a656dc4bd53958b885172aa56e5420d", "scenario_id": "support-0209", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "ff538fc1b82ee947d730dd9e666ee817", "scenario_id": "support-0210", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "bb6a6aa3a9c7cff0429a6a5603cc34d3", "scenario_id": "support-0211", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "eb66d8c3c47d014a4875bca715700fa1", "scenario_id": "support-0213", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "e554d383cf7fcb2c46a7333cfa3f0cd3", "scenario_id": "support-0214", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "78e4c7372d4d65a1a9b6060732616c3f", "scenario_id": "support-0215", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "4abc4c014846ad489aa16274e8d7130a", "scenario_id": "support-0216", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "b8c904fb48d2140f20b61318b24b89ae", "scenario_id": "support-0220", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "a52a2d7c2109ca942fea62c56ccf3dc3", "scenario_id": "support-0222", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "eb7a4ef263bd1a14b057398655d82e66", "scenario_id": "support-0225", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "d2e0f1226c144a8490291119a80be87c", "scenario_id": "support-0226", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "67e72d25d032efff01f1277ca3201b60", "scenario_id": "support-0228", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "93d1a05dda7b8465ea3c316d55979214", "scenario_id": "support-0231", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "022cb8fd8a62b46c0b22880f05e01367", "scenario_id": "support-0233", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "9fee979c1d709730993a8f6fb33047c7", "scenario_id": "support-0235", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "deccbb8cf2e1697dc94d87df26a69d0e", "scenario_id": "support-0237", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "cfe1f89788c9506fc5eaa30cf33f0951", "scenario_id": "support-0247", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "918e0a19d0b28fa6c627db69b241e864", "scenario_id": "support-0248", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "95616bae87e55cc00eac63b3d178a067", "scenario_id": "support-0053", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "4b28c6ea097407dca5ab78eb3d72a353", "scenario_id": "support-0076", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "87db91964ae6fe4c14acac16050d44a8", "scenario_id": "support-0098", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "a7103794250d93ecabb0d215e6c1fc75", "scenario_id": "support-0111", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "77e9b73a6a7d2f9ba8fc158ac08aa2d7", "scenario_id": "support-0182", "label": 0, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "1c5a6f3308918a3efb3cdd921ef35981", "scenario_id": "support-0192", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "302e47bc15fe3a3a7247b20d3495a756", "scenario_id": "support-0208", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "5b05ceab9adb1b3eeed6ae0d93ed03a6", "scenario_id": "support-0191", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "9cccbc338364dcdfc43a9b1bf1f1184e", "scenario_id": "support-0107", "label": 1, "evidence": "HW4 label", "source": "hw4", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "d3d0fb92-1b02-4d29-9bca-48a85192cac5", "scenario_id": "hw5t-001", "label": 1, "evidence": "it said the right thing", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "8ce3874a-a1b6-4d10-9640-895a57021f9d", "scenario_id": "hw5t-002", "label": 1, "evidence": "it followed the rule (asked for order ID, never said missing)", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "6d772528-a1ff-4fb7-9824-e7a2226e9d13", "scenario_id": "hw5t-003", "label": 1, "evidence": "it said the right thing", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "63dcada4-8ebb-4e5d-9c9b-db33654775d8", "scenario_id": "hw5t-004", "label": 0, "evidence": "it was in the database (row 3), agent said not among orders", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "dcc68db5-6b46-4772-8656-d73b494dad05", "scenario_id": "hw5t-005", "label": 1, "evidence": "it said the right thing", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "1869f455-9b02-48f4-9a55-33dc01c1eef0", "scenario_id": "hw5t-006", "label": 1, "evidence": "no false missing claim. Separate concern: cancelled a placed order; check policy", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "0538464e-60ea-4755-ae7e-72989c86d3bf", "scenario_id": "hw5t-007", "label": 0, "evidence": "falsely reported it missing (row 1)", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "5b704789-39a2-42c5-b618-bb1a2ababa9d", "scenario_id": "hw5t-008", "label": 1, "evidence": "found and cancelled", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "deb85d52-3dad-4381-bba7-12e695555e2c", "scenario_id": "hw5t-009", "label": 1, "evidence": "found and cancelled", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "299410c5-f2a2-4332-addb-9343be854066", "scenario_id": "hw5t-010", "label": 1, "evidence": "found it", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "c23ddb05-7dd9-41f0-a480-2efd85b356fa", "scenario_id": "hw5t-011", "label": 1, "evidence": "misread the store, not a claim of absence (changed from PRESENT after review)", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "a958252f-d39b-4ddf-b870-a77cff30e873", "scenario_id": "hw5t-012", "label": 1, "evidence": "agent found the order", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "aa694ffe-593d-4998-b47c-c18cbf0fecf8", "scenario_id": "hw5t-013", "label": 1, "evidence": "declined without claiming absence; fails other dimensions (changed from PRESENT after review)", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "37187fa8-ae2a-4ccc-a720-aa8f406e3847", "scenario_id": "hw5t-014", "label": 0, "evidence": "the plural broke the search (journals)", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "bf546393-e0f2-4592-b452-f00e36a20b5e", "scenario_id": "hw5t-015", "label": 0, "evidence": "plural search (webcams)", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "3a2a9327-b2c2-48b1-90ca-9272c1d9d798", "scenario_id": "hw5t-016", "label": 0, "evidence": "plural search (rain shells)", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "89b64699-c1be-489e-8d0d-7ae8776882fd", "scenario_id": "hw5t-017", "label": 1, "evidence": "never claimed anything missing", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "2ec0f63b-ffdd-4b20-b477-b77afa82386c", "scenario_id": "hw5t-018", "label": 1, "evidence": "agent listed the puzzles, never said anything was missing", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "c3cf044c-b62a-4d7f-b714-82ebefbf3f91", "scenario_id": "hw5t-019", "label": 0, "evidence": "falsely reported, the product was clearly there", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "d478159f-92aa-4867-96a6-2247b5ff56b8", "scenario_id": "hw5t-020", "label": 0, "evidence": "it exists and the agent said it didn't", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "981c6d85-30b4-43cb-8249-1cf6721a1b14", "scenario_id": "hw5t-021", "label": 0, "evidence": "store error reported as store not available; product exists at Northwind Books", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "e2146280-bdb3-4d23-a83d-a7a31e418aa0", "scenario_id": "hw5t-022", "label": 1, "evidence": "found the speaker and gave the price", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "9b63149ccbd4bfd46074851cd29604e1", "scenario_id": "support-0040", "label": 1, "evidence": "the agent ran the order lookup and what it said is fine", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "cfd24f783a3d242710efac45a5d34034", "scenario_id": "support-0045", "label": 0, "evidence": "no product names, and the item was there", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "9567c3a07970973ad5b5107c410f3445", "scenario_id": "support-0056", "label": 1, "evidence": "found the order and refunded it", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "8e09df7bf56c2fd7456ebd21b435e67b", "scenario_id": "support-0057", "label": 0, "evidence": "no product names; agent said \"does not match any items listed\" (changed from ABSENT after review)", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "21298724db9fb66ad8e7a7c37a534fb7", "scenario_id": "support-0074", "label": 1, "evidence": "found the order, never said anything was missing", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "33a6a2b0782a858be772acf268866c23", "scenario_id": "support-0079", "label": 0, "evidence": "it was there and marked delivered", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "55a19947409e4951fff6db108ef57f6f", "scenario_id": "support-0105", "label": 1, "evidence": "didn't say anything was missing", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "b040d78cddb348a7bf0b1c10af69e52c", "scenario_id": "support-0106", "label": 1, "evidence": "found order 880, never said anything was missing", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "da5050a0958c13895977b8b591a97177", "scenario_id": "support-0116", "label": 1, "evidence": "no item named, never said anything was missing", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "38ebe9d71a40a420b5c8bc700e9e6dd3", "scenario_id": "support-0147", "label": 1, "evidence": "other failure: incomplete answer, touches on the policy but not enough", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}
+{"trace_id": "de2a7c93535beafd334d2018b8c0d578", "scenario_id": "support-0201", "label": 1, "evidence": "agent said the list has no product names; never said the tray wasn't there", "source": "hw5_voice", "label_convention": "1=Pass,0=Fail"}

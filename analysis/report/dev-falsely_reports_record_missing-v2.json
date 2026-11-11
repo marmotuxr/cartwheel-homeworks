@@ -1,0 +1,31 @@
+{
+  "judge_id": "falsely_reports_record_missing-v2",
+  "prompt_path": "analysis/prompts/falsely_reports_record_missing-v2.txt",
+  "prompt_hash": "e127843342ed",
+  "model": "gpt-4o-mini",
+  "dev": {
+    "judge_id": "falsely_reports_record_missing-v2",
+    "split": "dev",
+    "tpr": 0.9556,
+    "tnr": 0.9091,
+    "tpr_interval": [
+      0.8517,
+      0.9877
+    ],
+    "tnr_interval": [
+      0.6226,
+      0.9838
+    ],
+    "agreement": 0.9464,
+    "tp": 43,
+    "fn": 2,
+    "tn": 10,
+    "fp": 1,
+    "n": 56,
+    "disagreements": [
+      "302e47bc15fe3a3a7247b20d3495a756",
+      "55a19947409e4951fff6db108ef57f6f",
+      "cfd24f783a3d242710efac45a5d34034"
+    ]
+  }
+}

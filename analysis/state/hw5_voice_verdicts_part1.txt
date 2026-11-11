@@ -1,0 +1,21 @@
+# HW5 voice labeling, Part 1 (hw5t-001..017), mode: falsely_reports_record_missing
+# Labeled by Eve over voice, 2026-11-10. PRESENT = failure present (Fail), ABSENT = Pass.
+hw5t-001 | ABSENT | it said the right thing
+hw5t-002 | ABSENT | it followed the rule (asked for order ID, never said missing)
+hw5t-003 | ABSENT | it said the right thing
+hw5t-004 | PRESENT | it was in the database (row 3), agent said not among orders
+hw5t-005 | ABSENT | it said the right thing
+hw5t-006 | ABSENT | no false missing claim. Separate concern: cancelled a placed order; check policy
+hw5t-007 | PRESENT | falsely reported it missing (row 1)
+hw5t-008 | ABSENT | found and cancelled
+hw5t-009 | ABSENT | found and cancelled
+hw5t-010 | ABSENT | found it
+hw5t-011 | ABSENT | misread the store, not a claim of absence (changed from PRESENT after review)
+hw5t-012 | ABSENT | agent found the order
+hw5t-013 | ABSENT | declined without claiming absence; fails other dimensions (changed from PRESENT after review)
+hw5t-014 | PRESENT | the plural broke the search (journals)
+hw5t-015 | PRESENT | plural search (webcams)
+hw5t-016 | PRESENT | plural search (rain shells)
+hw5t-017 | ABSENT | never claimed anything missing
+
+# Office hours question: is voice labeling a valid method for short, single-question error analysis?

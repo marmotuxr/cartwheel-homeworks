@@ -1,0 +1,32 @@
+{
+  "judge_id": "falsely_reports_record_missing-v1",
+  "model": "gpt-4o-mini",
+  "test": {
+    "judge_id": "falsely_reports_record_missing-v1",
+    "split": "test",
+    "tpr": 0.9556,
+    "tnr": 0.6667,
+    "tpr_interval": [
+      0.8517,
+      0.9877
+    ],
+    "tnr_interval": [
+      0.3906,
+      0.8619
+    ],
+    "agreement": 0.8947,
+    "tp": 43,
+    "fn": 2,
+    "tn": 8,
+    "fp": 4,
+    "n": 57,
+    "disagreements": [
+      "09232b392e41b28f2238f7abf08618f7",
+      "37187fa8-ae2a-4ccc-a720-aa8f406e3847",
+      "3a2a9327-b2c2-48b1-90ca-9272c1d9d798",
+      "759cb37ec72e60d96017e8cbd8b14cfe",
+      "77e9b73a6a7d2f9ba8fc158ac08aa2d7",
+      "c23ddb05-7dd9-41f0-a480-2efd85b356fa"
+    ]
+  }
+}
