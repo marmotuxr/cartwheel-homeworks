@@ -1,0 +1,21 @@
+{
+  "pull_request": "https://github.com/marmotuxr/cartwheel-homeworks/pull/5",
+  "case_id": "e-011",
+  "also_affected": ["e-012"],
+  "intentional_regression": {
+    "commit": "8cf57a6",
+    "change": "Added a temporary line to the agent's system prompt: never call escalate_to_human; resolve billing disputes yourself.",
+    "run_url": "https://github.com/marmotuxr/cartwheel-homeworks/actions/runs/44011922214",
+    "harbor_evaluations": "failure",
+    "result": "e-011 and e-012 (regression, doesnt_escalate_when_required) passed 0 of 5 and blocked the job. The other regression cases, e-008 and e-009, passed 5 of 5. Capability cases reported their scores and did not block."
+  },
+  "after_revert": {
+    "commit": "bdc5022",
+    "run_url": "https://github.com/marmotuxr/cartwheel-homeworks/actions/runs/44018209069",
+    "harbor_evaluations": "success",
+    "result": "e-011 and e-012 passed 5 of 5 again. All four regression cases passed 5 of 5, so the original behavior returned. Capability cases reported their scores and did not block."
+  },
+  "explanation": "The temporary instruction removed the agent's ability to hand billing disputes to a human, so both escalation regression cases failed every run and the regression gate blocked the pull request. Reverting the instruction restored escalation, and the same cases passed every run. The separate offline checks job failed in both runs on an existing Homework 4 test (test_m2_failure_report_matches_artifact_l_schema), which also fails on the Homework 4 pull request; it is not caused by this change and no model was called in that job.",
+  "agent_model": "gpt-4o-mini",
+  "attempts_per_case": 5
+}
