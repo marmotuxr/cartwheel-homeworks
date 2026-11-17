@@ -17,6 +17,22 @@ def _case_id(task_name: str, known_ids: set[str]) -> str | None:
     return max(matches, key=len) if matches else None
 
 
+def _trial_results(job_dir: Path, result: dict[str, Any]) -> list[dict[str, Any]]:
+    """Return the job's trials, oldest first.
+
+    Some Harbor 0.23.0 runs write only job stats in the top-level result.json
+    and keep each trial's result in ``<job_dir>/<trial>/result.json``. Fall back
+    to those files, ordered by start time, when ``trial_results`` is absent.
+    """
+    if "trial_results" in result:
+        return list(result["trial_results"])
+    trials = [
+        json.loads(path.read_text())
+        for path in job_dir.glob("*/result.json")
+    ]
+    return sorted(trials, key=lambda trial: str(trial.get("started_at", "")))
+
+
 def _reward(trial: dict[str, Any]) -> float | None:
     verifier = trial.get("verifier_result")
     if not isinstance(verifier, dict):
@@ -49,7 +65,7 @@ def summarize_job(
     result = json.loads(result_path.read_text())
     trials: dict[str, list[dict[str, Any]]] = defaultdict(list)
     unknown: list[str] = []
-    for trial in result.get("trial_results", []):
+    for trial in _trial_results(job_dir, result):
         case_id = _case_id(str(trial.get("task_name", "")), set(by_id))
         if case_id is None:
             unknown.append(str(trial.get("task_name", "")))
