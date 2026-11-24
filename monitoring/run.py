@@ -55,27 +55,106 @@ def _iso(value: datetime) -> str:
 
 
 def fetch_window(start: datetime, end: datetime) -> list[dict[str, Any]]:
-    """Return full Langfuse traces (as dicts) whose timestamp is in [start, end]."""
+    """Return full traces (as dicts) whose timestamp is in [start, end].
+
+    Self-hosted Langfuse v3 (the course's local stack) serves the v1 traces
+    API. Langfuse Cloud removed that API on 2026-11-19 (HTTP 410) and serves
+    only GET /api/public/v2/observations, so on a 410 the traces are rebuilt
+    from observation rows grouped by trace id.
+    """
     from langfuse import get_client
+    from langfuse.api.core.api_error import ApiError
 
     from analysis.helpers.normalization import _data
 
     client = get_client()
     summaries: list[Any] = []
     page = 1
-    while True:
-        response = client.api.trace.list(
-            from_timestamp=start, to_timestamp=end, page=page, limit=100
-        )
-        summaries.extend(response.data or [])
-        total_pages = getattr(response.meta, "total_pages", None) or 1
-        if page >= total_pages:
-            break
-        page += 1
+    try:
+        while True:
+            response = client.api.trace.list(
+                from_timestamp=start, to_timestamp=end, page=page, limit=100
+            )
+            summaries.extend(response.data or [])
+            total_pages = getattr(response.meta, "total_pages", None) or 1
+            if page >= total_pages:
+                break
+            page += 1
+    except ApiError as error:
+        if error.status_code != 410:
+            raise
+        return _fetch_window_v2(start, end)
     traces = []
     for summary in summaries:
         full = client.api.trace.get(summary.id)
         traces.append(_data(full))
+    return traces
+
+
+def _fetch_window_v2(start: datetime, end: datetime) -> list[dict[str, Any]]:
+    """Rebuild trace dicts from Langfuse Cloud's v2 observations API."""
+    import base64
+    import urllib.parse
+    import urllib.request
+
+    host = os.environ["LANGFUSE_HOST"].rstrip("/")
+    token = base64.b64encode(
+        f"{os.environ['LANGFUSE_PUBLIC_KEY']}:{os.environ['LANGFUSE_SECRET_KEY']}".encode()
+    ).decode()
+    rows: list[dict[str, Any]] = []
+    cursor = None
+    while True:
+        params = {
+            "fromStartTime": _iso(start),
+            "toStartTime": _iso(end),
+            "fields": "core,basic,io,metadata,model",
+            "expandMetadata": "attributes",
+            "limit": 1000,
+        }
+        if cursor:
+            params["cursor"] = cursor
+        request = urllib.request.Request(
+            f"{host}/api/public/v2/observations?{urllib.parse.urlencode(params)}",
+            headers={"Authorization": f"Basic {token}"},
+        )
+        with urllib.request.urlopen(request, timeout=60) as response:
+            body = json.load(response)
+        rows.extend(body.get("data") or [])
+        cursor = (body.get("meta") or {}).get("cursor")
+        if not cursor:
+            break
+
+    def parsed(value: Any) -> Any:
+        if isinstance(value, str):
+            try:
+                return json.loads(value)
+            except ValueError:
+                return value
+        return value
+
+    by_trace: dict[str, list[dict[str, Any]]] = {}
+    for row in rows:
+        by_trace.setdefault(str(row["traceId"]), []).append(row)
+    traces = []
+    for trace_id, group in by_trace.items():
+        group.sort(key=lambda row: row.get("startTime") or "")
+        root = next((r for r in group if not r.get("parentObservationId")), group[0])
+        metadata = parsed(root.get("metadata")) or {}
+        traces.append(
+            {
+                "id": trace_id,
+                "timestamp": root.get("startTime"),
+                "sessionId": root.get("sessionId"),
+                "metadata": metadata,
+                "input": parsed(root.get("input")),
+                "output": parsed(root.get("output")),
+                "observations": [
+                    {**r, "input": parsed(r.get("input")), "output": parsed(r.get("output"))}
+                    for r in group
+                    if r is not root
+                ],
+            }
+        )
     return traces
 
 
