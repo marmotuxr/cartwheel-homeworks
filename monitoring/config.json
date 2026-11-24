@@ -1,0 +1,20 @@
+{
+  "judge_id": "falsely_reports_record_missing-v1",
+  "judge_mode": "falsely_reports_record_missing",
+  "model": "gpt-4o-mini",
+  "random_rate": 0.2,
+  "risk_groups": ["multi_turn"],
+  "threshold": 0.15,
+  "periods": [
+    {
+      "label": "before",
+      "from": "2026-10-24T17:31:00Z",
+      "to": "2026-10-24T18:10:00Z"
+    },
+    {
+      "label": "after",
+      "from": "2026-11-24T18:51:03Z",
+      "to": "2026-11-24T18:54:19Z"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+name: monitor
+
+# Homework 7: once a day, sample the previous 24 hours of Cartwheel traces in
+# Langfuse, run the frozen Homework 5 judge, correct the failure rate, and
+# write the scores back to Langfuse. The job only reads existing traces, so it
+# needs no Cartwheel model key, only the judge's provider key.
+
+on:
+  schedule:
+    - cron: "0 14 * * *" # daily, 14:00 UTC (6 AM Pacific)
+  workflow_dispatch:
+
+jobs:
+  monitor:
+    name: daily monitor
+    runs-on: ubuntu-latest
+    env:
+      LANGFUSE_HOST: ${{ vars.LANGFUSE_HOST }}
+      LANGFUSE_PUBLIC_KEY: ${{ secrets.LANGFUSE_PUBLIC_KEY }}
+      LANGFUSE_SECRET_KEY: ${{ secrets.LANGFUSE_SECRET_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # frozen judge runs on gpt-4o-mini
+      PYTHONPATH: ${{ github.workspace }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      # The daily schedule runs from main. Until the Homework 7 code is merged
+      # there, skip cleanly instead of failing every day.
+      - name: Check that the monitor code is on this branch
+        id: code
+        run: |
+          if [ -f monitoring/run.py ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::monitoring/run.py is not on this branch yet; skipping."
+          fi
+
+      - uses: astral-sh/setup-uv@v5
+        if: steps.code.outputs.present == 'true'
+      - run: uv sync
+        if: steps.code.outputs.present == 'true'
+
+      - name: Sample, judge, correct, and write scores for the last 24 hours
+        if: steps.code.outputs.present == 'true'
+        run: uv run python -m monitoring.run --last-hours 24
+
+      - name: Upload the monitoring output
+        if: always() && steps.code.outputs.present == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: monitor-output
+          path: monitoring/output
+          if-no-files-found: warn
