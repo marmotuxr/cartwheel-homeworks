@@ -55,5 +55,60 @@ def corrected_mode_prevalence(
             lengths, a value is not 0 or 1, a class is absent, the judge is
             missing a usable correction, or no bootstrap replicate is valid.
     """
-    ### YOUR CODE HERE (hw7)
-    raise NotImplementedError("hw7: implement corrected_mode_prevalence")
+    import numpy as np
+
+    sample = np.asarray(sample_preds, dtype=int)
+    labels = np.asarray(test_labels, dtype=int)
+    preds = np.asarray(test_preds, dtype=int)
+    if sample.size == 0 or labels.size == 0:
+        raise ValueError("sample and held-out inputs must be nonempty")
+    if labels.size != preds.size:
+        raise ValueError("held-out labels and predictions differ in length")
+    for array in (sample, labels, preds):
+        if not np.isin(array, (0, 1)).all():
+            raise ValueError("every value must be 0 or 1")
+
+    def rates(lab: np.ndarray, pre: np.ndarray) -> tuple[float, float] | None:
+        failures, passes = lab == 1, lab == 0
+        if not failures.any() or not passes.any():
+            return None
+        sensitivity = float(pre[failures].mean())
+        specificity = float(1 - pre[passes].mean())
+        if sensitivity + specificity - 1 <= 0:
+            return None
+        return sensitivity, specificity
+
+    def rogan_gladen(raw: float, sensitivity: float, specificity: float) -> float:
+        value = (raw + specificity - 1) / (sensitivity + specificity - 1)
+        return min(1.0, max(0.0, value))
+
+    point_rates = rates(labels, preds)
+    if point_rates is None:
+        raise ValueError("held-out labels need both classes and a usable judge")
+    sensitivity, specificity = point_rates
+    raw = float(sample.mean())
+    corrected = rogan_gladen(raw, sensitivity, specificity)
+
+    rng = np.random.default_rng(seed)
+    estimates: list[float] = []
+    for _ in range(bootstrap_iterations):
+        draw_sample = sample[rng.integers(0, sample.size, sample.size)]
+        index = rng.integers(0, labels.size, labels.size)
+        draw_rates = rates(labels[index], preds[index])
+        if draw_rates is None:
+            continue
+        estimates.append(rogan_gladen(float(draw_sample.mean()), *draw_rates))
+    if not estimates:
+        raise ValueError("no bootstrap replicate could be corrected")
+    alpha = (1 - confidence) / 2
+    ci_low, ci_high = np.percentile(estimates, [100 * alpha, 100 * (1 - alpha)])
+    return {
+        "raw": round(raw, 4),
+        "corrected": round(corrected, 4),
+        "ci_low": round(float(ci_low), 4),
+        "ci_high": round(float(ci_high), 4),
+        "confidence": confidence,
+        "failure_sensitivity": round(sensitivity, 4),
+        "pass_specificity": round(specificity, 4),
+        "n_sample": int(sample.size),
+    }

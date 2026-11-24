@@ -25,3 +25,4 @@ archive/
 .sessions.db-*
 work/
 outputs/
+monitoring/output/
