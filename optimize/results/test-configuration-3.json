@@ -1,0 +1,124 @@
+{
+  "cached_fraction": 0.0,
+  "cached_input_tokens": 0,
+  "candidate": "starting-version-model-3",
+  "case_count": 4,
+  "cases": [
+    {
+      "case_id": "e-001",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:falsely_reports_record_missing"
+      ],
+      "latencies_seconds": [
+        4.1222
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:falsely_reports_record_missing"
+          ],
+          "final_reply": "To assist you with the cancellation of your purchase, I first need to verify the details of your order for the Compact Tote Bag. I'll check your recent orders to confirm that this bag is included. Once I have that information, I'll guide you through the cancellation process. \n\nLet me look up your recent orders now.\nIt looks like you do not have an order for the Compact Tote Bag from Harbor Knits in your recent orders. The orders I found include various items, but none match the description you provided.\n\nCould you please confirm the product name or provide any additional details about the order? This will help me assist you further with the cancellation.",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The customer asked to cancel a purchase of the Compact Tote Bag from Harbor Knits. The agent called list_my_orders, which returned a list of orders but did not include any product names. The agent then stated, 'It looks like you do not have an order for the Compact Tote Bag from Harbor Knits in your recent orders.' This is a claim of absence without grounds, as the lookup results did not provide any information about the Compact Tote Bag. The agent should not have concluded that the item was missing based on the available data.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-003",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:falsely_reports_record_missing"
+      ],
+      "latencies_seconds": [
+        6.3144
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:falsely_reports_record_missing"
+          ],
+          "final_reply": "I'll check your recent order to confirm the details of the purchase before proceeding with the cancellation. This will ensure I have the correct information regarding the Sturdy Water Bottle. \n\nLet me look up your recent orders now.\nI found your recent orders, but it looks like there are no orders for a \"Sturdy Water Bottle\" from Meridian Cycles. Here are your most recent orders:\n\n1. **Order ID 1247**: Status - Shipped, Item - Total $255.00\n2. **Order ID 9007**: Status - Delivered, Item - Total $210.25\n3. Other orders also delivered or cancelled.\n\nSince I couldn't find an order for the Sturdy Water Bottle, could you please confirm if the item was ordered under a different name or if you have more details about the order? This will help me assist you better.",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The customer mentioned a specific product, the Sturdy Water Bottle from Meridian Cycles, and requested to cancel the purchase. The agent called for recent orders, which returned a list of orders without product names. The agent then stated, 'it looks like there are no orders for a Sturdy Water Bottle from Meridian Cycles.' This is a claim of absence without grounds, as the lookup results do not provide product names, and thus the agent could not have confirmed that the item was missing. The agent's wording suggests a definitive absence of the item, which is not supported by the tool results.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-009",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        4.8895
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I'll search for available journals specifically at Paper Lantern Press to see what products they have in stock. Please hold on for a moment.\nHere are the available journals at Paper Lantern Press:\n\n1. **Portable Journal** - $160.50\n2. **Modern Journal** - $184.25\n3. **Modern Journal** - $232.75\n4. **Everyday Journal** - $276.50\n5. **Vintage Journal** - $291.25\n\nLet me know if you need more information about any of these products!",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The customer asked for available journals at Paper Lantern Press. The agent called search_products with the query 'Journal' and the store 'Paper Lantern Press', which returned five products, all with titles and prices. The agent then listed these products without suggesting that any are missing. Since the agent provided a complete list of available journals, there is no claim of absence, and thus this failure mode is absent.\", \"result\": \"Pass\"}"
+          },
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-010",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:falsely_reports_record_missing"
+      ],
+      "latencies_seconds": [
+        1.9772
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:falsely_reports_record_missing"
+          ],
+          "final_reply": "I'm unable to assist with finding a perpetual-motion home generator as such products do not exist according to the laws of physics. However, I can help you find similar energy solutions if you're interested.",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The agent states, 'I'm unable to assist with finding a perpetual-motion home generator as such products do not exist according to the laws of physics.' This is a claim of absence without grounds, as the agent did not perform any lookup to verify the existence of the product. The agent should have either conducted a search or stated that they could not retrieve the information instead of claiming that the product does not exist.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    }
+  ],
+  "cost_per_100_conversations_usd": 0.044299,
+  "cost_usd": 0.001772,
+  "created_at": "2026-11-28T20:25:04.659832+00:00",
+  "evaluated_case_runs": 4,
+  "git_commit": "a4465f7162d5b24363b55c25797e262184d66fd0",
+  "input_tokens": 9721,
+  "median_latency_seconds": 4.5059,
+  "model": "gpt-4o-mini",
+  "output_tokens": 523,
+  "price_date": "2026-11-28",
+  "prompt_sha256_12": "457cf684927e",
+  "schema_version": 1,
+  "score": 0.25,
+  "split": "test",
+  "test_plan_sha256": "c4fad0c78a2081ac6c28091932f7c376d5e1032043eaa38b4adbfe78c88c125e",
+  "write_pass_5": null
+}

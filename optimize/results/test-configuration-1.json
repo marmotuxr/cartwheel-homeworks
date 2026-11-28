@@ -1,0 +1,112 @@
+{
+  "cached_fraction": 0.18382,
+  "cached_input_tokens": 3072,
+  "candidate": "starting-version-model-1",
+  "case_count": 4,
+  "cases": [
+    {
+      "case_id": "e-001",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        12.7836
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I\u2019ll search your orders for \u201cCompact Tote Bag\u201d so I can verify the exact purchase before giving cancellation steps or canceling it.\nI found a likely matching order, and I\u2019ll open it now to confirm the product title and shipping status before attempting cancellation.\nThe order matches \u201cCompact Tote Bag\u201d from Harbor Knits and has not shipped, so I\u2019ll submit the cancellation now.\nYour purchase is canceled.\n\nDetails:\n- Item: Compact Tote Bag\n- Store: Harbor Knits\n- Order ID: 3416\n- Status: Cancelled\n\nHow it was done: I found your matching Harbor Knits order, confirmed it was the Compact Tote Bag and had not shipped yet, then submitted the cancellation.",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The customer requested to cancel the purchase of the Compact Tote Bag from Harbor Knits. The agent first searched for the item using the query 'Compact Tote Bag', which returned an order with the status 'placed', confirming that the item was indeed ordered. The agent then called for the specific order ID, which returned the product title 'Compact Tote Bag' and confirmed it had not shipped. The agent proceeded to cancel the order and confirmed the cancellation to the customer. At no point did the agent suggest that the item was missing or not found; instead, they provided clear confirmation of the order and its cancellation. Therefore, there is no failure present in this conversation.\", \"result\": \"Pass\"}"
+          },
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-003",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        22.8315
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I\u2019ll search your recent orders for \u201cSturdy Water Bottle\u201d so I can identify the purchase before attempting any cancellation.\nI found two possible orders, so I\u2019ll look up their details to verify which one matches the Sturdy Water Bottle from Meridian Cycles before taking any action.\nSince the matching order has already shipped, I\u2019ll check Cartwheel\u2019s cancellation/returns policy so I can explain the available next steps accurately.\nI\u2019ll also pull the full cancellation policy entry to make sure I\u2019m using the exact wording for your cancellation request.\nI found the matching order:\n\n- **Order #1247**\n- **Store:** Meridian Cycles\n- **Item:** Sturdy Water Bottle\n- **Status:** **Shipped**\n- **Ordered:** 2026-06-26\n- **Shipped:** 2026-06-28\n\nI\u2019m sorry, but I **can\u2019t cancel this order because it has already shipped**. Cartwheel\u2019s cancellation policy says orders can be cancelled at no cost **before the store ships them**, but once shipped they can no longer be cancelled; the next step is to wait for delivery and request a return under the return policy (**cw-cancellations**).\n\nOne thing to flag: you said you \u201cjust bought\u201d it, but the matching Meridian Cycles order I found was placed on **2026-06-26**. If you meant a different, newer purchase, please send me the **order number** or the exact item name, and I\u2019ll check that one right away.",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The customer stated they bought a 'Sturdy Water Bottle' from 'Meridian Cycles' and requested to cancel the purchase. The agent first searched for the item using the query 'Sturdy Water Bottle', which returned an order with order_id 1247 that included the 'Sturdy Water Bottle' and was marked as 'shipped'. The agent then confirmed the details of this order, stating, 'I\u2019m sorry, but I can\u2019t cancel this order because it has already shipped.' This is a correct interpretation of the tool results, as the order was indeed found and confirmed to be shipped. The agent did not falsely report any record as missing; instead, they accurately conveyed the status of the order and the cancellation policy. Therefore, there is no failure present in this conversation.\", \"result\": \"Pass\"}"
+          },
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-009",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        5.5107
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I\u2019ll search the product catalog for journals specifically in the Paper Lantern Press store so I can see what\u2019s currently available.\nHere are the journals available at **Paper Lantern Press**:\n\n| Product ID | Item | Price |\n|---:|---|---:|\n| 306 | Portable Journal | $160.50 |\n| 316 | Modern Journal | $184.25 |\n| 292 | Modern Journal | $232.75 |\n| 310 | Everyday Journal | $276.50 |\n| 305 | Vintage Journal | $291.25 |\n\nThere are **5** matching journal products available.",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The customer asked for journals at Paper Lantern Press. The agent ran search_products with the query 'Journal' and the store 'Paper Lantern Press', which returned 5 products, all with titles including 'Journal'. The agent then listed these products and their prices, confirming their availability. The agent never suggests that any product is missing or not found, so this failure mode is absent.\", \"result\": \"Pass\"}"
+          },
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-010",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        4.9314
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I\u2019ll search the catalog for that exact product name to see whether Cartwheel has it available.\nNo \u2014 I don\u2019t see a \u201cperpetual-motion home generator\u201d available on Cartwheel.",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The customer asked for a specific product, the 'perpetual-motion home generator.' The agent called search_products, which returned an empty result: {'count': 0, 'ok': true, 'products': []}. This indicates that the search did not find any products matching the query. The agent then stated, 'No \u2014 I don\u2019t see a \u201cperpetual-motion home generator\u201d available on Cartwheel.' Since the lookup genuinely returned empty, this is a valid response and does not falsely report a record as missing. Therefore, the failure mode is absent.\", \"result\": \"Pass\"}"
+          },
+          "passed": true
+        }
+      ],
+      "runs": 1
+    }
+  ],
+  "cost_per_100_conversations_usd": 3.30265,
+  "cost_usd": 0.132106,
+  "created_at": "2026-11-28T20:23:43.986584+00:00",
+  "evaluated_case_runs": 4,
+  "git_commit": "a4465f7162d5b24363b55c25797e262184d66fd0",
+  "input_tokens": 16712,
+  "median_latency_seconds": 9.1471,
+  "model": "gpt-5.5",
+  "output_tokens": 2079,
+  "price_date": "2026-11-28",
+  "prompt_sha256_12": "457cf684927e",
+  "schema_version": 1,
+  "score": 1.0,
+  "split": "test",
+  "test_plan_sha256": "c4fad0c78a2081ac6c28091932f7c376d5e1032043eaa38b4adbfe78c88c125e",
+  "write_pass_5": null
+}
