@@ -1,0 +1,83 @@
+{
+  "changed_layers": [
+    "tool",
+    "harness",
+    "prompt"
+  ],
+  "comparison_models": [
+    "gpt-5.5",
+    "gpt-5.4-mini",
+    "gpt-4o-mini"
+  ],
+  "created_at": "2026-11-28T20:22:37.566678+00:00",
+  "development_model": "gpt-4o-mini",
+  "development_result": "/Users/ejkim17/Documents/Codex/2026-10-21/https-github-com-ai-evals-course/optimize/results/latest-development.json",
+  "development_score": 0.666667,
+  "git_commit": "6c9bb56738a9ecf079cd35aac9ac7ce58bba6cf0",
+  "grader_sha256": "4861fe599b739751b122f29a08355615b80bff4d960110744dd66683a46bd2b4",
+  "kind": "final",
+  "method": [
+    "manual",
+    "improve-loop"
+  ],
+  "model_selection_sha256": "b195a4ee316b7929123d854c5df2d519909d0be5a2302a1cfb5915e3bdcac00f",
+  "prompt_sha256_12": "0d1d92aefad1",
+  "search_budget": {
+    "maximum_calls": 150,
+    "reservations": [
+      {
+        "calls": 9,
+        "label": "loop_baseline",
+        "reserved_at": "2026-11-28T20:11:14.625190+00:00"
+      },
+      {
+        "calls": 9,
+        "label": "d1_order_tool_descriptions",
+        "reserved_at": "2026-11-28T20:12:18.810869+00:00"
+      },
+      {
+        "calls": 9,
+        "label": "d2_name_find_order_results",
+        "reserved_at": "2026-11-28T20:13:35.887641+00:00"
+      },
+      {
+        "calls": 9,
+        "label": "d2_rerun",
+        "reserved_at": "2026-11-28T20:14:29.758486+00:00"
+      },
+      {
+        "calls": 9,
+        "label": "d3_escalate_account_and_disputes",
+        "reserved_at": "2026-11-28T20:15:38.574342+00:00"
+      },
+      {
+        "calls": 9,
+        "label": "d3_rerun",
+        "reserved_at": "2026-11-28T20:16:35.657662+00:00"
+      },
+      {
+        "calls": 9,
+        "label": "d4_escalate_tool_description",
+        "reserved_at": "2026-11-28T20:17:39.495129+00:00"
+      },
+      {
+        "calls": 9,
+        "label": "d4_rerun",
+        "reserved_at": "2026-11-28T20:18:34.273611+00:00"
+      },
+      {
+        "calls": 9,
+        "label": "d5_contact_changes_escalate",
+        "reserved_at": "2026-11-28T20:19:40.265317+00:00"
+      },
+      {
+        "calls": 9,
+        "label": "d5_rerun",
+        "reserved_at": "2026-11-28T20:20:40.085817+00:00"
+      }
+    ],
+    "used_calls": 90
+  },
+  "split_membership_sha256": "ca4b28db7720dc882c5843e69f78181e392ce3e7cf25432a0b85eef7b89c9915",
+  "write_pass_5": null
+}
