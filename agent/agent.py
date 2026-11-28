@@ -426,7 +426,11 @@ def search_products(
 
 @function_tool
 def list_my_orders(wrapper: RunContextWrapper[AuthContext]) -> dict[str, Any]:
-    """List the caller's recent orders (shopper) or their store's recent orders (merchant)."""
+    """List the caller's 20 most recent orders (shopper) or their store's (merchant).
+
+    Older orders are not included. When the customer names a specific item,
+    use find_order instead: it searches all of their orders by product name.
+    """
     return _call(wrapper, hw_tools.list_my_orders)
 
 
@@ -442,7 +446,13 @@ def cancel_order(
 def find_order(
     wrapper: RunContextWrapper[AuthContext], query: str
 ) -> dict[str, Any]:
-    """Search your orders by product name (fuzzy match)."""
+    """Search ALL of the customer's orders, including old ones, by product name.
+
+    Use this first whenever the customer names an item they ordered (e.g.,
+    "cancel my Handmade Card Game"). search_products searches the store
+    catalog, not the customer's orders. Only say an order does not exist
+    after find_order returns no match.
+    """
     return _call(wrapper, hw_tools.find_order, query)
 
 
