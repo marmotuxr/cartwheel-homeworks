@@ -355,7 +355,28 @@ def _call(
         result = fn(wrapper.context, *args)
     except NotImplementedError as exc:
         result = {"ok": False, "error": "not_implemented", "reason": str(exc)}
+    result = _note_truncated_order_list(fn, result)
     record_tool_result(wrapper.context, result)
+    return result
+
+
+def _note_truncated_order_list(fn: Any, result: dict[str, Any]) -> dict[str, Any]:
+    """Harness: tell the model when the order list it sees is not complete.
+
+    list_my_orders returns only the most recent orders, so an older order the
+    customer names is not in the list. Without this note the model reads the
+    short list as the whole history and says the order does not exist
+    (falsely_reports_record_missing, e.g. eval case e-004).
+    """
+    if fn is not hw_tools.list_my_orders or not isinstance(result, dict):
+        return result
+    if result.get("ok") and result.get("count", 0) >= hw_tools.DEFAULT_ORDER_LIMIT:
+        result = dict(result)
+        result["note"] = (
+            f"Only the {hw_tools.DEFAULT_ORDER_LIMIT} most recent orders are shown; "
+            "older orders exist and are not in this list. Before saying an order "
+            "is missing, search all orders by product name with find_order."
+        )
     return result
 
 
