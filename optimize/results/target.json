@@ -1,0 +1,12 @@
+{
+  "failure_mode": "falsely_reports_record_missing",
+  "source": "Homework 4 failure report (analysis/report/review_summary.md), judged by the frozen Homework 5 judge falsely_reports_record_missing-v1",
+  "prevalence": 0.15,
+  "requirement": "RESP-3",
+  "example_trace_ids": [
+    "7dc59adfdba5a6b7657119da79e5a9de",
+    "8b953ffe369fced78c8cf0dd697c651a",
+    "50882ee40cb526ff57c29d9e9f657921"
+  ],
+  "why_agent_can_change_it": "In all three traces (support-0100, support-0104, support-0110) the agent calls list_my_orders, which returns order IDs and statuses but no product names, so it cannot match the product the shopper names and tells them the order does not exist even when it is in its own list. The fix is inside the agent: return product names from the order tools (tool layer), tell the agent never to say an order is missing without checking each listed order (prompt layer), or look up the listed orders before a not-found reply (harness layer)."
+}
