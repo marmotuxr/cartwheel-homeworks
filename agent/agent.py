@@ -426,7 +426,13 @@ def issue_refund(
 def escalate_to_human(
     wrapper: RunContextWrapper[AuthContext], summary: str, context: str
 ) -> dict[str, Any]:
-    """Open a ticket for a human support agent when a case is above your authority."""
+    """Open a ticket for a human support agent when a case is above your authority.
+
+    Call it yourself, without asking the user first, for account-detail
+    changes (email, phone, password), charge or billing disputes, and any
+    request you cannot complete with your other tools. Write the summary
+    from what the user already told you; do not ask them to summarize.
+    """
     return _call(wrapper, escalate_to_human_logic, summary, context)
 
 
