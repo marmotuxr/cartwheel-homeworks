@@ -355,8 +355,36 @@ def _call(
         result = fn(wrapper.context, *args)
     except NotImplementedError as exc:
         result = {"ok": False, "error": "not_implemented", "reason": str(exc)}
+    result = _name_found_orders(fn, result)
     record_tool_result(wrapper.context, result)
     return result
+
+
+def _name_found_orders(fn: Any, result: dict[str, Any]) -> dict[str, Any]:
+    """Harness: add product and store names to find_order matches.
+
+    find_order returns bare order rows (the HW1 tests fix that shape), so the
+    model sees order numbers it cannot match to the item the customer named
+    and says "none of these match" (falsely_reports_record_missing).
+    """
+    if fn is not hw_tools.find_order or not isinstance(result, dict):
+        return result
+    orders = result.get("orders")
+    if not result.get("ok") or not orders:
+        return result
+    from agent import db
+
+    with db.connection() as conn:
+        products = {product.id: product for product in db.list_products(conn)}
+        named = []
+        for order in orders:
+            item = dict(order)
+            product = products.get(item.get("product_id"))
+            item["product_title"] = product.title if product else None
+            store = db.get_store(conn, item.get("store_id"))
+            item["store_name"] = store.name if store else None
+            named.append(item)
+    return {**result, "orders": named}
 
 
 @function_tool
