@@ -420,8 +420,12 @@ def judge_reply_with_text(judge: dict[str, Any], reply: str, docs: str) -> tuple
     from agent.agent import LITELLM_COURSE_MODELS
 
     model = LITELLM_COURSE_MODELS.get(judge["model"], judge["model"])
+    # `reply` is the whole conversation from judge_trace_text (user messages,
+    # tool calls and results, assistant replies), the same input the HW5
+    # judges were validated on and the HW6 Harbor rubric sends.
     user_content = (
-        f"Agent reply:\n{reply}\n\nPolicy documents retrieved in the trace:\n{docs}"
+        f"--- Trace to evaluate ---\n{reply}\n\n"
+        f"Policy documents retrieved in the trace:\n{docs}"
     )
     response = litellm.completion(
         model=model,
@@ -434,8 +438,8 @@ def judge_reply_with_text(judge: dict[str, Any], reply: str, docs: str) -> tuple
         timeout=120,
     )
     text = response.choices[0].message.content or ""
-    match = re.search(r'"answer"\s*:\s*"(pass|fail)"', text)
+    match = re.search(r'"(?:answer|result)"\s*:\s*"(pass|fail)', text, re.IGNORECASE)
     if match:
-        return match.group(1), text
+        return match.group(1).lower(), text
     lowered = text.lower()
     return ("fail" if "fail" in lowered else "pass"), text

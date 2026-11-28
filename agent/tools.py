@@ -158,27 +158,6 @@ def search_products(
     return {"ok": True, "products": products, "count": len(products)}
 
 
-def _with_product_names(conn: Any, orders: list[Any]) -> list[dict[str, Any]]:
-    """Public order dicts plus the product title and store name.
-
-    Without names the model cannot match "the bath salts I ordered" to a row,
-    and tells the shopper the order is missing (falsely_reports_record_missing).
-    """
-    products = {product.id: product for product in db.list_products(conn)}
-    stores: dict[int, Any] = {}
-    enriched = []
-    for order in orders:
-        item = order.to_public_dict()
-        product = products.get(order.product_id)
-        item["product_title"] = product.title if product else None
-        if order.store_id not in stores:
-            stores[order.store_id] = db.get_store(conn, order.store_id)
-        store = stores[order.store_id]
-        item["store_name"] = store.name if store else None
-        enriched.append(item)
-    return enriched
-
-
 def list_my_orders(ctx: AuthContext) -> dict[str, Any]:
     """List recent orders in the caller's own scope. Risk tier: read.
 
@@ -218,7 +197,7 @@ def list_my_orders(ctx: AuthContext) -> dict[str, Any]:
             orders = db.list_orders_for_store(
                 conn, ctx.store_id, limit=DEFAULT_ORDER_LIMIT
             )
-        public_orders = _with_product_names(conn, orders)
+    public_orders = [order.to_public_dict() for order in orders]
     return {"ok": True, "orders": public_orders, "count": len(public_orders)}
 
 
