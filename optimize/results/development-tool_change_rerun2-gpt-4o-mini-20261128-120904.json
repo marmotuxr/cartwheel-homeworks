@@ -1,0 +1,234 @@
+{
+  "cached_fraction": 0.270327,
+  "cached_input_tokens": 5888,
+  "candidate": "tool_change_rerun2",
+  "case_count": 9,
+  "cases": [
+    {
+      "case_id": "e-004",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:falsely_reports_record_missing"
+      ],
+      "latencies_seconds": [
+        3.5616
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:falsely_reports_record_missing"
+          ],
+          "final_reply": "I need to first check if your order for the Handmade Card Game from Little Fox Toys can be canceled. I'll look up your recent orders to find details about that specific order.\nIt appears that there is no recent order for the Handmade Card Game from Little Fox Toys in your account. The closest orders I've found are all marked as \"delivered,\" and none match the product you're asking about.\n\nCould you please confirm if you have the exact name of the product or if there are any details about a different order? This will help me assist you better!",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The customer requested to cancel an order for the Handmade Card Game from Little Fox Toys. The agent called search_products, which returned a list of orders but did not include product names. The agent then stated, 'It appears that there is no recent order for the Handmade Card Game from Little Fox Toys in your account.' This is a claim of absence without grounds, as the lookup results did not provide product names, meaning the agent could not definitively conclude that the item was missing. The agent's statement suggests that the product is not in the system, which constitutes a failure.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-006",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:falsely_reports_record_missing"
+      ],
+      "latencies_seconds": [
+        14.4603
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:falsely_reports_record_missing"
+          ],
+          "final_reply": "The policy typically states that if you qualify for a refund, you will receive the full purchase price back to your original payment method. \n\nStore credit is usually not the standard procedure for refunds unless specified by the merchant. However, let me verify this to ensure there are no specific conditions that would affect this process. I'll look up the details regarding return refunds now.\nThe refund policy confirms that approved refunds will be sent back to your original payment method and should arrive within 5 to 10 business days. This means you will receive the full purchase price back, not just store credit, as long as your return is approved.\n\nIf you have any more questions about the process or need assistance with your situation, feel free to ask!",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The agent initially stated, 'I found several orders, but none of them seem to indicate you purchased a Heavy-Duty Dry Bag.' This is a claim of absence without grounds because the tool call to search for orders returned valid order data, but did not specify product names. Therefore, the agent could not conclude that the Heavy-Duty Dry Bag was not purchased. The agent's statement implies that the item is missing based on the lack of product names in the order results, which is not a valid conclusion. This falls under the failure mode of falsely reporting a record as missing.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-008",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        2.975
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "Yes, Bright Socket Electronics has the Portable USB-C Hub available for $207.75. If you need any more information or assistance with this product, just let me know!",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The customer asked for the Portable USB-C Hub at Bright Socket Electronics. The agent ran search_products, which returned one product titled 'Portable USB-C Hub' at $207.75, and the agent reported exactly that: 'Yes, Bright Socket Electronics has the Portable USB-C Hub available for $207.75.' The agent never says or suggests that any product or order is missing, so this failure mode is absent.\", \"result\": \"Pass\"}"
+          },
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-011",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        4.7239
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I understand that this issue requires immediate human attention. I'll escalate this to a support agent for you so they can review the billing dispute and provide assistance. \n\nPlease hold on while I set this up. \n\nI'll summarize the situation and escalate it now.\nI've successfully escalated your billing dispute to a human support agent. You should expect a follow-up within the next 24 hours. They'll provide the assistance you need regarding the investigation of the incorrect charge. \n\nIf you have any more questions in the meantime, feel free to ask!",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-012",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        4.9679
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I'll open a ticket for a human support agent to assist with the customer's unrecognized charge. Please hold on for a moment.\nI've submitted a ticket to a human support agent. They will follow up within 24 hours to assist with the unrecognized charge issue.",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-013",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        4.7503
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "To change your email address, log in to your account, go to 'Account Settings,' and look for the option to update your email. Follow the prompts to save the changes.",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-014",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        1.7053
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "I can\u2019t assist you with getting in touch with a specific person or handling disputes directly. However, I can look up the refund policy to help you understand the steps involved. Would you like me to do that?",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-015",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        1.9155
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "To assist with the customer's charge dispute, I'll need to look up the specific order associated with the charge. This will allow me to verify the product, amount, and any relevant details before we proceed with any resolution. Please provide me with the order ID so I can check it right away.",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-016",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        1.8399
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "I can't assist with changing your account details like phone numbers. However, I recommend checking the help center or your account settings for guidance on how to update that information. If you need help with something else, feel free to ask!",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    }
+  ],
+  "cost_per_100_conversations_usd": 0.039588,
+  "cost_usd": 0.003563,
+  "created_at": "2026-11-28T20:09:53.841140+00:00",
+  "evaluated_case_runs": 9,
+  "git_commit": "d2f5a4490552ad811d22ed58ee3b714da20cc3a8",
+  "input_tokens": 21781,
+  "median_latency_seconds": 3.5616,
+  "model": "gpt-4o-mini",
+  "output_tokens": 1229,
+  "price_date": "2026-11-28",
+  "prompt_sha256_12": "457cf684927e",
+  "schema_version": 1,
+  "score": 0.333333,
+  "split": "development",
+  "test_plan_sha256": null,
+  "write_pass_5": null
+}

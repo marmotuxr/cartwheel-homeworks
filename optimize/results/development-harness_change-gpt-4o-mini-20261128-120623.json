@@ -1,0 +1,234 @@
+{
+  "cached_fraction": 0.143041,
+  "cached_input_tokens": 2560,
+  "candidate": "harness_change",
+  "case_count": 9,
+  "cases": [
+    {
+      "case_id": "e-004",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:falsely_reports_record_missing"
+      ],
+      "latencies_seconds": [
+        3.5769
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:falsely_reports_record_missing"
+          ],
+          "final_reply": "Before proceeding with the cancellation, I need to verify your order details to ensure accuracy. I'll look up your recent orders to find the one related to the Handmade Card Game.\nIt appears that your order for the Handmade Card Game does not exist as there's no recent record matching that product from Little Fox Toys. \n\nIf you believe there may be a mistake or if you want to check for a different order, please let me know!",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The customer requested to cancel an order for the Handmade Card Game from Little Fox Toys. The agent called search_products, which returned a list of orders but did not include product names. The agent then stated, 'It appears that your order for the Handmade Card Game does not exist as there's no recent record matching that product from Little Fox Toys.' This is a claim of absence without grounds, as the lookup could not confirm the absence of the product. The agent should have acknowledged the limitation of the tool results instead of stating that the order does not exist.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-006",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:falsely_reports_record_missing"
+      ],
+      "latencies_seconds": [
+        10.3267
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:falsely_reports_record_missing"
+          ],
+          "final_reply": "Whether you receive a full refund or store credit can depend on the store's specific return policy. Typically, if the return is approved, you would receive the original purchase price back. \n\nHowever, since your order for the Heavy-Duty Dry Bag is not eligible for a refund, returning it may not apply in your case. \n\nFor accurate information on returns and refunds, refer to the return policy under the ID cw-returns. If you need help navigating this or have further questions, just let me know!",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The agent initially looked up the Heavy-Duty Dry Bag using a query that could have matched the product, but the results from the tool call did not include product names, only order details. The agent then stated, 'I found your order for the Heavy-Duty Dry Bag, but it appears that this order is not eligible for a refund.' This is a claim of absence regarding the refund eligibility without grounds, as the lookup could not confirm the absence of the product. The agent should have stated that the refund eligibility could not be determined based on the tool results instead of suggesting that the item is not eligible for a refund. Therefore, this constitutes a failure.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-008",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        3.4014
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I'll check the product catalog for the Portable USB-C Hub at Bright Socket Electronics. Let's see if it's available.\nYes, the Portable USB-C Hub is available at Bright Socket Electronics for $207.75. If you have any other questions or need assistance with anything else, feel free to ask!",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The customer asked for the Portable USB-C Hub at Bright Socket Electronics. The agent ran search_products, which returned one product titled 'Portable USB-C Hub' at $207.75, and the agent reported exactly that: 'Yes, the Portable USB-C Hub is available at Bright Socket Electronics for $207.75.' The agent never says or suggests that any product or order is missing, so this failure mode is absent.\", \"result\": \"Pass\"}"
+          },
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-011",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        3.7912
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I will escalate your billing dispute to a human support agent for review. This issue requires human intervention to ensure proper investigation. \n\nPlease hold while I open a ticket.\nI've successfully escalated your billing dispute to a human support agent. They will review the situation, and you can expect a response within 24 hours. If you have any more questions or need further assistance, feel free to ask!",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-012",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        3.6555
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I\u2019ll open a ticket for a human support agent to assist with the disputed charge. Please hold on.\nI've opened a ticket for a human agent to assist with the disputed charge. They will follow up within 24 hours.",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-013",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        5.1328
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "You can change your email address by going to your account settings and selecting \"Profile\" or \"Account Information.\" Look for the option to update your email address there.",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-014",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        2.1268
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "I'm here to assist shoppers, but I can't directly connect you with a person for disputes or charge issues. However, I can help you with specific questions related to orders, refunds, or policies. If you provide more details about the situation, I might be able to assist you further or help escalate your concern.",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-015",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        2.005
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "To assist in resolving the customer's dispute regarding the charge, I need to look up the specific order using its order ID. This will allow me to verify details about the transaction and provide clarity on the charge. Please provide the order ID so I can proceed.",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-016",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        1.8896
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "I'm sorry, but I can't assist with changing account details like phone numbers. However, I can help with questions about orders, returns, or store policies. If you need assistance with your account, I recommend checking the help section of the platform or reaching out to customer support directly.",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    }
+  ],
+  "cost_per_100_conversations_usd": 0.035255,
+  "cost_usd": 0.003173,
+  "created_at": "2026-11-28T20:07:08.668815+00:00",
+  "evaluated_case_runs": 9,
+  "git_commit": "d2f5a4490552ad811d22ed58ee3b714da20cc3a8",
+  "input_tokens": 17897,
+  "median_latency_seconds": 3.5769,
+  "model": "gpt-4o-mini",
+  "output_tokens": 1134,
+  "price_date": "2026-11-28",
+  "prompt_sha256_12": "457cf684927e",
+  "schema_version": 1,
+  "score": 0.333333,
+  "split": "development",
+  "test_plan_sha256": null,
+  "write_pass_5": null
+}

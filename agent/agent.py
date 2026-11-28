@@ -59,7 +59,8 @@ platform; you serve its shoppers, merchants, and support staff.
 ## Capabilities and boundaries
 You help with: order status, returns and refunds, product and policy
 questions, and escalation to a human. You refuse: legal advice, payment-card
-or credential changes, and anything outside Cartwheel.
+or credential changes, and anything outside Cartwheel. A request to change
+contact details (email, phone) is not a refusal: escalate it to a human.
 
 ## Tool guidance
 - Prefer a tool lookup over memory. Policy answers come from the help
@@ -80,6 +81,10 @@ or credential changes, and anything outside Cartwheel.
 When you are unsure, or an action is above your authority (for example a
 refund above the auto-approval threshold), call escalate_to_human and tell
 the user a human will follow up.
+You cannot change account details (email, phone number, password) and
+cannot resolve charge or billing disputes yourself. For these, call
+escalate_to_human right away with a short summary; do not just describe
+steps or ask the user to contact support.
 
 ## Tone
 Plain and warm. No legalese.
@@ -355,8 +360,36 @@ def _call(
         result = fn(wrapper.context, *args)
     except NotImplementedError as exc:
         result = {"ok": False, "error": "not_implemented", "reason": str(exc)}
+    result = _name_found_orders(fn, result)
     record_tool_result(wrapper.context, result)
     return result
+
+
+def _name_found_orders(fn: Any, result: dict[str, Any]) -> dict[str, Any]:
+    """Harness: add product and store names to find_order matches.
+
+    find_order returns bare order rows (the HW1 tests fix that shape), so the
+    model sees order numbers it cannot match to the item the customer named
+    and says "none of these match" (falsely_reports_record_missing).
+    """
+    if fn is not hw_tools.find_order or not isinstance(result, dict):
+        return result
+    orders = result.get("orders")
+    if not result.get("ok") or not orders:
+        return result
+    from agent import db
+
+    with db.connection() as conn:
+        products = {product.id: product for product in db.list_products(conn)}
+        named = []
+        for order in orders:
+            item = dict(order)
+            product = products.get(item.get("product_id"))
+            item["product_title"] = product.title if product else None
+            store = db.get_store(conn, item.get("store_id"))
+            item["store_name"] = store.name if store else None
+            named.append(item)
+    return {**result, "orders": named}
 
 
 @function_tool
@@ -394,7 +427,13 @@ def issue_refund(
 def escalate_to_human(
     wrapper: RunContextWrapper[AuthContext], summary: str, context: str
 ) -> dict[str, Any]:
-    """Open a ticket for a human support agent when a case is above your authority."""
+    """Open a ticket for a human support agent when a case is above your authority.
+
+    Call it yourself, without asking the user first, for account-detail
+    changes (email, phone, password), charge or billing disputes, and any
+    request you cannot complete with your other tools. Write the summary
+    from what the user already told you; do not ask them to summarize.
+    """
     return _call(wrapper, escalate_to_human_logic, summary, context)
 
 

@@ -1,0 +1,56 @@
+{
+  "maximum_calls": 150,
+  "reservations": [
+    {
+      "calls": 9,
+      "label": "loop_baseline",
+      "reserved_at": "2026-11-28T20:11:14.625190+00:00"
+    },
+    {
+      "calls": 9,
+      "label": "d1_order_tool_descriptions",
+      "reserved_at": "2026-11-28T20:12:18.810869+00:00"
+    },
+    {
+      "calls": 9,
+      "label": "d2_name_find_order_results",
+      "reserved_at": "2026-11-28T20:13:35.887641+00:00"
+    },
+    {
+      "calls": 9,
+      "label": "d2_rerun",
+      "reserved_at": "2026-11-28T20:14:29.758486+00:00"
+    },
+    {
+      "calls": 9,
+      "label": "d3_escalate_account_and_disputes",
+      "reserved_at": "2026-11-28T20:15:38.574342+00:00"
+    },
+    {
+      "calls": 9,
+      "label": "d3_rerun",
+      "reserved_at": "2026-11-28T20:16:35.657662+00:00"
+    },
+    {
+      "calls": 9,
+      "label": "d4_escalate_tool_description",
+      "reserved_at": "2026-11-28T20:17:39.495129+00:00"
+    },
+    {
+      "calls": 9,
+      "label": "d4_rerun",
+      "reserved_at": "2026-11-28T20:18:34.273611+00:00"
+    },
+    {
+      "calls": 9,
+      "label": "d5_contact_changes_escalate",
+      "reserved_at": "2026-11-28T20:19:40.265317+00:00"
+    },
+    {
+      "calls": 9,
+      "label": "d5_rerun",
+      "reserved_at": "2026-11-28T20:20:40.085817+00:00"
+    }
+  ],
+  "used_calls": 90
+}

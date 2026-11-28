@@ -33,6 +33,7 @@ from replay.harness import ReplayInfraError, replay_case, summarize_rollouts
 from replay.rollout import (
     apply_checks,
     judge_reply_with_text,
+    judge_trace_text,
     load_cases,
     load_frozen_judge,
     retrieved_docs_text,
@@ -133,7 +134,7 @@ def make_runner(
             expected = case["expected"]["judges"][mode]
             try:
                 verdict, judge_reasons[mode] = judge_reply_with_text(
-                    judge, transcript["final_reply"], docs
+                    judge, judge_trace_text(transcript), docs
                 )
                 judge_reasons[mode] = judge_reasons[mode][:1000]
             except Exception as exc:  # noqa: BLE001

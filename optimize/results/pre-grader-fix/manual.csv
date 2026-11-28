@@ -1,0 +1,4 @@
+candidate,layer,predicted_effect,dev_score,write_pass_5,cost_per_100_conversations_usd,decision,git_commit,result_file
+starting_version,none,baseline,0.333333,,0.04003,keep,3707bd8,optimize/results/development-starting-gpt-4o-mini-20261128-115730.json
+prompt_change,prompt,Fixes e-004 (false missing) if the model follows a rule to check find_order/get_order before saying an order is missing; small cost rise from extra lookups; escalation cases unchanged,0.111111,,0.035563,revert,9634cff,optimize/results/development-prompt_change-gpt-4o-mini-20261128-115903.json
+tool_change,tool,Fixes e-004 directly: list_my_orders and find_order return product_title and store_name so the agent can see the item is in its list; slightly more input tokens; escalation cases unchanged,,,,,,
