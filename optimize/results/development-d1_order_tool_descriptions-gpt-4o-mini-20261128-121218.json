@@ -1,0 +1,234 @@
+{
+  "cached_fraction": 0.324441,
+  "cached_input_tokens": 7808,
+  "candidate": "d1_order_tool_descriptions",
+  "case_count": 9,
+  "cases": [
+    {
+      "case_id": "e-004",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:falsely_reports_record_missing"
+      ],
+      "latencies_seconds": [
+        3.632
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:falsely_reports_record_missing"
+          ],
+          "final_reply": "I'll first check your order details to verify that you have an order for the Handmade Card Game from Little Fox Toys. Once I confirm that, I can assist with the cancellation. Let's look up your orders now.\nIt looks like there are no current orders for the Handmade Card Game from Little Fox Toys. I found a few orders, but none match your request.\n\nIf you meant a different item or if there's a misunderstanding, please let me know, and I can help you further!",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The customer requested to cancel an order for the Handmade Card Game from Little Fox Toys. The agent called search_products, which returned a list of orders but did not include product names. The agent then stated, 'It looks like there are no current orders for the Handmade Card Game from Little Fox Toys.' This is a claim of absence without grounds, as the lookup could not show that the item was missing. The agent should have acknowledged the limitation of the tool results instead of suggesting the item is not present.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-006",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:falsely_reports_record_missing"
+      ],
+      "latencies_seconds": [
+        16.8771
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:falsely_reports_record_missing"
+          ],
+          "final_reply": "The refund policy typically allows for a full refund back to your original payment method unless stated otherwise by the store's specific return policy. Some stores may offer store credit in certain situations, but refunds usually depend on the condition of the item and adherence to return guidelines.\n\nSince your order is currently ineligible for a refund, it\u2019s best to check the specific return policy for that product. Let me look that up for you now to provide the most accurate information.\nAccording to the Cartwheel return policy (policy id: cw-returns), here are the key points:\n\n1. **Return Window**: Items can generally be returned within 30 days of delivery.\n2. **Condition**: The item must be in the condition described by the store's listing.\n3. **Refund Type**: Typically, you will receive a full refund back to your original payment method unless stated otherwise by the specific store's policies.\n\nIf you proceed with a return and meet these conditions, you should expect a full refund. If you have any further questions or need assistance with the return process, feel free to ask!",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The agent stated, 'It looks like I found multiple orders for \\\"Heavy-Duty Dry Bag,\\\" but none of them are eligible for a refund.' This is a claim of absence regarding the refund eligibility of the product. The tool call to search for the Heavy-Duty Dry Bag returned order details, but it did not indicate the absence of the product or its refund eligibility. The agent should have acknowledged that the lookup could not confirm the refund eligibility and instead suggested checking the store's return policy. Therefore, the agent falsely reported that the item is not eligible for a refund without grounds.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-008",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        2.8464
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "Yes, the Portable USB-C Hub is available at Bright Socket Electronics for $207.75. If you need any more information or want to make a purchase, just let me know!",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The customer asked for the Portable USB-C Hub at Bright Socket Electronics. The agent ran search_products, which returned one product titled 'Portable USB-C Hub' at $207.75, and the agent reported exactly that: 'Yes, the Portable USB-C Hub is available at Bright Socket Electronics for $207.75.' The agent never says or suggests that any product or order is missing, so this failure mode is absent.\", \"result\": \"Pass\"}"
+          },
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-011",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        3.687
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I understand that you need a human review for your billing dispute. I will escalate this issue so that a support agent can assist you further. \n\nPlease hold on for a moment while I open a ticket for human support.\nI've successfully escalated your billing dispute to a human support agent. You'll receive a response within 24 hours. If you have any other questions or need further assistance, feel free to ask!",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-012",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        3.5814
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I'll open a ticket for a human support agent to assist with the unrecognized charge dispute. One moment, please.\nI've opened a ticket for a human agent to assist with the charge dispute. They should follow up within 24 hours.",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-013",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        5.65
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "You can usually change your email address in your account settings under \"Profile\" or \"Account Information.\" If you're having trouble, contact customer support for help.",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-014",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        2.1038
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "I can't assist with disputes or connect you directly to individuals, but I can help guide you on refund policies or escalate a request to a human support agent who can follow up on your issue. Would you like me to open a ticket for you?",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-015",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        2.0683
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "I can help with order-related inquiries, but I need specific details about the order in question to provide assistance. Could you please provide me with the order ID or any details regarding the charge the customer is contesting? This will allow me to look up the order and clarify the situation.",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-016",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        1.8589
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "I'm sorry, but I can't assist with changing your account details, including phone numbers. However, I can help you with questions about orders, returns, or policies. For updating your account information, I recommend visiting the account settings on our platform or contacting customer support directly.",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    }
+  ],
+  "cost_per_100_conversations_usd": 0.043237,
+  "cost_usd": 0.003891,
+  "created_at": "2026-11-28T20:13:08.447006+00:00",
+  "evaluated_case_runs": 9,
+  "git_commit": "b4f6c5713f1d411402f72c25f1e134c8394afd9b",
+  "input_tokens": 24066,
+  "median_latency_seconds": 3.5814,
+  "model": "gpt-4o-mini",
+  "output_tokens": 1445,
+  "price_date": "2026-11-28",
+  "prompt_sha256_12": "457cf684927e",
+  "schema_version": 1,
+  "score": 0.333333,
+  "split": "development",
+  "test_plan_sha256": null,
+  "write_pass_5": null
+}

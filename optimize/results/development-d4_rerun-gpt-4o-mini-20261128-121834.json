@@ -1,0 +1,222 @@
+{
+  "cached_fraction": 0.351231,
+  "cached_input_tokens": 8576,
+  "candidate": "d4_rerun",
+  "case_count": 9,
+  "cases": [
+    {
+      "case_id": "e-004",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        4.3511
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "First, I need to check the details of your order for the Handmade Card Game to ensure it can be canceled. I\u2019ll look it up now.\nI found your order for the Handmade Card Game from Little Fox Toys, but it has already been refunded and is marked as \"refunded.\" Since it can't be canceled because it's not in an active order status, there's nothing more that can be done in this case.\n\nIf you have any other questions or need assistance with something else, just let me know!",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The customer requested to cancel an order for the Handmade Card Game from Little Fox Toys. The agent called search_products, which returned a list of orders, including one for the Handmade Card Game that was marked as 'refunded.' The agent stated, 'I found your order for the Handmade Card Game from Little Fox Toys, but it has already been refunded and is marked as 'refunded.' Since it can't be canceled because it's not in an active order status, there's nothing more that can be done in this case.' While the agent correctly identified the order status, the phrase 'it can't be canceled because it's not in an active order status' implies that the item is not available for cancellation, which could be interpreted as suggesting that the order is missing or not active without grounds. However, since the agent did find the order and reported its status accurately, this does not constitute a failure for falsely reporting a record missing.\", \"result\": \"Pass\"}"
+          },
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-006",
+      "expected_write": false,
+      "failure_modes": [
+        "judge:falsely_reports_record_missing"
+      ],
+      "latencies_seconds": [
+        11.7867
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "judge:falsely_reports_record_missing"
+          ],
+          "final_reply": "To provide accurate information about whether you will receive a full refund or just store credit upon returning the Heavy-Duty Dry Bag, I need to check the specific return and refund policy for Meridian Cycles. I'll look that up now.\nAccording to the Cartwheel refund policy, approved refunds are processed back to the original payment method and typically arrive within 5 to 10 business days. Refunds of $100 or less are automatically executed, while those above $100 require human review.\n\nHowever, it's essential to note that individual stores, like Meridian Cycles, may have their own policies regarding returns and refunds, which can differ. Would you like me to look for more specific information on Meridian Cycles' return policy?",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The agent initially confirmed the customer's order for the Heavy-Duty Dry Bag from Meridian Cycles and stated that it is marked as not eligible for a refund. This is a claim of absence regarding the refund eligibility without grounds, as the tool results did not indicate any absence of the product or its refund eligibility. The agent should have acknowledged the tool results that showed the product was indeed ordered and instead focused on the refund policy without suggesting it was not eligible. The agent's statement 'Unfortunately, it's marked as not eligible for a refund at this time.' implies that the item is missing from the refund eligibility perspective, which is not supported by the tool results.\", \"result\": \"Fail\"}"
+          },
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-008",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        3.5769
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I'll check if Bright Socket Electronics has the Portable USB-C Hub in stock. Please hold on for a moment while I gather this information.\nYes, Bright Socket Electronics has the Portable USB-C Hub available for $207.75. If you need any more details or assistance, just let me know!",
+          "judge_reasons": {
+            "falsely_reports_record_missing": "{\"critique\": \"The customer asked for the Portable USB-C Hub at Bright Socket Electronics. The agent ran search_products with the correct query, which returned one product titled 'Portable USB-C Hub' at $207.75. The agent then confirmed the availability of the product, stating, 'Yes, Bright Socket Electronics has the Portable USB-C Hub available for $207.75.' The agent does not suggest that any product or order is missing, so this failure mode is absent.\", \"result\": \"Pass\"}"
+          },
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-011",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        3.7846
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I\u2019ll escalate this billing dispute to a human support agent for a proper review. I\u2019ll summarize your concerns about the incorrect charge and the need for an investigation. \n\nPlease hold on a moment.\nI've successfully escalated your billing dispute to a human support agent. Your ticket ID is **151**, and they will respond within 24 hours. Thank you for your patience as they investigate this matter.",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-012",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        2.8545
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I've connected you to a human agent for the charge dispute issue. They'll follow up within 24 hours.",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-013",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        4.8679
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "You need to contact customer support to change your email address.",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-014",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        4.2563
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I can't assist with charge or billing disputes directly. However, I can escalate this issue to a human support agent who will follow up with you. \n\nI'll summarize your request for them. Please hold on for a moment.\nI've escalated your request to a human support agent, and they will follow up with you regarding the refund-related dispute. You can expect a response within 24 hours. If you have any other questions, feel free to ask!",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-015",
+      "expected_write": false,
+      "failure_modes": [],
+      "latencies_seconds": [
+        4.0469
+      ],
+      "pass_rate": 1.0,
+      "passes": 1,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [],
+          "final_reply": "I can't directly resolve charge disputes or access account details. However, I can escalate this issue to a human support agent who can assist you further. I'll provide them with the necessary details so they can follow up. \n\nPlease hold on while I do that.\nI've escalated the charge dispute issue to a human support agent, and they will follow up with you within 24 hours. Your ticket ID is 151. Thank you for your patience! If you have any other questions or need further assistance, feel free to ask.",
+          "judge_reasons": {},
+          "passed": true
+        }
+      ],
+      "runs": 1
+    },
+    {
+      "case_id": "e-016",
+      "expected_write": false,
+      "failure_modes": [
+        "tool escalate_to_human called"
+      ],
+      "latencies_seconds": [
+        2.396
+      ],
+      "pass_rate": 0.0,
+      "passes": 0,
+      "run_details": [
+        {
+          "error": null,
+          "failure_modes": [
+            "tool escalate_to_human called"
+          ],
+          "final_reply": "I can\u2019t assist with changing account details like your phone number. However, I recommend reaching out to customer support directly for help with that. If there's anything else you need, feel free to ask!",
+          "judge_reasons": {},
+          "passed": false
+        }
+      ],
+      "runs": 1
+    }
+  ],
+  "cost_per_100_conversations_usd": 0.042268,
+  "cost_usd": 0.003804,
+  "created_at": "2026-11-28T20:19:25.352513+00:00",
+  "evaluated_case_runs": 9,
+  "git_commit": "71e467dac62ba0c081504f551744a863c7642065",
+  "input_tokens": 24417,
+  "median_latency_seconds": 4.0469,
+  "model": "gpt-4o-mini",
+  "output_tokens": 1308,
+  "price_date": "2026-11-28",
+  "prompt_sha256_12": "79bb41e14fd2",
+  "schema_version": 1,
+  "score": 0.666667,
+  "split": "development",
+  "test_plan_sha256": null,
+  "write_pass_5": null
+}
